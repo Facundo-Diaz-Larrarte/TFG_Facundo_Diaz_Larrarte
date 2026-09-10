@@ -16,11 +16,19 @@ Desde la raíz del repositorio:
 
 ```bash
 python analysis/01_descriptivo.py \
-  --input data/processed/base_analitica_ia_productividad_ue27_v0_1.xlsx \
+  --input data/processed/panel_analitico.csv \
   --output-dir outputs/descriptivo_v0_1
 ```
 
 Dependencias: `pandas`, `numpy`, `scipy`, `matplotlib`, `seaborn` y `openpyxl`.
+
+El modelo preliminar se reproduce con:
+
+```bash
+python analysis/02_modelos_panel.py \
+  --input data/processed/panel_analitico.csv \
+  --output-dir outputs/modelos_panel_v0_1
+```
 
 ## Productos
 
@@ -39,4 +47,3 @@ El script genera tablas CSV de cobertura, estadísticos, promedios por año y se
 Los resultados son descriptivos y agregados. La asociación positiva en niveles puede reflejar diferencias persistentes entre países y sectores, mientras que las correlaciones de cambios pueden estar afectadas por inflación, shocks sectoriales, causalidad inversa y error de medición. No deben interpretarse causalmente.
 
 El siguiente paso es estimar modelos de panel con efectos fijos país–sector, efectos temporales y controles país–año. Los usos de IA deben evaluarse inicialmente en especificaciones separadas porque se superponen y presentan alta correlación entre sí.
-
