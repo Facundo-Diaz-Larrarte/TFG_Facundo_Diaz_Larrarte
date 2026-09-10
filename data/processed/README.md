@@ -1,6 +1,8 @@
 # Datos procesados
 
-La base de trabajo es `base_analitica_ia_productividad_ue27_v0_1.xlsx`.
+El archivo reproducible principal del repositorio es `panel_analitico.csv`. Contiene la grilla completa de 729 observaciones y las variables `core_complete` y `balanced_entity`, que permiten reconstruir la muestra balanceada de 627 filas.
+
+El libro completo `base_analitica_ia_productividad_ue27_v0_1.xlsx` conserva además las observaciones fuente filtradas, el diccionario y la auditoría, y se distribuye como artefacto versionado fuera del historial Git.
 
 ## Fuentes
 
@@ -18,4 +20,4 @@ La productividad laboral aparente se calcula como valor agregado, expresado en m
 
 La hoja `Panel` conserva la grilla teórica completa y sus faltantes. La hoja `Muestra_balanceada` contiene 209 entidades país–sector observadas durante los tres años.
 
-El libro también conserva las observaciones fuente filtradas, el diccionario de variables y las reglas de auditoría. Debido a que es un archivo binario derivado, debe versionarse con un número de versión y no editarse manualmente. El análisis reproducible se encuentra en `analysis/01_descriptivo.py`.
+El análisis reproducible se encuentra en `analysis/01_descriptivo.py` y `analysis/02_modelos_panel.py`.
