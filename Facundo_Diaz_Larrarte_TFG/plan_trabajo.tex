@@ -1,0 +1,142 @@
+\documentclass[12pt,a4paper]{article}
+
+% ==== Paquetes básicos ====
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[authoryear]{natbib}
+
+\geometry{margin=2.5cm}
+\onehalfspacing
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+% ==== Documento ====
+\begin{document}
+
+% ============================================================
+% PORTADA (Res. Anexo I, V.1.1: título, datos del alumno,
+% Director y Codirector si corresponde, carrera de grado,
+% firma del Director y Codirector)
+% ============================================================
+\begin{titlepage}
+  \centering
+  \begin{minipage}{0.45\textwidth}
+    \raggedright
+    \includegraphics[width=0.8\textwidth]{Imagenes/fce_logo.png}
+  \end{minipage}%
+  \begin{minipage}{0.45\textwidth}
+    \raggedleft
+    \includegraphics[width=0.4\textwidth]{Imagenes/unrc_logo.png}
+  \end{minipage}
+
+  \vspace{1.5cm}
+
+  {\Large \textbf{Universidad Nacional de Río Cuarto} \\[2pt]}
+  {\Large \textbf{Facultad de Ciencias Económicas} \\[2pt]}\par\vspace{2cm}
+
+  {\large \textbf{Plan de Trabajo Final de Grado}}\\[0.5cm]
+  {\large Licenciatura en Economía}\\[2cm]
+
+  {\Large \textit{TÍTULO}}\\[3cm]
+
+  \begin{tabular}{@{}ll}
+    Alumno: & NOMBRE \\
+    DNI: & XXXX \\
+    Registro Universitario: & XXXX \\
+    Email: & MMM \\
+    Carrera: & Licenciatura en Economía \\
+    Director propuesto: & FFFF \\
+% Habilitar si se propone Codirector
+%    Codirector propuesto: &  GGGG \\
+    Fecha de presentación: & FECHA \\
+  \end{tabular}
+
+  \vfill
+
+  % Firma del Director y, si corresponde, del Codirector,
+  % avalando el Plan de Trabajo (V.1.1.5 y modelo de nota, Anexo III)
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{0.8\textwidth}{0.4pt}\\
+    Firma y aclaración del Director
+  \end{minipage}%
+  \hfill
+  \begin{minipage}{0.45\textwidth}
+    \centering
+    \rule{0.8\textwidth}{0.4pt}\\
+    Firma y aclaración del Codirector \\
+    {\small (si corresponde)}
+  \end{minipage}
+
+  \vspace{1.5cm}
+  {\large Ciudad de Río Cuarto, Argentina}
+
+\end{titlepage}
+
+\newpage
+
+% ============================================================
+% INTRODUCCIÓN (Res. Anexo I, V.1.2)
+% ============================================================
+\section{Introducción}
+
+\subsection{Definición del objeto de estudio}
+% V.1.2.1
+blabla
+
+\subsection{Delimitación del tema y del campo o área de estudio}
+% V.1.2.2
+blabla
+
+\subsection{Fundamentación de la elección del tema}
+% V.1.2.3: origen del problema, ya sea teórico o práctico.
+blabla
+
+\subsection{Importancia del estudio}
+% V.1.2.4
+blabla
+
+% ============================================================
+% OBJETIVOS (Res. Anexo I, V.1.3)
+% Deben permitir la evaluación de su significado.
+% ============================================================
+\section{Objetivos}
+
+\subsection{Objetivo general}
+blabla
+
+\subsection{Objetivos específicos}
+blabla
+
+% ============================================================
+% METODOLOGÍA (Res. Anexo I, V.1.4)
+% Adecuada al campo del conocimiento sobre el cual versa el trabajo.
+% ============================================================
+\section{Metodología del trabajo}
+\cite{montmartin2015internal} y \citep{wooldridge2010econometric}
+
+% ============================================================
+% BIBLIOGRAFÍA BÁSICA (Res. Anexo I, V.1.5)
+% Criterio de cita según VI.1.6: Autor; fecha; nombre del libro o
+% artículo; título de la publicación; volumen, tomo o número; lugar.
+% ============================================================
+% ==== Bibliografía (VI.1.6) ====
+\clearpage
+\section{Bibliografía}
+\renewcommand{\refname}{}
+\bibliographystyle{apalike2}   % Si Overleaf no encuentra este .bst, sustituir por apalike o plainnat
+\bibliography{referencias}    % nombre del archivo .bib (sin la extensión)
+
+\end{document}
