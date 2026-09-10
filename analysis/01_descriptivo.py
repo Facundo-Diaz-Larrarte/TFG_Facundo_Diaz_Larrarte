@@ -2,7 +2,7 @@
 """Primer análisis descriptivo del panel IA-productividad de Eurostat.
 
 Uso:
-    python analysis/01_descriptivo.py --input data/processed/base_analitica_ia_productividad_ue27_v0_1.xlsx
+    python analysis/01_descriptivo.py --input data/processed/panel_analitico.csv
 """
 
 from __future__ import annotations
@@ -68,8 +68,12 @@ def main() -> None:
     tables_dir.mkdir(parents=True, exist_ok=True)
     figures_dir.mkdir(parents=True, exist_ok=True)
 
-    panel = pd.read_excel(args.input, sheet_name="Panel")
-    balanced = pd.read_excel(args.input, sheet_name="Muestra_balanceada")
+    if args.input.suffix.lower() == ".csv":
+        panel = pd.read_csv(args.input)
+        balanced = panel[(panel["core_complete"] == "Yes") & (panel["balanced_entity"] == "Yes")].copy()
+    else:
+        panel = pd.read_excel(args.input, sheet_name="Panel")
+        balanced = pd.read_excel(args.input, sheet_name="Muestra_balanceada")
     balanced["log_productivity"] = np.log(balanced["labour_productivity_keur"])
 
     analysis_vars = ["labour_productivity_keur", "log_productivity", *AI_LABELS.keys()]
