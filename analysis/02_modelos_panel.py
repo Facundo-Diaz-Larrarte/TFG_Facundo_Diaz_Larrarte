@@ -82,7 +82,11 @@ def main() -> None:
     args = parser.parse_args()
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
-    data = pd.read_excel(args.input, sheet_name="Muestra_balanceada")
+    if args.input.suffix.lower() == ".csv":
+        panel = pd.read_csv(args.input)
+        data = panel[(panel["core_complete"] == "Yes") & (panel["balanced_entity"] == "Yes")].copy()
+    else:
+        data = pd.read_excel(args.input, sheet_name="Muestra_balanceada")
     data = data[data["labour_productivity_keur"] > 0].copy()
     data["log_productivity"] = np.log(data["labour_productivity_keur"])
     data["entity"] = data["country_code"].astype(str) + "_" + data["sector_code"].astype(str)
