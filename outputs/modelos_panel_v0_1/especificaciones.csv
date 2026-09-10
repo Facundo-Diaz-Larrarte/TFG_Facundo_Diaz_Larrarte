@@ -1,0 +1,4 @@
+specification,fixed_effects,interpretation
+M1_pooled_FE,País + sector + año,Compara niveles controlando diferencias aditivas observables por efectos fijos.
+M2_entity_year_FE,País-sector + año,Usa variación temporal dentro de cada entidad y shocks comunes de año.
+M3_entity_countryyear_FE,País-sector + país-año,Absorbe heterogeneidad permanente y shocks macro/nominales específicos de cada país-año.
