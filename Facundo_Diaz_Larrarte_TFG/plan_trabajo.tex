@@ -1,9 +1,8 @@
 \documentclass[12pt,a4paper]{article}
 
-% ==== Paquetes básicos ====
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[spanish, es-tabla]{babel}
+\usepackage[spanish,es-tabla]{babel}
 \usepackage{lmodern}
 \usepackage{geometry}
 \usepackage{setspace}
@@ -11,6 +10,8 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{booktabs}
 \usepackage[authoryear]{natbib}
 
 \geometry{margin=2.5cm}
@@ -22,14 +23,8 @@
   urlcolor=blue
 }
 
-% ==== Documento ====
 \begin{document}
 
-% ============================================================
-% PORTADA (Res. Anexo I, V.1.1: título, datos del alumno,
-% Director y Codirector si corresponde, carrera de grado,
-% firma del Director y Codirector)
-% ============================================================
 \begin{titlepage}
   \centering
   \begin{minipage}{0.45\textwidth}
@@ -43,30 +38,27 @@
 
   \vspace{1.5cm}
 
-  {\Large \textbf{Universidad Nacional de Río Cuarto} \\[2pt]}
-  {\Large \textbf{Facultad de Ciencias Económicas} \\[2pt]}\par\vspace{2cm}
+  {\Large \textbf{Universidad Nacional de Río Cuarto}\\[2pt]}
+  {\Large \textbf{Facultad de Ciencias Económicas}\\[2pt]}
+  \vspace{2cm}
 
   {\large \textbf{Plan de Trabajo Final de Grado}}\\[0.5cm]
-  {\large Licenciatura en Economía}\\[2cm]
+  {\large Licenciatura en Economía}\\[1.5cm]
 
-  {\Large \textit{TÍTULO}}\\[3cm]
+  {\Large \textit{Adopción empresarial de inteligencia artificial y productividad laboral: evidencia sectorial para la Unión Europea}}\\[2.5cm]
 
   \begin{tabular}{@{}ll}
-    Alumno: & NOMBRE \\
-    DNI: & XXXX \\
-    Registro Universitario: & XXXX \\
-    Email: & MMM \\
+    Alumno: & Facundo Díaz Larrarte \\
+    DNI: & \textit{[completar]} \\
+    Registro Universitario: & \textit{[completar]} \\
+    Email: & \textit{[completar]} \\
     Carrera: & Licenciatura en Economía \\
-    Director propuesto: & FFFF \\
-% Habilitar si se propone Codirector
-%    Codirector propuesto: &  GGGG \\
-    Fecha de presentación: & FECHA \\
+    Director propuesto: & \textit{[completar]} \\
+    Fecha de presentación: & \textit{[completar]} \\
   \end{tabular}
 
   \vfill
 
-  % Firma del Director y, si corresponde, del Codirector,
-  % avalando el Plan de Trabajo (V.1.1.5 y modelo de nota, Anexo III)
   \begin{minipage}{0.45\textwidth}
     \centering
     \rule{0.8\textwidth}{0.4pt}\\
@@ -76,67 +68,181 @@
   \begin{minipage}{0.45\textwidth}
     \centering
     \rule{0.8\textwidth}{0.4pt}\\
-    Firma y aclaración del Codirector \\
+    Firma y aclaración del Codirector\\
     {\small (si corresponde)}
   \end{minipage}
 
   \vspace{1.5cm}
   {\large Ciudad de Río Cuarto, Argentina}
-
 \end{titlepage}
 
-\newpage
-
-% ============================================================
-% INTRODUCCIÓN (Res. Anexo I, V.1.2)
-% ============================================================
 \section{Introducción}
 
 \subsection{Definición del objeto de estudio}
-% V.1.2.1
-blabla
+
+El presente Trabajo Final de Grado propone estudiar la relación entre la adopción empresarial de tecnologías de inteligencia artificial (IA) y la productividad laboral aparente en sectores económicos de los países de la Unión Europea. El objeto de estudio no es la IA como tecnología aislada, sino su incorporación al proceso productivo de las empresas y su asociación con los resultados obtenidos por unidad de trabajo.
+
+La pregunta principal es: \textit{¿qué relación existe entre la adopción y los distintos usos empresariales de inteligencia artificial y la productividad laboral aparente en los sectores económicos de la Unión Europea?}
+
+Desde una perspectiva microeconómica, la incorporación de IA puede interpretarse como un cambio en la tecnología disponible para la empresa. Su efecto, sin embargo, no tiene por qué ser automático ni uniforme. Puede depender de la tarea en la que se aplique, de la reorganización de procesos, de las capacidades del personal y de la existencia de activos complementarios. Asimismo, las empresas y sectores inicialmente más productivos pueden ser los que cuentan con mayores recursos para adoptar estas tecnologías, lo que dificulta interpretar una correlación positiva como un efecto causal.
 
 \subsection{Delimitación del tema y del campo o área de estudio}
-% V.1.2.2
-blabla
+
+El trabajo se inscribe en el campo de la microeconomía aplicada, la economía de la empresa y la economía del cambio tecnológico. El análisis empírico utilizará información secundaria y agregada de Eurostat para los 27 países de la Unión Europea, un conjunto de sectores de actividad definidos según NACE Rev. 2 y los años 2021, 2023 y 2024.
+
+La unidad de observación será la combinación país--sector--año. La adopción de IA se medirá mediante el porcentaje de empresas de diez o más personas ocupadas que utiliza al menos una tecnología de IA. También se considerarán, cuando la comparabilidad de la información lo permita, indicadores relativos a aplicaciones de IA en organización de procesos o toma de decisiones, producción, logística, marketing y ventas, y seguridad de las tecnologías de información y comunicación.
+
+La productividad laboral aparente se calculará como el cociente entre el valor agregado del sector y la cantidad de personas ocupadas:
+
+\begin{equation}
+  Productividad_{cst} =
+  \frac{Valor\ agregado_{cst}}{Personas\ ocupadas_{cst}},
+\end{equation}
+
+donde $c$ identifica al país, $s$ al sector y $t$ al año. Este indicador no mide productividad total de los factores ni permite aislar por sí solo la contribución de la IA.
 
 \subsection{Fundamentación de la elección del tema}
-% V.1.2.3: origen del problema, ya sea teórico o práctico.
-blabla
+
+La difusión reciente de la IA ha generado expectativas de mejoras de eficiencia, reducción de costos y expansión de las capacidades productivas. Sin embargo, la adopción tecnológica y la obtención de resultados económicos son fenómenos distintos. La literatura sobre la denominada curva J de productividad destaca que las tecnologías de propósito general pueden requerir inversiones complementarias y reorganización empresarial antes de traducirse en aumentos observables de productividad \citep{brynjolfsson2021productivity}.
+
+Por ello, resulta relevante analizar si la asociación positiva que puede observarse entre adopción de IA y productividad se mantiene una vez consideradas las diferencias estructurales entre países y sectores. También interesa explorar si las aplicaciones más vinculadas con procesos internos presentan patrones distintos de aquellas orientadas a otras funciones empresariales.
+
+La elección de la Unión Europea responde, además, a una razón de viabilidad: Eurostat proporciona indicadores armonizados de uso empresarial de IA y estadísticas estructurales empresariales que permiten construir una base comparable sin recurrir a encuestas propias. Esto resulta compatible con el alcance y el plazo de una tesina de grado.
 
 \subsection{Importancia del estudio}
-% V.1.2.4
-blabla
 
-% ============================================================
-% OBJETIVOS (Res. Anexo I, V.1.3)
-% Deben permitir la evaluación de su significado.
-% ============================================================
+El estudio puede aportar evidencia ordenada sobre tres cuestiones. Primero, la heterogeneidad sectorial y territorial en la adopción de IA. Segundo, la diferencia entre una correlación transversal y la asociación obtenida al comparar cambios dentro de una misma unidad país--sector. Tercero, la conveniencia de distinguir la adopción general de los usos específicos de la tecnología.
+
+La contribución esperada es empírica y metodológica: construir una base reproducible a partir de fuentes oficiales, describir los patrones observados y estimar asociaciones mediante modelos de datos de panel. Debido al carácter agregado y observacional de la información, no se pretende demostrar que la adopción de IA causa por sí sola un incremento de productividad.
+
 \section{Objetivos}
 
 \subsection{Objetivo general}
-blabla
+
+Analizar la relación entre la adopción empresarial de inteligencia artificial y la productividad laboral aparente a nivel país--sector en la Unión Europea, considerando diferencias entre aplicaciones de IA y características estructurales de los sectores.
 
 \subsection{Objetivos específicos}
-blabla
 
-% ============================================================
-% METODOLOGÍA (Res. Anexo I, V.1.4)
-% Adecuada al campo del conocimiento sobre el cual versa el trabajo.
-% ============================================================
+\begin{itemize}
+  \item Construir una base de datos país--sector--año que integre indicadores de adopción empresarial de IA con información de valor agregado y personas ocupadas de Eurostat.
+  \item Describir la evolución y la heterogeneidad de la adopción de IA entre países, sectores y años.
+  \item Calcular y comparar los niveles de productividad laboral aparente de las unidades analizadas.
+  \item Estimar la asociación entre adopción de IA y productividad mediante modelos de datos de panel.
+  \item Explorar si la asociación varía según el uso empresarial de la IA, sujeto a la cobertura y comparabilidad temporal de los indicadores.
+  \item Evaluar la sensibilidad de los resultados frente a especificaciones alternativas, ponderaciones y tratamientos de la muestra.
+  \item Identificar las limitaciones de medición e interpretación derivadas del carácter agregado y no experimental de los datos.
+\end{itemize}
+
+\section{Hipótesis de trabajo}
+
+La hipótesis principal sostiene que una mayor adopción empresarial de IA se asocia con una mayor productividad laboral aparente, aunque la magnitud de dicha relación depende del tipo de aplicación y de las características productivas del sector.
+
+Como hipótesis complementaria se plantea que los usos de IA más directamente integrados en procesos internos, producción y toma de decisiones podrían presentar una asociación más estrecha con la productividad que otras aplicaciones. Esta proposición se tratará como exploratoria si la cobertura temporal de los indicadores no permite una prueba homogénea.
+
+Dado que ya se realizó una primera inspección de los datos para establecer la viabilidad del proyecto, estas hipótesis no se presentarán como completamente ajenas a los resultados observados. Las estimaciones existentes se considerarán exploratorias y las especificaciones definidas en este plan orientarán la etapa posterior de validación.
+
 \section{Metodología del trabajo}
-\cite{montmartin2015internal} y \citep{wooldridge2010econometric}
 
-% ============================================================
-% BIBLIOGRAFÍA BÁSICA (Res. Anexo I, V.1.5)
-% Criterio de cita según VI.1.6: Autor; fecha; nombre del libro o
-% artículo; título de la publicación; volumen, tomo o número; lugar.
-% ============================================================
-% ==== Bibliografía (VI.1.6) ====
+\subsection{Diseño y fuentes de información}
+
+Se realizará un estudio cuantitativo, longitudinal, observacional y no experimental, basado exclusivamente en datos secundarios. Las principales fuentes serán:
+
+\begin{itemize}
+  \item la base \texttt{isoc\_eb\_ai} de Eurostat, referida al uso de inteligencia artificial en empresas;
+  \item la base \texttt{isoc\_eb\_ain2}, con indicadores complementarios sobre usos, formas de incorporación y obstáculos;
+  \item las estadísticas estructurales empresariales de Eurostat (Structural Business Statistics, SBS), utilizadas para obtener valor agregado y personas ocupadas.
+\end{itemize}
+
+La base analítica preliminar contiene 729 combinaciones teóricas de 27 países, nueve sectores y tres años. De ellas, 667 disponen de la información central necesaria. Se identificó además un panel balanceado de 209 unidades país--sector observadas en los tres años, equivalente a 627 observaciones. Estas cantidades podrán variar después de la auditoría final de calidad y de la aplicación de cada especificación.
+
+\subsection{Variables}
+
+La variable dependiente será el logaritmo de la productividad laboral aparente, expresada inicialmente en miles de euros por persona ocupada. La transformación logarítmica permite interpretar aproximadamente el coeficiente de adopción como una variación porcentual y reduce la influencia de valores extremos.
+
+La variable explicativa principal será el porcentaje de empresas que utiliza al menos una tecnología de IA. Como variables explicativas secundarias se emplearán el porcentaje de empresas que utiliza dos o más y tres o más tecnologías de IA, y los indicadores de usos específicos disponibles y comparables.
+
+Se documentarán las unidades de medida, filtros de tamaño empresarial, clasificación sectorial, cobertura y posibles rupturas de serie. No se combinarán como si fueran equivalentes indicadores cuya definición haya cambiado entre años.
+
+\subsection{Estrategia de análisis}
+
+La primera etapa comprenderá estadística descriptiva, gráficos de evolución, comparaciones por país y sector, y correlaciones bivariadas. Estas relaciones serán interpretadas como descriptivas.
+
+La segunda etapa utilizará modelos de datos de panel. La especificación principal propuesta es:
+
+\begin{equation}
+ \ln(Productividad_{cst}) =
+ \beta IA_{cst} + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst},
+\end{equation}
+
+donde $\alpha_{cs}$ representa efectos fijos de la unidad país--sector y $\gamma_{ct}$ efectos país--año. Los primeros controlan características permanentes de cada combinación país--sector; los segundos absorben shocks comunes a los sectores de un país en un año determinado. Los errores estándar se agruparán por unidad país--sector. La estimación y la interpretación de modelos de panel seguirán criterios habituales de econometría aplicada \citep{wooldridge2010econometric}.
+
+Como especificaciones comparativas se estimarán modelos con efectos fijos de país, sector y año, y modelos con efectos fijos país--sector y año. Se analizarán también definiciones alternativas de adopción y usos de IA.
+
+\subsection{Pruebas de robustez}
+
+Sujeto a la disponibilidad y calidad de la información, se prevé:
+
+\begin{itemize}
+  \item comparar la muestra balanceada con la muestra no balanceada;
+  \item ponderar las estimaciones por cantidad de personas ocupadas;
+  \item examinar la sensibilidad a valores extremos;
+  \item utilizar especificaciones alternativas de efectos fijos;
+  \item evaluar el tratamiento de diferencias de precios entre países y años;
+  \item comparar la adopción general con indicadores de intensidad y usos específicos;
+  \item verificar las estimaciones mediante una biblioteca econométrica estándar.
+\end{itemize}
+
+Estas pruebas se definirán antes de interpretar los resultados definitivos, evitando seleccionar especificaciones únicamente en función de su significatividad estadística.
+
+\subsection{Alcance y limitaciones}
+
+El diseño permite estudiar asociaciones y variaciones dentro de las unidades observadas, pero no identifica de manera concluyente un efecto causal de la IA. Entre las principales limitaciones se encuentran el reducido número de años, el nivel agregado país--sector, la posible causalidad inversa, la omisión de capacidades organizacionales no observadas y la medición de productividad con valor agregado monetario.
+
+Asimismo, los datos no permiten determinar si cada empresa eligió IA cuando una automatización convencional hubiese sido más adecuada, ni observar directamente la calidad de la implementación. En consecuencia, los resultados se formularán en términos de asociación condicionada y no como prueba de que toda adopción de IA mejora necesariamente la productividad.
+
+\subsection{Resultados exploratorios y viabilidad}
+
+La exploración inicial indica que la adopción media de IA aumentó entre 2021 y 2024 y que existe una correlación positiva entre adopción y productividad en niveles. Sin embargo, esta asociación deja de ser estadísticamente clara al introducir controles exigentes por unidad país--sector y país--año. Estos resultados son preliminares y no constituyen las conclusiones del trabajo.
+
+Lejos de invalidar el estudio, esta diferencia muestra la relevancia económica de distinguir entre la comparación de sectores estructuralmente distintos y la variación temporal dentro de una misma unidad. La existencia de una base construida, documentada y reproducible confirma la factibilidad operativa del proyecto.
+
+\section{Plan de actividades}
+
+\begin{center}
+\begin{tabular}{p{0.12\textwidth}p{0.78\textwidth}}
+\toprule
+\textbf{Etapa} & \textbf{Actividad principal} \\
+\midrule
+1 & Revisión del plan con el director y ajuste de la pregunta, alcance e hipótesis. \\
+2 & Revisión bibliográfica y construcción de una matriz de antecedentes. \\
+3 & Auditoría final de fuentes, variables, comparabilidad y documentación de la base. \\
+4 & Análisis descriptivo definitivo y elaboración de cuadros y gráficos. \\
+5 & Estimación de modelos de panel y pruebas de robustez previamente definidas. \\
+6 & Interpretación económica y redacción de metodología y resultados. \\
+7 & Redacción de introducción, marco teórico, conclusiones y limitaciones. \\
+8 & Revisión integral, correcciones del director y preparación de la entrega. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Aspectos a validar con el director}
+
+Antes de avanzar a la estimación definitiva se propone validar:
+
+\begin{itemize}
+  \item la pertinencia de la pregunta para un Trabajo Final de Grado en Economía;
+  \item la conveniencia de mantener el alcance UE-27 o acotarlo;
+  \item la adecuación de la productividad laboral aparente como variable de resultado;
+  \item el tratamiento de diferencias de precios entre países y años;
+  \item la especificación de efectos fijos y errores estándar;
+  \item el lugar de los usos específicos de IA dentro del análisis principal o complementario;
+  \item la suficiencia de un diseño asociativo o la necesidad de una estrategia de identificación más exigente.
+\end{itemize}
+
 \clearpage
 \section{Bibliografía}
 \renewcommand{\refname}{}
-\bibliographystyle{apalike2}   % Si Overleaf no encuentra este .bst, sustituir por apalike o plainnat
-\bibliography{referencias}    % nombre del archivo .bib (sin la extensión)
+\bibliographystyle{apalike}
+\bibliography{referencias}
 
 \end{document}
