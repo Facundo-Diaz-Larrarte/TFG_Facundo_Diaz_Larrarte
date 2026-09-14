@@ -82,7 +82,7 @@
 
 El presente Trabajo Final de Grado propone estudiar la relación entre los usos empresariales de tecnologías de inteligencia artificial (IA) y la productividad laboral aparente en sectores económicos de los países de la Unión Europea. La adopción general se utilizará como punto de partida, pero el objeto central no será solamente determinar si las empresas declaran usar IA, sino examinar en qué funciones empresariales se aplica y cómo se asocian esas orientaciones de uso con los resultados obtenidos por unidad de trabajo.
 
-La pregunta principal es: \textit{¿cómo se asocian los distintos usos empresariales de inteligencia artificial con la productividad laboral aparente en los sectores económicos de la Unión Europea, y en qué medida esa relación difiere de la observada para la adopción general?}
+La pregunta principal es: \textit{¿cómo varían la adopción y los usos empresariales de inteligencia artificial entre los sectores económicos de la Unión Europea, y en qué medida esas diferencias se asocian con distintos niveles y variaciones de productividad laboral?}
 
 Desde una perspectiva microeconómica, la incorporación de IA puede interpretarse como un cambio en la tecnología disponible para la empresa. Su efecto, sin embargo, no tiene por qué ser automático ni uniforme. Puede depender de la tarea en la que se aplique, de la reorganización de procesos, de las capacidades del personal y de la existencia de activos complementarios. Asimismo, las empresas y sectores inicialmente más productivos pueden ser los que cuentan con mayores recursos para adoptar estas tecnologías, lo que dificulta interpretar una correlación positiva como un efecto causal.
 
@@ -127,7 +127,7 @@ La contribución esperada es empírica y metodológica y debe entenderse como un
 
 \subsection{Objetivo general}
 
-Analizar la relación entre los distintos usos empresariales de inteligencia artificial y la productividad laboral aparente a nivel país--sector en la Unión Europea, utilizando la adopción general como referencia y considerando las características estructurales de los sectores.
+Analizar cómo varían la adopción y los usos empresariales de inteligencia artificial entre sectores de la Unión Europea y estimar su asociación con la productividad laboral aparente, utilizando la adopción general como referencia y considerando la heterogeneidad productiva sectorial.
 
 \subsection{Objetivos específicos}
 
@@ -137,13 +137,14 @@ Analizar la relación entre los distintos usos empresariales de inteligencia art
   \item Calcular y comparar los niveles de productividad laboral aparente de las unidades analizadas.
   \item Estimar la asociación de referencia entre adopción general de IA y productividad mediante modelos de datos de panel.
   \item Comparar esa asociación con las correspondientes a usos empresariales vinculados con procesos y decisiones, producción, logística, marketing y ventas, y seguridad informática, sujeto a la cobertura y comparabilidad temporal de los indicadores.
+  \item Examinar si la relación entre adopción, usos de IA y productividad presenta diferencias entre sectores económicos.
   \item Evaluar la sensibilidad de los resultados frente a especificaciones alternativas, ponderaciones y tratamientos de la muestra.
   \item Identificar las limitaciones de medición e interpretación derivadas del carácter agregado y no experimental de los datos.
 \end{itemize}
 
 \section{Hipótesis de trabajo}
 
-La hipótesis de referencia sostiene que una mayor adopción empresarial de IA se asocia con una mayor productividad laboral aparente. La hipótesis central plantea que dicha asociación no es uniforme entre funciones empresariales: los usos vinculados con procesos internos, toma de decisiones, producción y logística podrían presentar una relación más estrecha con la productividad que la adopción general o que aplicaciones orientadas a funciones de apoyo y comercialización.
+La hipótesis de referencia sostiene que una mayor adopción empresarial de IA se asocia con una mayor productividad laboral aparente. La primera hipótesis central plantea que dicha asociación no es uniforme entre funciones empresariales: los usos vinculados con procesos internos, toma de decisiones, producción y logística podrían presentar una relación más estrecha con la productividad que la adopción general o que aplicaciones orientadas a funciones de apoyo y comercialización. La segunda hipótesis central sostiene que la asociación entre IA y productividad es heterogénea entre sectores, debido a diferencias en la naturaleza de las tareas, las tecnologías productivas y los requerimientos de capacidades complementarias.
 
 Esta comparación no supone que los indicadores disponibles midan la calidad o profundidad de la integración tecnológica. Cada variable representa la proporción de empresas que declara un determinado uso. La hipótesis sobre diferencias entre funciones se tratará como exploratoria cuando la cobertura o comparabilidad temporal no permita una prueba homogénea.
 
@@ -186,6 +187,17 @@ donde $\alpha_{cs}$ representa efectos fijos de la unidad país--sector y $\gamm
 
 Como especificaciones comparativas se estimarán modelos con efectos fijos de país, sector y año, y modelos con efectos fijos país--sector y año. Primero se estimará el modelo de referencia con adopción general. Luego se sustituirá esa variable, de manera separada, por cada uso funcional comparable. No se interpretarán automáticamente las diferencias entre coeficientes como diferencias causales, y se evitará incluir simultáneamente indicadores altamente correlacionados sin comprobar previamente su colinealidad.
 
+La heterogeneidad sectorial se examinará inicialmente mediante perfiles descriptivos de adopción, usos y productividad. Como extensión econométrica se estimará, cuando el número de observaciones lo permita, un modelo con interacciones entre la variable de IA y los sectores:
+
+\begin{equation}
+ \ln(Productividad_{cst}) =
+ \beta IA_{cst}
+ + \sum_{s} \delta_s\left(IA_{cst}\times Sector_s\right)
+ + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}.
+\end{equation}
+
+Los parámetros $\delta_s$ permiten evaluar si la asociación estimada difiere respecto del sector utilizado como referencia. Debido a que sólo se dispone de tres olas comparables, estos resultados se considerarán evidencia de heterogeneidad asociativa y no estimaciones causales precisas para cada actividad. Se informarán intervalos de confianza y se limitará el número de comparaciones para reducir el riesgo de conclusiones originadas por pruebas múltiples.
+
 \subsection{Pruebas de robustez}
 
 Sujeto a la disponibilidad y calidad de la información, se prevé:
@@ -206,7 +218,7 @@ Estas pruebas se definirán antes de interpretar los resultados definitivos, evi
 
 El diseño permite estudiar asociaciones y variaciones dentro de las unidades observadas, pero no identifica de manera concluyente un efecto causal de la IA. Entre las principales limitaciones se encuentran el reducido número de años, el nivel agregado país--sector, la posible causalidad inversa, la omisión de capacidades organizacionales no observadas y la medición de productividad con valor agregado monetario.
 
-Asimismo, los datos no permiten determinar si cada empresa eligió IA cuando una automatización convencional hubiese sido más adecuada, ni observar directamente la calidad de la implementación. En consecuencia, los resultados se formularán en términos de asociación condicionada y no como prueba de que toda adopción de IA mejora necesariamente la productividad.
+Asimismo, los datos no permiten determinar si cada empresa eligió IA cuando una automatización convencional hubiese sido más adecuada, ni observar directamente la calidad de la implementación, sus costos o el retorno económico obtenido. Una combinación sectorial de elevada adopción y débil crecimiento de productividad podrá señalar una brecha de realización productiva compatible con distintos mecanismos, pero no demostrará por sí sola un uso incorrecto de la tecnología. En consecuencia, los resultados se formularán en términos de asociación condicionada y no como prueba de que toda adopción de IA mejora necesariamente la productividad.
 
 \subsection{Resultados exploratorios y viabilidad}
 
