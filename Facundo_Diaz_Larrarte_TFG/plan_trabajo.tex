@@ -45,7 +45,7 @@
   {\large \textbf{Plan de Trabajo Final de Grado}}\\[0.5cm]
   {\large Licenciatura en Economía}\\[1.5cm]
 
-  {\Large \textit{Adopción empresarial de inteligencia artificial y productividad laboral: evidencia sectorial para la Unión Europea}}\\[2.5cm]
+  {\Large \textit{Usos empresariales de inteligencia artificial y productividad laboral: evidencia país--sector para la Unión Europea}}\\[2.5cm]
 
   \begin{tabular}{@{}ll}
     Alumno: & Facundo Díaz Larrarte \\
@@ -80,9 +80,9 @@
 
 \subsection{Definición del objeto de estudio}
 
-El presente Trabajo Final de Grado propone estudiar la relación entre la adopción empresarial de tecnologías de inteligencia artificial (IA) y la productividad laboral aparente en sectores económicos de los países de la Unión Europea. El objeto de estudio no es la IA como tecnología aislada, sino su incorporación al proceso productivo de las empresas y su asociación con los resultados obtenidos por unidad de trabajo.
+El presente Trabajo Final de Grado propone estudiar la relación entre los usos empresariales de tecnologías de inteligencia artificial (IA) y la productividad laboral aparente en sectores económicos de los países de la Unión Europea. La adopción general se utilizará como punto de partida, pero el objeto central no será solamente determinar si las empresas declaran usar IA, sino examinar en qué funciones empresariales se aplica y cómo se asocian esas orientaciones de uso con los resultados obtenidos por unidad de trabajo.
 
-La pregunta principal es: \textit{¿qué relación existe entre la adopción y los distintos usos empresariales de inteligencia artificial y la productividad laboral aparente en los sectores económicos de la Unión Europea?}
+La pregunta principal es: \textit{¿cómo se asocian los distintos usos empresariales de inteligencia artificial con la productividad laboral aparente en los sectores económicos de la Unión Europea, y en qué medida esa relación difiere de la observada para la adopción general?}
 
 Desde una perspectiva microeconómica, la incorporación de IA puede interpretarse como un cambio en la tecnología disponible para la empresa. Su efecto, sin embargo, no tiene por qué ser automático ni uniforme. Puede depender de la tarea en la que se aplique, de la reorganización de procesos, de las capacidades del personal y de la existencia de activos complementarios. Asimismo, las empresas y sectores inicialmente más productivos pueden ser los que cuentan con mayores recursos para adoptar estas tecnologías, lo que dificulta interpretar una correlación positiva como un efecto causal.
 
@@ -109,17 +109,25 @@ Por ello, resulta relevante analizar si la asociación positiva que puede observ
 
 La elección de la Unión Europea responde, además, a una razón de viabilidad: Eurostat proporciona indicadores armonizados de uso empresarial de IA y estadísticas estructurales empresariales que permiten construir una base comparable sin recurrir a encuestas propias. Esto resulta compatible con el alcance y el plazo de una tesina de grado.
 
+\subsection{Antecedentes cercanos y aporte específico}
+
+La relación general entre IA y productividad ya cuenta con antecedentes y, por lo tanto, no se plantea como una pregunta inédita. A nivel de empresa, \citet{czarnitzki2023firm} encuentran una asociación positiva entre adopción de IA y productividad en empresas alemanas. Más recientemente, \citet{aldasoro2026adoption} estudian más de 12.000 empresas europeas y estadounidenses mediante una estrategia de identificación basada en exposición tecnológica y destacan la heterogeneidad por tamaño y la importancia de inversiones complementarias.
+
+Existen además investigaciones particularmente próximas a este proyecto. \citet{kadarova2026slovakia} comparan adopción de IA y productividad laboral en Eslovaquia y la UE-27 con datos de Eurostat. Asimismo, \citet{yilmaz2026dataset} publican un panel país--sector para 27 países europeos y cuatro olas entre 2021 y 2025, combinando adopción empresarial de IA con productividad y otros resultados laborales.
+
+En este contexto, el aporte de la tesina se define como una \textbf{replicación y extensión} con tres énfasis: (i) reconstruir de forma transparente una base reproducible a partir de las estadísticas oficiales; (ii) distinguir la correlación entre unidades estructuralmente diferentes de la asociación obtenida a partir de variaciones dentro de cada país--sector; y (iii) examinar, sujeto a su comparabilidad temporal, si los usos empresariales específicos de IA presentan relaciones diferentes con la productividad. La originalidad buscada no reside en afirmar por primera vez que existe una relación entre ambas variables, sino en la delimitación, la estrategia comparativa y la evaluación crítica de dicha relación.
+
 \subsection{Importancia del estudio}
 
 El estudio puede aportar evidencia ordenada sobre tres cuestiones. Primero, la heterogeneidad sectorial y territorial en la adopción de IA. Segundo, la diferencia entre una correlación transversal y la asociación obtenida al comparar cambios dentro de una misma unidad país--sector. Tercero, la conveniencia de distinguir la adopción general de los usos específicos de la tecnología.
 
-La contribución esperada es empírica y metodológica: construir una base reproducible a partir de fuentes oficiales, describir los patrones observados y estimar asociaciones mediante modelos de datos de panel. Debido al carácter agregado y observacional de la información, no se pretende demostrar que la adopción de IA causa por sí sola un incremento de productividad.
+La contribución esperada es empírica y metodológica y debe entenderse como una replicación y extensión de antecedentes recientes: construir una base reproducible a partir de fuentes oficiales, contrastar resultados previos, distinguir adopción general de usos específicos y estimar asociaciones mediante modelos de datos de panel. Debido al carácter agregado y observacional de la información, no se pretende demostrar que la adopción de IA causa por sí sola un incremento de productividad.
 
 \section{Objetivos}
 
 \subsection{Objetivo general}
 
-Analizar la relación entre la adopción empresarial de inteligencia artificial y la productividad laboral aparente a nivel país--sector en la Unión Europea, considerando diferencias entre aplicaciones de IA y características estructurales de los sectores.
+Analizar la relación entre los distintos usos empresariales de inteligencia artificial y la productividad laboral aparente a nivel país--sector en la Unión Europea, utilizando la adopción general como referencia y considerando las características estructurales de los sectores.
 
 \subsection{Objetivos específicos}
 
@@ -127,17 +135,17 @@ Analizar la relación entre la adopción empresarial de inteligencia artificial 
   \item Construir una base de datos país--sector--año que integre indicadores de adopción empresarial de IA con información de valor agregado y personas ocupadas de Eurostat.
   \item Describir la evolución y la heterogeneidad de la adopción de IA entre países, sectores y años.
   \item Calcular y comparar los niveles de productividad laboral aparente de las unidades analizadas.
-  \item Estimar la asociación entre adopción de IA y productividad mediante modelos de datos de panel.
-  \item Explorar si la asociación varía según el uso empresarial de la IA, sujeto a la cobertura y comparabilidad temporal de los indicadores.
+  \item Estimar la asociación de referencia entre adopción general de IA y productividad mediante modelos de datos de panel.
+  \item Comparar esa asociación con las correspondientes a usos empresariales vinculados con procesos y decisiones, producción, logística, marketing y ventas, y seguridad informática, sujeto a la cobertura y comparabilidad temporal de los indicadores.
   \item Evaluar la sensibilidad de los resultados frente a especificaciones alternativas, ponderaciones y tratamientos de la muestra.
   \item Identificar las limitaciones de medición e interpretación derivadas del carácter agregado y no experimental de los datos.
 \end{itemize}
 
 \section{Hipótesis de trabajo}
 
-La hipótesis principal sostiene que una mayor adopción empresarial de IA se asocia con una mayor productividad laboral aparente, aunque la magnitud de dicha relación depende del tipo de aplicación y de las características productivas del sector.
+La hipótesis de referencia sostiene que una mayor adopción empresarial de IA se asocia con una mayor productividad laboral aparente. La hipótesis central plantea que dicha asociación no es uniforme entre funciones empresariales: los usos vinculados con procesos internos, toma de decisiones, producción y logística podrían presentar una relación más estrecha con la productividad que la adopción general o que aplicaciones orientadas a funciones de apoyo y comercialización.
 
-Como hipótesis complementaria se plantea que los usos de IA más directamente integrados en procesos internos, producción y toma de decisiones podrían presentar una asociación más estrecha con la productividad que otras aplicaciones. Esta proposición se tratará como exploratoria si la cobertura temporal de los indicadores no permite una prueba homogénea.
+Esta comparación no supone que los indicadores disponibles midan la calidad o profundidad de la integración tecnológica. Cada variable representa la proporción de empresas que declara un determinado uso. La hipótesis sobre diferencias entre funciones se tratará como exploratoria cuando la cobertura o comparabilidad temporal no permita una prueba homogénea.
 
 Dado que ya se realizó una primera inspección de los datos para establecer la viabilidad del proyecto, estas hipótesis no se presentarán como completamente ajenas a los resultados observados. Las estimaciones existentes se considerarán exploratorias y las especificaciones definidas en este plan orientarán la etapa posterior de validación.
 
@@ -159,7 +167,7 @@ La base analítica preliminar contiene 729 combinaciones teóricas de 27 países
 
 La variable dependiente será el logaritmo de la productividad laboral aparente, expresada inicialmente en miles de euros por persona ocupada. La transformación logarítmica permite interpretar aproximadamente el coeficiente de adopción como una variación porcentual y reduce la influencia de valores extremos.
 
-La variable explicativa principal será el porcentaje de empresas que utiliza al menos una tecnología de IA. Como variables explicativas secundarias se emplearán el porcentaje de empresas que utiliza dos o más y tres o más tecnologías de IA, y los indicadores de usos específicos disponibles y comparables.
+La adopción general ---porcentaje de empresas que utiliza al menos una tecnología de IA--- funcionará como variable explicativa de referencia. El análisis central empleará por separado los indicadores de usos específicos disponibles y comparables: procesos u organización de decisiones, producción, logística, marketing y ventas, y seguridad informática. Como medidas adicionales de intensidad se considerará el porcentaje de empresas que utiliza dos o más y tres o más tecnologías de IA.
 
 Se documentarán las unidades de medida, filtros de tamaño empresarial, clasificación sectorial, cobertura y posibles rupturas de serie. No se combinarán como si fueran equivalentes indicadores cuya definición haya cambiado entre años.
 
@@ -176,7 +184,7 @@ La segunda etapa utilizará modelos de datos de panel. La especificación princi
 
 donde $\alpha_{cs}$ representa efectos fijos de la unidad país--sector y $\gamma_{ct}$ efectos país--año. Los primeros controlan características permanentes de cada combinación país--sector; los segundos absorben shocks comunes a los sectores de un país en un año determinado. Los errores estándar se agruparán por unidad país--sector. La estimación y la interpretación de modelos de panel seguirán criterios habituales de econometría aplicada \citep{wooldridge2010econometric}.
 
-Como especificaciones comparativas se estimarán modelos con efectos fijos de país, sector y año, y modelos con efectos fijos país--sector y año. Se analizarán también definiciones alternativas de adopción y usos de IA.
+Como especificaciones comparativas se estimarán modelos con efectos fijos de país, sector y año, y modelos con efectos fijos país--sector y año. Primero se estimará el modelo de referencia con adopción general. Luego se sustituirá esa variable, de manera separada, por cada uso funcional comparable. No se interpretarán automáticamente las diferencias entre coeficientes como diferencias causales, y se evitará incluir simultáneamente indicadores altamente correlacionados sin comprobar previamente su colinealidad.
 
 \subsection{Pruebas de robustez}
 
