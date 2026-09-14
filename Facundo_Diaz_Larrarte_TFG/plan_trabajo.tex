@@ -192,11 +192,11 @@ La heterogeneidad sectorial se examinará inicialmente mediante perfiles descrip
 \begin{equation}
  \ln(Productividad_{cst}) =
  \beta IA_{cst}
- + \sum_{s} \delta_s\left(IA_{cst}\times Sector_s\right)
+ + \sum_{s \neq s_0} \delta_s\left(IA_{cst}\times Sector_s\right)
  + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}.
 \end{equation}
 
-Los parámetros $\delta_s$ permiten evaluar si la asociación estimada difiere respecto del sector utilizado como referencia. Debido a que sólo se dispone de tres olas comparables, estos resultados se considerarán evidencia de heterogeneidad asociativa y no estimaciones causales precisas para cada actividad. Se informarán intervalos de confianza y se limitará el número de comparaciones para reducir el riesgo de conclusiones originadas por pruebas múltiples.
+El sector $s_0$ se omite de la suma y funciona como categoría de referencia. En consecuencia, $\beta$ representa la asociación estimada para ese sector y cada parámetro $\delta_s$ indica cuánto difiere la pendiente del sector $s$ respecto de $s_0$. Debido a que sólo se dispone de tres olas comparables, estos resultados se considerarán evidencia de heterogeneidad asociativa y no estimaciones causales precisas para cada actividad. Se informarán intervalos de confianza y se limitará el número de comparaciones para reducir el riesgo de conclusiones originadas por pruebas múltiples.
 
 \subsection{Pruebas de robustez}
 
