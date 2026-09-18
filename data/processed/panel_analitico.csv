@@ -1,0 +1,730 @@
+country_code,country_name,sector_code,sector_name,year,ai_any_pct,ai_any_flag,ai_ge2_pct,ai_ge2_flag,ai_ge3_pct,ai_ge3_flag,ai_workflow_pct,ai_workflow_flag,ai_production_pct,ai_production_flag,ai_logistics_pct,ai_logistics_flag,ai_marketing_pct,ai_marketing_flag,ai_security_pct,ai_security_flag,value_added_meur_ge10,persons_employed_ge10,av_size_groups_available,emp_size_groups_available,labour_productivity_keur,missing_ai_measures,ai_any_break,core_complete,balanced_entity
+BE,Belgium,C,Manufacturing,2021,10.42,,5.11,,2.69,,3.79,,3.98,,1.22,,0.81,,4.29,,64282.630000000005,444390.0,4,4,144.65363757060243,0,No,Yes,Yes
+BE,Belgium,C,Manufacturing,2023,15.31,,6.89,,3.82,,6.92,,5.24,,2.28,,1.44,,5.31,,73000.62,455708.0,4,4,160.19165781596988,0,No,Yes,Yes
+BE,Belgium,C,Manufacturing,2024,23.24,,13.31,,9.85,,9.46,,7.02,,3.51,,6.22,,8.24,,73463.07,445163.0,4,4,165.02510316445887,0,No,Yes,Yes
+BE,Belgium,F,Construction,2021,8.3,,3.19,,1.54,,2.45,,0.93,,0.22,,0.5,,2.1,,12345.33,154483.0,4,4,79.91384165247956,0,No,Yes,Yes
+BE,Belgium,F,Construction,2023,5.17,,1.65,,1.17,,0.35,,0.36,,0.33,,0.18,,2.41,,14638.81,162703.0,4,4,89.97258808995532,0,No,Yes,Yes
+BE,Belgium,F,Construction,2024,11.08,,7.08,,2.02,,3.33,,0.95,,0.08,,1.69,,1.69,,15925.33,161999.0,4,4,98.30511299452466,0,No,Yes,Yes
+BE,Belgium,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,8.08,,4.29,,1.43,,2.18,,1.83,,1.33,,1.38,,2.6,,43683.17,417546.0,4,4,104.61882044134059,0,No,Yes,Yes
+BE,Belgium,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,10.25,,4.73,,2.4,,2.87,,1.89,,0.94,,2.65,,2.21,,42554.65,412063.0,4,4,103.27219381502343,0,No,Yes,Yes
+BE,Belgium,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,22.48,,14.84,,9.13,,10.27,,5.13,,3.65,,8.21,,7.84,,42709.95,415247.0,4,4,102.8543252570157,0,No,Yes,Yes
+BE,Belgium,H,Transportation and storage,2021,5.69,,1.8,,1.53,,1.66,,1.04,,1.35,,0.84,,4.03,,15616.75,186150.0,4,4,83.89336556540424,0,No,Yes,Yes
+BE,Belgium,H,Transportation and storage,2023,14.94,,7.49,,2.95,,5.88,,1.25,,6.44,,0.92,,4.84,,19579.309999999998,197912.0,4,4,98.9293726504709,0,No,Yes,Yes
+BE,Belgium,H,Transportation and storage,2024,23.03,,18.31,,12.64,,12.4,,3.76,,8.26,,2.67,,9.56,,19721.91,198623.0,4,4,99.29318356887168,0,No,Yes,Yes
+BE,Belgium,I,Accommodation and food service activities,2021,1.43,,0.57,,0.28,,0.28,,0.0,,0.0,,0.0,,1.15,,2084.81,61701.0,4,4,33.78891752159608,0,No,Yes,Yes
+BE,Belgium,I,Accommodation and food service activities,2023,7.98,,0.33,,0.1,,0.24,,0.2,,0.2,,0.1,,0.0,,4190.75,82566.0,4,4,50.75636460528547,0,No,Yes,Yes
+BE,Belgium,I,Accommodation and food service activities,2024,15.66,,6.88,,2.81,,2.0,,0.22,,0.14,,1.67,,0.68,,4497.11,85157.0,4,4,52.809633970196224,0,No,Yes,Yes
+BE,Belgium,J,Information and communication,2021,34.76,,26.0,,11.26,,11.72,,7.67,,1.97,,6.39,,7.82,,15777.65,101252.0,4,4,155.82556393947775,0,No,Yes,No
+BE,Belgium,J,Information and communication,2023,,,,,22.0,,23.34,,6.43,,1.69,,9.4,,16.45,,17567.870000000003,107469.0,4,4,163.4691864630731,2,No,No,No
+BE,Belgium,J,Information and communication,2024,64.12,,51.75,,38.52,,32.75,,23.21,,4.58,,22.27,,20.53,,17884.75,106126.0,4,4,168.52373593652828,0,No,Yes,No
+BE,Belgium,L,Real estate activities,2021,3.3,,2.76,,0.0,,0.0,,0.0,,0.0,,2.76,,2.76,,,,2,2,,0,No,No,No
+BE,Belgium,L,Real estate activities,2023,4.52,,0.0,,0.0,,2.99,,0.0,,0.0,,0.0,,0.78,,,,2,2,,0,No,No,No
+BE,Belgium,L,Real estate activities,2024,,,,,6.74,,,,2.25,,2.25,,,,2.81,,2672.5,13797.0,4,4,193.70152931796767,4,No,No,No
+BE,Belgium,M,"Professional, scientific and technical activities",2021,20.24,,13.23,,7.9,,6.55,,2.68,,3.77,,2.8,,9.88,,14971.04,129972.0,4,4,115.18665558735728,0,No,Yes,Yes
+BE,Belgium,M,"Professional, scientific and technical activities",2023,28.28,,18.42,,11.61,,11.08,,5.87,,0.26,,2.95,,5.98,,17249.809999999998,136134.0,4,4,126.71198965724945,0,No,Yes,Yes
+BE,Belgium,M,"Professional, scientific and technical activities",2024,42.92,,29.7,,19.65,,20.08,,8.67,,1.53,,3.85,,14.73,,17999.15,138238.0,4,4,130.20406834589622,0,No,Yes,Yes
+BE,Belgium,N,Administrative and support service activities,2021,8.7,,4.43,,2.27,,2.1,,0.48,,0.24,,2.02,,2.39,,19348.14,411255.0,4,4,47.04657694131378,0,No,Yes,Yes
+BE,Belgium,N,Administrative and support service activities,2023,11.04,,6.06,,2.5,,4.25,,0.5,,0.17,,3.74,,2.35,,22754.4,418297.0,4,4,54.39771263002125,0,No,Yes,Yes
+BE,Belgium,N,Administrative and support service activities,2024,20.99,,11.12,,4.89,,5.21,,2.52,,0.25,,5.75,,4.25,,23268.5,418096.0,4,4,55.65348628066281,0,No,Yes,Yes
+BG,Bulgaria,C,Manufacturing,2021,2.88,,,,,,,,,,,,,,,,7828.22,446022.0,4,4,17.55119702615566,7,No,Yes,Yes
+BG,Bulgaria,C,Manufacturing,2023,2.55,,0.95,,0.19,,1.2,,0.94,,0.11,,0.3,,0.17,,10808.67,436954.0,4,4,24.73640245884006,0,No,Yes,Yes
+BG,Bulgaria,C,Manufacturing,2024,4.35,,1.95,,1.04,,1.84,,1.26,,0.63,,1.1,,0.23,,11263.78,420281.0,4,4,26.800592936630494,0,No,Yes,Yes
+BG,Bulgaria,F,Construction,2021,1.47,,,,0.0,,,,,,0.0,,0.0,,,,1860.1100000000001,112076.0,4,4,16.596862843070774,4,No,Yes,No
+BG,Bulgaria,F,Construction,2023,,,,,0.0,,,,,,0.0,,0.0,,,,2562.71,111778.0,4,4,22.926783445758556,5,No,No,No
+BG,Bulgaria,F,Construction,2024,1.6,,,,,,,,,,0.0,,,,0.0,,3326.25,117720.0,4,4,28.255606523955148,5,No,Yes,No
+BG,Bulgaria,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,2.47,,0.51,,0.24,,1.72,,0.0,,,,1.17,,0.44,,5862.82,268580.0,4,4,21.828952267480826,1,No,Yes,Yes
+BG,Bulgaria,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,2.5,,1.0,,0.84,,0.97,,,,0.29,,0.86,,0.42,,7477.33,273480.0,4,4,27.341414363024718,1,No,Yes,Yes
+BG,Bulgaria,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,6.13,,3.06,,2.42,,2.31,,0.69,,0.61,,2.25,,0.96,,8299.939999999999,278983.0,4,4,29.750701655656435,0,No,Yes,Yes
+BG,Bulgaria,H,Transportation and storage,2021,1.92,,0.95,,,,1.56,,0.0,,,,,,,,1675.65,105961.0,4,4,15.813837166504657,4,No,Yes,Yes
+BG,Bulgaria,H,Transportation and storage,2023,1.9,,1.48,,,,1.67,,,,,,,,,,2465.08,106783.0,4,4,23.084947978610828,5,No,Yes,Yes
+BG,Bulgaria,H,Transportation and storage,2024,4.4,,2.52,,1.71,,2.62,,,,1.09,,1.97,,,,2679.62,105758.0,4,4,25.3372794493088,2,No,Yes,Yes
+BG,Bulgaria,I,Accommodation and food service activities,2021,,,0.0,,0.0,,0.0,,,,0.0,,,,0.0,,754.17,73346.0,4,4,10.282360319581164,3,No,No,No
+BG,Bulgaria,I,Accommodation and food service activities,2023,0.76,,,,0.0,,0.53,,,,0.0,,0.65,,,,1464.72,92886.0,4,4,15.769007170079453,3,No,Yes,No
+BG,Bulgaria,I,Accommodation and food service activities,2024,2.66,,0.74,,,,0.39,,,,,,0.89,,,,1749.36,100999.0,4,4,17.320567530371587,4,No,Yes,No
+BG,Bulgaria,J,Information and communication,2021,20.82,,14.72,,8.09,,11.81,,2.73,,,,7.61,,3.05,,4063.3,102956.0,4,4,39.4663739850033,1,No,Yes,Yes
+BG,Bulgaria,J,Information and communication,2023,21.4,,16.73,,9.55,,12.0,,4.79,,,,7.4,,6.11,,5916.33,118171.0,4,4,50.065836795829775,1,No,Yes,Yes
+BG,Bulgaria,J,Information and communication,2024,33.92,,29.32,,18.68,,19.7,,8.78,,0.95,,14.22,,6.26,,6565.0599999999995,118832.0,4,4,55.24656658139221,0,No,Yes,Yes
+BG,Bulgaria,L,Real estate activities,2021,,,0.0,,0.0,,,,0.0,,0.0,,,,0.0,,,,2,2,,3,No,No,No
+BG,Bulgaria,L,Real estate activities,2023,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,355.08,,4,2,,0,No,No,No
+BG,Bulgaria,L,Real estate activities,2024,,,,,,,,,,,0.0,,,,,,,,2,2,,7,No,No,No
+BG,Bulgaria,M,"Professional, scientific and technical activities",2021,3.68,,2.38,,,,1.0,,,,,,,,,,1118.2,45421.0,4,4,24.618568503555625,5,No,Yes,Yes
+BG,Bulgaria,M,"Professional, scientific and technical activities",2023,9.65,,5.52,,,,5.6,,2.46,,,,4.35,,2.97,,1515.71,48873.0,4,4,31.013238393386942,2,No,Yes,Yes
+BG,Bulgaria,M,"Professional, scientific and technical activities",2024,14.17,,11.65,,7.38,,7.27,,1.95,,,,2.56,,4.52,,1636.8,50462.0,4,4,32.43628869248147,1,No,Yes,Yes
+BG,Bulgaria,N,Administrative and support service activities,2021,2.88,,,,,,1.76,,0.0,,0.0,,0.0,,,,1128.52,96948.0,4,4,11.640467054503445,3,No,Yes,Yes
+BG,Bulgaria,N,Administrative and support service activities,2023,6.16,,1.49,,,,2.05,,,,0.0,,,,,,1438.64,96308.0,4,4,14.937907546621258,4,No,Yes,Yes
+BG,Bulgaria,N,Administrative and support service activities,2024,3.9,,1.88,,,,1.98,,,,0.0,,,,,,1804.78,97002.0,4,4,18.605595760912145,4,No,Yes,Yes
+CZ,Czechia,C,Manufacturing,2021,4.19,,1.65,,0.86,,1.8,,2.43,,0.55,,0.63,,1.48,,42651.95,1086019.0,4,4,39.27366832440316,0,No,Yes,Yes
+CZ,Czechia,C,Manufacturing,2023,6.01,,2.94,,1.17,,2.39,,3.36,,1.16,,0.72,,1.82,,51697.18,1068086.0,4,4,48.40170173562803,0,No,Yes,Yes
+CZ,Czechia,C,Manufacturing,2024,9.55,,5.3,,2.72,,2.61,,2.98,,1.34,,3.91,,2.34,,52506.37,1043481.0,4,4,50.31847249734303,0,No,Yes,Yes
+CZ,Czechia,F,Construction,2021,0.35,,0.07,,0.02,,0.07,,0.04,,0.0,,0.05,,0.23,,5424.3099999999995,169315.0,4,4,32.036795322328196,0,No,Yes,Yes
+CZ,Czechia,F,Construction,2023,1.34,,0.38,,0.0,,0.08,,0.42,,0.02,,0.0,,0.86,,7158.32,172592.0,4,4,41.4753870399555,0,No,Yes,Yes
+CZ,Czechia,F,Construction,2024,2.35,,0.82,,0.73,,0.67,,0.28,,0.02,,1.4,,0.61,,7045.13,168737.0,4,4,41.75213497928729,0,No,Yes,Yes
+CZ,Czechia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,4.21,,1.97,,0.64,,0.95,,0.54,,0.26,,0.96,,0.93,,17357.769999999997,455968.0,4,4,38.06795652326478,0,No,Yes,Yes
+CZ,Czechia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,5.16,,1.62,,0.65,,1.63,,0.57,,0.36,,1.44,,0.98,,20253.23,459215.0,4,4,44.104025347604065,0,No,Yes,Yes
+CZ,Czechia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,12.72,,7.59,,3.46,,1.75,,0.64,,0.52,,9.13,,2.88,,19602.670000000002,455969.0,4,4,42.99123405319222,0,No,Yes,Yes
+CZ,Czechia,H,Transportation and storage,2021,3.34,,1.01,,0.39,,0.67,,0.11,,1.75,,0.39,,1.24,,7237.209999999999,226916.0,4,4,31.89378448412628,0,No,Yes,Yes
+CZ,Czechia,H,Transportation and storage,2023,4.42,,1.8,,1.04,,1.76,,0.2,,1.14,,0.38,,1.55,,8874.75,225353.0,4,4,39.381548060154515,0,No,Yes,Yes
+CZ,Czechia,H,Transportation and storage,2024,5.65,,2.93,,0.69,,0.9,,0.25,,1.47,,2.51,,0.86,,9204.48,223616.0,4,4,41.161991986262166,0,No,Yes,Yes
+CZ,Czechia,I,Accommodation and food service activities,2021,0.93,,0.61,,0.51,,0.13,,0.0,,0.0,,0.71,,0.18,,852.34,79852.0,4,4,10.67399689425437,0,No,Yes,Yes
+CZ,Czechia,I,Accommodation and food service activities,2023,2.63,,0.97,,0.23,,0.33,,0.0,,0.0,,1.65,,0.53,,2132.0299999999997,91908.0,4,4,23.19743656700178,0,No,Yes,Yes
+CZ,Czechia,I,Accommodation and food service activities,2024,4.24,,1.3,,0.29,,0.79,,0.0,,0.28,,2.66,,0.8,,2252.88,97043.0,4,4,23.215275702523623,0,No,Yes,Yes
+CZ,Czechia,J,Information and communication,2021,21.22,,15.15,,7.94,,8.0,,5.14,,1.2,,7.99,,10.08,,8944.71,118311.0,4,4,75.60336739610011,0,No,Yes,Yes
+CZ,Czechia,J,Information and communication,2023,24.76,,18.53,,11.42,,7.53,,5.98,,2.36,,7.26,,12.13,,11407.25,127986.0,4,4,89.12888909724501,0,No,Yes,Yes
+CZ,Czechia,J,Information and communication,2024,46.49,,34.72,,24.12,,14.24,,10.37,,1.56,,22.91,,16.14,,11373.97,127219.0,4,4,89.40464867669138,0,No,Yes,Yes
+CZ,Czechia,L,Real estate activities,2021,4.51,,2.67,,1.75,,1.29,,0.0,,0.0,,1.64,,0.93,,1084.71,25940.0,4,4,41.81611410948342,0,No,Yes,Yes
+CZ,Czechia,L,Real estate activities,2023,4.92,,1.32,,0.09,,0.71,,0.0,,0.0,,0.92,,2.14,,1249.75,27495.0,4,4,45.453718857974174,0,No,Yes,Yes
+CZ,Czechia,L,Real estate activities,2024,13.74,,5.92,,1.57,,2.61,,0.18,,0.9,,7.36,,4.08,,1219.29,25492.0,4,4,47.830299701867254,0,No,Yes,Yes
+CZ,Czechia,M,"Professional, scientific and technical activities",2021,9.28,,5.59,,1.53,,2.48,,1.18,,0.7,,3.18,,5.11,,4944.5599999999995,115243.0,4,4,42.905512699252874,0,No,Yes,Yes
+CZ,Czechia,M,"Professional, scientific and technical activities",2023,9.42,,3.98,,1.78,,2.99,,1.29,,0.36,,2.15,,3.5,,6156.46,122205.0,4,4,50.37813510085512,0,No,Yes,Yes
+CZ,Czechia,M,"Professional, scientific and technical activities",2024,22.09,,15.83,,6.9,,8.06,,3.72,,0.87,,10.28,,4.84,,6495.59,124710.0,4,4,52.085558495710046,0,No,Yes,Yes
+CZ,Czechia,N,Administrative and support service activities,2021,3.1,,1.34,,0.49,,0.55,,0.62,,0.0,,0.88,,0.84,,4041.1000000000004,218032.0,4,4,18.534435312247744,0,No,Yes,Yes
+CZ,Czechia,N,Administrative and support service activities,2023,5.43,,3.2,,0.97,,1.21,,0.51,,0.6,,0.69,,1.86,,5317.1900000000005,230334.0,4,4,23.084694400305647,0,No,Yes,Yes
+CZ,Czechia,N,Administrative and support service activities,2024,9.45,,5.19,,2.72,,2.36,,0.35,,0.32,,4.98,,3.05,,5386.48,222360.0,4,4,24.224141032559814,0,No,Yes,Yes
+DK,Denmark,C,Manufacturing,2021,27.28,,13.39,,5.27,,19.97,,7.48,,4.03,,2.01,,6.7,,38376.08,296070.0,4,4,129.6182659506198,0,No,Yes,Yes
+DK,Denmark,C,Manufacturing,2023,14.8,,7.99,,3.38,,5.91,,4.85,,2.74,,2.42,,5.22,,46701.48,314445.0,4,4,148.52034537041453,0,No,Yes,Yes
+DK,Denmark,C,Manufacturing,2024,21.75,,12.95,,6.22,,6.94,,4.71,,2.52,,4.9,,5.6,,57071.46000000001,321196.0,4,4,177.68421773621094,0,No,Yes,Yes
+DK,Denmark,F,Construction,2021,8.87,,2.94,,0.67,,6.24,,0.42,,0.74,,0.85,,1.18,,,133136.0,2,4,,0,No,No,No
+DK,Denmark,F,Construction,2023,3.23,,1.08,,0.27,,0.67,,0.27,,0.0,,0.14,,0.92,,11076.84,138878.0,4,4,79.75950114488975,0,No,Yes,No
+DK,Denmark,F,Construction,2024,11.7,,6.61,,3.69,,3.78,,1.41,,0.73,,3.29,,1.82,,11466.89,140459.0,4,4,81.63869883738315,0,No,Yes,No
+DK,Denmark,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,21.3,,9.48,,4.89,,15.61,,4.24,,5.97,,5.71,,5.79,,27778.73,391565.0,4,4,70.94283196914944,0,No,Yes,Yes
+DK,Denmark,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,14.17,,7.66,,4.07,,7.44,,3.24,,3.79,,4.89,,5.57,,28310.59,409799.0,4,4,69.08408756487937,0,No,Yes,Yes
+DK,Denmark,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,27.34,,18.02,,11.15,,11.69,,4.52,,3.68,,12.45,,5.31,,28082.850000000002,410854.0,4,4,68.35238308498884,0,No,Yes,Yes
+DK,Denmark,H,Transportation and storage,2021,21.28,,10.26,,5.58,,15.61,,5.42,,8.99,,6.07,,7.92,,22891.82,122477.0,4,4,186.90709276027334,0,No,Yes,Yes
+DK,Denmark,H,Transportation and storage,2023,15.16,,6.13,,1.66,,7.89,,1.84,,4.91,,1.8,,5.34,,18688.62,136399.0,4,4,137.01434761251915,0,No,Yes,Yes
+DK,Denmark,H,Transportation and storage,2024,21.1,,15.83,,8.82,,11.47,,4.05,,3.96,,5.46,,5.35,,21475.31,136269.0,4,4,157.59497758110797,0,No,Yes,Yes
+DK,Denmark,I,Accommodation and food service activities,2021,12.21,,3.4,,1.64,,6.29,,0.79,,0.41,,4.3,,5.39,,2078.52,93378.0,4,4,22.259204523549442,0,No,Yes,Yes
+DK,Denmark,I,Accommodation and food service activities,2023,6.6,,1.68,,0.92,,3.98,,0.06,,0.0,,1.83,,1.14,,3534.98,123329.0,4,4,28.663007078627086,0,No,Yes,Yes
+DK,Denmark,I,Accommodation and food service activities,2024,10.79,,4.76,,1.94,,2.11,,1.0,,0.17,,5.45,,0.32,,3792.5099999999998,125862.0,4,4,30.132287743719306,0,No,Yes,Yes
+DK,Denmark,J,Information and communication,2021,54.75,,38.29,,25.16,,41.19,,12.79,,4.99,,21.29,,20.15,,10687.25,101630.0,4,4,105.15841779002263,0,No,Yes,Yes
+DK,Denmark,J,Information and communication,2023,44.31,,31.85,,22.22,,22.52,,7.15,,3.51,,15.47,,13.6,,11986.36,108320.0,4,4,110.6569423929099,0,No,Yes,Yes
+DK,Denmark,J,Information and communication,2024,68.3,,53.84,,40.77,,29.06,,11.17,,3.2,,26.81,,17.68,,12296.67,105387.0,4,4,116.68108969797034,0,No,Yes,Yes
+DK,Denmark,L,Real estate activities,2021,19.14,,9.18,,1.7,,12.37,,2.18,,0.0,,5.88,,4.48,,2532.7799999999997,35547.0,4,4,71.25158241201788,0,No,Yes,Yes
+DK,Denmark,L,Real estate activities,2023,13.77,,4.94,,2.29,,6.43,,0.0,,0.0,,3.37,,3.95,,2386.38,33732.0,4,4,70.74528637495553,0,No,Yes,Yes
+DK,Denmark,L,Real estate activities,2024,29.41,,15.97,,7.73,,10.39,,0.33,,0.0,,4.78,,5.59,,5604.44,33961.0,4,4,165.0257648479138,0,No,Yes,Yes
+DK,Denmark,M,"Professional, scientific and technical activities",2021,39.22,,25.62,,14.18,,26.13,,7.38,,3.23,,7.57,,10.9,,13476.2,129472.0,4,4,104.08582550667326,0,No,Yes,Yes
+DK,Denmark,M,"Professional, scientific and technical activities",2023,23.58,,14.75,,8.49,,11.95,,3.81,,1.32,,3.06,,8.65,,16108.93,148801.0,4,4,108.2582106303049,0,No,Yes,Yes
+DK,Denmark,M,"Professional, scientific and technical activities",2024,44.9,,33.4,,23.78,,18.41,,7.61,,2.33,,12.05,,12.14,,17945.739999999998,153128.0,4,4,117.19437333472648,0,No,Yes,Yes
+DK,Denmark,N,Administrative and support service activities,2021,19.04,,9.33,,3.4,,11.81,,2.03,,0.89,,4.04,,5.04,,6460.17,130917.0,4,4,49.345539540319436,0,No,Yes,Yes
+DK,Denmark,N,Administrative and support service activities,2023,9.32,,4.44,,1.47,,3.8,,2.71,,0.18,,1.53,,3.13,,7104.03,136714.0,4,4,51.96271047588396,0,No,Yes,Yes
+DK,Denmark,N,Administrative and support service activities,2024,27.84,,20.54,,11.81,,10.41,,1.13,,0.37,,8.9,,3.58,,7332.24,136385.0,4,4,53.76133739047549,0,No,Yes,Yes
+DE,Germany,C,Manufacturing,2021,9.19,,3.95,,1.71,,3.23,,2.2,,0.58,,0.77,,2.04,,686674.6499999999,7534253.0,4,4,91.14037582757041,0,No,Yes,Yes
+DE,Germany,C,Manufacturing,2023,9.32,,4.46,,1.91,,3.7,,2.41,,0.91,,0.98,,2.41,,754827.2,7736047.0,4,4,97.57272674274084,0,No,Yes,Yes
+DE,Germany,C,Manufacturing,2024,16.11,,7.43,,3.77,,4.24,,3.08,,0.99,,4.08,,3.98,,738441.8200000001,7485149.0,4,4,98.65425791791188,0,No,Yes,Yes
+DE,Germany,F,Construction,2021,8.29,,2.87,,1.6,,2.31,,0.33,,0.15,,0.13,,,,109306.66,1666492.0,4,4,65.59086992316794,1,No,Yes,Yes
+DE,Germany,F,Construction,2023,4.48,,1.26,,0.36,,0.78,,0.22,,0.05,,0.11,,0.41,,121155.53,1713404.0,4,4,70.71042789674823,0,No,Yes,Yes
+DE,Germany,F,Construction,2024,10.01,,4.92,,2.36,,1.18,,0.99,,0.14,,,,,,125892.97,1687900.0,4,4,74.58556194087328,2,No,Yes,Yes
+DE,Germany,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,7.95,,2.43,,1.32,,3.09,,0.72,,1.12,,1.47,,1.24,,361834.57,5084180.0,4,4,71.16871747263079,0,No,Yes,Yes
+DE,Germany,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,9.97,,4.2,,1.44,,3.21,,1.86,,1.34,,2.88,,2.57,,340081.75,5059848.0,4,4,67.21185102793602,0,No,Yes,Yes
+DE,Germany,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,16.29,,8.05,,3.52,,3.06,,2.09,,1.48,,7.57,,2.65,,325519.61,5129840.0,4,4,63.45609414718588,0,No,Yes,Yes
+DE,Germany,H,Transportation and storage,2021,6.14,,2.66,,0.9,,2.11,,0.39,,,,0.45,,,,124243.5,2067727.0,4,4,60.086994076103856,2,No,Yes,Yes
+DE,Germany,H,Transportation and storage,2023,7.05,,4.71,,0.56,,1.86,,,,,,,,,,117443.84,1836194.0,4,4,63.96047476464905,4,No,Yes,Yes
+DE,Germany,H,Transportation and storage,2024,11.48,,6.56,,3.5,,2.3,,,,1.48,,,,,,120848.82,1910379.0,4,4,63.259081051456285,3,No,Yes,Yes
+DE,Germany,I,Accommodation and food service activities,2021,3.88,,1.98,,0.34,,0.99,,,,0.1,,,,,,28745.3,1342387.0,4,4,21.41357149614828,3,No,Yes,Yes
+DE,Germany,I,Accommodation and food service activities,2023,5.38,,1.79,,1.26,,1.73,,0.38,,,,,,,,46090.72,1506819.0,4,4,30.588093195002187,3,No,Yes,Yes
+DE,Germany,I,Accommodation and food service activities,2024,8.26,,3.65,,1.31,,0.79,,,,0.05,,,,0.41,,48361.11,1747408.0,4,4,27.67591197934312,2,No,Yes,Yes
+DE,Germany,J,Information and communication,2021,28.8,,17.91,,10.9,,9.81,,3.69,,2.1,,7.05,,10.61,,135390.11000000002,1296097.0,4,4,104.45985910005194,0,No,Yes,Yes
+DE,Germany,J,Information and communication,2023,33.05,,23.21,,11.88,,12.05,,10.89,,1.56,,9.1,,12.98,,140794.3,1330861.0,4,4,105.79188961131177,0,No,Yes,Yes
+DE,Germany,J,Information and communication,2024,60.52,,47.62,,30.2,,27.09,,27.83,,0.98,,28.62,,15.68,,137852.16999999998,1316498.0,4,4,104.71126427841133,0,No,Yes,Yes
+DE,Germany,L,Real estate activities,2021,11.15,,3.1,,1.93,,3.38,,0.0,,0.0,,1.48,,1.87,,39148.82,266070.0,4,4,147.13729469688428,0,No,Yes,Yes
+DE,Germany,L,Real estate activities,2023,11.4,,4.17,,1.49,,3.31,,1.29,,,,,,,,36597.75,275135.0,4,4,133.0174278081669,3,No,Yes,Yes
+DE,Germany,L,Real estate activities,2024,20.98,,9.93,,6.33,,5.84,,,,,,,,,,39659.03,291536.0,4,4,136.03476071565777,4,No,Yes,Yes
+DE,Germany,M,"Professional, scientific and technical activities",2021,25.54,,11.93,,5.55,,8.19,,1.15,,0.09,,1.94,,3.6,,137431.16,1699182.0,4,4,80.88077675022451,0,No,Yes,Yes
+DE,Germany,M,"Professional, scientific and technical activities",2023,26.34,,13.15,,6.81,,8.51,,6.09,,0.79,,3.11,,4.7,,143481.3,1742649.0,4,4,82.33516904436866,0,No,Yes,Yes
+DE,Germany,M,"Professional, scientific and technical activities",2024,42.29,,23.83,,12.63,,11.67,,12.85,,0.37,,9.08,,7.31,,153080.41,1814793.0,4,4,84.35144393878531,0,No,Yes,Yes
+DE,Germany,N,Administrative and support service activities,2021,6.85,,1.69,,0.81,,1.69,,0.75,,0.09,,0.52,,,,120631.12,2788680.0,4,4,43.257426452658606,1,No,Yes,Yes
+DE,Germany,N,Administrative and support service activities,2023,11.02,,5.87,,3.64,,2.39,,2.23,,0.78,,,,,,131777.03,2674944.0,4,4,49.263472431572396,2,No,Yes,Yes
+DE,Germany,N,Administrative and support service activities,2024,18.91,,10.04,,5.39,,5.53,,4.08,,1.06,,,,,,141108.28,2816173.0,4,4,50.10639616245167,2,No,Yes,Yes
+EE,Estonia,C,Manufacturing,2021,2.72,,1.17,,0.3,,0.93,,1.47,,0.52,,0.57,,0.43,,3622.29,95335.0,4,4,37.995384696071746,0,No,Yes,Yes
+EE,Estonia,C,Manufacturing,2023,3.12,,0.43,,0.12,,0.75,,1.17,,0.57,,0.49,,0.72,,3801.63,92520.0,4,4,41.08981841763943,0,No,Yes,Yes
+EE,Estonia,C,Manufacturing,2024,9.77,,4.48,,1.61,,1.92,,3.37,,0.62,,4.5,,1.47,,3873.72,88961.0,4,4,43.54402490979193,0,No,Yes,Yes
+EE,Estonia,F,Construction,2021,0.64,,0.0,,0.0,,0.0,,0.32,,0.0,,0.0,,0.0,,901.03,25491.0,4,4,35.34698521046644,0,No,Yes,Yes
+EE,Estonia,F,Construction,2023,3.63,,0.0,,0.0,,0.0,,0.2,,0.49,,0.0,,1.13,,1092.9,24821.0,4,4,44.031263849159984,0,No,Yes,Yes
+EE,Estonia,F,Construction,2024,8.05,,2.21,,0.69,,0.51,,1.01,,0.11,,3.0,,2.71,,1149.05,22978.0,4,4,50.006527983288365,0,No,Yes,Yes
+EE,Estonia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,2.07,,1.07,,0.28,,0.37,,0.21,,0.59,,0.85,,0.75,,2377.19,63577.0,4,4,37.39072306022618,0,No,Yes,Yes
+EE,Estonia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,3.47,,1.18,,0.4,,1.16,,0.4,,0.85,,1.22,,1.03,,2571.16,65488.0,4,4,39.26154409968238,0,No,Yes,Yes
+EE,Estonia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,10.49,,5.21,,2.05,,1.9,,0.8,,1.07,,5.85,,1.96,,2498.99,63715.0,4,4,39.22137644196814,0,No,Yes,Yes
+EE,Estonia,H,Transportation and storage,2021,2.36,,0.18,,0.18,,0.53,,0.36,,1.51,,0.17,,0.78,,1124.69,27376.0,4,4,41.08306545879603,0,No,Yes,Yes
+EE,Estonia,H,Transportation and storage,2023,5.61,,1.27,,0.37,,1.31,,1.31,,2.17,,0.33,,1.03,,1120.81,25617.0,4,4,43.75258617324433,0,No,Yes,Yes
+EE,Estonia,H,Transportation and storage,2024,10.13,,4.1,,2.52,,0.91,,1.93,,2.63,,4.34,,2.62,,1091.13,24495.0,4,4,44.54500918554807,0,No,Yes,Yes
+EE,Estonia,I,Accommodation and food service activities,2021,0.19,,0.0,,0.0,,0.0,,0.0,,0.0,,0.19,,0.0,,,,2,2,,0,No,No,No
+EE,Estonia,I,Accommodation and food service activities,2023,1.64,,0.0,,0.0,,0.26,,0.0,,1.39,,0.26,,0.0,,383.64,17689.0,4,4,21.68805472327435,0,No,Yes,No
+EE,Estonia,I,Accommodation and food service activities,2024,6.1,,2.82,,0.19,,0.72,,0.55,,0.55,,4.02,,0.55,,420.13,18477.0,4,4,22.73799859284516,0,No,Yes,No
+EE,Estonia,J,Information and communication,2021,11.51,,8.38,,6.83,,1.52,,2.56,,0.63,,6.34,,2.01,,1001.24,21315.0,4,4,46.97349284541403,0,No,Yes,Yes
+EE,Estonia,J,Information and communication,2023,20.49,,12.88,,10.15,,4.69,,7.07,,0.8,,12.39,,7.77,,1757.1599999999999,23978.0,4,4,73.28217532738343,0,No,Yes,Yes
+EE,Estonia,J,Information and communication,2024,44.28,,32.35,,26.82,,14.92,,17.46,,0.78,,27.96,,15.63,,1746.63,23295.0,4,4,74.97875080489375,0,No,Yes,Yes
+EE,Estonia,L,Real estate activities,2021,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,148.94,2759.0,4,4,53.98332729249728,0,No,Yes,Yes
+EE,Estonia,L,Real estate activities,2023,1.66,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,141.95,2440.0,4,4,58.17622950819672,0,No,Yes,Yes
+EE,Estonia,L,Real estate activities,2024,9.71,,1.11,,0.0,,4.1,,0.0,,0.0,,0.0,,0.0,,152.34,2161.0,4,4,70.49514113836187,0,No,Yes,Yes
+EE,Estonia,M,"Professional, scientific and technical activities",2021,8.51,,2.83,,0.82,,1.88,,0.93,,0.25,,1.56,,1.31,,264.22,11067.0,4,4,23.874582090900876,0,No,Yes,No
+EE,Estonia,M,"Professional, scientific and technical activities",2023,10.75,,3.73,,1.62,,2.28,,4.64,,0.42,,2.82,,1.77,,,,2,2,,0,No,No,No
+EE,Estonia,M,"Professional, scientific and technical activities",2024,36.43,,20.68,,14.01,,5.77,,8.25,,2.24,,15.93,,6.4,,,,2,2,,0,No,No,No
+EE,Estonia,N,Administrative and support service activities,2021,2.63,,0.54,,0.28,,1.05,,0.28,,0.26,,1.82,,0.83,,591.52,25265.0,4,4,23.41262616267564,0,No,Yes,Yes
+EE,Estonia,N,Administrative and support service activities,2023,7.07,,5.22,,3.65,,4.36,,0.23,,0.48,,4.98,,4.79,,764.3199999999999,26296.0,4,4,29.066017645269238,0,No,Yes,Yes
+EE,Estonia,N,Administrative and support service activities,2024,20.33,,11.23,,2.22,,6.27,,7.49,,1.53,,11.84,,6.8,,795.34,25402.0,4,4,31.310133060388946,0,No,Yes,Yes
+IE,Ireland,C,Manufacturing,2021,8.83,,4.31,,2.62,,5.18,,4.53,,1.56,,1.66,,2.24,,147575.53,218357.0,4,4,675.8451984594036,0,No,Yes,Yes
+IE,Ireland,C,Manufacturing,2023,7.18,,3.19,,2.19,,3.45,,2.85,,1.42,,2.08,,1.77,,168902.52,241363.0,4,4,699.7862969883537,0,No,Yes,Yes
+IE,Ireland,C,Manufacturing,2024,17.51,,8.91,,5.69,,6.84,,4.02,,3.02,,3.99,,5.59,,173905.09,247113.0,4,4,703.7472330472294,0,No,Yes,Yes
+IE,Ireland,F,Construction,2021,0.27,,0.12,,0.12,,0.12,,0.0,,0.0,,0.0,,0.16,,4139.69,71176.0,4,4,58.161318421939974,0,No,Yes,Yes
+IE,Ireland,F,Construction,2023,5.92,,2.25,,1.48,,4.72,,0.0,,0.0,,0.0,,2.62,,6231.92,86163.0,4,4,72.32710095980873,0,No,Yes,Yes
+IE,Ireland,F,Construction,2024,6.24,,3.46,,0.74,,2.63,,1.46,,0.69,,0.63,,2.99,,7404.26,89910.0,4,4,82.35190746301858,0,No,Yes,Yes
+IE,Ireland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,5.12,,2.25,,1.04,,2.05,,1.09,,0.04,,2.84,,0.89,,21310.0,295888.0,4,4,72.02049424106418,0,No,Yes,Yes
+IE,Ireland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,4.99,,2.45,,0.21,,3.77,,0.21,,0.08,,2.89,,1.62,,23257.47,325235.0,4,4,71.50973911171921,0,No,Yes,Yes
+IE,Ireland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,11.71,,4.82,,2.27,,3.44,,2.5,,2.17,,4.75,,2.14,,24494.14,331219.0,4,4,73.95149432852584,0,No,Yes,Yes
+IE,Ireland,H,Transportation and storage,2021,4.98,,3.8,,0.21,,0.63,,1.26,,1.17,,1.08,,2.44,,,,2,2,,0,No,No,No
+IE,Ireland,H,Transportation and storage,2023,6.07,,2.9,,0.52,,2.73,,1.11,,1.69,,1.54,,1.11,,5313.98,80048.0,4,4,66.38491904857085,0,No,Yes,No
+IE,Ireland,H,Transportation and storage,2024,7.87,,5.08,,3.8,,4.7,,3.48,,1.32,,1.6,,2.71,,7298.15,83530.0,4,4,87.37160301688016,0,No,Yes,No
+IE,Ireland,I,Accommodation and food service activities,2021,4.27,,0.08,,0.08,,0.0,,0.0,,0.0,,2.51,,0.08,,3560.96,121513.0,4,4,29.305177223836132,0,No,Yes,Yes
+IE,Ireland,I,Accommodation and food service activities,2023,2.68,,1.18,,0.0,,0.8,,0.0,,0.0,,2.2,,0.8,,6281.38,196550.0,4,4,31.958178580513863,0,No,Yes,Yes
+IE,Ireland,I,Accommodation and food service activities,2024,4.71,,2.45,,1.67,,2.13,,0.93,,0.06,,2.5,,0.23,,6401.389999999999,200936.0,4,4,31.85785523748855,0,No,Yes,Yes
+IE,Ireland,J,Information and communication,2021,32.4,,21.93,,14.87,,19.39,,7.66,,0.71,,12.24,,9.67,,67074.85,111760.0,4,4,600.168664996421,0,No,Yes,Yes
+IE,Ireland,J,Information and communication,2023,28.52,,17.43,,12.44,,18.91,,9.36,,1.8,,12.83,,4.7,,76621.83,122229.0,4,4,626.8711189652211,0,No,Yes,Yes
+IE,Ireland,J,Information and communication,2024,49.07,,34.26,,22.66,,23.37,,17.62,,5.45,,22.32,,12.1,,104081.85,121417.0,4,4,857.2263356861066,0,No,Yes,Yes
+IE,Ireland,L,Real estate activities,2021,11.65,,1.21,,0.0,,1.97,,0.0,,0.0,,1.3,,0.0,,,,2,2,,0,No,No,No
+IE,Ireland,L,Real estate activities,2023,16.74,,4.23,,2.82,,2.82,,0.0,,0.0,,3.3,,1.5,,843.75,14095.0,4,4,59.861653068463994,0,No,Yes,No
+IE,Ireland,L,Real estate activities,2024,18.15,,9.87,,9.87,,9.02,,4.57,,0.0,,4.57,,4.57,,,16375.0,2,4,,0,No,No,No
+IE,Ireland,M,"Professional, scientific and technical activities",2021,13.59,,4.13,,1.59,,3.28,,2.44,,1.97,,1.51,,3.31,,15244.36,113910.0,4,4,133.8281099113335,0,No,Yes,Yes
+IE,Ireland,M,"Professional, scientific and technical activities",2023,15.77,,5.47,,3.38,,5.58,,4.37,,2.85,,2.25,,2.44,,23226.519999999997,138043.0,4,4,168.25568844490482,0,No,Yes,Yes
+IE,Ireland,M,"Professional, scientific and technical activities",2024,27.25,,18.71,,9.81,,12.11,,5.89,,0.4,,10.27,,4.74,,24667.71,143933.0,4,4,171.3832824994963,0,No,Yes,Yes
+IE,Ireland,N,Administrative and support service activities,2021,12.22,,3.07,,1.66,,4.3,,3.25,,3.21,,2.47,,3.58,,6457.78,130931.0,4,4,49.32200930260977,0,No,Yes,Yes
+IE,Ireland,N,Administrative and support service activities,2023,6.59,,2.74,,0.96,,1.73,,0.55,,0.2,,2.36,,0.59,,9505.09,158128.0,4,4,60.110100677931804,0,No,Yes,Yes
+IE,Ireland,N,Administrative and support service activities,2024,24.8,,15.56,,10.39,,12.29,,4.97,,1.14,,11.65,,13.85,,9363.119999999999,158348.0,4,4,59.13001742996437,0,No,Yes,Yes
+EL,Greece,C,Manufacturing,2021,5.35,,0.53,,0.25,,1.01,,2.95,,0.25,,2.95,,0.81,,11980.16,256077.0,4,4,46.78342842191997,0,No,Yes,Yes
+EL,Greece,C,Manufacturing,2023,5.19,,1.59,,0.83,,2.68,,0.74,,0.2,,0.48,,3.28,,16072.58,280225.0,4,4,57.355981800339016,0,No,Yes,Yes
+EL,Greece,C,Manufacturing,2024,7.48,,2.14,,0.71,,1.21,,0.8,,0.35,,0.61,,3.89,,18092.47,298330.0,4,4,60.64582844501056,0,No,Yes,Yes
+EL,Greece,F,Construction,2021,2.82,,1.86,,1.86,,1.86,,0.0,,0.0,,0.0,,0.96,,1687.34,65058.0,4,4,25.935934089581604,0,No,Yes,No
+EL,Greece,F,Construction,2023,3.4,,0.54,,0.0,,1.83,,0.0,,0.0,,0.3,,1.55,,2775.31,78564.0,4,4,35.32546713507459,0,No,Yes,No
+EL,Greece,F,Construction,2024,5.17,,1.61,,1.23,,0.38,,0.3,,0.0,,0.61,,1.36,,,,2,2,,0,No,No,No
+EL,Greece,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,1.88,,0.3,,0.24,,1.22,,0.96,,0.44,,0.95,,0.59,,12390.53,376066.0,4,4,32.947753851717515,0,No,Yes,Yes
+EL,Greece,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,4.34,,1.63,,0.76,,2.11,,0.56,,0.3,,0.85,,2.37,,15635.71,414171.0,4,4,37.75182231493755,0,No,Yes,Yes
+EL,Greece,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,10.45,,4.28,,3.26,,3.11,,0.47,,0.24,,2.21,,4.08,,16997.52,430876.0,4,4,39.44875091673707,0,No,Yes,Yes
+EL,Greece,H,Transportation and storage,2021,5.43,,0.41,,0.06,,2.64,,0.23,,2.15,,0.23,,4.96,,4217.860000000001,81198.0,4,4,51.9453681125151,0,No,Yes,Yes
+EL,Greece,H,Transportation and storage,2023,5.91,,2.03,,1.31,,3.49,,1.76,,0.54,,0.61,,3.41,,5702.110000000001,97847.0,4,4,58.27577748934562,0,No,Yes,Yes
+EL,Greece,H,Transportation and storage,2024,11.64,,4.35,,3.06,,2.52,,0.27,,0.27,,0.89,,6.1,,6352.12,106123.0,4,4,59.85620459278385,0,No,Yes,Yes
+EL,Greece,I,Accommodation and food service activities,2021,0.12,,0.05,,0.03,,0.04,,0.05,,0.01,,0.05,,0.05,,4072.62,401769.0,4,4,10.136720354233402,0,No,Yes,Yes
+EL,Greece,I,Accommodation and food service activities,2023,1.33,,0.46,,0.15,,0.62,,0.3,,0.15,,0.58,,0.86,,7405.45,493927.0,4,4,14.9930050392062,0,No,Yes,Yes
+EL,Greece,I,Accommodation and food service activities,2024,6.24,,2.13,,2.05,,2.81,,0.0,,0.0,,0.54,,3.73,,8410.84,506767.0,4,4,16.59705545151914,0,No,Yes,Yes
+EL,Greece,J,Information and communication,2021,11.16,,7.47,,3.82,,4.31,,3.15,,0.33,,3.15,,4.41,,4743.73,67926.0,4,4,69.83673409298355,0,No,Yes,Yes
+EL,Greece,J,Information and communication,2023,17.5,,11.14,,7.47,,7.02,,3.33,,0.4,,3.72,,4.91,,5430.26,77513.0,4,4,70.05611961864462,0,No,Yes,Yes
+EL,Greece,J,Information and communication,2024,25.63,,18.89,,14.44,,12.84,,5.89,,0.72,,7.48,,10.68,,5895.27,80761.0,4,4,72.99649583338493,0,No,Yes,Yes
+EL,Greece,L,Real estate activities,2021,0.82,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.82,,,,2,2,,0,No,No,No
+EL,Greece,L,Real estate activities,2023,8.08,,7.06,,7.06,,0.0,,0.0,,0.0,,7.06,,0.64,,,,2,2,,0,No,No,No
+EL,Greece,L,Real estate activities,2024,9.3,,2.13,,2.13,,0.0,,0.0,,0.0,,1.06,,8.24,,1043.28,13509.0,4,4,77.22851432378414,0,No,Yes,No
+EL,Greece,M,"Professional, scientific and technical activities",2021,9.2,,3.81,,3.42,,3.88,,4.2,,0.08,,3.61,,2.61,,2383.79,69649.0,4,4,34.22576059957788,0,No,Yes,Yes
+EL,Greece,M,"Professional, scientific and technical activities",2023,8.67,,4.33,,2.37,,3.6,,1.69,,0.0,,1.91,,3.72,,3835.27,86535.0,4,4,44.32044837349049,0,No,Yes,Yes
+EL,Greece,M,"Professional, scientific and technical activities",2024,21.02,,14.29,,7.75,,9.71,,5.62,,0.71,,2.83,,9.69,,4327.29,94990.0,4,4,45.555216338561955,0,No,Yes,Yes
+EL,Greece,N,Administrative and support service activities,2021,1.84,,0.43,,0.23,,0.19,,0.1,,0.0,,0.1,,0.96,,2237.33,109795.0,4,4,20.377339587412905,0,No,Yes,Yes
+EL,Greece,N,Administrative and support service activities,2023,4.69,,1.55,,0.89,,2.61,,0.07,,0.0,,0.7,,2.73,,3307.6,131879.0,4,4,25.080566276662697,0,No,Yes,Yes
+EL,Greece,N,Administrative and support service activities,2024,14.4,,5.6,,0.94,,1.98,,0.36,,2.07,,6.69,,7.0,,3781.89,146741.0,4,4,25.772551638601346,0,No,Yes,Yes
+ES,Spain,C,Manufacturing,2021,7.42,,3.41,,1.48,,3.02,,3.06,,1.1,,0.68,,1.8,,123129.48,1773449.0,4,4,69.42938872220176,0,No,Yes,Yes
+ES,Spain,C,Manufacturing,2023,8.68,,4.4,,2.09,,3.6,,3.57,,1.2,,1.15,,2.28,,140914.57,1841240.0,4,4,76.53242923247377,0,No,Yes,Yes
+ES,Spain,C,Manufacturing,2024,9.81,,4.61,,2.18,,3.57,,3.12,,1.33,,1.99,,2.61,,149917.78000000003,1877601.0,4,4,79.84538781136143,0,No,Yes,Yes
+ES,Spain,F,Construction,2021,3.77,,1.06,,0.52,,0.86,,0.18,,0.17,,0.48,,0.43,,30681.2,657780.0,4,4,46.643558636626224,0,No,Yes,Yes
+ES,Spain,F,Construction,2023,4.63,,2.27,,0.94,,1.32,,1.29,,0.45,,0.66,,1.2,,32800.89,640042.0,4,4,51.24802747319707,0,No,Yes,Yes
+ES,Spain,F,Construction,2024,4.43,,1.91,,0.87,,1.31,,0.98,,0.12,,0.69,,0.53,,39856.31,734632.0,4,4,54.25343573380958,0,No,Yes,Yes
+ES,Spain,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,5.99,,2.48,,1.37,,2.68,,0.92,,0.91,,1.63,,1.03,,92185.98000000001,1853288.0,4,4,49.74185339785291,0,No,Yes,Yes
+ES,Spain,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,6.79,,3.07,,1.48,,2.16,,1.63,,1.17,,2.27,,1.92,,108845.39,1955204.0,4,4,55.66958230445519,0,No,Yes,Yes
+ES,Spain,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,9.58,,5.16,,2.49,,3.17,,1.54,,1.03,,3.39,,2.02,,118925.48999999999,2049907.0,4,4,58.01506604933784,0,No,Yes,Yes
+ES,Spain,H,Transportation and storage,2021,9.02,,3.63,,1.23,,2.08,,0.8,,1.96,,1.71,,1.46,,33137.479999999996,608889.0,4,4,54.422858681960086,0,No,Yes,Yes
+ES,Spain,H,Transportation and storage,2023,7.04,,3.38,,1.92,,2.08,,1.26,,1.44,,0.79,,2.6,,45711.97,673995.0,4,4,67.8224170802454,0,No,Yes,Yes
+ES,Spain,H,Transportation and storage,2024,8.59,,5.17,,1.98,,2.76,,1.24,,1.04,,1.64,,1.54,,50761.2,706287.0,4,4,71.87050023573987,0,No,Yes,Yes
+ES,Spain,I,Accommodation and food service activities,2021,3.57,,1.43,,0.19,,1.17,,0.85,,0.31,,1.61,,1.11,,18196.13,767425.0,4,4,23.710629703228328,0,No,Yes,Yes
+ES,Spain,I,Accommodation and food service activities,2023,6.38,,1.44,,0.71,,1.76,,1.31,,0.25,,3.23,,0.51,,34469.66,1000432.0,4,4,34.45477553696803,0,No,Yes,Yes
+ES,Spain,I,Accommodation and food service activities,2024,3.52,,2.12,,0.78,,0.96,,0.48,,0.08,,1.32,,0.7,,39787.69,1072278.0,4,4,37.105759886895,0,No,Yes,Yes
+ES,Spain,J,Information and communication,2021,26.65,,19.16,,13.21,,13.89,,8.31,,2.49,,10.43,,8.14,,35942.42,457843.0,4,4,78.50381025810158,0,No,Yes,Yes
+ES,Spain,J,Information and communication,2023,32.43,,22.78,,13.82,,13.29,,9.73,,3.12,,10.13,,7.98,,46862.99,555997.0,4,4,84.28640802018715,0,No,Yes,Yes
+ES,Spain,J,Information and communication,2024,46.57,,31.24,,21.17,,24.2,,17.27,,2.81,,20.25,,13.18,,50915.54,586462.0,4,4,86.8181399647377,0,No,Yes,Yes
+ES,Spain,L,Real estate activities,2021,12.87,,4.33,,3.59,,2.22,,2.63,,0.0,,1.43,,4.14,,4900.219999999999,40869.0,4,4,119.90065820059212,0,No,Yes,Yes
+ES,Spain,L,Real estate activities,2023,9.35,,2.45,,0.87,,2.11,,0.37,,0.19,,3.13,,1.05,,5405.63,46189.0,4,4,117.03284331767304,0,No,Yes,Yes
+ES,Spain,L,Real estate activities,2024,11.67,,4.81,,3.82,,4.01,,0.77,,0.0,,2.87,,3.29,,5964.8099999999995,49028.0,4,4,121.66129558619562,0,No,Yes,Yes
+ES,Spain,M,"Professional, scientific and technical activities",2021,13.72,,7.66,,4.18,,5.93,,3.6,,0.57,,2.37,,3.23,,31451.12,521574.0,4,4,60.30039840942992,0,No,Yes,Yes
+ES,Spain,M,"Professional, scientific and technical activities",2023,16.14,,10.5,,5.84,,6.82,,3.87,,1.38,,3.26,,4.21,,38482.28,592706.0,4,4,64.92642220595033,0,No,Yes,Yes
+ES,Spain,M,"Professional, scientific and technical activities",2024,26.07,,17.63,,10.85,,11.13,,7.02,,1.18,,5.04,,5.45,,43850.619999999995,633544.0,4,4,69.21479802507797,0,No,Yes,Yes
+ES,Spain,N,Administrative and support service activities,2021,7.77,,3.61,,2.07,,2.37,,1.26,,0.23,,1.57,,0.9,,35624.03,1312674.0,4,4,27.138520302832234,0,No,Yes,Yes
+ES,Spain,N,Administrative and support service activities,2023,8.97,,3.85,,2.5,,3.19,,2.97,,0.4,,2.56,,3.19,,42835.41,1376876.0,4,4,31.110579311426736,0,No,Yes,Yes
+ES,Spain,N,Administrative and support service activities,2024,8.82,,5.13,,2.42,,2.97,,2.81,,1.23,,3.39,,2.29,,46319.05,1399875.0,4,4,33.087989999107066,0,No,Yes,Yes
+FR,France,C,Manufacturing,2021,5.33,,2.19,,0.84,,2.1,,1.56,,0.85,,0.35,,1.2,,240848.41999999998,2779294.0,4,4,86.6581297264701,0,No,Yes,Yes
+FR,France,C,Manufacturing,2023,4.87,b,2.09,b,1.05,b,1.63,b,1.82,b,0.28,b,0.6,b,1.34,b,276094.51,2883303.0,4,4,95.75632876600204,0,Yes,Yes,Yes
+FR,France,C,Manufacturing,2024,7.43,,3.53,,1.98,,2.7,,2.51,,,,1.97,,1.8,,281456.57999999996,2900219.0,4,4,97.04666440706717,1,No,Yes,Yes
+FR,France,F,Construction,2021,4.09,,1.43,,0.55,,0.95,,0.31,,0.08,,0.09,,0.54,,,,2,2,,0,No,No,No
+FR,France,F,Construction,2023,2.09,b,0.72,b,0.42,b,0.61,b,0.11,b,0.01,b,,,,,83546.35,1174357.0,4,4,71.1422080338432,2,Yes,Yes,No
+FR,France,F,Construction,2024,3.14,,0.66,,0.64,,0.06,,0.06,,0.02,,0.04,,,,87551.2,1203868.0,4,4,72.72491668521798,1,No,Yes,No
+FR,France,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,4.71,,1.33,,0.64,,1.1,,,,,,1.9,,0.72,,177000.34999999998,2615543.0,4,4,67.67250624440125,2,No,Yes,Yes
+FR,France,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,4.07,b,1.85,b,0.85,b,1.23,b,0.34,b,0.33,b,,,0.67,b,193437.8,2691896.0,4,4,71.85931402996252,1,Yes,Yes,Yes
+FR,France,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,9.77,,4.84,,1.88,,2.98,,,,,,,,,,197307.55,2751579.0,4,4,71.70702712878678,4,No,Yes,Yes
+FR,France,H,Transportation and storage,2021,4.24,,1.52,,0.95,,0.84,,0.14,,0.32,,0.33,,1.09,,87991.42,1251853.0,4,4,70.28893967582455,0,No,Yes,Yes
+FR,France,H,Transportation and storage,2023,2.35,b,1.23,b,0.31,b,0.81,b,,,,,0.19,b,,,93236.14,1308579.0,4,4,71.24991307364706,3,Yes,Yes,Yes
+FR,France,H,Transportation and storage,2024,5.28,,1.2,,1.06,,1.73,,,,,,,,,,99407.61,1311150.0,4,4,75.8171147465965,4,No,Yes,Yes
+FR,France,I,Accommodation and food service activities,2021,2.47,,0.98,,0.38,,0.57,,0.27,,0.16,,0.94,,0.2,,21926.87,694713.0,4,4,31.562486955044744,0,No,Yes,Yes
+FR,France,I,Accommodation and food service activities,2023,2.47,b,0.95,b,,,0.62,b,,,0.0,b,,,,,36361.82,836716.0,4,4,43.45778017869863,4,Yes,Yes,Yes
+FR,France,I,Accommodation and food service activities,2024,5.09,,2.56,,0.83,,1.38,,,,,,,,,,38353.270000000004,831383.0,4,4,46.13189107787868,4,No,Yes,Yes
+FR,France,J,Information and communication,2021,23.55,,15.87,,8.61,,11.59,,2.48,,0.53,,4.66,,7.14,,92415.83,835202.0,4,4,110.6508724835429,0,No,Yes,Yes
+FR,France,J,Information and communication,2023,29.56,b,19.75,b,13.21,b,12.49,b,5.94,b,0.65,b,7.06,b,6.08,b,103980.85,911406.0,4,4,114.0883974869597,0,Yes,Yes,Yes
+FR,France,J,Information and communication,2024,41.76,,29.32,,19.99,,16.31,,14.8,,,,13.58,,9.36,,106412.38,885560.0,4,4,120.16394146077059,1,No,Yes,Yes
+FR,France,L,Real estate activities,2021,3.92,,0.14,,0.14,,1.14,,0.0,,0.0,,0.95,,2.14,,26975.559999999998,228359.0,4,4,118.12786007996179,0,No,Yes,No
+FR,France,L,Real estate activities,2023,7.02,b,,,1.37,b,1.72,b,,,,,0.33,b,,,24369.370000000003,,4,2,,4,Yes,No,No
+FR,France,L,Real estate activities,2024,14.3,,8.85,,4.09,,4.42,,,,,,,,,,27497.690000000002,,4,2,,4,No,No,No
+FR,France,M,"Professional, scientific and technical activities",2021,15.23,,5.83,,2.76,,4.7,,1.9,,0.49,,2.21,,2.5,,67568.77,810854.0,4,4,83.33037760188641,0,No,Yes,Yes
+FR,France,M,"Professional, scientific and technical activities",2023,13.75,b,6.92,b,3.52,b,5.73,b,,,0.24,b,1.36,b,2.96,b,75578.99,916363.0,4,4,82.47712969641944,1,Yes,Yes,Yes
+FR,France,M,"Professional, scientific and technical activities",2024,17.47,,9.62,,5.51,,7.17,,,,0.15,,2.7,,,,80488.57,940727.0,4,4,85.5599658561942,2,No,Yes,Yes
+FR,France,N,Administrative and support service activities,2021,7.28,,1.84,,0.66,,1.69,,1.4,,0.47,,1.15,,2.0,,77641.22,1881574.0,4,4,41.2639736731056,0,No,Yes,Yes
+FR,France,N,Administrative and support service activities,2023,5.6,b,1.12,b,0.37,b,0.54,b,0.3,b,0.02,b,0.53,b,,,88343.18,1950609.0,4,4,45.290050440657254,1,Yes,Yes,Yes
+FR,France,N,Administrative and support service activities,2024,11.25,,6.47,,2.67,,3.05,,,,,,,,,,92171.28,1952404.0,4,4,47.20912270206371,4,No,Yes,Yes
+HR,Croatia,C,Manufacturing,2021,8.29,,2.15,,0.27,,4.88,,2.3,,0.62,,0.48,,0.68,,6340.8099999999995,225802.0,4,4,28.08128360244816,0,No,Yes,Yes
+HR,Croatia,C,Manufacturing,2023,6.7,,1.95,,0.9,,1.94,,1.35,,0.2,,1.06,,0.67,,7969.91,229584.0,4,4,34.71457070179107,0,No,Yes,Yes
+HR,Croatia,C,Manufacturing,2024,9.71,,5.4,,3.85,,3.88,,2.05,,0.7,,1.91,,1.26,,8631.84,231104.0,4,4,37.35045693713653,0,No,Yes,Yes
+HR,Croatia,F,Construction,2021,4.85,,4.41,,3.49,,0.93,,0.85,,,,0.85,,0.85,,1829.62,79868.0,4,4,22.90804827966144,1,No,Yes,Yes
+HR,Croatia,F,Construction,2023,3.06,,1.8,,1.09,,,,,,0.23,,0.0,,,,2907.25,88583.0,4,4,32.81950261336825,3,No,Yes,Yes
+HR,Croatia,F,Construction,2024,4.39,,1.38,,1.22,,0.3,,0.0,,0.0,,0.96,,0.26,,3144.72,94909.0,4,4,33.13405472610606,0,No,Yes,Yes
+HR,Croatia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,8.51,,2.07,,0.6,,1.59,,1.02,,0.7,,2.22,,2.29,,4858.8099999999995,172226.0,4,4,28.211826321229076,0,No,Yes,Yes
+HR,Croatia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,5.37,,2.46,,1.04,,2.07,,0.18,,0.64,,1.17,,0.54,,6514.889999999999,186298.0,4,4,34.97026269739879,0,No,Yes,Yes
+HR,Croatia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,10.17,,5.26,,2.21,,2.37,,0.51,,0.43,,2.83,,1.19,,7325.8099999999995,192027.0,4,4,38.14989558759966,0,No,Yes,Yes
+HR,Croatia,H,Transportation and storage,2021,7.52,,2.93,,2.5,,1.25,,2.3,,,,2.93,,3.36,,1522.24,50400.0,4,4,30.203174603174602,1,No,Yes,Yes
+HR,Croatia,H,Transportation and storage,2023,7.58,,4.76,,1.65,,2.31,,0.0,,1.48,,,,1.48,,2208.25,54221.0,4,4,40.726840154183805,1,No,Yes,Yes
+HR,Croatia,H,Transportation and storage,2024,7.83,,4.25,,2.82,,2.2,,0.0,,,,1.65,,0.55,,2340.8,57150.0,4,4,40.958880139982504,1,No,Yes,Yes
+HR,Croatia,I,Accommodation and food service activities,2021,7.38,,2.41,,1.38,,0.44,,,,0.0,,0.79,,,,1359.67,54987.0,4,4,24.72711731863895,2,No,Yes,Yes
+HR,Croatia,I,Accommodation and food service activities,2023,5.8,,1.23,,,,1.12,,1.06,,1.13,,1.36,,,,2436.86,71188.0,4,4,34.231331123223015,2,No,Yes,Yes
+HR,Croatia,I,Accommodation and food service activities,2024,6.38,,2.79,,2.5,,1.06,,0.0,,0.0,,1.44,,0.46,,2822.52,75779.0,4,4,37.24673062457937,0,No,Yes,Yes
+HR,Croatia,J,Information and communication,2021,25.8,,15.44,,10.44,,12.17,,2.06,,,,3.71,,12.06,,2158.88,39101.0,4,4,55.21291015575049,1,No,Yes,Yes
+HR,Croatia,J,Information and communication,2023,40.01,,24.39,,11.76,,10.67,,5.45,,5.88,,14.16,,,,2737.07,46203.0,4,4,59.2400926346774,1,No,Yes,Yes
+HR,Croatia,J,Information and communication,2024,56.93,,45.34,,19.51,,14.01,,8.01,,,,15.62,,25.07,,2952.6499999999996,45689.0,4,4,64.62496443345225,1,No,Yes,Yes
+HR,Croatia,L,Real estate activities,2021,,,,,0.0,,0.0,,0.0,,0.0,,0.0,,,,156.05,3509.0,4,4,44.4713593616415,3,No,No,No
+HR,Croatia,L,Real estate activities,2023,6.93,,6.93,,6.93,,0.0,,0.0,,0.0,,0.0,,0.0,,164.41,3690.0,4,4,44.55555555555556,0,No,Yes,No
+HR,Croatia,L,Real estate activities,2024,11.65,,11.65,,5.51,,5.51,,0.0,,0.0,,6.14,,0.0,,177.29,3601.0,4,4,49.23354623715635,0,No,Yes,No
+HR,Croatia,M,"Professional, scientific and technical activities",2021,13.25,,5.79,,3.78,,3.95,,0.92,,0.92,,2.53,,2.85,,911.74,29677.0,4,4,30.72210802978738,0,No,Yes,Yes
+HR,Croatia,M,"Professional, scientific and technical activities",2023,12.88,,4.88,,3.26,,0.96,,0.98,,,,3.56,,0.88,,1300.42,32602.0,4,4,39.887736948653455,1,No,Yes,Yes
+HR,Croatia,M,"Professional, scientific and technical activities",2024,17.22,,12.16,,8.76,,4.99,,1.61,,1.16,,4.17,,5.88,,1414.76,34319.0,4,4,41.22381188263061,0,No,Yes,Yes
+HR,Croatia,N,Administrative and support service activities,2021,5.16,,2.28,,1.91,,4.44,,,,0.0,,1.94,,,,631.3199999999999,41087.0,4,4,15.365444057731153,2,No,Yes,Yes
+HR,Croatia,N,Administrative and support service activities,2023,6.85,,2.35,,2.35,,1.17,,,,1.64,,1.92,,0.0,,965.69,45957.0,4,4,21.012903366190134,1,No,Yes,Yes
+HR,Croatia,N,Administrative and support service activities,2024,21.63,,15.41,,3.56,,3.67,,,,0.7,,9.8,,7.73,,1065.38,48990.0,4,4,21.74688711982037,1,No,Yes,Yes
+IT,Italy,C,Manufacturing,2021,6.63,,2.86,,1.34,,2.59,,3.37,,0.75,,1.27,,1.25,,248345.65,3008342.0,4,4,82.55233281322403,0,No,Yes,Yes
+IT,Italy,C,Manufacturing,2023,4.94,,2.69,,1.15,,2.59,,2.59,,0.9,,0.93,,1.1,,291994.42000000004,3164003.0,4,4,92.28639163742893,0,No,Yes,Yes
+IT,Italy,C,Manufacturing,2024,8.03,,4.81,,2.2,,2.4,,2.25,,0.69,,2.58,,1.33,,288240.33999999997,3207864.0,4,4,89.85428933396177,0,No,Yes,Yes
+IT,Italy,F,Construction,2021,5.24,,2.81,,1.47,,1.02,,1.02,,1.08,,0.66,,1.68,,35203.09,579849.0,4,4,60.71078849838492,0,No,Yes,Yes
+IT,Italy,F,Construction,2023,2.62,,1.39,,0.86,,0.93,,0.69,,0.33,,0.86,,0.63,,53677.6,699945.0,4,4,76.68831122445334,0,No,Yes,Yes
+IT,Italy,F,Construction,2024,5.24,,3.23,,1.8,,0.77,,1.13,,0.33,,1.05,,0.78,,53536.3,731263.0,4,4,73.21073266389794,0,No,Yes,Yes
+IT,Italy,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,5.59,,2.15,,0.75,,1.92,,0.87,,0.91,,2.55,,2.38,,106971.56,1545249.0,4,4,69.22609883585105,0,No,Yes,Yes
+IT,Italy,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,3.66,,1.62,,0.69,,1.86,,0.59,,0.84,,1.92,,0.49,,121721.22,1659164.0,4,4,73.36298280338772,0,No,Yes,Yes
+IT,Italy,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,8.22,,4.75,,2.29,,2.15,,0.74,,0.8,,3.63,,1.1,,123294.29000000001,1718756.0,4,4,71.7346092173642,0,No,Yes,Yes
+IT,Italy,H,Transportation and storage,2021,3.03,,1.21,,0.69,,1.14,,0.64,,0.57,,0.93,,0.75,,52979.19,934869.0,4,4,56.670175179624096,0,No,Yes,Yes
+IT,Italy,H,Transportation and storage,2023,3.45,,1.71,,1.19,,0.98,,0.69,,1.7,,0.58,,0.52,,67112.51000000001,983637.0,4,4,68.22894014763578,0,No,Yes,Yes
+IT,Italy,H,Transportation and storage,2024,5.24,,3.19,,1.28,,1.37,,0.94,,1.06,,2.13,,1.41,,69941.47,985349.0,4,4,70.98141876634573,0,No,Yes,Yes
+IT,Italy,I,Accommodation and food service activities,2021,4.82,,2.19,,0.33,,0.64,,0.53,,0.44,,0.69,,0.61,,14724.720000000001,566501.0,4,4,25.99239895428252,0,No,Yes,Yes
+IT,Italy,I,Accommodation and food service activities,2023,3.99,,3.1,,2.64,,0.72,,2.65,,0.51,,3.05,,2.26,,28768.15,790824.0,4,4,36.377436698936805,0,No,Yes,Yes
+IT,Italy,I,Accommodation and food service activities,2024,2.73,,1.42,,1.23,,1.15,,,,0.11,,2.11,,0.26,,31876.27,858690.0,4,4,37.12197649908582,1,No,Yes,Yes
+IT,Italy,J,Information and communication,2021,16.19,,10.93,,5.86,,6.13,,6.05,,0.97,,4.9,,5.26,,46473.78,442508.0,4,4,105.02359279380259,0,No,Yes,Yes
+IT,Italy,J,Information and communication,2023,21.04,,12.16,,9.05,,5.93,,7.38,,2.01,,6.56,,4.77,,48920.67,485397.0,4,4,100.78486270001669,0,No,Yes,Yes
+IT,Italy,J,Information and communication,2024,34.6,,26.19,,19.13,,11.01,,12.01,,0.77,,11.92,,10.66,,51439.95,482921.0,4,4,106.51835393366616,0,No,Yes,Yes
+IT,Italy,L,Real estate activities,2021,3.19,,0.94,,0.61,,1.73,,,,,,0.48,,1.39,,2698.65,20099.0,4,4,134.26787402358326,2,No,Yes,No
+IT,Italy,L,Real estate activities,2023,2.73,,1.16,,0.4,,0.4,,,,,,1.76,,0.78,,2961.16,20357.0,4,4,145.4615120106106,2,No,Yes,No
+IT,Italy,L,Real estate activities,2024,6.2,,4.82,,2.57,,2.11,,,,,,2.41,,0.76,,,19392.0,2,4,,2,No,No,No
+IT,Italy,M,"Professional, scientific and technical activities",2021,8.68,,3.6,,1.41,,1.54,,2.82,,0.24,,1.56,,2.32,,27673.72,353889.0,4,4,78.19887026723069,0,No,Yes,Yes
+IT,Italy,M,"Professional, scientific and technical activities",2023,9.23,,4.69,,2.64,,3.02,,3.53,,0.1,,1.65,,1.43,,33206.55,411342.0,4,4,80.7273509634319,0,No,Yes,Yes
+IT,Italy,M,"Professional, scientific and technical activities",2024,19.56,,14.56,,7.4,,5.95,,5.72,,0.36,,6.11,,3.42,,35668.22,433493.0,4,4,82.28095955413352,0,No,Yes,Yes
+IT,Italy,N,Administrative and support service activities,2021,6.22,,2.68,,0.64,,0.6,,1.2,,0.15,,1.05,,1.75,,42538.9,1202000.0,4,4,35.39009983361065,0,No,Yes,Yes
+IT,Italy,N,Administrative and support service activities,2023,6.73,,3.56,,1.75,,2.21,,1.57,,0.36,,2.57,,1.41,,50050.72,1272757.0,4,4,39.32464720288319,0,No,Yes,Yes
+IT,Italy,N,Administrative and support service activities,2024,7.72,,4.67,,3.56,,1.31,,1.4,,0.24,,2.25,,1.61,,51450.55,1294607.0,4,4,39.74221520507768,0,No,Yes,Yes
+CY,Cyprus,C,Manufacturing,2021,2.05,,1.07,,0.38,,1.05,,1.71,,0.53,,0.19,,0.19,,1127.08,26027.0,4,4,43.30426095977254,0,No,Yes,Yes
+CY,Cyprus,C,Manufacturing,2023,3.81,,1.37,,0.52,,1.8,,2.42,,1.05,,0.2,,1.3,,1306.74,27366.0,4,4,47.750493312869985,0,No,Yes,Yes
+CY,Cyprus,C,Manufacturing,2024,2.98,,1.75,,0.53,,1.4,,1.23,,0.67,,0.52,,0.69,,1424.75,28039.0,4,4,50.81315310817076,0,No,Yes,Yes
+CY,Cyprus,F,Construction,2021,0.21,,0.0,,0.0,,0.0,,0.21,,0.0,,0.0,,0.0,,762.9,18260.0,4,4,41.77984665936473,0,No,Yes,No
+CY,Cyprus,F,Construction,2023,1.31,,0.45,,0.45,,0.16,,0.16,,0.0,,0.45,,0.58,,,,2,2,,0,No,No,No
+CY,Cyprus,F,Construction,2024,2.39,,1.64,,0.35,,0.55,,0.55,,0.0,,1.09,,0.55,,967.6999999999999,19115.0,4,4,50.62516348417473,0,No,Yes,No
+CY,Cyprus,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,1.06,,0.0,,0.0,,0.1,,0.0,,0.2,,0.35,,0.5,,1924.51,40555.0,4,4,47.45432129207249,0,No,Yes,Yes
+CY,Cyprus,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,2.1,,0.69,,0.44,,0.83,,0.2,,0.49,,1.37,,0.39,,2386.82,44359.0,4,4,53.80689375324061,0,No,Yes,Yes
+CY,Cyprus,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,4.1,,2.34,,1.36,,1.25,,0.17,,0.11,,2.27,,0.96,,2470.15,45503.0,4,4,54.28543172977606,0,No,Yes,Yes
+CY,Cyprus,H,Transportation and storage,2021,7.14,,5.21,,3.27,,3.8,,3.34,,2.4,,2.88,,5.21,,645.23,13341.0,4,4,48.364440446743124,0,No,Yes,Yes
+CY,Cyprus,H,Transportation and storage,2023,7.01,,2.13,,1.21,,1.64,,1.4,,1.21,,0.98,,5.07,,931.63,16291.0,4,4,57.18679025228654,0,No,Yes,Yes
+CY,Cyprus,H,Transportation and storage,2024,7.28,,2.99,,1.41,,2.2,,0.0,,0.9,,1.3,,4.45,,948.4200000000001,15868.0,4,4,59.769347113687935,0,No,Yes,Yes
+CY,Cyprus,I,Accommodation and food service activities,2021,0.45,,0.2,,0.0,,0.2,,0.0,,0.0,,0.2,,0.45,,736.3100000000001,33756.0,4,4,21.812714776632305,0,No,Yes,Yes
+CY,Cyprus,I,Accommodation and food service activities,2023,1.22,,0.59,,0.0,,0.13,,0.0,,0.13,,0.91,,0.45,,1442.58,43598.0,4,4,33.088215055736505,0,No,Yes,Yes
+CY,Cyprus,I,Accommodation and food service activities,2024,3.53,,1.91,,0.9,,0.28,,0.0,,0.11,,3.09,,0.56,,1625.49,44442.0,4,4,36.575536654516,0,No,Yes,Yes
+CY,Cyprus,J,Information and communication,2021,18.98,,7.86,,5.08,,6.22,,3.44,,1.15,,9.49,,8.66,,1671.8899999999999,11891.0,4,4,140.60129509713227,0,No,Yes,Yes
+CY,Cyprus,J,Information and communication,2023,25.95,,17.5,,13.04,,11.11,,8.51,,3.62,,12.13,,10.07,,2774.2599999999998,19633.0,4,4,141.3059644476137,0,No,Yes,Yes
+CY,Cyprus,J,Information and communication,2024,41.39,,29.3,,17.68,,12.1,,2.86,,1.45,,17.37,,13.55,,3316.1800000000003,21169.0,4,4,156.652652463508,0,No,Yes,Yes
+CY,Cyprus,L,Real estate activities,2021,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,,,1,1,,0,No,No,No
+CY,Cyprus,L,Real estate activities,2023,3.91,,0.0,,0.0,,0.0,,0.0,,0.0,,3.91,,0.0,,,,2,2,,0,No,No,No
+CY,Cyprus,L,Real estate activities,2024,4.2,,0.0,,0.0,,0.0,,0.0,,0.0,,2.1,,0.0,,,,2,2,,0,No,No,No
+CY,Cyprus,M,"Professional, scientific and technical activities",2021,4.39,,2.38,,0.73,,0.37,,0.37,,0.0,,0.37,,2.74,,1022.03,16837.0,4,4,60.70143137138445,0,No,Yes,Yes
+CY,Cyprus,M,"Professional, scientific and technical activities",2023,7.66,,2.35,,1.68,,1.18,,1.09,,0.25,,1.68,,3.79,,1213.47,20058.0,4,4,60.49805563864792,0,No,Yes,Yes
+CY,Cyprus,M,"Professional, scientific and technical activities",2024,14.84,,8.55,,3.82,,2.87,,0.36,,0.0,,5.49,,5.25,,1354.94,20797.0,4,4,65.15074289560994,0,No,Yes,Yes
+CY,Cyprus,N,Administrative and support service activities,2021,3.1,,1.2,,1.2,,1.89,,0.0,,0.0,,0.0,,1.89,,366.09000000000003,10477.0,4,4,34.942254462155205,0,No,Yes,Yes
+CY,Cyprus,N,Administrative and support service activities,2023,9.03,,2.55,,1.05,,1.49,,0.93,,0.0,,2.7,,5.32,,548.05,13195.0,4,4,41.534672224327394,0,No,Yes,Yes
+CY,Cyprus,N,Administrative and support service activities,2024,9.37,,7.07,,2.45,,2.73,,0.72,,0.0,,5.57,,4.12,,605.1,14327.0,4,4,42.2349410204509,0,No,Yes,Yes
+LV,Latvia,C,Manufacturing,2021,2.61,,0.81,,0.37,,0.83,,1.08,,0.28,,0.11,,0.17,,3541.7,105291.0,4,4,33.63725294659562,0,No,Yes,Yes
+LV,Latvia,C,Manufacturing,2023,4.14,,1.9,,0.85,,0.81,,1.61,,0.28,,0.25,,0.91,,3541.87,97392.0,4,4,36.36715541317562,0,No,Yes,Yes
+LV,Latvia,C,Manufacturing,2024,8.39,,4.53,,2.52,,2.33,,2.8,,0.79,,2.87,,1.87,,3570.1400000000003,96975.0,4,4,36.81505542665636,0,No,Yes,Yes
+LV,Latvia,F,Construction,2021,3.32,,2.5,,2.43,,0.91,,0.84,,0.0,,0.82,,0.89,,966.36,49486.0,4,4,19.52794729822576,0,No,Yes,Yes
+LV,Latvia,F,Construction,2023,1.51,,1.51,,1.3,,0.72,,0.65,,0.65,,0.65,,0.14,,1231.22,40751.0,4,4,30.213246300704277,0,No,Yes,Yes
+LV,Latvia,F,Construction,2024,5.28,,2.77,,1.32,,1.32,,0.0,,0.63,,0.63,,0.07,,1300.53,43440.0,4,4,29.93853591160221,0,No,Yes,Yes
+LV,Latvia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,3.05,,1.22,,0.83,,1.96,,0.46,,0.0,,0.86,,1.12,,2936.56,101647.0,4,4,28.889785237144235,0,No,Yes,Yes
+LV,Latvia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,2.41,,1.07,,0.11,,0.31,,0.28,,0.52,,0.86,,0.09,,3228.81,93646.0,4,4,34.478888580398525,0,No,Yes,Yes
+LV,Latvia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,6.71,,2.66,,1.26,,1.57,,0.71,,0.72,,4.74,,0.73,,3435.4,99029.0,4,4,34.69084813539468,0,No,Yes,Yes
+LV,Latvia,H,Transportation and storage,2021,3.45,,1.85,,1.65,,2.52,,1.65,,2.18,,2.12,,1.75,,1208.82,54676.0,4,4,22.108786304777233,0,No,Yes,Yes
+LV,Latvia,H,Transportation and storage,2023,4.1,,2.43,,0.3,,0.9,,0.1,,0.7,,1.37,,0.5,,1474.15,49312.0,4,4,29.89434620376379,0,No,Yes,Yes
+LV,Latvia,H,Transportation and storage,2024,5.19,,3.75,,2.22,,0.79,,0.95,,2.02,,0.79,,1.08,,1276.2,44863.0,4,4,28.446604105833316,0,No,Yes,Yes
+LV,Latvia,I,Accommodation and food service activities,2021,0.28,,0.0,,0.0,,0.0,,0.14,,0.0,,0.0,,0.0,,235.17000000000002,22904.0,4,4,10.267638840377227,0,No,Yes,Yes
+LV,Latvia,I,Accommodation and food service activities,2023,1.01,,0.79,,0.0,,0.79,,0.0,,0.0,,0.0,,0.0,,430.54,23489.0,4,4,18.329430797394526,0,No,Yes,Yes
+LV,Latvia,I,Accommodation and food service activities,2024,1.34,,1.01,,0.0,,1.01,,0.0,,0.0,,0.24,,0.24,,499.28999999999996,26343.0,4,4,18.953422161485022,0,No,Yes,Yes
+LV,Latvia,J,Information and communication,2021,13.71,,7.75,,3.89,,5.51,,2.7,,1.54,,5.1,,5.73,,1322.6,29592.0,4,4,44.69451203027845,0,No,Yes,Yes
+LV,Latvia,J,Information and communication,2023,20.93,,10.05,,6.16,,5.04,,1.39,,0.47,,7.8,,3.97,,1691.91,31929.0,4,4,52.98975852673119,0,No,Yes,Yes
+LV,Latvia,J,Information and communication,2024,37.38,,24.53,,11.99,,13.63,,12.83,,1.96,,17.29,,8.45,,1844.33,32732.0,4,4,56.34638885494317,0,No,Yes,Yes
+LV,Latvia,L,Real estate activities,2021,2.7,,0.0,,0.0,,0.0,,0.0,,0.0,,0.88,,0.91,,,11951.0,2,4,,0,No,No,No
+LV,Latvia,L,Real estate activities,2023,5.85,,2.95,,1.48,,0.74,,0.0,,0.74,,0.0,,0.74,,,10032.0,2,4,,0,No,No,No
+LV,Latvia,L,Real estate activities,2024,7.96,,1.02,,0.3,,1.02,,0.72,,0.76,,1.73,,1.02,,,11474.0,2,4,,0,No,No,No
+LV,Latvia,M,"Professional, scientific and technical activities",2021,9.28,,4.92,,2.61,,4.14,,2.35,,0.52,,1.81,,1.3,,552.13,16028.0,4,4,34.447841277763914,0,No,Yes,Yes
+LV,Latvia,M,"Professional, scientific and technical activities",2023,11.37,,7.06,,2.37,,4.06,,2.04,,0.65,,3.59,,1.54,,648.3,15144.0,4,4,42.80903328050713,0,No,Yes,Yes
+LV,Latvia,M,"Professional, scientific and technical activities",2024,23.46,,12.85,,7.85,,7.95,,4.68,,0.75,,6.84,,4.86,,734.61,17281.0,4,4,42.50969272611539,0,No,Yes,Yes
+LV,Latvia,N,Administrative and support service activities,2021,4.01,,1.79,,0.45,,0.66,,0.2,,0.0,,0.2,,0.88,,,28186.0,2,4,,0,No,No,No
+LV,Latvia,N,Administrative and support service activities,2023,6.6,,3.05,,0.0,,3.5,,0.0,,0.0,,2.08,,0.0,,652.6,28708.0,4,4,22.732339417583947,0,No,Yes,No
+LV,Latvia,N,Administrative and support service activities,2024,8.42,,6.5,,3.15,,2.67,,1.39,,1.02,,3.96,,1.64,,771.75,31204.0,4,4,24.732406101781823,0,No,Yes,No
+LT,Lithuania,C,Manufacturing,2021,5.06,,1.83,,0.84,,2.16,,2.71,,0.55,,1.1,,1.72,,7078.82,199364.0,4,4,35.507012299111175,0,No,Yes,Yes
+LT,Lithuania,C,Manufacturing,2023,4.83,,3.0,,1.21,,2.49,,1.86,,0.88,,0.84,,0.88,,8344.01,198919.0,4,4,41.946772304304766,0,No,Yes,Yes
+LT,Lithuania,C,Manufacturing,2024,8.81,,5.66,,3.07,,3.18,,2.45,,0.62,,2.37,,1.64,,8504.119999999999,197905.0,4,4,42.970718273919296,0,No,Yes,Yes
+LT,Lithuania,F,Construction,2021,1.11,,0.39,,0.29,,0.72,,0.24,,0.1,,0.29,,0.63,,1807.0900000000001,79553.0,4,4,22.715548125149276,0,No,Yes,Yes
+LT,Lithuania,F,Construction,2023,2.4,,0.58,,0.31,,0.36,,0.22,,0.04,,0.04,,0.09,,2789.75,83455.0,4,4,33.42819483554011,0,No,Yes,Yes
+LT,Lithuania,F,Construction,2024,3.42,,2.43,,1.43,,1.26,,0.52,,0.26,,0.61,,0.35,,2972.5899999999997,82154.0,4,4,36.18314385179053,0,No,Yes,Yes
+LT,Lithuania,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,2.79,,1.3,,0.54,,1.52,,0.29,,0.48,,1.08,,1.05,,5129.39,151755.0,4,4,33.80046785937861,0,No,Yes,Yes
+LT,Lithuania,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,4.39,,2.39,,1.08,,1.8,,0.46,,0.26,,1.8,,1.11,,5768.6900000000005,153084.0,4,4,37.68316741135586,0,No,Yes,Yes
+LT,Lithuania,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,7.68,,5.57,,3.16,,3.76,,0.76,,1.81,,3.59,,1.02,,5849.83,152671.0,4,4,38.31657616705203,0,No,Yes,Yes
+LT,Lithuania,H,Transportation and storage,2021,3.84,,1.62,,0.22,,1.9,,0.65,,1.3,,0.32,,0.87,,3852.3,129670.0,4,4,29.708490784298604,0,No,Yes,Yes
+LT,Lithuania,H,Transportation and storage,2023,4.97,,1.53,,0.44,,2.84,,0.22,,0.11,,0.22,,0.44,,5721.64,146259.0,4,4,39.11991740679206,0,No,Yes,Yes
+LT,Lithuania,H,Transportation and storage,2024,4.96,,1.56,,0.47,,0.83,,1.04,,1.1,,1.15,,1.51,,5328.91,142156.0,4,4,37.48635302062523,0,No,Yes,Yes
+LT,Lithuania,I,Accommodation and food service activities,2021,3.8,,2.63,,1.17,,1.75,,1.46,,0.1,,0.78,,0.29,,449.55,32710.0,4,4,13.74350351574442,0,No,Yes,Yes
+LT,Lithuania,I,Accommodation and food service activities,2023,0.55,,0.55,,0.37,,0.09,,0.0,,0.0,,0.18,,0.0,,755.3,37860.0,4,4,19.949815108293713,0,No,Yes,Yes
+LT,Lithuania,I,Accommodation and food service activities,2024,4.22,,2.93,,1.46,,1.55,,1.2,,1.03,,1.64,,2.15,,766.6800000000001,38552.0,4,4,19.886905997094836,0,No,Yes,Yes
+LT,Lithuania,J,Information and communication,2021,22.77,,15.64,,10.69,,14.06,,8.12,,3.37,,9.7,,8.32,,1608.33,32195.0,4,4,49.95589377232489,0,No,Yes,Yes
+LT,Lithuania,J,Information and communication,2023,26.68,,20.67,,14.49,,17.49,,7.95,,1.24,,5.83,,10.95,,2742.28,40478.0,4,4,67.74741835070903,0,No,Yes,Yes
+LT,Lithuania,J,Information and communication,2024,45.9,,40.44,,32.42,,32.94,,13.48,,2.22,,15.36,,16.21,,3023.0299999999997,39670.0,4,4,76.20443660196621,0,No,Yes,Yes
+LT,Lithuania,L,Real estate activities,2021,1.3,,0.0,,0.0,,0.0,,0.0,,0.0,,1.3,,0.0,,354.15,6363.0,4,4,55.65770862800566,0,No,Yes,No
+LT,Lithuania,L,Real estate activities,2023,2.65,,2.65,,2.65,,2.65,,1.33,,1.33,,1.33,,0.0,,,,2,2,,0,No,No,No
+LT,Lithuania,L,Real estate activities,2024,5.58,,4.65,,4.19,,1.86,,2.33,,0.47,,0.47,,0.93,,,,2,2,,0,No,No,No
+LT,Lithuania,M,"Professional, scientific and technical activities",2021,7.22,,2.68,,0.81,,5.36,,1.51,,0.0,,0.12,,0.7,,911.04,25592.0,4,4,35.59862457017818,0,No,Yes,Yes
+LT,Lithuania,M,"Professional, scientific and technical activities",2023,4.07,,3.69,,1.78,,2.54,,0.38,,0.13,,0.38,,0.89,,1194.97,27148.0,4,4,44.01687048769707,0,No,Yes,Yes
+LT,Lithuania,M,"Professional, scientific and technical activities",2024,16.15,,9.74,,7.95,,11.15,,2.82,,0.13,,4.62,,1.03,,1263.43,27576.0,4,4,45.816289527125036,0,No,Yes,Yes
+LT,Lithuania,N,Administrative and support service activities,2021,6.35,,4.46,,4.12,,1.03,,1.54,,0.17,,4.12,,1.89,,1066.71,54239.0,4,4,19.666844890208154,0,No,Yes,Yes
+LT,Lithuania,N,Administrative and support service activities,2023,5.46,,2.15,,0.99,,1.66,,0.33,,0.0,,2.48,,1.16,,1738.81,66892.0,4,4,25.994289302158702,0,No,Yes,Yes
+LT,Lithuania,N,Administrative and support service activities,2024,10.06,,4.49,,2.17,,6.04,,2.32,,0.15,,3.72,,1.86,,1896.8600000000001,67852.0,4,4,27.955845074574075,0,No,Yes,Yes
+LU,Luxembourg,C,Manufacturing,2021,13.48,,4.9,,2.46,,4.96,,4.79,,2.93,,0.68,,2.39,,,,3,3,,0,No,No,No
+LU,Luxembourg,C,Manufacturing,2023,16.17,,4.99,,2.25,,4.78,,4.18,,1.61,,0.64,,1.61,,,,3,3,,0,No,No,No
+LU,Luxembourg,C,Manufacturing,2024,27.13,,13.96,,7.27,,7.67,,8.23,,1.32,,3.89,,8.26,,,,3,3,,0,No,No,No
+LU,Luxembourg,F,Construction,2021,11.28,,4.17,,1.23,,0.6,,0.64,,0.21,,1.03,,0.63,,2879.2799999999997,44966.0,4,4,64.0323800204599,0,No,Yes,Yes
+LU,Luxembourg,F,Construction,2023,10.03,,3.2,,1.33,,0.67,,0.87,,0.29,,1.18,,0.98,,3106.73,45335.0,4,4,68.52828940112497,0,No,Yes,Yes
+LU,Luxembourg,F,Construction,2024,19.08,,6.84,,2.99,,1.55,,0.53,,0.24,,1.77,,0.18,,3019.92,42690.0,4,4,70.74068868587491,0,No,Yes,Yes
+LU,Luxembourg,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,9.14,,4.16,,1.76,,3.0,,1.18,,1.94,,2.37,,1.99,,,,2,2,,0,No,No,No
+LU,Luxembourg,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,14.61,,6.1,,4.26,,4.73,,2.06,,1.71,,4.03,,3.75,,,,2,2,,0,No,No,No
+LU,Luxembourg,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,20.16,,11.06,,5.66,,4.43,,3.74,,1.88,,6.14,,3.1,,,,2,2,,0,No,No,No
+LU,Luxembourg,H,Transportation and storage,2021,10.09,,2.08,,0.39,,0.37,,2.07,,0.75,,0.79,,0.75,,3334.64,21248.0,4,4,156.9390060240964,0,No,Yes,Yes
+LU,Luxembourg,H,Transportation and storage,2023,10.04,,5.1,,2.8,,2.84,,3.16,,2.16,,0.37,,1.74,,2360.5099999999998,22883.0,4,4,103.15561770746841,0,No,Yes,Yes
+LU,Luxembourg,H,Transportation and storage,2024,14.54,,4.9,,4.51,,3.01,,1.54,,3.33,,1.19,,3.69,,2484.19,22940.0,4,4,108.29075850043591,0,No,Yes,Yes
+LU,Luxembourg,I,Accommodation and food service activities,2021,2.35,,1.06,,0.84,,0.21,,0.87,,0.21,,0.22,,0.21,,,,1,1,,0,No,No,No
+LU,Luxembourg,I,Accommodation and food service activities,2023,4.87,,1.53,,0.32,,0.32,,0.0,,0.0,,1.64,,0.93,,,,1,1,,0,No,No,No
+LU,Luxembourg,I,Accommodation and food service activities,2024,6.83,,1.93,,0.48,,0.48,,0.88,,0.0,,1.26,,0.48,,,,1,1,,0,No,No,No
+LU,Luxembourg,J,Information and communication,2021,28.69,,21.62,,12.65,,14.65,,6.77,,1.64,,7.78,,6.66,,3114.43,18989.0,4,4,164.012322923798,0,No,Yes,Yes
+LU,Luxembourg,J,Information and communication,2023,31.66,,18.69,,12.02,,10.69,,6.6,,0.32,,6.19,,8.13,,3195.92,19664.0,4,4,162.52644426362897,0,No,Yes,Yes
+LU,Luxembourg,J,Information and communication,2024,48.69,,40.72,,28.25,,22.16,,13.77,,1.94,,14.08,,13.88,,3202.0,19722.0,4,4,162.3567589493966,0,No,Yes,Yes
+LU,Luxembourg,L,Real estate activities,2021,,,,,,,,,,,,,,,,,,,1,1,,8,No,No,No
+LU,Luxembourg,L,Real estate activities,2023,,,,,,,,,,,,,,,,,,,1,1,,8,No,No,No
+LU,Luxembourg,L,Real estate activities,2024,,,,,,,,,,,,,,,,,,,1,1,,8,No,No,No
+LU,Luxembourg,M,"Professional, scientific and technical activities",2021,20.8,,12.13,,6.51,,6.21,,2.41,,0.47,,1.69,,5.13,,,,1,1,,0,No,No,No
+LU,Luxembourg,M,"Professional, scientific and technical activities",2023,21.98,,12.21,,7.64,,6.85,,5.71,,1.06,,1.87,,5.51,,,,1,1,,0,No,No,No
+LU,Luxembourg,M,"Professional, scientific and technical activities",2024,37.49,,23.64,,12.32,,10.82,,6.67,,1.12,,4.55,,8.55,,,,1,1,,0,No,No,No
+LU,Luxembourg,N,Administrative and support service activities,2021,16.09,,7.7,,3.39,,3.66,,1.7,,1.72,,1.06,,4.15,,1805.61,36081.0,4,4,50.043236052215846,0,No,Yes,Yes
+LU,Luxembourg,N,Administrative and support service activities,2023,13.39,,5.72,,1.58,,1.02,,1.76,,0.27,,1.46,,1.59,,2230.33,37396.0,4,4,59.6408706813563,0,No,Yes,Yes
+LU,Luxembourg,N,Administrative and support service activities,2024,25.64,,13.54,,7.74,,6.44,,3.92,,0.71,,2.91,,5.55,,2297.59,37603.0,4,4,61.10124192218706,0,No,Yes,Yes
+HU,Hungary,C,Manufacturing,2021,4.0,,1.55,,0.98,,1.75,,2.5,,0.86,,1.68,,0.62,,27630.38,674932.0,4,4,40.93802042279815,0,No,Yes,Yes
+HU,Hungary,C,Manufacturing,2023,4.24,,2.14,,1.21,,2.01,,2.24,,0.85,,0.89,,0.77,,31005.1,685750.0,4,4,45.21341596791834,0,No,Yes,Yes
+HU,Hungary,C,Manufacturing,2024,4.83,,2.44,,1.23,,1.95,,1.58,,0.67,,0.76,,0.67,,33381.16,677728.0,4,4,49.254509183625295,0,No,Yes,Yes
+HU,Hungary,F,Construction,2021,0.55,,0.07,,0.0,,0.26,,0.0,,0.0,,0.48,,0.07,,4380.71,130679.0,4,4,33.52267770644097,0,No,Yes,Yes
+HU,Hungary,F,Construction,2023,1.8,,0.92,,0.48,,0.72,,0.0,,0.0,,0.09,,0.43,,5342.39,134663.0,4,4,39.67229305748424,0,No,Yes,Yes
+HU,Hungary,F,Construction,2024,4.27,,2.66,,0.6,,0.53,,0.36,,0.0,,1.06,,0.66,,5347.53,126821.0,4,4,42.16596620433524,0,No,Yes,Yes
+HU,Hungary,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,1.65,,0.56,,0.11,,0.49,,0.34,,0.07,,1.28,,0.24,,11039.44,326614.0,4,4,33.799653413509525,0,No,Yes,Yes
+HU,Hungary,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,3.02,,1.65,,0.67,,1.67,,0.63,,0.94,,1.28,,0.82,,12594.539999999999,339539.0,4,4,37.09305852935892,0,No,Yes,Yes
+HU,Hungary,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,6.84,,3.8,,1.78,,1.95,,0.43,,0.4,,3.72,,0.94,,12982.99,345754.0,4,4,37.54978973489822,0,No,Yes,Yes
+HU,Hungary,H,Transportation and storage,2021,3.32,,0.89,,0.17,,1.38,,1.2,,1.01,,1.79,,0.3,,3607.67,136303.0,4,4,26.468016111164097,0,No,Yes,Yes
+HU,Hungary,H,Transportation and storage,2023,2.23,,0.56,,0.19,,1.45,,1.0,,1.25,,0.51,,0.96,,4735.25,140020.0,4,4,33.81838308813027,0,No,Yes,Yes
+HU,Hungary,H,Transportation and storage,2024,3.95,,1.74,,0.47,,0.95,,0.2,,0.51,,0.12,,0.29,,5244.35,141759.0,4,4,36.99482925246369,0,No,Yes,Yes
+HU,Hungary,I,Accommodation and food service activities,2021,0.66,,0.34,,0.0,,0.0,,0.0,,0.04,,0.59,,0.0,,1101.5,77233.0,4,4,14.262038247899214,0,No,Yes,Yes
+HU,Hungary,I,Accommodation and food service activities,2023,2.46,,1.49,,0.38,,0.44,,0.74,,1.69,,1.18,,1.59,,2131.46,103811.0,4,4,20.532120873510515,0,No,Yes,Yes
+HU,Hungary,I,Accommodation and food service activities,2024,4.53,,2.38,,1.57,,1.5,,0.49,,0.0,,2.11,,0.06,,2449.96,109199.0,4,4,22.435736590994424,0,No,Yes,Yes
+HU,Hungary,J,Information and communication,2021,13.09,,10.31,,5.59,,7.28,,2.79,,1.42,,4.48,,4.43,,5036.39,91993.0,4,4,54.74753513854315,0,No,Yes,Yes
+HU,Hungary,J,Information and communication,2023,14.54,,9.27,,6.01,,5.13,,4.06,,1.13,,5.08,,2.56,,6245.61,99721.0,4,4,62.63084004372198,0,No,Yes,Yes
+HU,Hungary,J,Information and communication,2024,32.88,,22.18,,15.31,,14.02,,11.34,,1.12,,10.71,,6.34,,7017.13,105152.0,4,4,66.73320526475959,0,No,Yes,Yes
+HU,Hungary,L,Real estate activities,2021,2.3,,1.05,,0.0,,1.16,,1.05,,0.55,,0.55,,0.0,,792.54,21065.0,4,4,37.62354616662711,0,No,Yes,Yes
+HU,Hungary,L,Real estate activities,2023,3.38,,0.38,,0.38,,2.0,,0.0,,0.0,,3.38,,0.0,,1042.5,24007.0,4,4,43.424834423293206,0,No,Yes,Yes
+HU,Hungary,L,Real estate activities,2024,4.16,,1.88,,0.27,,2.55,,0.13,,0.0,,2.41,,1.74,,1169.53,23873.0,4,4,48.989653583546264,0,No,Yes,Yes
+HU,Hungary,M,"Professional, scientific and technical activities",2021,3.71,,1.3,,0.49,,0.77,,0.08,,0.0,,1.47,,0.12,,3472.63,98039.0,4,4,35.42090392598864,0,No,Yes,Yes
+HU,Hungary,M,"Professional, scientific and technical activities",2023,5.24,,2.11,,1.07,,2.01,,1.07,,0.5,,1.87,,0.34,,4787.17,111327.0,4,4,43.00097909761334,0,No,Yes,Yes
+HU,Hungary,M,"Professional, scientific and technical activities",2024,17.3,,11.92,,7.98,,7.28,,2.71,,0.19,,3.69,,1.54,,5112.58,111545.0,4,4,45.8342373033305,0,No,Yes,Yes
+HU,Hungary,N,Administrative and support service activities,2021,4.83,,1.15,,0.97,,1.22,,2.52,,0.64,,1.05,,2.27,,3070.95,169605.0,4,4,18.106482709825773,0,No,Yes,Yes
+HU,Hungary,N,Administrative and support service activities,2023,2.89,,1.51,,0.73,,1.0,,0.28,,0.21,,1.33,,0.54,,4577.04,197856.0,4,4,23.133187772925766,0,No,Yes,Yes
+HU,Hungary,N,Administrative and support service activities,2024,5.63,,3.17,,2.28,,1.66,,1.43,,0.24,,0.91,,1.87,,4767.38,197485.0,4,4,24.140466364534014,0,No,Yes,Yes
+MT,Malta,C,Manufacturing,2021,6.23,,2.73,,0.34,,2.94,,2.31,,0.33,,0.0,,0.94,,872.57,18679.0,4,4,46.713956849938434,0,No,Yes,Yes
+MT,Malta,C,Manufacturing,2023,10.06,,4.64,,2.36,,3.27,,3.33,,1.39,,0.97,,2.33,,1066.71,20664.0,4,4,51.621660859465734,0,No,Yes,Yes
+MT,Malta,C,Manufacturing,2024,13.66,,5.34,,1.45,,5.6,,4.35,,1.45,,2.54,,1.73,,1080.85,21135.0,4,4,51.14028862077123,0,No,Yes,Yes
+MT,Malta,F,Construction,2021,7.62,,2.87,,0.0,,0.73,,0.0,,0.0,,1.3,,1.3,,322.19,9047.0,4,4,35.612910357024425,0,No,Yes,Yes
+MT,Malta,F,Construction,2023,9.05,,0.61,,0.0,,0.0,,0.0,,0.72,,1.93,,2.42,,390.38,10836.0,4,4,36.02620893318568,0,No,Yes,Yes
+MT,Malta,F,Construction,2024,9.36,,1.6,,0.0,,0.0,,0.0,,1.6,,0.65,,2.49,,418.88000000000005,11225.0,4,4,37.31670378619154,0,No,Yes,Yes
+MT,Malta,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,7.12,,3.27,,2.08,,2.67,,2.26,,1.74,,2.7,,3.44,,856.37,22639.0,4,4,37.827200848093995,0,No,Yes,Yes
+MT,Malta,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,9.44,,2.87,,1.86,,3.28,,1.62,,1.3,,2.42,,2.71,,1074.92,24452.0,4,4,43.9604122362179,0,No,Yes,Yes
+MT,Malta,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,10.21,,4.96,,1.78,,4.17,,1.37,,1.78,,4.4,,3.13,,1188.8400000000001,26467.0,4,4,44.91782219367515,0,No,Yes,Yes
+MT,Malta,H,Transportation and storage,2021,15.0,,6.26,,2.42,,5.42,,3.42,,4.55,,4.63,,4.83,,585.62,10459.0,4,4,55.991968639449276,0,No,Yes,Yes
+MT,Malta,H,Transportation and storage,2023,16.45,,8.52,,2.66,,6.96,,2.24,,4.72,,4.81,,3.42,,1099.92,12939.0,4,4,85.00811500115928,0,No,Yes,Yes
+MT,Malta,H,Transportation and storage,2024,20.63,,8.7,,6.65,,7.47,,2.51,,7.16,,6.96,,5.48,,1341.3,14495.0,4,4,92.53535701966196,0,No,Yes,Yes
+MT,Malta,I,Accommodation and food service activities,2021,7.88,,3.22,,2.49,,2.87,,2.9,,1.81,,3.29,,3.22,,269.02,14061.0,4,4,19.132351895313278,0,No,Yes,Yes
+MT,Malta,I,Accommodation and food service activities,2023,7.55,,2.15,,1.08,,2.42,,1.44,,0.72,,2.42,,2.05,,624.48,18621.0,4,4,33.53632995005639,0,No,Yes,Yes
+MT,Malta,I,Accommodation and food service activities,2024,9.8,,3.98,,1.92,,3.67,,0.91,,0.97,,4.15,,2.85,,747.1600000000001,21255.0,4,4,35.152199482474714,0,No,Yes,Yes
+MT,Malta,J,Information and communication,2021,25.35,,16.95,,6.7,,11.63,,5.46,,0.0,,7.76,,9.27,,1218.3,8529.0,4,4,142.842068237777,0,No,Yes,Yes
+MT,Malta,J,Information and communication,2023,35.29,,26.7,,13.53,,20.37,,12.75,,0.65,,13.53,,19.03,,2010.69,10385.0,4,4,193.61482908040443,0,No,Yes,Yes
+MT,Malta,J,Information and communication,2024,55.07,,37.0,,23.09,,28.35,,20.03,,0.65,,22.18,,21.86,,2133.2200000000003,10911.0,4,4,195.51095225002297,0,No,Yes,Yes
+MT,Malta,L,Real estate activities,2021,14.72,,0.0,,0.0,,0.0,,0.0,,0.0,,3.36,,7.69,,108.55000000000001,1090.0,4,4,99.58715596330276,0,No,Yes,No
+MT,Malta,L,Real estate activities,2023,11.76,,2.94,,2.94,,0.0,,0.0,,0.0,,2.94,,2.94,,,1422.0,2,4,,0,No,No,No
+MT,Malta,L,Real estate activities,2024,12.48,,3.12,,3.12,,3.12,,0.0,,0.0,,3.12,,9.36,,,1625.0,2,4,,0,No,No,No
+MT,Malta,M,"Professional, scientific and technical activities",2021,,,,,,,,,,,,,,,,,705.9399999999999,10775.0,4,4,65.51647331786542,8,No,No,No
+MT,Malta,M,"Professional, scientific and technical activities",2023,18.09,,10.1,,5.49,,7.7,,5.33,,0.0,,6.38,,6.04,,995.1800000000001,12585.0,4,4,79.07667858561781,0,No,Yes,No
+MT,Malta,M,"Professional, scientific and technical activities",2024,25.24,,12.24,,5.02,,8.42,,7.0,,0.57,,9.18,,5.56,,1107.92,13454.0,4,4,82.34874386799464,0,No,Yes,No
+MT,Malta,N,Administrative and support service activities,2021,8.64,,5.12,,2.79,,4.2,,0.95,,0.95,,3.62,,4.15,,476.46999999999997,19737.0,4,4,24.140953539038353,0,No,Yes,Yes
+MT,Malta,N,Administrative and support service activities,2023,12.39,,6.21,,3.72,,3.57,,1.11,,0.0,,5.35,,3.98,,609.12,25319.0,4,4,24.05782218887002,0,No,Yes,Yes
+MT,Malta,N,Administrative and support service activities,2024,17.05,,7.51,,4.13,,5.98,,3.38,,0.74,,9.54,,4.45,,679.79,26132.0,4,4,26.013699678555028,0,No,Yes,Yes
+NL,Netherlands,C,Manufacturing,2021,12.42,,6.01,,2.94,,7.54,,7.2,,3.71,,2.57,,4.43,,83402.51000000001,626825.0,4,4,133.0554939576437,0,No,Yes,Yes
+NL,Netherlands,C,Manufacturing,2023,11.74,,5.31,,3.31,,5.43,,3.86,,2.53,,1.88,,2.96,,92618.84,659945.0,4,4,140.34327103016162,0,No,Yes,Yes
+NL,Netherlands,C,Manufacturing,2024,18.03,,9.92,,5.03,,4.73,,4.64,,2.14,,5.24,,3.5,,100171.11,664614.0,4,4,150.72073414041836,0,No,Yes,Yes
+NL,Netherlands,F,Construction,2021,7.39,,2.96,,1.0,,2.91,,1.48,,0.87,,1.36,,2.58,,23366.78,268668.0,4,4,86.97269492459094,0,No,Yes,Yes
+NL,Netherlands,F,Construction,2023,4.72,,2.26,,1.04,,2.14,,1.34,,0.54,,0.92,,1.55,,27142.91,280957.0,4,4,96.60876931345366,0,No,Yes,Yes
+NL,Netherlands,F,Construction,2024,8.88,,4.18,,2.38,,1.43,,1.22,,0.2,,2.23,,2.73,,28704.2,282665.0,4,4,101.54847611129783,0,No,Yes,Yes
+NL,Netherlands,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,12.04,,6.08,,3.34,,5.95,,4.0,,4.0,,6.5,,4.4,,86932.20999999999,1168414.0,4,4,74.40189008348067,0,No,Yes,Yes
+NL,Netherlands,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,12.99,,6.93,,3.95,,4.46,,2.61,,2.41,,5.91,,3.68,,90016.22,1204774.0,4,4,74.71627043744304,0,No,Yes,Yes
+NL,Netherlands,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,23.15,,12.53,,6.5,,4.87,,3.41,,1.73,,12.52,,4.17,,92810.23999999999,1211053.0,4,4,76.635985378014,0,No,Yes,Yes
+NL,Netherlands,H,Transportation and storage,2021,11.48,,5.05,,2.81,,4.73,,2.8,,5.03,,1.05,,4.26,,29546.91,356098.0,4,4,82.97409701823655,0,No,Yes,Yes
+NL,Netherlands,H,Transportation and storage,2023,9.06,,4.15,,2.78,,4.66,,2.52,,3.51,,2.38,,3.46,,36041.369999999995,372039.0,4,4,96.87524694991652,0,No,Yes,Yes
+NL,Netherlands,H,Transportation and storage,2024,10.99,,5.57,,3.21,,4.11,,2.51,,2.9,,2.47,,2.66,,37485.979999999996,372841.0,4,4,100.54146405572347,0,No,Yes,Yes
+NL,Netherlands,I,Accommodation and food service activities,2021,4.96,,1.23,,0.41,,2.28,,1.33,,0.91,,3.11,,1.59,,5998.79,246394.0,4,4,24.34633148534461,0,No,Yes,Yes
+NL,Netherlands,I,Accommodation and food service activities,2023,5.91,,2.23,,1.62,,2.07,,0.48,,0.25,,0.98,,0.17,,10634.0,327515.0,4,4,32.468741889684445,0,No,Yes,Yes
+NL,Netherlands,I,Accommodation and food service activities,2024,9.04,,4.22,,1.49,,1.17,,0.98,,1.0,,4.56,,1.06,,11214.34,330113.0,4,4,33.97121591697388,0,No,Yes,Yes
+NL,Netherlands,J,Information and communication,2021,32.05,,19.67,,12.03,,14.83,,9.44,,2.44,,11.88,,11.54,,29196.28,250868.0,4,4,116.38104501171931,0,No,Yes,Yes
+NL,Netherlands,J,Information and communication,2023,36.97,,24.39,,15.77,,15.97,,10.92,,2.24,,14.46,,12.95,,35370.09,275004.0,4,4,128.61663830344287,0,No,Yes,Yes
+NL,Netherlands,J,Information and communication,2024,58.03,,42.48,,28.97,,24.32,,17.08,,2.74,,23.36,,17.72,,38685.72,273761.0,4,4,141.31202033890875,0,No,Yes,Yes
+NL,Netherlands,L,Real estate activities,2021,16.76,,7.27,,4.42,,9.5,,1.53,,0.0,,2.76,,3.36,,12957.43,44736.0,4,4,289.64212267525033,0,No,Yes,Yes
+NL,Netherlands,L,Real estate activities,2023,21.01,,9.01,,1.61,,10.67,,3.08,,0.41,,2.36,,3.56,,11529.98,46662.0,4,4,247.0957095709571,0,No,Yes,Yes
+NL,Netherlands,L,Real estate activities,2024,27.96,,12.78,,6.59,,7.48,,5.2,,0.18,,11.27,,6.29,,11885.470000000001,47693.0,4,4,249.20785020862604,0,No,Yes,Yes
+NL,Netherlands,M,"Professional, scientific and technical activities",2021,20.05,,10.52,,5.88,,8.97,,7.49,,1.67,,4.51,,5.95,,34382.06,372181.0,4,4,92.37994416695102,0,No,Yes,Yes
+NL,Netherlands,M,"Professional, scientific and technical activities",2023,24.8,,13.76,,7.54,,8.17,,5.87,,0.93,,5.76,,6.9,,39388.96,409596.0,4,4,96.1653922401586,0,No,Yes,Yes
+NL,Netherlands,M,"Professional, scientific and technical activities",2024,39.78,,25.65,,13.78,,10.82,,9.1,,1.52,,10.12,,7.9,,41805.43,409594.0,4,4,102.0655331865213,0,No,Yes,Yes
+NL,Netherlands,N,Administrative and support service activities,2021,10.6,,5.31,,3.17,,5.69,,2.41,,1.17,,4.45,,3.29,,44398.15,879257.0,4,4,50.495077093500534,0,No,Yes,Yes
+NL,Netherlands,N,Administrative and support service activities,2023,12.19,,6.06,,3.08,,5.57,,1.75,,0.83,,3.49,,3.89,,55713.880000000005,868562.0,4,4,64.14496604732881,0,No,Yes,Yes
+NL,Netherlands,N,Administrative and support service activities,2024,22.57,,13.18,,6.34,,5.73,,2.78,,0.66,,8.87,,3.32,,58971.71000000001,883054.0,4,4,66.78154450350715,0,No,Yes,Yes
+AT,Austria,C,Manufacturing,2021,9.61,,5.3,,1.52,,3.04,,5.3,,1.84,,0.86,,2.18,,64644.46,645296.0,4,4,100.17799583446977,0,No,Yes,Yes
+AT,Austria,C,Manufacturing,2023,12.31,,5.69,,2.68,,3.92,,4.99,,1.74,,1.91,,4.22,,69258.07,674191.0,4,4,102.72766916200305,0,No,Yes,Yes
+AT,Austria,C,Manufacturing,2024,22.71,,11.59,,5.85,,3.97,,5.54,,1.49,,9.78,,4.67,,69565.64,667179.0,4,4,104.2683297885575,0,No,Yes,Yes
+AT,Austria,F,Construction,2021,3.12,,0.74,,0.03,,0.11,,0.5,,0.03,,0.62,,0.06,,18380.1,259899.0,4,4,70.72016437154433,0,No,Yes,Yes
+AT,Austria,F,Construction,2023,4.28,,1.23,,0.61,,0.67,,0.77,,0.23,,0.72,,1.38,,20975.38,263223.0,4,4,79.68672950312093,0,No,Yes,Yes
+AT,Austria,F,Construction,2024,7.35,,3.39,,2.29,,1.5,,1.11,,,,3.17,,0.99,,22356.23,256805.0,4,4,87.05527540351629,1,No,Yes,Yes
+AT,Austria,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,6.94,,3.76,,1.32,,2.72,,0.67,,0.74,,3.36,,0.69,,36586.41,522222.0,4,4,70.05911279111183,0,No,Yes,Yes
+AT,Austria,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,8.35,,4.11,,1.91,,2.6,,2.76,,1.21,,3.15,,3.18,,39349.479999999996,534866.0,4,4,73.56885649863703,0,No,Yes,Yes
+AT,Austria,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,15.67,,7.79,,5.15,,4.06,,2.63,,0.81,,8.39,,3.34,,38531.1,530977.0,4,4,72.56642001442624,0,No,Yes,Yes
+AT,Austria,H,Transportation and storage,2021,6.98,,3.9,,1.44,,1.38,,1.2,,1.67,,2.53,,1.5,,13410.4,180857.0,4,4,74.14918969130308,0,No,Yes,Yes
+AT,Austria,H,Transportation and storage,2023,8.31,,4.74,,2.12,,4.2,,2.54,,1.46,,1.87,,2.51,,17271.93,193084.0,4,4,89.45293240247767,0,No,Yes,Yes
+AT,Austria,H,Transportation and storage,2024,13.48,,7.04,,3.91,,3.54,,2.62,,1.12,,4.56,,2.82,,17820.73,194670.0,4,4,91.54327836852109,0,No,Yes,Yes
+AT,Austria,I,Accommodation and food service activities,2021,3.31,,1.3,,0.68,,0.03,,0.14,,0.03,,3.06,,0.03,,6008.07,153057.0,4,4,39.25380740508438,0,No,Yes,Yes
+AT,Austria,I,Accommodation and food service activities,2023,3.63,,1.84,,0.91,,0.59,,0.7,,,,2.25,,0.51,,9478.52,202648.0,4,4,46.77332122695511,1,No,Yes,Yes
+AT,Austria,I,Accommodation and food service activities,2024,15.87,,7.48,,3.68,,2.14,,3.37,,0.35,,11.31,,1.93,,10376.82,204939.0,4,4,50.63370075973826,0,No,Yes,Yes
+AT,Austria,J,Information and communication,2021,30.27,,20.87,,13.31,,10.43,,7.87,,3.21,,10.25,,4.34,,10603.37,94810.0,4,4,111.83809724712583,0,No,Yes,Yes
+AT,Austria,J,Information and communication,2023,37.05,,24.48,,16.51,,13.49,,15.05,,1.62,,15.02,,8.19,,11865.619999999999,104763.0,4,4,113.26155226558993,0,No,Yes,Yes
+AT,Austria,J,Information and communication,2024,60.74,,44.7,,29.34,,21.74,,19.88,,1.67,,28.58,,13.12,,12901.09,102161.0,4,4,126.28194712267891,0,No,Yes,Yes
+AT,Austria,L,Real estate activities,2021,5.51,,4.89,,4.89,,4.26,,0.0,,4.26,,0.0,,0.0,,4666.26,27706.0,4,4,168.42055872374215,0,No,Yes,Yes
+AT,Austria,L,Real estate activities,2023,10.02,,4.64,,2.65,,3.02,,5.51,,,,3.3,,1.43,,4584.7300000000005,29822.0,4,4,153.7365032526323,1,No,Yes,Yes
+AT,Austria,L,Real estate activities,2024,24.54,,12.87,,4.64,,5.96,,2.87,,,,15.22,,4.71,,5068.25,30072.0,4,4,168.53717744080873,1,No,Yes,Yes
+AT,Austria,M,"Professional, scientific and technical activities",2021,20.93,,10.3,,4.43,,5.89,,2.14,,0.42,,3.82,,3.06,,9666.95,124182.0,4,4,77.84501779646004,0,No,Yes,Yes
+AT,Austria,M,"Professional, scientific and technical activities",2023,25.82,,16.09,,8.78,,9.03,,9.22,,0.75,,4.45,,6.08,,11604.61,138322.0,4,4,83.89562036407803,0,No,Yes,Yes
+AT,Austria,M,"Professional, scientific and technical activities",2024,39.59,,27.23,,14.11,,11.19,,14.42,,0.55,,14.01,,5.99,,12435.08,139124.0,4,4,89.3812713838015,0,No,Yes,Yes
+AT,Austria,N,Administrative and support service activities,2021,6.48,,4.19,,1.61,,1.52,,2.42,,0.07,,1.29,,1.72,,10616.19,210691.0,4,4,50.38748688838157,0,No,Yes,Yes
+AT,Austria,N,Administrative and support service activities,2023,7.78,,3.48,,2.38,,2.27,,2.89,,1.15,,3.9,,1.74,,12204.529999999999,214608.0,4,4,56.8689424438977,0,No,Yes,Yes
+AT,Austria,N,Administrative and support service activities,2024,19.57,,9.43,,5.1,,3.44,,4.86,,0.58,,8.58,,3.73,,12928.59,204175.0,4,4,63.32112158687401,0,No,Yes,Yes
+PL,Poland,C,Manufacturing,2021,2.33,,0.77,,0.39,,1.26,,1.31,,0.5,,0.41,,0.4,,90359.98,2466686.0,4,4,36.63213720757324,0,No,Yes,Yes
+PL,Poland,C,Manufacturing,2023,2.86,,1.05,,0.52,,1.44,,1.44,,0.78,,0.65,,1.13,,106099.68000000001,2467478.0,4,4,42.99924052007759,0,No,Yes,Yes
+PL,Poland,C,Manufacturing,2024,5.13,,2.23,,1.17,,2.39,,1.81,,0.71,,1.62,,1.77,,114177.36,2419774.0,4,4,47.1851338182822,0,No,Yes,Yes
+PL,Poland,F,Construction,2021,0.35,,0.04,,0.01,,0.13,,0.02,,0.01,,0.02,,0.12,,14598.83,467846.0,4,4,31.204349294425942,0,No,Yes,Yes
+PL,Poland,F,Construction,2023,1.23,,0.5,,0.22,,0.68,,0.2,,0.36,,0.12,,0.56,,19182.15,450269.0,4,4,42.6015337498251,0,No,Yes,Yes
+PL,Poland,F,Construction,2024,2.01,,1.08,,0.16,,0.59,,0.31,,0.47,,0.42,,0.67,,20710.18,448319.0,4,4,46.195186909321265,0,No,Yes,Yes
+PL,Poland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,3.1,,0.94,,0.59,,1.21,,0.42,,0.56,,2.23,,0.57,,49359.15,1423786.0,4,4,34.66753430641965,0,No,Yes,Yes
+PL,Poland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,3.99,,1.8,,0.48,,2.52,,0.69,,0.42,,2.41,,0.73,,59440.66,1457837.0,4,4,40.773186577100184,0,No,Yes,Yes
+PL,Poland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,5.54,,2.39,,1.15,,2.26,,0.94,,0.36,,3.1,,1.82,,66015.53,1472056.0,4,4,44.84580070323412,0,No,Yes,Yes
+PL,Poland,H,Transportation and storage,2021,1.85,,0.5,,0.04,,0.7,,0.24,,0.45,,0.33,,0.24,,15636.52,590433.0,4,4,26.48314033937805,0,No,Yes,Yes
+PL,Poland,H,Transportation and storage,2023,1.84,,0.44,,0.17,,0.47,,0.68,,0.51,,0.63,,0.59,,24042.91,618623.0,4,4,38.86520546439431,0,No,Yes,Yes
+PL,Poland,H,Transportation and storage,2024,2.46,,1.17,,0.34,,0.96,,0.52,,0.9,,0.75,,1.02,,25633.79,605483.0,4,4,42.3361019219367,0,No,Yes,Yes
+PL,Poland,I,Accommodation and food service activities,2021,0.99,,0.5,,0.0,,0.38,,0.0,,0.0,,0.84,,0.45,,2330.75,142875.0,4,4,16.31321084864392,0,No,Yes,Yes
+PL,Poland,I,Accommodation and food service activities,2023,1.65,,0.52,,0.08,,0.72,,0.05,,0.03,,1.2,,0.47,,4574.05,160432.0,4,4,28.510833250224394,0,No,Yes,Yes
+PL,Poland,I,Accommodation and food service activities,2024,2.43,,0.88,,0.24,,0.56,,0.14,,0.02,,1.89,,0.29,,5426.7,164775.0,4,4,32.93400091033227,0,No,Yes,Yes
+PL,Poland,J,Information and communication,2021,16.35,,10.16,,7.01,,9.61,,4.81,,1.03,,6.17,,3.36,,15880.24,272134.0,4,4,58.354487127665045,0,No,Yes,Yes
+PL,Poland,J,Information and communication,2023,17.56,,9.77,,4.59,,9.14,,7.82,,1.16,,7.97,,4.49,,20775.88,307629.0,4,4,67.53550543024227,0,No,Yes,Yes
+PL,Poland,J,Information and communication,2024,32.63,,19.57,,11.96,,13.42,,14.84,,2.14,,13.73,,12.08,,23825.47,304609.0,4,4,78.21656615530073,0,No,Yes,Yes
+PL,Poland,L,Real estate activities,2021,1.76,,0.61,,0.18,,0.53,,0.14,,0.0,,0.08,,1.11,,4665.67,93560.0,4,4,49.86821291150064,0,No,Yes,Yes
+PL,Poland,L,Real estate activities,2023,2.39,,1.02,,0.04,,1.08,,0.26,,0.0,,0.83,,1.15,,5896.389999999999,93714.0,4,4,62.91898755788888,0,No,Yes,Yes
+PL,Poland,L,Real estate activities,2024,4.02,,1.39,,0.48,,1.01,,0.59,,0.04,,1.61,,1.37,,7087.24,96779.0,4,4,73.23117618491615,0,No,Yes,Yes
+PL,Poland,M,"Professional, scientific and technical activities",2021,6.48,,2.67,,1.02,,4.06,,1.05,,0.21,,1.58,,1.15,,9212.45,258857.0,4,4,35.588954519290574,0,No,Yes,Yes
+PL,Poland,M,"Professional, scientific and technical activities",2023,9.05,,2.95,,1.23,,5.12,,2.75,,0.1,,2.78,,2.1,,11506.5,275939.0,4,4,41.699433570463036,0,No,Yes,Yes
+PL,Poland,M,"Professional, scientific and technical activities",2024,14.45,,7.43,,4.43,,7.3,,4.98,,0.37,,5.3,,4.8,,13158.99,275601.0,4,4,47.74652486747145,0,No,Yes,Yes
+PL,Poland,N,Administrative and support service activities,2021,4.16,,1.9,,0.62,,2.35,,0.66,,0.05,,2.09,,1.37,,9740.31,435869.0,4,4,22.346874863777877,0,No,Yes,Yes
+PL,Poland,N,Administrative and support service activities,2023,4.8,,2.76,,1.05,,2.42,,2.62,,0.49,,1.72,,1.68,,12310.93,415412.0,4,4,29.635470328252435,0,No,Yes,Yes
+PL,Poland,N,Administrative and support service activities,2024,7.72,,4.18,,1.71,,3.77,,3.81,,1.11,,3.07,,2.2,,14785.509999999998,405660.0,4,4,36.44803530049795,0,No,Yes,Yes
+PT,Portugal,C,Manufacturing,2021,8.58,,2.87,,0.91,,2.75,,4.22,,1.41,,1.41,,3.21,,22846.78,607323.0,4,4,37.618828860425175,0,No,Yes,Yes
+PT,Portugal,C,Manufacturing,2023,8.74,,2.57,,1.27,,2.62,,4.76,,1.76,,0.92,,2.69,,27318.07,629997.0,4,4,43.362222359789016,0,No,Yes,Yes
+PT,Portugal,C,Manufacturing,2024,6.78,,3.53,,1.53,,2.56,,2.8,,1.31,,0.8,,1.94,,27758.04,627208.0,4,4,44.256514585273145,0,No,Yes,Yes
+PT,Portugal,F,Construction,2021,1.06,,0.45,,0.0,,0.43,,0.45,,0.02,,0.11,,0.15,,5847.78,209074.0,4,4,27.96990539234912,0,No,Yes,Yes
+PT,Portugal,F,Construction,2023,2.92,,0.08,,0.05,,0.08,,0.09,,0.0,,0.02,,0.12,,7696.9800000000005,242629.0,4,4,31.723248251445625,0,No,Yes,Yes
+PT,Portugal,F,Construction,2024,2.74,,2.52,,0.12,,0.21,,0.17,,0.02,,1.16,,0.23,,8758.12,262824.0,4,4,33.323136395458555,0,No,Yes,Yes
+PT,Portugal,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,6.63,,3.62,,0.64,,2.4,,1.74,,1.4,,2.49,,2.88,,15611.9,440917.0,4,4,35.40779783950267,0,No,Yes,Yes
+PT,Portugal,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,6.94,,2.32,,1.4,,3.98,,0.72,,0.32,,2.44,,3.05,,19291.39,481487.0,4,4,40.06627385578427,0,No,Yes,Yes
+PT,Portugal,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,5.77,,2.77,,2.2,,1.93,,0.57,,0.79,,2.91,,1.31,,20695.84,498119.0,4,4,41.54798351397959,0,No,Yes,Yes
+PT,Portugal,H,Transportation and storage,2021,7.38,,2.75,,0.91,,4.54,,1.5,,0.8,,1.88,,2.42,,5211.6900000000005,134911.0,4,4,38.630578677795,0,No,Yes,Yes
+PT,Portugal,H,Transportation and storage,2023,8.26,,2.66,,0.42,,3.03,,0.47,,0.28,,0.42,,4.75,,8358.880000000001,148274.0,4,4,56.37454981992798,0,No,Yes,Yes
+PT,Portugal,H,Transportation and storage,2024,4.9,,3.52,,0.72,,1.0,,0.52,,0.47,,0.66,,1.99,,8893.130000000001,156393.0,4,4,56.8639900762822,0,No,Yes,Yes
+PT,Portugal,I,Accommodation and food service activities,2021,4.4,,0.18,,0.1,,2.47,,0.1,,0.6,,2.95,,0.18,,3144.73,171603.0,4,4,18.32561202309983,0,No,Yes,Yes
+PT,Portugal,I,Accommodation and food service activities,2023,5.26,,2.48,,0.5,,1.94,,0.36,,0.08,,3.26,,0.99,,6579.13,238960.0,4,4,27.532348510210912,0,No,Yes,Yes
+PT,Portugal,I,Accommodation and food service activities,2024,6.58,,2.81,,1.91,,1.98,,1.27,,0.32,,3.29,,1.47,,7395.88,257603.0,4,4,28.710379925699623,0,No,Yes,Yes
+PT,Portugal,J,Information and communication,2021,,,15.3,,9.31,,10.42,,7.16,,1.44,,,,12.37,,7362.09,110394.0,4,4,66.68922224033915,2,No,No,No
+PT,Portugal,J,Information and communication,2023,29.79,,24.41,,18.01,,16.89,,9.47,,1.72,,11.1,,14.86,,9926.06,136196.0,4,4,72.88070134218333,0,No,Yes,No
+PT,Portugal,J,Information and communication,2024,52.45,,40.88,,26.15,,28.75,,20.27,,3.16,,22.18,,17.56,,10921.09,143088.0,4,4,76.32428994744492,0,No,Yes,No
+PT,Portugal,L,Real estate activities,2021,3.58,,1.66,,0.24,,1.08,,0.24,,0.24,,0.24,,0.48,,,,2,2,,0,No,No,No
+PT,Portugal,L,Real estate activities,2023,7.52,,5.27,,0.4,,2.3,,0.4,,0.4,,6.6,,0.58,,849.3,14241.0,4,4,59.637665894249,0,No,Yes,No
+PT,Portugal,L,Real estate activities,2024,,,1.11,,0.8,,1.25,,,,0.31,,,,1.58,,822.04,15431.0,4,4,53.27198496532953,3,No,No,No
+PT,Portugal,M,"Professional, scientific and technical activities",2021,10.38,,6.38,,2.91,,4.49,,0.68,,0.0,,3.9,,6.14,,4215.02,106163.0,4,4,39.70328645573316,0,No,Yes,No
+PT,Portugal,M,"Professional, scientific and technical activities",2023,10.68,,7.66,,3.42,,5.86,,1.89,,1.49,,1.81,,2.28,,6118.75,130233.0,4,4,46.98309952162662,0,No,Yes,No
+PT,Portugal,M,"Professional, scientific and technical activities",2024,,,11.93,,7.76,,12.4,,6.49,,0.65,,4.25,,8.24,,6860.530000000001,140355.0,4,4,48.87984040468812,1,No,No,No
+PT,Portugal,N,Administrative and support service activities,2021,10.81,,8.57,,2.7,,1.78,,4.36,,0.46,,5.01,,2.39,,5832.09,313172.0,4,4,18.622641870920773,0,No,Yes,Yes
+PT,Portugal,N,Administrative and support service activities,2023,10.29,,5.81,,1.47,,3.15,,2.0,,2.31,,2.29,,5.28,,7924.889999999999,346273.0,4,4,22.886248711276938,0,No,Yes,Yes
+PT,Portugal,N,Administrative and support service activities,2024,12.91,,6.2,,4.15,,5.69,,1.78,,0.38,,2.88,,3.19,,8554.18,367883.0,4,4,23.25244710954298,0,No,Yes,Yes
+RO,Romania,C,Manufacturing,2021,1.28,,0.66,,0.43,,0.54,,0.92,,0.23,,0.42,,0.58,,25177.93,1005273.0,4,4,25.045863163538662,0,No,Yes,Yes
+RO,Romania,C,Manufacturing,2023,1.34,,1.0,,0.68,,0.37,,0.3,,0.17,,0.96,,0.2,,28418.88,974200.0,4,4,29.171504824471363,0,No,Yes,Yes
+RO,Romania,C,Manufacturing,2024,1.3,,0.86,,0.28,,0.52,,0.58,,0.18,,0.33,,0.35,,30640.32,945653.0,4,4,32.40122962651205,0,No,Yes,Yes
+RO,Romania,F,Construction,2021,0.05,,0.0,,0.0,,0.0,,0.0,,0.0,,0.02,,0.02,,6164.89,312165.0,4,4,19.74881873368251,0,No,Yes,Yes
+RO,Romania,F,Construction,2023,0.13,,0.07,,0.03,,0.03,,0.04,,0.0,,0.09,,0.01,,10536.22,317718.0,4,4,33.16217526233956,0,No,Yes,Yes
+RO,Romania,F,Construction,2024,0.18,,0.12,,0.03,,0.03,,0.07,,0.06,,0.04,,0.09,,11651.58,315736.0,4,4,36.902918894266094,0,No,Yes,Yes
+RO,Romania,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,0.6,,0.44,,0.38,,0.48,,0.06,,0.36,,0.43,,0.38,,18857.04,566390.0,4,4,33.29338441709776,0,No,Yes,Yes
+RO,Romania,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,1.29,,0.62,,0.34,,0.35,,0.07,,0.13,,1.15,,0.1,,20111.44,572492.0,4,4,35.12964373301286,0,No,Yes,Yes
+RO,Romania,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,3.63,,1.87,,0.82,,0.64,,0.82,,0.33,,2.06,,0.9,,19989.16,580006.0,4,4,34.46371244435402,0,No,Yes,Yes
+RO,Romania,H,Transportation and storage,2021,0.31,,0.2,,0.1,,0.18,,0.1,,0.1,,0.1,,0.08,,5358.610000000001,283535.0,4,4,18.899289329359693,0,No,Yes,Yes
+RO,Romania,H,Transportation and storage,2023,0.36,,0.29,,0.21,,0.16,,0.02,,0.05,,0.24,,0.05,,7286.88,287755.0,4,4,25.32320897986134,0,No,Yes,Yes
+RO,Romania,H,Transportation and storage,2024,2.73,,2.58,,1.87,,0.79,,1.26,,0.61,,0.63,,1.82,,7877.87,287166.0,4,4,27.433157128629436,0,No,Yes,Yes
+RO,Romania,I,Accommodation and food service activities,2021,0.27,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,1475.67,109337.0,4,4,13.496529079817446,0,No,Yes,Yes
+RO,Romania,I,Accommodation and food service activities,2023,0.06,,0.0,,0.0,,0.03,,0.0,,0.0,,0.06,,0.03,,2290.91,130085.0,4,4,17.61086981588961,0,No,Yes,Yes
+RO,Romania,I,Accommodation and food service activities,2024,0.08,,0.03,,0.03,,0.06,,0.0,,0.0,,0.06,,0.03,,2604.51,131258.0,4,4,19.842676255923447,0,No,Yes,Yes
+RO,Romania,J,Information and communication,2021,8.8,,5.16,,4.27,,3.06,,3.44,,0.2,,2.63,,3.57,,7991.01,180087.0,4,4,44.37305302437155,0,No,Yes,Yes
+RO,Romania,J,Information and communication,2023,8.12,,7.24,,4.02,,4.59,,2.72,,1.9,,3.45,,1.93,,10510.55,203918.0,4,4,51.54302219519611,0,No,Yes,Yes
+RO,Romania,J,Information and communication,2024,15.69,,12.89,,10.01,,9.48,,8.5,,2.33,,5.57,,5.74,,11409.11,202323.0,4,4,56.39057348892612,0,No,Yes,Yes
+RO,Romania,L,Real estate activities,2021,0.39,,0.0,,0.0,,0.21,,0.0,,0.0,,0.0,,0.18,,894.53,19158.0,4,4,46.692243449211816,0,No,Yes,Yes
+RO,Romania,L,Real estate activities,2023,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,1144.3,18040.0,4,4,63.431263858093125,0,No,Yes,Yes
+RO,Romania,L,Real estate activities,2024,3.81,,3.59,,0.0,,3.38,,0.0,,0.0,,0.0,,0.0,,1259.27,17781.0,4,4,70.82110117541195,0,No,Yes,Yes
+RO,Romania,M,"Professional, scientific and technical activities",2021,6.68,,6.2,,5.86,,4.17,,0.23,,1.88,,3.8,,5.54,,2901.22,106732.0,4,4,27.182288348386614,0,No,Yes,Yes
+RO,Romania,M,"Professional, scientific and technical activities",2023,7.21,,6.6,,5.1,,3.8,,0.65,,0.47,,4.39,,1.86,,4261.26,120145.0,4,4,35.46764326438886,0,No,Yes,Yes
+RO,Romania,M,"Professional, scientific and technical activities",2024,9.06,,6.13,,5.74,,3.78,,2.83,,0.78,,1.51,,3.35,,4683.15,118559.0,4,4,39.500586206024,0,No,Yes,Yes
+RO,Romania,N,Administrative and support service activities,2021,3.04,,1.64,,0.3,,0.88,,0.13,,0.13,,0.25,,0.21,,3770.12,259068.0,4,4,14.552627109484769,0,No,Yes,Yes
+RO,Romania,N,Administrative and support service activities,2023,1.57,,1.35,,1.3,,1.15,,0.3,,0.25,,0.92,,0.87,,5121.91,275662.0,4,4,18.580399184508565,0,No,Yes,Yes
+RO,Romania,N,Administrative and support service activities,2024,5.3,,3.88,,1.05,,1.41,,0.72,,0.11,,2.1,,0.44,,5784.5,283664.0,4,4,20.39208359185515,0,No,Yes,Yes
+SI,Slovenia,C,Manufacturing,2021,12.57,,3.51,,1.98,,2.94,,6.94,,0.74,,2.0,,7.58,,10232.07,185900.0,4,4,55.040720817643894,0,No,Yes,Yes
+SI,Slovenia,C,Manufacturing,2023,12.34,,5.92,,2.72,,2.57,,5.72,,1.52,,1.81,,8.57,,10576.06,190422.0,4,4,55.54011616304839,0,No,Yes,Yes
+SI,Slovenia,C,Manufacturing,2024,21.64,,10.96,,4.63,,4.45,,10.22,,1.81,,5.68,,15.23,,11109.48,188269.0,4,4,59.00854628218135,0,No,Yes,Yes
+SI,Slovenia,F,Construction,2021,4.16,,0.79,,0.0,,0.0,,0.0,,0.0,,0.79,,2.52,,1383.97,39633.0,4,4,34.91963767567431,0,No,Yes,Yes
+SI,Slovenia,F,Construction,2023,3.5,,0.8,,0.0,,0.68,,0.8,,,,,,3.44,,1873.25,42811.0,4,4,43.75627759220761,2,No,Yes,Yes
+SI,Slovenia,F,Construction,2024,11.94,,3.68,,2.35,,0.78,,1.55,,1.33,,1.4,,5.44,,1861.9099999999999,40392.0,4,4,46.09600911071499,0,No,Yes,Yes
+SI,Slovenia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,10.95,,6.08,,1.51,,3.03,,1.62,,2.52,,2.77,,7.59,,4096.19,79887.0,4,4,51.27480065592649,0,No,Yes,Yes
+SI,Slovenia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,14.49,,5.78,,3.2,,4.61,,0.93,,2.53,,4.69,,9.48,,4397.469999999999,82436.0,4,4,53.344048716580126,0,No,Yes,Yes
+SI,Slovenia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,23.46,,14.64,,6.41,,4.73,,2.93,,3.14,,10.34,,16.14,,4777.24,83295.0,4,4,57.35326250075035,0,No,Yes,Yes
+SI,Slovenia,H,Transportation and storage,2021,12.52,,5.27,,0.6,,0.0,,0.0,,1.68,,2.46,,10.04,,1984.59,37696.0,4,4,52.647230475382,0,No,Yes,Yes
+SI,Slovenia,H,Transportation and storage,2023,7.5,,2.46,,1.36,,1.36,,,,2.33,,0.38,,5.04,,2424.05,40045.0,4,4,60.53315020601823,1,No,Yes,Yes
+SI,Slovenia,H,Transportation and storage,2024,18.97,,7.24,,3.38,,2.32,,4.85,,8.76,,6.02,,8.58,,2516.02,40110.0,4,4,62.72799800548491,0,No,Yes,Yes
+SI,Slovenia,I,Accommodation and food service activities,2021,5.08,,0.81,,0.0,,0.0,,0.0,,0.0,,1.4,,2.65,,494.9,16619.0,4,4,29.779168421686023,0,No,Yes,Yes
+SI,Slovenia,I,Accommodation and food service activities,2023,6.53,,1.79,,,,,,0.0,,0.0,,4.4,,4.72,,728.39,19252.0,4,4,37.834510700186996,2,No,Yes,Yes
+SI,Slovenia,I,Accommodation and food service activities,2024,16.85,,8.85,,3.28,,4.7,,0.37,,1.16,,6.1,,7.97,,788.15,19705.0,4,4,39.99746257295103,0,No,Yes,Yes
+SI,Slovenia,J,Information and communication,2021,39.65,,23.89,,17.17,,12.0,,6.14,,1.55,,21.09,,27.12,,1350.4099999999999,18484.0,4,4,73.05832070980306,0,No,Yes,Yes
+SI,Slovenia,J,Information and communication,2023,32.48,,19.44,,11.62,,7.38,,5.8,,1.99,,7.65,,20.43,,1618.38,21155.0,4,4,76.50106357835027,0,No,Yes,Yes
+SI,Slovenia,J,Information and communication,2024,52.94,,41.7,,25.26,,21.35,,17.48,,5.25,,27.42,,40.19,,1739.0500000000002,21364.0,4,4,81.4009548773638,0,No,Yes,Yes
+SI,Slovenia,L,Real estate activities,2021,,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,,,,1791.0,2,4,,2,No,No,No
+SI,Slovenia,L,Real estate activities,2023,10.39,,7.38,,0.0,,0.0,,0.0,,0.0,,,,,,92.65,1739.0,4,4,53.27774583093732,2,No,Yes,No
+SI,Slovenia,L,Real estate activities,2024,8.17,,,,0.0,,0.0,,0.0,,0.0,,4.71,,8.17,,,,2,2,,1,No,No,No
+SI,Slovenia,M,"Professional, scientific and technical activities",2021,18.59,,7.87,,3.4,,2.42,,4.32,,0.76,,5.13,,16.69,,1021.86,18909.0,4,4,54.040932889100425,0,No,Yes,Yes
+SI,Slovenia,M,"Professional, scientific and technical activities",2023,22.24,,10.18,,8.15,,5.25,,6.2,,0.0,,3.63,,14.59,,1287.71,21815.0,4,4,59.02865001146,0,No,Yes,Yes
+SI,Slovenia,M,"Professional, scientific and technical activities",2024,30.37,,18.25,,5.25,,4.11,,6.06,,0.99,,9.18,,15.72,,1268.97,21042.0,4,4,60.30652979754776,0,No,Yes,Yes
+SI,Slovenia,N,Administrative and support service activities,2021,9.02,,1.56,,0.0,,0.0,,0.0,,1.56,,1.96,,5.1,,692.15,26829.0,4,4,25.798576167579856,0,No,Yes,No
+SI,Slovenia,N,Administrative and support service activities,2023,3.22,,,,,,0.0,,,,,,2.27,,2.59,,,26438.0,3,4,,4,No,No,No
+SI,Slovenia,N,Administrative and support service activities,2024,7.65,,3.66,,2.84,,0.64,,0.56,,0.0,,3.8,,2.02,,799.1,24432.0,4,4,32.707105435494434,0,No,Yes,No
+SK,Slovakia,C,Manufacturing,2021,5.4,,2.07,,0.72,,2.02,,2.12,,0.92,,1.39,,0.86,,17087.47,387404.0,4,4,44.107624082353304,0,No,Yes,Yes
+SK,Slovakia,C,Manufacturing,2023,6.07,,3.0,,1.36,,2.14,,1.56,,0.94,,1.25,,0.85,,17145.5,381216.0,4,4,44.97581423654831,0,No,Yes,Yes
+SK,Slovakia,C,Manufacturing,2024,8.08,,4.23,,2.41,,2.77,,1.55,,0.88,,1.49,,1.35,,18182.059999999998,368236.0,4,4,49.37610662727163,0,No,Yes,Yes
+SK,Slovakia,F,Construction,2021,2.12,,0.0,,0.0,,0.0,,1.02,,0.0,,1.02,,0.0,,1232.55,44726.0,4,4,27.557796360059026,0,No,Yes,Yes
+SK,Slovakia,F,Construction,2023,4.08,,3.09,,0.0,,1.03,,0.15,,0.0,,0.0,,0.15,,1573.66,45116.0,4,4,34.880308537990956,0,No,Yes,Yes
+SK,Slovakia,F,Construction,2024,6.31,,3.08,,2.06,,0.0,,0.07,,0.0,,1.05,,0.07,,1653.19,42871.0,4,4,38.56196496466143,0,No,Yes,Yes
+SK,Slovakia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,4.88,,1.09,,0.03,,1.19,,0.64,,0.03,,2.39,,1.17,,6164.71,174001.0,4,4,35.42916420020575,0,No,Yes,Yes
+SK,Slovakia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,6.96,,3.38,,1.46,,2.2,,0.99,,0.6,,1.59,,2.22,,7548.56,175966.0,4,4,42.89783253583079,0,No,Yes,Yes
+SK,Slovakia,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,11.65,,6.86,,4.78,,5.01,,2.57,,0.42,,5.29,,2.31,,7557.57,175744.0,4,4,43.00328887472688,0,No,Yes,Yes
+SK,Slovakia,H,Transportation and storage,2021,6.23,,1.96,,1.79,,1.79,,0.09,,0.89,,2.95,,0.17,,2913.67,86523.0,4,4,33.675092172023625,0,No,Yes,Yes
+SK,Slovakia,H,Transportation and storage,2023,3.32,,1.45,,0.77,,1.45,,0.09,,0.68,,0.68,,0.68,,3153.81,80886.0,4,4,38.99080186929753,0,No,Yes,Yes
+SK,Slovakia,H,Transportation and storage,2024,8.22,,3.79,,2.29,,3.79,,0.75,,1.01,,2.98,,2.78,,3098.11,78023.0,4,4,39.70765030824244,0,No,Yes,Yes
+SK,Slovakia,I,Accommodation and food service activities,2021,1.25,,0.83,,0.42,,0.0,,0.42,,0.0,,0.83,,0.0,,301.99,24145.0,4,4,12.50735141851315,0,No,Yes,Yes
+SK,Slovakia,I,Accommodation and food service activities,2023,2.31,,0.39,,0.39,,0.0,,0.39,,0.0,,0.77,,0.0,,664.4,29280.0,4,4,22.691256830601095,0,No,Yes,Yes
+SK,Slovakia,I,Accommodation and food service activities,2024,3.77,,0.0,,0.0,,1.31,,0.39,,0.39,,0.39,,0.39,,731.84,30497.0,4,4,23.997114470275765,0,No,Yes,Yes
+SK,Slovakia,J,Information and communication,2021,18.19,,11.4,,6.07,,10.73,,1.82,,0.67,,2.99,,4.59,,3114.65,46764.0,4,4,66.60358395346849,0,No,Yes,Yes
+SK,Slovakia,J,Information and communication,2023,21.62,,16.42,,9.14,,8.71,,2.35,,0.92,,9.77,,5.7,,3729.33,48994.0,4,4,76.11809609339919,0,No,Yes,Yes
+SK,Slovakia,J,Information and communication,2024,29.19,,20.19,,13.25,,14.24,,8.68,,2.09,,10.85,,7.36,,3906.9300000000003,48716.0,4,4,80.19808687084327,0,No,Yes,Yes
+SK,Slovakia,L,Real estate activities,2021,0.76,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,0.0,,,,2,2,,0,No,No,No
+SK,Slovakia,L,Real estate activities,2023,6.47,,3.88,,2.59,,3.88,,0.0,,0.0,,1.29,,1.29,,,,2,2,,0,No,No,No
+SK,Slovakia,L,Real estate activities,2024,3.68,,1.14,,1.14,,2.28,,1.14,,0.0,,2.28,,0.0,,,,2,2,,0,No,No,No
+SK,Slovakia,M,"Professional, scientific and technical activities",2021,3.67,,2.81,,0.87,,1.78,,0.09,,0.49,,0.57,,0.68,,1871.57,47160.0,4,4,39.68553859202714,0,No,Yes,Yes
+SK,Slovakia,M,"Professional, scientific and technical activities",2023,12.22,,7.37,,6.33,,6.48,,2.28,,1.02,,4.61,,4.55,,2102.42,46872.0,4,4,44.854497354497354,0,No,Yes,Yes
+SK,Slovakia,M,"Professional, scientific and technical activities",2024,17.12,,11.2,,6.67,,9.47,,2.97,,1.28,,4.85,,6.25,,2330.06,45970.0,4,4,50.68653469654122,0,No,Yes,Yes
+SK,Slovakia,N,Administrative and support service activities,2021,8.6,,3.44,,1.63,,0.69,,0.61,,0.0,,1.89,,2.39,,1424.6599999999999,60989.0,4,4,23.359294298971943,0,No,Yes,Yes
+SK,Slovakia,N,Administrative and support service activities,2023,10.16,,7.22,,2.57,,4.94,,2.56,,0.0,,2.67,,4.83,,1839.36,63812.0,4,4,28.824672475396476,0,No,Yes,Yes
+SK,Slovakia,N,Administrative and support service activities,2024,18.37,,10.48,,2.27,,2.65,,0.9,,0.0,,6.5,,1.46,,2027.6100000000001,65903.0,4,4,30.766581187502847,0,No,Yes,Yes
+FI,Finland,C,Manufacturing,2021,16.25,,7.99,,2.97,,9.57,,6.6,,2.53,,2.24,,2.95,,30218.29,289561.0,4,4,104.35897790102949,0,No,Yes,Yes
+FI,Finland,C,Manufacturing,2023,12.98,,7.13,,3.62,,8.0,,5.83,,1.94,,3.17,,3.16,,28632.09,299164.0,4,4,95.70700351646589,0,No,Yes,Yes
+FI,Finland,C,Manufacturing,2024,20.75,,15.08,,8.95,,6.94,,5.73,,1.63,,7.17,,3.93,,30153.280000000002,296493.0,4,4,101.69980404259124,0,No,Yes,Yes
+FI,Finland,F,Construction,2021,9.39,,1.65,,1.27,,3.5,,1.52,,1.1,,2.53,,0.54,,8101.4,112821.0,4,4,71.80755355829146,0,No,Yes,Yes
+FI,Finland,F,Construction,2023,5.18,,1.57,,0.57,,2.19,,0.26,,0.15,,1.55,,0.46,,7943.95,109297.0,4,4,72.68223281517334,0,No,Yes,Yes
+FI,Finland,F,Construction,2024,11.26,,8.23,,4.67,,5.74,,2.33,,0.82,,2.0,,3.77,,7800.91,101730.0,4,4,76.68249287329205,0,No,Yes,Yes
+FI,Finland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,13.32,,5.37,,3.0,,6.97,,1.74,,2.03,,4.43,,2.32,,12791.560000000001,209509.0,4,4,61.05494274708963,0,No,Yes,Yes
+FI,Finland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,10.79,,5.02,,2.93,,5.75,,2.49,,1.66,,3.71,,2.16,,13266.24,220157.0,4,4,60.25808854590134,0,No,Yes,Yes
+FI,Finland,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,21.65,,12.66,,7.57,,6.92,,3.27,,2.84,,10.67,,5.27,,12927.9,219610.0,4,4,58.86753790810983,0,No,Yes,Yes
+FI,Finland,H,Transportation and storage,2021,5.7,,2.92,,2.27,,4.01,,0.8,,2.49,,1.98,,0.66,,4839.54,90260.0,4,4,53.617770884112566,0,No,Yes,Yes
+FI,Finland,H,Transportation and storage,2023,8.37,,5.74,,1.22,,4.8,,2.11,,2.11,,1.46,,4.01,,6537.18,97441.0,4,4,67.08859720240966,0,No,Yes,Yes
+FI,Finland,H,Transportation and storage,2024,6.95,,3.72,,1.85,,4.3,,2.03,,2.19,,1.0,,1.16,,6192.14,97925.0,4,4,63.23349502170028,0,No,Yes,Yes
+FI,Finland,I,Accommodation and food service activities,2021,4.92,,2.25,,,,0.9,,,,0.0,,2.73,,,,1133.2,38877.0,4,4,29.148339635259923,3,No,Yes,Yes
+FI,Finland,I,Accommodation and food service activities,2023,2.46,,0.74,,0.0,,1.16,,,,0.0,,1.38,,,,1961.45,53913.0,4,4,36.38176321109936,2,No,Yes,Yes
+FI,Finland,I,Accommodation and food service activities,2024,10.83,,4.45,,3.14,,2.61,,0.0,,0.31,,7.65,,1.45,,2063.23,53977.0,4,4,38.22424365933638,0,No,Yes,Yes
+FI,Finland,J,Information and communication,2021,40.64,,25.5,,14.38,,25.63,,9.33,,2.09,,16.23,,10.9,,10285.16,91523.0,4,4,112.37787222883865,0,No,Yes,Yes
+FI,Finland,J,Information and communication,2023,48.19,,38.15,,27.42,,23.55,,11.95,,4.33,,15.69,,14.05,,10851.13,97794.0,4,4,110.95905679285028,0,No,Yes,Yes
+FI,Finland,J,Information and communication,2024,66.43,,56.75,,41.4,,33.91,,16.91,,2.98,,27.72,,18.11,,11106.8,95913.0,4,4,115.80077778820389,0,No,Yes,Yes
+FI,Finland,L,Real estate activities,2021,18.67,,6.79,,2.49,,13.35,,5.0,,1.61,,11.42,,3.92,,1671.19,14004.0,4,4,119.33661810911168,0,No,Yes,Yes
+FI,Finland,L,Real estate activities,2023,18.8,,10.44,,2.59,,11.32,,4.52,,,,4.51,,7.48,,1820.5100000000002,14147.0,4,4,128.685233618435,1,No,Yes,Yes
+FI,Finland,L,Real estate activities,2024,32.85,,17.86,,9.03,,12.1,,4.66,,1.73,,15.0,,5.38,,2007.7600000000002,13758.0,4,4,145.93400203517956,0,No,Yes,Yes
+FI,Finland,M,"Professional, scientific and technical activities",2021,29.63,,20.98,,11.58,,17.62,,7.28,,,,8.94,,3.82,,6221.8,85620.0,4,4,72.66760102779725,1,No,Yes,Yes
+FI,Finland,M,"Professional, scientific and technical activities",2023,31.54,,19.62,,11.38,,17.23,,3.1,,,,4.58,,7.63,,6886.55,92736.0,4,4,74.25972653554176,1,No,Yes,Yes
+FI,Finland,M,"Professional, scientific and technical activities",2024,48.46,,31.57,,22.86,,21.24,,13.18,,2.18,,18.53,,6.85,,6911.629999999999,89941.0,4,4,76.84626588541376,0,No,Yes,Yes
+FI,Finland,N,Administrative and support service activities,2021,17.28,,11.43,,6.63,,7.48,,1.31,,,,6.13,,5.05,,5582.9400000000005,153948.0,4,4,36.265102502143584,1,No,Yes,Yes
+FI,Finland,N,Administrative and support service activities,2023,14.76,,10.53,,4.52,,12.32,,1.6,,0.48,,4.15,,7.45,,5847.59,156977.0,4,4,37.251253368327845,0,No,Yes,Yes
+FI,Finland,N,Administrative and support service activities,2024,24.78,,19.93,,9.02,,14.43,,8.7,,1.6,,7.12,,8.08,,6332.26,146459.0,4,4,43.23571784595006,0,No,Yes,Yes
+SE,Sweden,C,Manufacturing,2021,8.87,,3.53,,1.52,,4.27,,3.25,,0.95,,1.72,,3.17,,66952.71,602801.0,4,4,111.06934129173642,0,No,Yes,Yes
+SE,Sweden,C,Manufacturing,2023,7.47,b,3.43,b,1.8,b,3.67,b,2.59,b,1.11,b,0.57,b,2.1,b,68608.87000000001,559887.0,4,4,122.54056622139828,0,Yes,Yes,Yes
+SE,Sweden,C,Manufacturing,2024,19.49,,10.33,,3.62,,6.38,,3.9,,1.51,,3.93,,3.04,,68970.12000000001,561081.0,4,4,122.92364204098877,0,No,Yes,Yes
+SE,Sweden,F,Construction,2021,2.32,,1.22,,0.23,,0.92,,0.17,,0.12,,0.47,,0.83,,21602.43,311612.0,4,4,69.32476926434155,0,No,Yes,Yes
+SE,Sweden,F,Construction,2023,2.78,b,0.23,b,0.06,b,0.21,b,0.07,b,0.02,b,0.08,b,0.18,b,20696.83,275899.0,4,4,75.01596598755341,0,Yes,Yes,Yes
+SE,Sweden,F,Construction,2024,13.15,,4.06,,3.07,,1.18,,0.12,,0.04,,4.43,,0.39,,20141.15,259236.0,4,4,77.69426314246478,0,No,Yes,Yes
+SE,Sweden,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2021,11.84,,6.57,,2.35,,4.46,,2.05,,1.81,,4.08,,3.55,,43373.26,557419.0,4,4,77.81087476386703,0,No,Yes,Yes
+SE,Sweden,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2023,10.79,b,6.0,b,3.13,b,4.83,b,2.98,b,2.41,b,4.53,b,3.12,b,38641.49,525584.0,4,4,73.52105467441932,0,Yes,Yes,Yes
+SE,Sweden,G,Wholesale and retail trade; repair of motor vehicles and motorcycles,2024,22.47,,11.98,,7.69,,7.68,,2.56,,1.79,,14.41,,3.12,,39056.71,513233.0,4,4,76.09937396854839,0,No,Yes,Yes
+SE,Sweden,H,Transportation and storage,2021,3.71,,3.22,,1.66,,1.98,,3.02,,2.89,,2.52,,2.81,,13708.25,232176.0,4,4,59.042493625525466,0,No,Yes,Yes
+SE,Sweden,H,Transportation and storage,2023,4.74,b,1.07,b,0.68,b,2.05,b,0.65,b,1.4,b,0.3,b,0.69,b,13865.19,215061.0,4,4,64.47096405205964,0,Yes,Yes,Yes
+SE,Sweden,H,Transportation and storage,2024,15.54,,10.07,,5.01,,4.05,,0.46,,2.39,,4.28,,2.71,,14325.619999999999,213754.0,4,4,67.01919028415841,0,No,Yes,Yes
+SE,Sweden,I,Accommodation and food service activities,2021,4.2,,1.7,,0.9,,1.16,,0.0,,1.0,,2.36,,0.83,,4809.139999999999,138508.0,4,4,34.72102694429202,0,No,Yes,Yes
+SE,Sweden,I,Accommodation and food service activities,2023,3.18,b,1.19,b,0.96,b,1.39,b,1.16,b,0.0,b,1.37,b,0.0,b,6413.76,184121.0,4,4,34.83448384486289,0,Yes,Yes,Yes
+SE,Sweden,I,Accommodation and food service activities,2024,10.47,,4.87,,2.72,,3.42,,2.43,,0.34,,5.79,,0.0,,6701.69,184969.0,4,4,36.2314225626997,0,No,Yes,Yes
+SE,Sweden,J,Information and communication,2021,30.81,,16.09,,10.93,,14.83,,4.61,,1.45,,11.38,,10.8,,27633.07,220000.0,4,4,125.60486363636363,0,No,Yes,Yes
+SE,Sweden,J,Information and communication,2023,36.85,b,26.47,b,19.24,b,20.87,b,16.63,b,1.19,b,11.49,b,12.43,b,23844.71,209547.0,4,4,113.79170305468463,0,Yes,Yes,Yes
+SE,Sweden,J,Information and communication,2024,67.56,,53.53,,34.79,,28.3,,23.13,,2.87,,28.62,,16.49,,30805.48,202221.0,4,4,152.33571191913796,0,No,Yes,Yes
+SE,Sweden,L,Real estate activities,2021,9.6,,2.73,,0.5,,6.32,,1.01,,0.56,,0.0,,2.31,,14052.7,63114.0,4,4,222.65582913458186,0,No,Yes,Yes
+SE,Sweden,L,Real estate activities,2023,17.75,b,6.28,b,1.95,b,5.42,b,2.39,b,0.0,b,2.04,b,2.87,b,14954.72,62549.0,4,4,239.0880749492398,0,Yes,Yes,Yes
+SE,Sweden,L,Real estate activities,2024,28.97,,11.76,,4.34,,8.66,,4.67,,0.0,,4.49,,4.01,,16415.46,60569.0,4,4,271.0208192309597,0,No,Yes,Yes
+SE,Sweden,M,"Professional, scientific and technical activities",2021,16.47,,9.78,,5.06,,7.62,,4.06,,1.19,,4.81,,6.13,,17692.879999999997,229883.0,4,4,76.96471683421565,0,No,Yes,Yes
+SE,Sweden,M,"Professional, scientific and technical activities",2023,20.69,b,12.41,b,4.52,b,10.48,b,4.48,b,0.24,b,4.96,b,4.15,b,19367.47,225749.0,4,4,85.79205223500436,0,Yes,Yes,Yes
+SE,Sweden,M,"Professional, scientific and technical activities",2024,53.71,,35.25,,20.17,,18.79,,10.99,,0.03,,17.25,,6.66,,20187.63,226349.0,4,4,89.18806798351218,0,No,Yes,Yes
+SE,Sweden,N,Administrative and support service activities,2021,8.58,,3.64,,0.59,,5.74,,0.56,,0.12,,3.21,,1.66,,13095.82,312385.0,4,4,41.92205131488388,0,No,Yes,Yes
+SE,Sweden,N,Administrative and support service activities,2023,8.3,b,1.48,b,1.04,b,3.0,b,4.5,b,0.49,b,4.34,b,0.92,b,13952.7,297122.0,4,4,46.959498118617944,0,Yes,Yes,Yes
+SE,Sweden,N,Administrative and support service activities,2024,21.63,,11.91,,6.68,,7.87,,4.83,,2.15,,9.8,,2.62,,14234.1,282262.0,4,4,50.42867973726538,0,No,Yes,Yes

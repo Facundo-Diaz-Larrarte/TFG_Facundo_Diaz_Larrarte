@@ -1,0 +1,711 @@
+{
+  "summary": {
+    "panel_rows": 729,
+    "balanced_rows": 627,
+    "balanced_entities": 209,
+    "years": [
+      2021,
+      2023,
+      2024
+    ],
+    "countries": 27,
+    "sectors": 9,
+    "strongest_level_correlation": {
+      "variable": "ai_any_pct",
+      "indicador": "Adopción general",
+      "n": 627,
+      "pearson_r": 0.5642650724003451,
+      "pearson_p": 5.368442641292324e-54,
+      "spearman_rho": 0.6508413204743162,
+      "spearman_p": 8.25976743211489e-77
+    },
+    "strongest_change_correlation": {
+      "variable": "ai_marketing_pct",
+      "indicador": "Marketing y ventas",
+      "n": 196,
+      "pearson_r": -0.268283344462897,
+      "p_value": 0.000143603704375405
+    }
+  },
+  "descriptive": [
+    {
+      "variable": "labour_productivity_keur",
+      "count": 627.0,
+      "mean": 67.47141676746836,
+      "std": 73.75027624524007,
+      "min": 10.136720354233402,
+      "p25": 34.956258579777,
+      "median": 50.043236052215846,
+      "p75": 76.35275009015824,
+      "max": 857.2263356861066
+    },
+    {
+      "variable": "log_productivity",
+      "count": 627.0,
+      "mean": 3.967035021080945,
+      "std": 0.6372144545369353,
+      "min": 2.3161645093800485,
+      "p25": 3.554097444783495,
+      "median": 3.9128873528166106,
+      "p75": 4.335362163920716,
+      "max": 6.753701986046413
+    },
+    {
+      "variable": "ai_any_pct",
+      "count": 627.0,
+      "mean": 12.117097288676236,
+      "std": 11.8258048728144,
+      "min": 0.0,
+      "p25": 4.27,
+      "median": 8.26,
+      "p75": 16.1,
+      "max": 68.3
+    },
+    {
+      "variable": "ai_ge2_pct",
+      "count": 625.0,
+      "mean": 6.943728,
+      "std": 8.762961280678276,
+      "min": 0.0,
+      "p25": 1.7,
+      "median": 3.68,
+      "p75": 8.05,
+      "max": 56.75
+    },
+    {
+      "variable": "ai_ge3_pct",
+      "count": 615.0,
+      "mean": 3.969024390243902,
+      "std": 5.869390178389863,
+      "min": 0.0,
+      "p25": 0.69,
+      "median": 1.78,
+      "p75": 4.38,
+      "max": 41.4
+    },
+    {
+      "variable": "ai_workflow_pct",
+      "count": 624.0,
+      "mean": 4.662708333333333,
+      "std": 5.665043485559946,
+      "min": 0.0,
+      "p25": 1.17,
+      "median": 2.58,
+      "p75": 5.74,
+      "max": 41.19
+    },
+    {
+      "variable": "ai_production_pct",
+      "count": 597.0,
+      "mean": 2.7321440536013397,
+      "std": 3.6679039274256464,
+      "min": 0.0,
+      "p25": 0.42,
+      "median": 1.44,
+      "p75": 3.36,
+      "max": 27.83
+    },
+    {
+      "variable": "ai_logistics_pct",
+      "count": 590.0,
+      "mean": 0.9888474576271186,
+      "std": 1.2307301905042602,
+      "min": 0.0,
+      "p25": 0.15,
+      "median": 0.62,
+      "p75": 1.3975,
+      "max": 8.99
+    },
+    {
+      "variable": "ai_marketing_pct",
+      "count": 603.0,
+      "mean": 3.857446102819237,
+      "std": 4.877611587209287,
+      "min": 0.0,
+      "p25": 0.87,
+      "median": 2.23,
+      "p75": 4.595000000000001,
+      "max": 28.62
+    },
+    {
+      "variable": "ai_security_pct",
+      "count": 592.0,
+      "mean": 3.5389358108108113,
+      "std": 4.3191074369260996,
+      "min": 0.0,
+      "p25": 0.8075000000000001,
+      "median": 2.1900000000000004,
+      "p75": 4.609999999999999,
+      "max": 40.19
+    }
+  ],
+  "by_year": [
+    {
+      "year": 2021,
+      "n": 209,
+      "entities": 209,
+      "productivity_mean_keur": 61.76516742839666,
+      "productivity_median_keur": 44.37305302437155,
+      "productivity_employment_weighted_keur": 64.26747650451915,
+      "ai_any_pct_mean": 9.203492822966508,
+      "ai_ge2_pct_mean": 4.769420289855073,
+      "ai_ge3_pct_mean": 2.5712745098039216,
+      "ai_workflow_pct_mean": 3.9591346153846154,
+      "ai_production_pct_mean": 1.9896534653465348,
+      "ai_logistics_pct_mean": 0.9407106598984771,
+      "ai_marketing_pct_mean": 2.6145853658536584,
+      "ai_security_pct_mean": 2.9105050505050505
+    },
+    {
+      "year": 2023,
+      "n": 209,
+      "entities": 209,
+      "productivity_mean_keur": 67.89299734084904,
+      "productivity_median_keur": 51.54302219519611,
+      "productivity_employment_weighted_keur": 69.54867128975403,
+      "ai_any_pct_mean": 9.996411483253588,
+      "ai_ge2_pct_mean": 5.37047846889952,
+      "ai_ge3_pct_mean": 3.0139901477832516,
+      "ai_workflow_pct_mean": 3.9557004830917872,
+      "ai_production_pct_mean": 2.3438383838383836,
+      "ai_logistics_pct_mean": 0.9005102040816326,
+      "ai_marketing_pct_mean": 2.7723618090452264,
+      "ai_security_pct_mean": 3.0562244897959183
+    },
+    {
+      "year": 2024,
+      "n": 209,
+      "entities": 209,
+      "productivity_mean_keur": 72.75608553315938,
+      "productivity_median_keur": 54.25343573380958,
+      "productivity_employment_weighted_keur": 71.42616891378516,
+      "ai_any_pct_mean": 17.151387559808615,
+      "ai_ge2_pct_mean": 10.670478468899523,
+      "ai_ge3_pct_mean": 6.271971153846154,
+      "ai_workflow_pct_mean": 6.063157894736842,
+      "ai_production_pct_mean": 3.8837563451776647,
+      "ai_logistics_pct_mean": 1.1248730964467004,
+      "ai_marketing_pct_mean": 6.22286432160804,
+      "ai_security_pct_mean": 4.64520202020202
+    }
+  ],
+  "by_sector": [
+    {
+      "sector_code": "J",
+      "sector_name": "Information and communication",
+      "n": 75,
+      "countries": 25,
+      "productivity_mean_keur": 118.60012340547723,
+      "productivity_median_keur": 89.12888909724501,
+      "ai_any_mean_pct": 32.95666666666666,
+      "ai_workflow_mean_pct": 14.634933333333334,
+      "ai_production_mean_pct": 9.026,
+      "ai_logistics_mean_pct": 1.8458571428571429,
+      "ai_marketing_mean_pct": 12.4396,
+      "ai_security_mean_pct": 10.693513513513514
+    },
+    {
+      "sector_code": "M",
+      "sector_name": "Professional, scientific and technical activities",
+      "n": 69,
+      "countries": 23,
+      "productivity_mean_keur": 67.94359820503819,
+      "productivity_median_keur": 60.49805563864792,
+      "ai_any_mean_pct": 18.747826086956522,
+      "ai_workflow_mean_pct": 7.311449275362319,
+      "ai_production_mean_pct": 4.061969696969697,
+      "ai_logistics_mean_pct": 0.7836507936507936,
+      "ai_marketing_mean_pct": 4.541617647058823,
+      "ai_security_mean_pct": 4.969701492537314
+    },
+    {
+      "sector_code": "L",
+      "sector_name": "Real estate activities",
+      "n": 36,
+      "countries": 12,
+      "productivity_mean_keur": 119.44231285634585,
+      "productivity_median_keur": 118.18473071339236,
+      "ai_any_mean_pct": 11.914722222222222,
+      "ai_workflow_mean_pct": 4.6875,
+      "ai_production_mean_pct": 1.4388571428571428,
+      "ai_logistics_mean_pct": 0.3364516129032258,
+      "ai_marketing_mean_pct": 3.3555882352941175,
+      "ai_security_mean_pct": 2.423235294117647
+    },
+    {
+      "sector_code": "N",
+      "sector_name": "Administrative and support service activities",
+      "n": 75,
+      "countries": 25,
+      "productivity_mean_keur": 35.83361759699442,
+      "productivity_median_keur": 33.087989999107066,
+      "ai_any_mean_pct": 10.4716,
+      "ai_workflow_mean_pct": 3.5816,
+      "ai_production_mean_pct": 1.8850724637681158,
+      "ai_logistics_mean_pct": 0.5434246575342466,
+      "ai_marketing_mean_pct": 3.5275714285714286,
+      "ai_security_mean_pct": 3.0768181818181817
+    },
+    {
+      "sector_code": "C",
+      "sector_name": "Manufacturing",
+      "n": 78,
+      "countries": 26,
+      "productivity_mean_keur": 94.19681576928683,
+      "productivity_median_keur": 51.380974740118475,
+      "ai_any_mean_pct": 8.906538461538462,
+      "ai_workflow_mean_pct": 3.444675324675325,
+      "ai_production_mean_pct": 3.159090909090909,
+      "ai_logistics_mean_pct": 1.1563157894736842,
+      "ai_marketing_mean_pct": 1.818961038961039,
+      "ai_security_mean_pct": 2.477922077922078
+    },
+    {
+      "sector_code": "G",
+      "sector_name": "Wholesale and retail trade; repair of motor vehicles and motorcycles",
+      "n": 78,
+      "countries": 26,
+      "productivity_mean_keur": 52.954907074124336,
+      "productivity_median_keur": 46.18607174287382,
+      "ai_any_mean_pct": 8.466923076923077,
+      "ai_workflow_mean_pct": 3.0551282051282054,
+      "ai_production_mean_pct": 1.3381333333333334,
+      "ai_logistics_mean_pct": 1.1606666666666667,
+      "ai_marketing_mean_pct": 3.5475000000000003,
+      "ai_security_mean_pct": 2.3385714285714285
+    },
+    {
+      "sector_code": "H",
+      "sector_name": "Transportation and storage",
+      "n": 78,
+      "countries": 26,
+      "productivity_mean_keur": 60.60382632776938,
+      "productivity_median_keur": 56.767082627953144,
+      "ai_any_mean_pct": 7.642307692307693,
+      "ai_workflow_mean_pct": 2.7555128205128208,
+      "ai_production_mean_pct": 1.3129577464788733,
+      "ai_logistics_mean_pct": 2.081714285714286,
+      "ai_marketing_mean_pct": 1.7044444444444444,
+      "ai_security_mean_pct": 2.6598571428571427
+    },
+    {
+      "sector_code": "F",
+      "sector_name": "Construction",
+      "n": 66,
+      "countries": 22,
+      "productivity_mean_keur": 52.76078291582884,
+      "productivity_median_keur": 45.063636479937486,
+      "ai_any_mean_pct": 4.954999999999999,
+      "ai_workflow_mean_pct": 0.9870769230769231,
+      "ai_production_mean_pct": 0.5284615384615385,
+      "ai_logistics_mean_pct": 0.2561904761904762,
+      "ai_marketing_mean_pct": 0.8245312499999999,
+      "ai_security_mean_pct": 1.0263492063492063
+    },
+    {
+      "sector_code": "I",
+      "sector_name": "Accommodation and food service activities",
+      "n": 72,
+      "countries": 24,
+      "productivity_mean_keur": 28.428773489505748,
+      "productivity_median_keur": 28.92935978047977,
+      "ai_any_mean_pct": 4.715416666666666,
+      "ai_workflow_mean_pct": 1.2312676056338028,
+      "ai_production_mean_pct": 0.538125,
+      "ai_logistics_mean_pct": 0.26014492753623186,
+      "ai_marketing_mean_pct": 2.060597014925373,
+      "ai_security_mean_pct": 0.9934375
+    }
+  ],
+  "correlations": [
+    {
+      "variable": "ai_any_pct",
+      "indicador": "Adopción general",
+      "n": 627,
+      "pearson_r": 0.5642650724003451,
+      "pearson_p": 5.368442641292324e-54,
+      "spearman_rho": 0.6508413204743162,
+      "spearman_p": 8.25976743211489e-77
+    },
+    {
+      "variable": "ai_ge2_pct",
+      "indicador": "Dos o más tecnologías",
+      "n": 625,
+      "pearson_r": 0.496777446440445,
+      "pearson_p": 2.9242324493725482e-40,
+      "spearman_rho": 0.6062604399236238,
+      "spearman_p": 5.4949932182114005e-64
+    },
+    {
+      "variable": "ai_ge3_pct",
+      "indicador": "Tres o más tecnologías",
+      "n": 615,
+      "pearson_r": 0.46261378225776095,
+      "pearson_p": 6.099847109388317e-34,
+      "spearman_rho": 0.5679066806490645,
+      "spearman_p": 8.364671574135434e-54
+    },
+    {
+      "variable": "ai_workflow_pct",
+      "indicador": "Procesos y decisiones",
+      "n": 624,
+      "pearson_r": 0.5328094262433645,
+      "pearson_p": 4.742801266763395e-47,
+      "spearman_rho": 0.6090669115164747,
+      "spearman_p": 1.2806643720469501e-64
+    },
+    {
+      "variable": "ai_production_pct",
+      "indicador": "Producción",
+      "n": 597,
+      "pearson_r": 0.5044019882210838,
+      "pearson_p": 7.523476210307632e-40,
+      "spearman_rho": 0.5946864091090203,
+      "spearman_p": 2.2524920274999488e-58
+    },
+    {
+      "variable": "ai_logistics_pct",
+      "indicador": "Logística",
+      "n": 590,
+      "pearson_r": 0.41813933784601803,
+      "pearson_p": 2.2619408278364723e-26,
+      "spearman_rho": 0.47115738642814115,
+      "spearman_p": 6.181849256959655e-34
+    },
+    {
+      "variable": "ai_marketing_pct",
+      "indicador": "Marketing y ventas",
+      "n": 603,
+      "pearson_r": 0.4138302011767143,
+      "pearson_p": 2.385063705894712e-26,
+      "spearman_rho": 0.4115284624499545,
+      "spearman_p": 4.77196025895095e-26
+    },
+    {
+      "variable": "ai_security_pct",
+      "indicador": "Seguridad informática",
+      "n": 592,
+      "pearson_r": 0.4382679622873375,
+      "pearson_p": 3.5108524511535837e-29,
+      "spearman_rho": 0.5715777866764024,
+      "spearman_p": 1.1997065928184553e-52
+    }
+  ],
+  "correlations_by_year": [
+    {
+      "year": 2021,
+      "variable": "ai_any_pct",
+      "indicador": "Adopción general",
+      "n": 209,
+      "pearson_r": 0.5886993155002447,
+      "p_value": 6.966598678998233e-21
+    },
+    {
+      "year": 2021,
+      "variable": "ai_ge2_pct",
+      "indicador": "Dos o más tecnologías",
+      "n": 207,
+      "pearson_r": 0.5186094325129232,
+      "p_value": 1.2005792463047113e-15
+    },
+    {
+      "year": 2021,
+      "variable": "ai_ge3_pct",
+      "indicador": "Tres o más tecnologías",
+      "n": 204,
+      "pearson_r": 0.4710776734236246,
+      "p_value": 1.1540941668299825e-12
+    },
+    {
+      "year": 2021,
+      "variable": "ai_workflow_pct",
+      "indicador": "Procesos y decisiones",
+      "n": 208,
+      "pearson_r": 0.5182983968994755,
+      "p_value": 1.072300170432545e-15
+    },
+    {
+      "year": 2021,
+      "variable": "ai_production_pct",
+      "indicador": "Producción",
+      "n": 202,
+      "pearson_r": 0.5422851780858952,
+      "p_value": 7.719746018213413e-17
+    },
+    {
+      "year": 2021,
+      "variable": "ai_logistics_pct",
+      "indicador": "Logística",
+      "n": 197,
+      "pearson_r": 0.4274033174336774,
+      "p_value": 3.75603120154835e-10
+    },
+    {
+      "year": 2021,
+      "variable": "ai_marketing_pct",
+      "indicador": "Marketing y ventas",
+      "n": 205,
+      "pearson_r": 0.3883659432734902,
+      "p_value": 8.714890348950433e-09
+    },
+    {
+      "year": 2021,
+      "variable": "ai_security_pct",
+      "indicador": "Seguridad informática",
+      "n": 198,
+      "pearson_r": 0.4393184166925003,
+      "p_value": 9.491044206172914e-11
+    },
+    {
+      "year": 2023,
+      "variable": "ai_any_pct",
+      "indicador": "Adopción general",
+      "n": 209,
+      "pearson_r": 0.5756504455675239,
+      "p_value": 7.68563596930554e-20
+    },
+    {
+      "year": 2023,
+      "variable": "ai_ge2_pct",
+      "indicador": "Dos o más tecnologías",
+      "n": 209,
+      "pearson_r": 0.5092036802821973,
+      "p_value": 3.4632071266530934e-15
+    },
+    {
+      "year": 2023,
+      "variable": "ai_ge3_pct",
+      "indicador": "Tres o más tecnologías",
+      "n": 203,
+      "pearson_r": 0.4669981395883606,
+      "p_value": 2.1653768891895883e-12
+    },
+    {
+      "year": 2023,
+      "variable": "ai_workflow_pct",
+      "indicador": "Procesos y decisiones",
+      "n": 207,
+      "pearson_r": 0.5605530708487705,
+      "p_value": 1.5900528674368257e-18
+    },
+    {
+      "year": 2023,
+      "variable": "ai_production_pct",
+      "indicador": "Producción",
+      "n": 198,
+      "pearson_r": 0.5663045854348162,
+      "p_value": 3.4646688165486276e-18
+    },
+    {
+      "year": 2023,
+      "variable": "ai_logistics_pct",
+      "indicador": "Logística",
+      "n": 196,
+      "pearson_r": 0.41239515781551794,
+      "p_value": 1.9010051154931796e-09
+    },
+    {
+      "year": 2023,
+      "variable": "ai_marketing_pct",
+      "indicador": "Marketing y ventas",
+      "n": 199,
+      "pearson_r": 0.41742900123680493,
+      "p_value": 8.580670779452251e-10
+    },
+    {
+      "year": 2023,
+      "variable": "ai_security_pct",
+      "indicador": "Seguridad informática",
+      "n": 196,
+      "pearson_r": 0.44518425788885774,
+      "p_value": 6.242752213161438e-11
+    },
+    {
+      "year": 2024,
+      "variable": "ai_any_pct",
+      "indicador": "Adopción general",
+      "n": 209,
+      "pearson_r": 0.5930171914990137,
+      "p_value": 3.072931778191365e-21
+    },
+    {
+      "year": 2024,
+      "variable": "ai_ge2_pct",
+      "indicador": "Dos o más tecnologías",
+      "n": 209,
+      "pearson_r": 0.5348371074236294,
+      "p_value": 7.323833050096193e-17
+    },
+    {
+      "year": 2024,
+      "variable": "ai_ge3_pct",
+      "indicador": "Tres o más tecnologías",
+      "n": 208,
+      "pearson_r": 0.5151132508885198,
+      "p_value": 1.7130583132216091e-15
+    },
+    {
+      "year": 2024,
+      "variable": "ai_workflow_pct",
+      "indicador": "Procesos y decisiones",
+      "n": 209,
+      "pearson_r": 0.5432620731966483,
+      "p_value": 1.9170824479204345e-17
+    },
+    {
+      "year": 2024,
+      "variable": "ai_production_pct",
+      "indicador": "Producción",
+      "n": 197,
+      "pearson_r": 0.5140374146391534,
+      "p_value": 1.1130871097015479e-14
+    },
+    {
+      "year": 2024,
+      "variable": "ai_logistics_pct",
+      "indicador": "Logística",
+      "n": 197,
+      "pearson_r": 0.41432046362721997,
+      "p_value": 1.4263882991084556e-09
+    },
+    {
+      "year": 2024,
+      "variable": "ai_marketing_pct",
+      "indicador": "Marketing y ventas",
+      "n": 199,
+      "pearson_r": 0.4785068113967278,
+      "p_value": 8.786024644061439e-13
+    },
+    {
+      "year": 2024,
+      "variable": "ai_security_pct",
+      "indicador": "Seguridad informática",
+      "n": 198,
+      "pearson_r": 0.4485276421936563,
+      "p_value": 3.430098054904718e-11
+    }
+  ],
+  "change_correlations": [
+    {
+      "variable": "ai_any_pct",
+      "indicador": "Adopción general",
+      "n": 209,
+      "pearson_r": -0.2173809788540276,
+      "p_value": 0.0015685797715408714
+    },
+    {
+      "variable": "ai_ge2_pct",
+      "indicador": "Dos o más tecnologías",
+      "n": 207,
+      "pearson_r": -0.2203212497621052,
+      "p_value": 0.0014228964388625952
+    },
+    {
+      "variable": "ai_ge3_pct",
+      "indicador": "Tres o más tecnologías",
+      "n": 204,
+      "pearson_r": -0.2087476897277324,
+      "p_value": 0.0027330244347202257
+    },
+    {
+      "variable": "ai_workflow_pct",
+      "indicador": "Procesos y decisiones",
+      "n": 208,
+      "pearson_r": -0.05872283761028328,
+      "p_value": 0.3994877631130091
+    },
+    {
+      "variable": "ai_production_pct",
+      "indicador": "Producción",
+      "n": 193,
+      "pearson_r": -0.13492767423496166,
+      "p_value": 0.06136410044976241
+    },
+    {
+      "variable": "ai_logistics_pct",
+      "indicador": "Logística",
+      "n": 189,
+      "pearson_r": 0.026743618064962282,
+      "p_value": 0.7148947612031606
+    },
+    {
+      "variable": "ai_marketing_pct",
+      "indicador": "Marketing y ventas",
+      "n": 196,
+      "pearson_r": -0.268283344462897,
+      "p_value": 0.000143603704375405
+    },
+    {
+      "variable": "ai_security_pct",
+      "indicador": "Seguridad informática",
+      "n": 192,
+      "pearson_r": -0.11970563282542247,
+      "p_value": 0.09816597325589631
+    }
+  ],
+  "coverage": [
+    {
+      "variable": "labour_productivity_keur",
+      "missing_panel": 53,
+      "missing_balanced": 0,
+      "coverage_panel_pct": 92.72976680384087,
+      "coverage_balanced_pct": 100.0
+    },
+    {
+      "variable": "ai_any_pct",
+      "missing_panel": 15,
+      "missing_balanced": 0,
+      "coverage_panel_pct": 97.94238683127573,
+      "coverage_balanced_pct": 100.0
+    },
+    {
+      "variable": "ai_ge2_pct",
+      "missing_panel": 17,
+      "missing_balanced": 2,
+      "coverage_panel_pct": 97.66803840877915,
+      "coverage_balanced_pct": 99.68102073365232
+    },
+    {
+      "variable": "ai_ge3_pct",
+      "missing_panel": 20,
+      "missing_balanced": 12,
+      "coverage_panel_pct": 97.25651577503429,
+      "coverage_balanced_pct": 98.08612440191388
+    },
+    {
+      "variable": "ai_workflow_pct",
+      "missing_panel": 13,
+      "missing_balanced": 3,
+      "coverage_panel_pct": 98.21673525377228,
+      "coverage_balanced_pct": 99.52153110047847
+    },
+    {
+      "variable": "ai_production_pct",
+      "missing_panel": 48,
+      "missing_balanced": 30,
+      "coverage_panel_pct": 93.4156378600823,
+      "coverage_balanced_pct": 95.2153110047847
+    },
+    {
+      "variable": "ai_logistics_pct",
+      "missing_panel": 48,
+      "missing_balanced": 37,
+      "coverage_panel_pct": 93.4156378600823,
+      "coverage_balanced_pct": 94.09888357256779
+    },
+    {
+      "variable": "ai_marketing_pct",
+      "missing_panel": 38,
+      "missing_balanced": 24,
+      "coverage_panel_pct": 94.78737997256516,
+      "coverage_balanced_pct": 96.17224880382776
+    },
+    {
+      "variable": "ai_security_pct",
+      "missing_panel": 51,
+      "missing_balanced": 35,
+      "coverage_panel_pct": 93.00411522633745,
+      "coverage_balanced_pct": 94.41786283891547
+    }
+  ]
+}

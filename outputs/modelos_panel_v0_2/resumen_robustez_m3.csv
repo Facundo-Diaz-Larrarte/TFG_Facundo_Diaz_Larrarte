@@ -1,0 +1,9 @@
+ai_variable,indicator,scenarios,beta_min,beta_max,significant_5pct,significant_10pct
+ai_any_pct,Adopción general,4,-0.001567371290962909,-0.0007437005948326616,1,1
+ai_ge2_pct,Dos o más tecnologías,4,-0.001678833424689875,-0.0011975266485718555,0,2
+ai_ge3_pct,Tres o más tecnologías,4,-0.0020266546188844286,-0.0012054717310132114,0,0
+ai_logistics_pct,Logística,4,-0.001089023752178698,0.010673671918343267,0,0
+ai_marketing_pct,Marketing y ventas,4,-0.0038353574444383778,-0.0033016080520713127,0,3
+ai_production_pct,Producción,4,-0.0014208744883115552,0.00018715734928377285,0,0
+ai_security_pct,Seguridad informática,4,-0.001864647261095445,-0.0001856594502393538,0,0
+ai_workflow_pct,Procesos y decisiones,4,-0.0006957618959266058,3.422908813589246e-05,0,0
