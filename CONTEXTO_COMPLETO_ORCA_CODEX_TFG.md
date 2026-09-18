@@ -1,9 +1,13 @@
 # Contexto completo para continuar el TFG con Orca/Codex
 
-**Responsable:** Facundo Díaz Larrarte  
-**Carrera:** Licenciatura en Economía, Facultad de Ciencias Económicas, Universidad Nacional de Río Cuarto  
-**Estado del documento:** handoff operativo y académico  
-**Última actualización:** 18 de septiembre de 2026  
+**Responsable:** Facundo Díaz Larrarte
+
+**Carrera:** Licenciatura en Economía, Facultad de Ciencias Económicas, Universidad Nacional de Río Cuarto
+
+**Estado del documento:** handoff operativo y académico
+
+**Última actualización:** 18 de septiembre de 2026
+
 **Repositorio:** <https://github.com/Facundo-Diaz-Larrarte/TFG_Facundo_Diaz_Larrarte>
 
 > **Instrucción para cualquier agente nuevo:** leer este archivo completo antes de proponer cambios. No cambiar el tema, la pregunta, el alcance, las hipótesis ni la estrategia econométrica sin autorización expresa de Facundo. Antes de editar, comprobar la rama, el estado de Git y los PR abiertos.
@@ -219,13 +223,13 @@ Los campos `*_flag`, disponibilidad de grupos de tamaño, faltantes y rupturas d
 
 ### 6.1 Eurostat
 
-- Uso empresarial de IA, `isoc_eb_ai`:  
+- Uso empresarial de IA, `isoc_eb_ai`:
   <https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ai/default/table?lang=en>
-- Indicadores adicionales de IA, `isoc_eb_ain2`:  
+- Indicadores adicionales de IA, `isoc_eb_ain2`:
   <https://ec.europa.eu/eurostat/databrowser/view/isoc_eb_ain2/default/table?lang=en>
-- Metadatos de la encuesta TIC empresarial:  
+- Metadatos de la encuesta TIC empresarial:
   <https://ec.europa.eu/eurostat/cache/metadata/en/isoc_e_esms.htm>
-- Portal de Structural Business Statistics:  
+- Portal de Structural Business Statistics:
   <https://ec.europa.eu/eurostat/web/structural-business-statistics/database>
 
 Estructuras SDMX consultadas:
@@ -503,15 +507,15 @@ La relación IA–productividad ya fue estudiada. El TFG sigue siendo válido po
 
 ### 10.1 Trabajos cercanos ya identificados
 
-- Brynjolfsson, Rock y Syverson (2021), *The Productivity J-Curve*.  
+- Brynjolfsson, Rock y Syverson (2021), *The Productivity J-Curve*.
   DOI: <https://doi.org/10.1257/mac.20180386>
-- Czarnitzki, Fernández y Rammer (2023), *Artificial Intelligence and Firm-Level Productivity*.  
+- Czarnitzki, Fernández y Rammer (2023), *Artificial Intelligence and Firm-Level Productivity*.
   DOI: <https://doi.org/10.1016/j.jebo.2023.05.008>
-- Kádárová et al. (2026), *Artificial Intelligence Adoption and Labour Productivity in Slovakia and the EU27*.  
+- Kádárová et al. (2026), *Artificial Intelligence Adoption and Labour Productivity in Slovakia and the EU27*.
   DOI: <https://doi.org/10.3390/su18042135>
-- Aldasoro et al. (2026), *AI Adoption, Productivity and Employment: Evidence from European Firms*, BIS Working Paper 1325.  
+- Aldasoro et al. (2026), *AI Adoption, Productivity and Employment: Evidence from European Firms*, BIS Working Paper 1325.
   <https://www.bis.org/publ/work1325.htm>
-- Yilmaz (2026), *AI Adoption Velocity, Productivity and Labour Outcomes in Europe: A Country-Sector Dataset...*  
+- Yilmaz (2026), *AI Adoption Velocity, Productivity and Labour Outcomes in Europe: A Country-Sector Dataset...*
   DOI: <https://doi.org/10.17632/gznvk45cfk.1>
 - Wooldridge (2010), *Econometric Analysis of Cross Section and Panel Data*, para metodología.
 
@@ -740,4 +744,3 @@ Una redacción inválida sería:
 ## 15. Mensaje breve de continuidad
 
 El TFG es viable y no debe pivotearse. El hallazgo preliminar —asociación positiva en niveles, pero ausencia de una relación temporal robusta con efectos fijos exigentes— no es un fracaso: es precisamente una razón para distinguir adopción de realización productiva y estudiar heterogeneidad sectorial con prudencia. La meta inmediata no es buscar significatividad, sino consolidar reproducibilidad, comparabilidad, robustez e interpretación económica.
-
