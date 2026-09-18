@@ -1,0 +1,28 @@
+{
+  "panel_rows": 729,
+  "balanced_rows": 627,
+  "balanced_entities": 209,
+  "years": [
+    2021,
+    2023,
+    2024
+  ],
+  "countries": 27,
+  "sectors": 9,
+  "strongest_level_correlation": {
+    "variable": "ai_any_pct",
+    "indicador": "Adopción general",
+    "n": 627,
+    "pearson_r": 0.5642650724003451,
+    "pearson_p": 5.368442641292324e-54,
+    "spearman_rho": 0.6508413204743162,
+    "spearman_p": 8.25976743211489e-77
+  },
+  "strongest_change_correlation": {
+    "variable": "ai_marketing_pct",
+    "indicador": "Marketing y ventas",
+    "n": 196,
+    "pearson_r": -0.268283344462897,
+    "p_value": 0.000143603704375405
+  }
+}

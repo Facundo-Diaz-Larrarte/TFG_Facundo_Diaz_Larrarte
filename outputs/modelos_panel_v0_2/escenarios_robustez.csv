@@ -1,0 +1,5 @@
+scenario,label,rows_before_ai_dropna,entities,countries,sectors,years,weighted,weight_col,trim,productivity_min_keur,productivity_max_keur
+balanced_unweighted,"Muestra balanceada, sin ponderar",627,209,27,9,"2021,2023,2024",False,,,10.136720354233402,857.2263356861066
+core_unbalanced_unweighted,"Muestra central completa, sin ponderar",667,233,27,9,"2021,2023,2024",False,,,10.136720354233402,857.2263356861066
+balanced_employment_weighted,"Muestra balanceada, ponderada por empleo",627,209,27,9,"2021,2023,2024",True,persons_employed_ge10,,10.136720354233402,857.2263356861066
+balanced_trim_p01_p99,"Muestra balanceada, sin extremos p1-p99 de productividad",613,207,27,9,"2021,2023,2024",False,,"(0.01, 0.99)",14.262038247899214,271.0208192309597
