@@ -89,7 +89,7 @@
 
 El presente Trabajo Final de Grado analiza la relación entre los usos empresariales de inteligencia artificial y la productividad laboral aparente en sectores económicos de la Unión Europea. A partir de información secundaria de Eurostat, se construye una base país--sector--año que combina indicadores de adopción y usos de inteligencia artificial con datos de valor agregado y personas ocupadas provenientes de estadísticas estructurales empresariales. El objetivo es estudiar la heterogeneidad sectorial de la adopción tecnológica y estimar su asociación con la productividad, distinguiendo entre correlaciones en niveles y variaciones dentro de cada unidad país--sector.
 
-El enfoque es cuantitativo, longitudinal, observacional y no experimental. La estrategia empírica propuesta utiliza modelos de datos de panel con efectos fijos, manteniendo una interpretación asociativa y evitando inferencias causales no respaldadas por el diseño. Los resultados preliminares muestran una asociación positiva entre adopción de inteligencia artificial y productividad en niveles, pero esa relación se debilita al controlar por diferencias permanentes entre unidades país--sector y shocks país--año. Esta diferencia sugiere la necesidad de distinguir entre adopción tecnológica y realización productiva, así como de considerar la heterogeneidad sectorial, los activos complementarios y las limitaciones de medición.
+El enfoque es cuantitativo, longitudinal, observacional y no experimental. La estrategia empírica propuesta utiliza modelos de datos de panel con efectos fijos, manteniendo una interpretación asociativa y evitando inferencias causales no respaldadas por el diseño. Los resultados muestran una asociación positiva entre adopción de inteligencia artificial y productividad en niveles, pero esa relación se debilita al controlar por diferencias permanentes entre unidades país--sector y shocks país--año. Esta diferencia sugiere la necesidad de distinguir entre adopción tecnológica y realización productiva, así como de considerar la heterogeneidad sectorial, los activos complementarios y las limitaciones de medición.
 
 \vspace{1.5cm}
 \noindent\textbf{Palabras clave:} inteligencia artificial; productividad laboral; adopción tecnológica; datos de panel; Unión Europea.
@@ -245,7 +245,7 @@ La discusión de los resultados se estructura alrededor del concepto de \textbf{
 
 El trabajo utiliza datos secundarios de Eurostat. Las fuentes principales son la base \texttt{isoc\_eb\_ai}, referida al uso de inteligencia artificial en empresas \citep{eurostat_ai}; la base \texttt{isoc\_eb\_ain2}, con indicadores complementarios sobre usos y características de la adopción \citep{eurostat_ain2}; y las estadísticas estructurales empresariales de Eurostat, utilizadas para obtener valor agregado y personas ocupadas \citep{eurostat_sbs}.
 
-La cobertura principal comprende 27 países de la Unión Europea, nueve sectores NACE Rev. 2 y tres años: 2021, 2023 y 2024. La base analítica preliminar contiene 729 combinaciones teóricas de país, sector y año. De ellas, 667 cuentan con información central completa. La muestra balanceada preliminar contiene 209 unidades país--sector observadas en los tres años, equivalentes a 627 observaciones.
+La cobertura principal comprende 27 países de la Unión Europea, nueve sectores NACE Rev. 2 y tres años: 2021, 2023 y 2024. La base analítica contiene 729 combinaciones teóricas de país, sector y año. De ellas, 667 cuentan con información central completa. La muestra balanceada contiene 209 unidades país--sector observadas en los tres años, equivalentes a 627 observaciones.
 
 \subsection{Sectores considerados}
 
@@ -289,7 +289,7 @@ La especificación principal propuesta es:
  \beta IA_{cst} + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst},
 \end{equation}
 
-donde $c$ representa el país, $s$ el sector y $t$ el año. El término $\alpha_{cs}$ corresponde a efectos fijos de la unidad país--sector, que absorben diferencias permanentes de cada combinación. El término $\gamma_{ct}$ representa efectos fijos país--año, que capturan shocks comunes a todos los sectores de un país en un año determinado. Los errores estándar se agrupan por entidad país--sector. En virtud del teorema de Frisch--Waugh--Lovell \citep{wooldridge2010econometric}, la inclusión de los efectos fijos $\gamma_{ct}$ garantiza que cualquier deflactor general de precios o perturbación inflacionaria a escala nacional resulte idénticamente absorbida por la estructura temporal del modelo, haciendo que el estimador $\hat{\beta}$ sea numéricamente invariante ante deflactores macroeconómicos agregados y delimitando la fuente residual de variabilidad no controlada a los precios relativos intersectoriales.
+donde $c$ representa el país, $s$ el sector y $t$ el año. El término $\alpha_{cs}$ corresponde a efectos fijos de la unidad país--sector, que absorben diferencias permanentes de cada combinación. El término $\gamma_{ct}$ representa efectos fijos país--año, que capturan shocks comunes a todos los sectores de un país en un año determinado. Los errores estándar se agrupan por entidad país--sector. En virtud del teorema de Frisch--Waugh--Lovell \citep{wooldridge2010econometric}, esta estructura de efectos fijos absorbe las variaciones nominales comunes a todos los sectores dentro de un mismo país--año. Por lo tanto, el parámetro $\hat{\beta}$ se identifica a partir de diferencias sectoriales dentro de cada país--año y de cambios dentro de cada entidad país--sector, aunque la especificación no corrige variaciones de precios relativos entre sectores ni shocks sectoriales específicos.
 
 También se estiman especificaciones comparativas con efectos fijos de país, sector y año, y con efectos fijos de país--sector y año. La estimación e interpretación de modelos de panel se apoya en criterios habituales de econometría aplicada \citep{wooldridge2010econometric}.
 
@@ -306,11 +306,11 @@ La heterogeneidad sectorial se analiza descriptivamente y, como extensión econo
 
 El sector $s_0$ funciona como categoría de referencia. La pendiente estimada para cada sector se obtiene como $\beta + \delta_s$. Dado que sólo se dispone de tres olas comparables, estos resultados deben interpretarse como evidencia exploratoria de heterogeneidad asociativa.
 
-\subsection{Robustez prevista}
+\subsection{Robustez}
 
-Las pruebas de robustez previstas incluyen comparar muestra balanceada y no balanceada, ponderar por personas ocupadas, examinar sensibilidad a valores extremos, utilizar efectos fijos alternativos, evaluar el tratamiento de precios o deflactores, estimar indicadores de IA por separado y validar los modelos con bibliotecas econométricas estándar. Estas pruebas deben definirse antes de seleccionar resultados para evitar elegir especificaciones únicamente por significatividad estadística.
+Las pruebas de robustez incluyen comparar muestra balanceada y no balanceada, ponderar por personas ocupadas, examinar sensibilidad a valores extremos, utilizar efectos fijos alternativos, evaluar el tratamiento de precios o deflactores, estimar indicadores de IA por separado y validar los modelos con bibliotecas econométricas estándar. Estas pruebas se reportan para documentar sensibilidad de signo, magnitud y significatividad, no para elegir la especificación más favorable.
 
-\section{Resultados preliminares}
+\section{Resultados}
 
 \subsection{Evolución agregada}
 
@@ -424,9 +424,9 @@ Seguridad informática & 592 & 0,438 & <0,001 & -0,120 & 0,098 \\
     \label{fig:matriz-correlaciones}
 \end{figure}
 
-\subsection{Modelo de panel preliminar}
+\subsection{Modelo de panel}
 
-La especificación con efectos fijos de país--sector y país--año no arroja, en la estimación preliminar validada con \texttt{linearmodels}, coeficientes estadísticamente significativos para los indicadores de IA a niveles convencionales. La Tabla~\ref{tab:modelo-m3} reporta el modelo preferido. Para adopción general, el coeficiente estimado por un punto porcentual es aproximadamente -0,0011, con $n=627$ observaciones y 209 clusters país--sector. Interpretado para un aumento de 10 puntos porcentuales, el efecto estimado equivale aproximadamente a -1,1\%, aunque no es estadísticamente distinguible de cero.
+La especificación con efectos fijos de país--sector y país--año no arroja, en la estimación validada con \texttt{linearmodels}, coeficientes estadísticamente significativos para los indicadores de IA a niveles convencionales. La Tabla~\ref{tab:modelo-m3} reporta el modelo preferido. Para adopción general, el coeficiente estimado por un punto porcentual es aproximadamente -0,0011, con $n=627$ observaciones y 209 clusters país--sector. Interpretado para un aumento de 10 puntos porcentuales, el efecto estimado equivale aproximadamente a -1,1\%, aunque no es estadísticamente distinguible de cero.
 
 \begin{table}[H]
 \centering
@@ -489,9 +489,9 @@ I & Alojamiento y servicios de comida & 0,0118 & 0,0046 & 2,59 & 0,010 & +12,5\%
 \end{flushleft}
 \end{table}
 
-La estimación revela una marcada heterogeneidad que quedaba encubierta en el coeficiente agregado del modelo sin interacciones:
+La estimación con interacciones sugiere heterogeneidad sectorial que quedaba encubierta en el coeficiente agregado del modelo sin interacciones. Dado el panel corto, estos resultados deben leerse como exploratorios:
 \begin{itemize}
-    \item En sectores con cadenas logísticas complejas e intensivos en capital físico, como la Industria Manufacturera ($C$) y el Comercio ($G$), las pendientes dentro de entidad son negativas y estadísticamente significativas al 1\% ($\beta = -0,0095$ y $\beta = -0,0134$, respectivamente). Este comportamiento es compatible, entre otras interpretaciones, con costos de ajuste y reorganización previstos por el marco de la curva J; sin embargo, el diseño observacional no permite identificar dicho mecanismo de forma directa ni separarlo de shocks sectoriales concurrentes (como perturbaciones energéticas o cuellos de botella en insumos industriales).
+    \item En sectores con cadenas logísticas complejas e intensivos en capital físico, como la Industria Manufacturera ($C$) y el Comercio ($G$), las pendientes dentro de entidad son negativas y estadísticamente significativas al 1\% ($\beta = -0,0095$ y $\beta = -0,0134$, respectivamente). Este comportamiento es compatible, entre otras interpretaciones, con costos de ajuste y reorganización previstos por el marco de la curva J; sin embargo, el diseño observacional no mide esos costos ni permite separar ese mecanismo de shocks sectoriales concurrentes (como perturbaciones energéticas o cuellos de botella en insumos industriales).
     \item En el sector de Información y Comunicación ($J$), donde la penetración de herramientas de software y ciencia de datos es nativa y más extendida, el coeficiente es muy próximo a cero ($\beta = -0,0009$) y estadísticamente no significativo. Este coeficiente próximo a cero indica que, en la ventana temporal analizada, no se observa una asociación contemporánea estadísticamente significativa entre aumentos de adopción y productividad dentro de las unidades país--sector correspondientes a Información y Comunicación. Una posible interpretación, consistente con su elevada intensidad digital previa, es que los costos de ajuste sean menores, aunque este mecanismo no puede identificarse directamente con los datos disponibles.
     \item En Actividades Profesionales, Científicas y Técnicas ($M$), se observa un coeficiente negativo leve pero significativo al 5\% ($\beta = -0,0028$), un patrón compatible, entre otras explicaciones, con tiempos de aprendizaje y adaptación en servicios intensivos en conocimiento.
     \item En Alojamiento y Servicios de Comida ($I$), el coeficiente resulta positivo y significativo ($\beta = 0,0118$, $p=0,010$). Si bien este comportamiento podría estar influido por selección entre empresas adoptantes en un sector con baja adopción basal (4,7\% de empresas en promedio), su interpretación requiere especial cautela por coincidir con la fase de reapertura y normalización post-pandemia del turismo europeo entre 2021 y 2024.
@@ -538,8 +538,8 @@ Este patrón resulta conceptualmente compatible con la hipótesis de la \textbf{
 
 El análisis exploratorio de interacciones sectoriales profundiza la interpretación económica al revelar que la respuesta productiva no es homogénea entre actividades, si bien estos parámetros deben interpretarse con cautela debido a la reducida ventana temporal del panel ($T=3$):
 \begin{itemize}
-    \item \textbf{Sectores de alta inercia física y coordinación:} en la Industria Manufacturera y el Comercio Mayorista y Minorista, donde la adopción de IA implica rediseñar cadenas de abastecimiento, integrar sistemas ciberfísicos o sincronizar almacenes automatizados, los costos de ajuste y aprendizaje organizacional son considerables. En el corto plazo, estos costos pueden generar cuellos de botella y desajustes operativos temporales, ofreciendo una hipótesis explicativa plausible para las pendientes negativas observadas. Asimismo, estos sectores enfrentaron de forma asimétrica presiones en costos energéticos y disrupciones logísticas durante el período 2022--2023, factores que pudieron incidir en la dinámica del valor agregado nominal.
-    \item \textbf{Sectores intensivos en información:} en Información y Comunicación, una posible explicación del coeficiente próximo a cero es que la infraestructura digital y las capacidades tecnológicas preexistentes reduzcan los costos de ajuste asociados a nuevas herramientas de IA, amortiguando disrupciones pero sin generar un salto productivo contemporáneo detectable.
+    \item \textbf{Sectores de alta inercia física y coordinación:} en la Industria Manufacturera y el Comercio Mayorista y Minorista, la adopción de IA puede requerir rediseñar cadenas de abastecimiento, integrar sistemas ciberfísicos o sincronizar almacenes automatizados. En el corto plazo, esos procesos podrían generar costos de aprendizaje y desajustes operativos temporales, lo que ofrece una hipótesis explicativa plausible para las pendientes negativas observadas. Asimismo, estos sectores enfrentaron de forma asimétrica presiones en costos energéticos y disrupciones logísticas durante el período 2022--2023, factores que también pudieron incidir en la dinámica del valor agregado nominal.
+    \item \textbf{Sectores intensivos en información:} en Información y Comunicación, una posible explicación del coeficiente próximo a cero es que la infraestructura digital y las capacidades tecnológicas preexistentes reduzcan los costos de ajuste asociados a nuevas herramientas de IA. Esta interpretación es compatible con el patrón estimado, pero no puede distinguirse empíricamente de otros mecanismos con los datos disponibles.
     \item \textbf{Servicios con baja penetración basal:} en Alojamiento y Comida, el coeficiente positivo podría estar asociado tanto a patrones de selección entre adoptantes en un sector con baja penetración basal como a la fuerte recuperación cíclica posterior a la pandemia. Con el diseño observacional disponible no es posible separar ambos mecanismos.
 \end{itemize}
 
@@ -556,7 +556,7 @@ Desde una perspectiva microeconómica, adoptar una tecnología no equivale a opt
 
 Este resultado dialoga directamente con la evidencia de \citet{aldasoro2026adoption} y \citet{yilmaz2026dataset}, reforzando la conclusión de que la IA es una tecnología complementaria: su rendimiento depende críticamente de la calidad de gestión y de las inversiones intangibles que la acompañan.
 
-Asimismo, es relevante destacar que la hipótesis preliminar de que los usos funcionales orientados al núcleo operativo (procesos y toma de decisiones, producción o logística) exhibirían una asociación más estrecha con la productividad que la adopción general no encuentra respaldo empírico en las estimaciones del modelo principal M3. Ninguno de estos coeficientes funcionales resulta estadísticamente significativo (con $p$-valores de $0,860$ para procesos, $0,529$ para producción y $0,901$ para logística). Esta ausencia de significatividad contemporánea en las funciones analizadas es compatible con una etapa todavía incipiente de experimentación e integración tecnológica, aunque los datos disponibles no permiten observar directamente la profundidad de implementación ni determinar si las empresas han alcanzado una fase de optimización productiva.
+Asimismo, es relevante destacar que la hipótesis de que los usos funcionales orientados al núcleo operativo (procesos y toma de decisiones, producción o logística) exhibirían una asociación más estrecha con la productividad que la adopción general no encuentra respaldo empírico en las estimaciones del modelo principal M3. Ninguno de estos coeficientes funcionales resulta estadísticamente significativo (con $p$-valores de $0,860$ para procesos, $0,529$ para producción y $0,901$ para logística). Esta ausencia de significatividad contemporánea en las funciones analizadas es compatible con una etapa todavía incipiente de experimentación e integración tecnológica, aunque los datos disponibles no permiten observar directamente la profundidad de implementación ni determinar si las empresas han alcanzado una fase de optimización productiva.
 
 \subsubsection{De la adopción de herramientas genéricas a la resolución de cuellos de botella específicos}
 
@@ -581,7 +581,7 @@ Este Trabajo Final de Grado se propuso analizar cómo varían la adopción y los
 Los resultados alcanzados permiten extraer tres conclusiones principales:
 \begin{enumerate}
     \item \textbf{Divergencia entre corte transversal y dinámica temporal (hallazgo empírico central):} este resultado muestra que la asociación positiva observada en niveles está fuertemente condicionada por diferencias estructurales persistentes entre las unidades país--sector y que, con la variación temporal disponible, no se identifica una asociación contemporánea positiva robusta entre aumentos de adopción y productividad laboral aparente en el conjunto de la UE-27 ($r = 0,564$ en niveles frente a $\beta = -0,0011$ en el modelo con efectos fijos).
-    \item \textbf{Heterogeneidad estructural sectorial (evidencia exploratoria):} las estimaciones exploratorias muestran heterogeneidad sectorial en las asociaciones temporales observadas. Las actividades con alta complejidad física y de coordinación (manufactura y comercio) exhiben pendientes temporales negativas compatibles con costos de ajuste iniciales, mientras que los servicios informáticos absorben la tecnología sin disrupciones pero con impactos contemporáneos neutros.
+    \item \textbf{Heterogeneidad estructural sectorial (evidencia exploratoria):} las estimaciones exploratorias muestran heterogeneidad sectorial en las asociaciones temporales observadas. Las actividades con alta complejidad física y de coordinación (manufactura y comercio) exhiben pendientes temporales negativas compatibles con costos de ajuste iniciales u otros shocks sectoriales concurrentes, mientras que en los servicios informáticos se observa una asociación contemporánea cercana a cero.
     \item \textbf{La necesidad de activos complementarios:} la adopción declarada de IA no es condición suficiente para elevar la productividad agregada en el corto plazo. La materialización de mejoras en valor agregado exige tiempo de maduración, capacitación de personal y reorganización profunda de tareas.
 \end{enumerate}
 
@@ -691,7 +691,7 @@ M3 & Seguridad informática & -0,0012 & 0,0024 & -0,51 & 0,610 & -1,2\% & 0,989 
 \end{flushleft}
 \end{table}
 
-Esta tabla pone de manifiesto el hallazgo econométrico metodológico central: en el Modelo M1, la adopción general, los procesos y la logística exhiben coeficientes positivos y estadísticamente significativos. No obstante, tan pronto como se incorporan los efectos fijos de entidad ($\alpha_{cs}$) en M2 y M3 para eliminar la heterogeneidad no observable permanente, dichos coeficientes se disipan y se vuelven no significativos, demostrando que la correlación inicial obedece a factores estructurales preexistentes entre países y sectores.
+Esta tabla pone de manifiesto el hallazgo econométrico metodológico central: en el Modelo M1, la adopción general, los procesos y la logística exhiben coeficientes positivos y estadísticamente significativos. No obstante, tan pronto como se incorporan los efectos fijos de entidad ($\alpha_{cs}$) en M2 y M3 para eliminar la heterogeneidad no observable permanente, dichos coeficientes se disipan y se vuelven no significativos. Este patrón indica que la correlación inicial es consistente con la presencia de factores estructurales preexistentes entre países y sectores, más que con una asociación temporal robusta dentro de cada unidad.
 
 \subsection*{Anexo C: Cobertura geográfica (Estados miembros de la UE-27)}
 \label{anexo:paises}
@@ -746,7 +746,7 @@ python analysis/00_reproducir_todo.py
 Este script ejecuta de manera secuencial:
 \begin{enumerate}
     \item \texttt{01\_descriptivo.py}: genera las estadísticas descriptivas, tablas de cambios 2021--2024, matrices de correlación y las figuras de adopción y dispersión.
-    \item \texttt{02\_modelos\_panel.py}: realiza las estimaciones preliminares de panel por mínimos cuadrados agrupados con errores robustos.
+    \item \texttt{02\_modelos\_panel.py}: realiza las estimaciones de panel por mínimos cuadrados agrupados con errores robustos.
     \item \texttt{03\_validacion\_linearmodels.py}: replica y valida el modelo preferido M3 utilizando el algoritmo \texttt{AbsorbingLS}, verificando la coincidencia de los coeficientes a nivel de precisión de máquina.
     \item \texttt{04\_robustez\_panel.py}: estima los cuatro escenarios de sensibilidad de muestra, ponderaciones por empleo y filtros de valores extremos.
 \end{enumerate}
