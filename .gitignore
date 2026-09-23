@@ -22,3 +22,5 @@ __pycache__/
 *.lot
 *.synctex.gz
 *.pdf
+!Facundo_Diaz_Larrarte_TFG/plan_trabajo.pdf
+!Facundo_Diaz_Larrarte_TFG/trabajo_final.pdf
