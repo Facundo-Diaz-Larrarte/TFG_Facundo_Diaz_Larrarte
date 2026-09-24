@@ -6,7 +6,8 @@ Desde la raíz del repositorio:
     python analysis/00_reproducir_todo.py
 
 El script usa el mismo intérprete de Python que lo ejecuta, corre el análisis
-descriptivo, los modelos preliminares y la validación con linearmodels. Al final
+descriptivo, los modelos de panel, la validación con linearmodels y las pruebas
+de robustez, incluida la productividad real sectorial aproximada. Al final
 verifica la existencia de los productos clave y que los coeficientes del modelo
 preferido coincidan entre la implementación manual y linearmodels.
 """
@@ -25,6 +26,8 @@ INPUT = ROOT / "data" / "processed" / "panel_analitico.csv"
 DESCRIPTIVE_OUTPUT = ROOT / "outputs" / "descriptivo_v0_1"
 MODELS_OUTPUT = ROOT / "outputs" / "modelos_panel_v0_1"
 ROBUSTNESS_OUTPUT = ROOT / "outputs" / "modelos_panel_v0_2"
+REAL_PRODUCTIVITY_OUTPUT = ROOT / "outputs" / "modelos_panel_v0_3"
+REAL_PRODUCTIVITY_PANEL = ROOT / "data" / "processed" / "panel_analitico_productividad_real.csv"
 
 EXPECTED_FILES = [
     DESCRIPTIVE_OUTPUT / "tables" / "promedios_por_anio.csv",
@@ -41,6 +44,11 @@ EXPECTED_FILES = [
     ROBUSTNESS_OUTPUT / "robustez_adopcion_general.csv",
     ROBUSTNESS_OUTPUT / "comparacion_especificaciones_balanceada.csv",
     ROBUSTNESS_OUTPUT / "resumen_robustez_m3.csv",
+    REAL_PRODUCTIVITY_OUTPUT / "deflactores_pais_sector_anio.csv",
+    REAL_PRODUCTIVITY_OUTPUT / "cobertura_deflactores.csv",
+    REAL_PRODUCTIVITY_OUTPUT / "robustez_productividad_real_sectorial.csv",
+    REAL_PRODUCTIVITY_OUTPUT / "robustez_productividad_real_adopcion_general.csv",
+    REAL_PRODUCTIVITY_PANEL,
 ]
 
 
@@ -61,7 +69,7 @@ def verify_outputs() -> None:
         failed = comparison.loc[~comparison["same_beta_1e_10"], ["ai_variable", "beta_abs_diff"]]
         raise SystemExit(f"Manual and linearmodels coefficients differ:\n{failed.to_string(index=False)}")
 
-    print("Reproducibility check OK: expected outputs exist and M3 coefficients match linearmodels.")
+    print("Reproducibility check OK: expected outputs exist, M3 coefficients match linearmodels, and sectoral real-productivity robustness is available.")
 
 
 def main() -> None:
@@ -95,6 +103,15 @@ def main() -> None:
         str(INPUT.relative_to(ROOT)),
         "--output-dir",
         str(ROBUSTNESS_OUTPUT.relative_to(ROOT)),
+    )
+    run(
+        "05_productividad_real_sectorial.py",
+        "--input",
+        str(INPUT.relative_to(ROOT)),
+        "--output-dir",
+        str(REAL_PRODUCTIVITY_OUTPUT.relative_to(ROOT)),
+        "--processed-output",
+        str(REAL_PRODUCTIVITY_PANEL.relative_to(ROOT)),
     )
     verify_outputs()
 

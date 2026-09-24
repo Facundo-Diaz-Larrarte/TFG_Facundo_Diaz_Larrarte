@@ -1,0 +1,3 @@
+specification,dependent,dependent_label,ai_variable,indicator,beta_per_1pp,clustered_se,t_stat,p_value,ci95_low,ci95_high,effect_10pp_pct,n,clusters,r2_absorbing_ls
+M3_entity_countryyear_FE,log_productivity_nominal,"Nominal, miles EUR corrientes por persona",ai_any_pct,Adopción general,-0.0010706278884205311,0.0009285608838854805,-1.1529969730585505,0.24972877636977198,-0.002897133411060691,0.0007558776342196289,-1.0649170667633157,627,209,0.9893167797739608
+M3_entity_countryyear_FE,log_productivity_real_2021,"Real aproximada, precios sectoriales 2021",ai_any_pct,Adopción general,0.0018921307330429437,0.0008997691187228356,2.1029069498725423,0.03621509466627004,0.00012225942684325908,0.0036620020392426284,1.9101449648277757,627,209,0.9900656811228491

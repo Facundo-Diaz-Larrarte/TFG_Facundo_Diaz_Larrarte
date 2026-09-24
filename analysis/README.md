@@ -19,7 +19,7 @@ Los libros Excel versionados en `Facundo_Diaz_Larrarte_TFG/Datos/` conservan una
 - Nueve secciones NACE: C, F, G, H, I, J, L, M y N.
 - Años 2021, 2023 y 2024.
 - Empresas con 10 o más personas ocupadas.
-- Muestra balanceada preliminar: 209 entidades país–sector y 627 observaciones.
+- Muestra balanceada: 209 entidades país–sector y 627 observaciones.
 
 ## Instalación
 
@@ -67,7 +67,7 @@ python analysis/04_robustez_panel.py \
   --output-dir outputs/modelos_panel_v0_2
 ```
 
-Al final verifica que existan los productos clave y que los coeficientes de la especificación preferida coincidan entre la implementación manual y `linearmodels.AbsorbingLS`.
+Al final verifica que existan los productos clave, que los coeficientes de la especificación preferida coincidan entre la implementación manual y `linearmodels.AbsorbingLS`, y que esté disponible la robustez con productividad real sectorial aproximada.
 
 ## Productos versionables
 
@@ -79,6 +79,8 @@ outputs/descriptivo_v0_1/figures/*.png
 outputs/descriptivo_v0_1/resumen.json
 outputs/modelos_panel_v0_1/*.csv
 outputs/modelos_panel_v0_2/*.csv
+outputs/modelos_panel_v0_3/*.csv
+data/processed/panel_analitico_productividad_real.csv
 ```
 
 El archivo `outputs/descriptivo_v0_1/analisis_descriptivo_ia_productividad_ue27_v0_1.xlsx` es un artefacto de consulta. No es la fuente canónica del análisis.
@@ -102,6 +104,26 @@ El script `analysis/04_robustez_panel.py` genera `outputs/modelos_panel_v0_2/` c
 - M3 excluyendo extremos p1-p99 de productividad en la muestra balanceada.
 
 Estas pruebas evalúan sensibilidad de signo, magnitud y significatividad. No deben usarse para seleccionar la especificación más favorable, sino para documentar la estabilidad de los resultados.
+
+
+## Robustez v0.3: productividad real sectorial aproximada
+
+El script `analysis/05_productividad_real_sectorial.py` descarga de Eurostat `nama_10_a64` el valor agregado bruto por industria a precios corrientes (`CP_MEUR`) y en volúmenes encadenados 2020 (`CLV20_MEUR`). Con esos datos construye un deflactor país–sector–año:
+
+```text
+deflactor = GVA corriente / GVA volumen encadenado 2020
+deflactor normalizado = deflactor / deflactor país-sector en 2021
+productividad real aproximada = productividad SBS nominal / deflactor normalizado
+```
+
+La cobertura es completa para las 729 combinaciones país–sector–año del panel y para las 627 observaciones de la muestra balanceada. La prueba es una robustez aproximada porque aplica deflactores de cuentas nacionales por industria a valor agregado SBS de empresas de 10+ ocupados.
+
+Resultado principal para adopción general en M3:
+
+- Productividad nominal: β = -0,0011; p = 0,250; efecto 10 pp = -1,1%.
+- Productividad real sectorial aproximada: β = 0,0019; p = 0,036; efecto 10 pp = +1,9%.
+
+Este contraste indica que la dinámica de precios relativos sectoriales es relevante para la interpretación. La evidencia sigue siendo asociativa y no identifica causalidad.
 
 ## Interpretación
 

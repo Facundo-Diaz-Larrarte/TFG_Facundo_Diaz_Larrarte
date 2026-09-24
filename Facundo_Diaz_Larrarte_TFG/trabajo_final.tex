@@ -524,6 +524,28 @@ Muestra balanceada, sin extremos p1--p99 & -0,0007 & 0,0009 & 0,391 & -0,7\% \\
 
 El signo del coeficiente de adopción general se mantiene cualitativamente negativo en los cuatro escenarios, resultando estadísticamente significativo al 5\% únicamente bajo la ponderación por empleo. Esta sensibilidad indica que la ausencia de una asociación temporal positiva agregada no depende de la exigencia de balancear el panel ni de la presencia de valores extremos de productividad.
 
+Como robustez adicional, se construyó una medida aproximada de productividad laboral real utilizando deflactores país--sector--año de cuentas nacionales de Eurostat \citep{eurostat_nama}. Para cada país, sector y año se descargó de \texttt{nama\_10\_a64} el valor agregado bruto a precios corrientes (\texttt{CP\_MEUR}) y en volúmenes encadenados base 2020 (\texttt{CLV20\_MEUR}). El deflactor se calculó como el cociente entre ambas series y se normalizó a 2021=1 dentro de cada entidad país--sector. Luego se aplicó ese deflactor sectorial al valor agregado SBS utilizado en el indicador de productividad. Esta corrección es aproximada, porque combina deflactores de cuentas nacionales para el sector agregado con valor agregado SBS de empresas de diez o más personas ocupadas.
+
+\begin{table}[H]
+\centering
+\caption{Robustez con productividad nominal y real sectorial aproximada}
+\label{tab:robustez-real}
+\small
+\begin{tabularx}{\textwidth}{Xrrrr}
+\toprule
+\textbf{Variable dependiente} & \textbf{$\beta$ 1 pp} & \textbf{EE} & \textbf{$p$} & \textbf{Efecto 10 pp} \\
+\midrule
+Productividad nominal, euros corrientes & -0,0011 & 0,0009 & 0,250 & -1,1\% \\
+Productividad real aproximada, precios sectoriales 2021 & 0,0019 & 0,0009 & 0,036 & +1,9\% \\
+\bottomrule
+\end{tabularx}
+\begin{flushleft}
+\footnotesize Nota: variable explicativa: adopción general de IA. Ambos modelos incluyen efectos fijos país--sector y país--año, con errores estándar agrupados por entidad país--sector ($n=627$, 209 entidades). La productividad real se calcula con deflactores país--sector--año aproximados a partir de cuentas nacionales de Eurostat.
+\end{flushleft}
+\end{table}
+
+La comparación muestra que el tratamiento de precios relativos sectoriales es relevante para la interpretación. Mientras que la productividad nominal no exhibe una asociación temporal positiva estadísticamente significativa, la productividad real aproximada presenta una asociación positiva y significativa al 5\% para la adopción general. Este resultado no modifica el carácter asociativo del diseño ni resuelve la endogeneidad, pero sugiere que las variaciones de precios sectoriales dentro de cada país--año pueden ocultar parte de la relación entre adopción de IA y productividad en volumen.
+
 \section{Discusión}
 
 Los resultados obtenidos en este trabajo ofrecen elementos analíticos de relevancia para la discusión contemporánea sobre la difusión de la inteligencia artificial y su impacto económico, estructurándose en torno a cuatro ejes interpretativos.
@@ -545,7 +567,7 @@ El análisis exploratorio de interacciones sectoriales profundiza la interpretac
 
 \subsection{La brecha de realización productiva y las fricciones de optimización}
 
-La evidencia reunida es consistente con la noción de una \textbf{brecha de realización productiva}: mientras la adopción declarada de IA aumenta con rapidez en las empresas europeas, no se observa en la ventana temporal analizada una asociación contemporánea positiva robusta con la productividad laboral aparente una vez absorbidas las diferencias estructurales y los shocks anuales.
+La evidencia reunida es consistente con la noción de una \textbf{brecha de realización productiva}, aunque con un matiz importante: mientras la adopción declarada de IA aumenta con rapidez en las empresas europeas, no se observa en la ventana temporal analizada una asociación contemporánea positiva robusta con la productividad laboral aparente nominal una vez absorbidas las diferencias estructurales y los shocks anuales. Al corregir de manera aproximada por precios relativos sectoriales, la asociación con adopción general se vuelve positiva, lo que sugiere que la dinámica de precios dentro de cada país--año es empíricamente relevante.
 
 Desde una perspectiva microeconómica, adoptar una tecnología no equivale a optimizar su uso dentro de la función de producción. Las empresas a menudo enfrentan fricciones sustanciales para reestructurar sus flujos de trabajo tradicionales:
 \begin{enumerate}
@@ -556,7 +578,7 @@ Desde una perspectiva microeconómica, adoptar una tecnología no equivale a opt
 
 Este resultado dialoga directamente con la evidencia de \citet{aldasoro2026adoption} y \citet{yilmaz2026dataset}, reforzando la conclusión de que la IA es una tecnología complementaria: su rendimiento depende críticamente de la calidad de gestión y de las inversiones intangibles que la acompañan.
 
-Asimismo, es relevante destacar que la hipótesis de que los usos funcionales orientados al núcleo operativo (procesos y toma de decisiones, producción o logística) exhibirían una asociación más estrecha con la productividad que la adopción general no encuentra respaldo empírico en las estimaciones del modelo principal M3. Ninguno de estos coeficientes funcionales resulta estadísticamente significativo (con $p$-valores de $0,860$ para procesos, $0,529$ para producción y $0,901$ para logística). Esta ausencia de significatividad contemporánea en las funciones analizadas es compatible con una etapa todavía incipiente de experimentación e integración tecnológica, aunque los datos disponibles no permiten observar directamente la profundidad de implementación ni determinar si las empresas han alcanzado una fase de optimización productiva.
+Asimismo, es relevante destacar que la hipótesis de que los usos funcionales orientados al núcleo operativo (procesos y toma de decisiones, producción o logística) exhibirían una asociación más estrecha con la productividad que la adopción general no encuentra respaldo empírico en las estimaciones nominales del modelo principal M3. Ninguno de estos coeficientes funcionales resulta estadísticamente significativo en la especificación nominal (con $p$-valores de $0,860$ para procesos, $0,529$ para producción y $0,901$ para logística). En la robustez con productividad real aproximada, procesos y producción sí presentan coeficientes positivos y significativos, mientras que logística permanece no significativa. Este contraste refuerza la necesidad de interpretar los resultados como asociaciones sensibles al tratamiento de precios relativos y no como efectos causales.
 
 \subsubsection{De la adopción de herramientas genéricas a la resolución de cuellos de botella específicos}
 
@@ -570,7 +592,7 @@ Es imperativo subrayar los límites del diseño econométrico implementado:
 \begin{enumerate}
     \item \textbf{Nivel de agregación y supuestos normativos:} la unidad de análisis es la entidad país--sector. Por consiguiente, los resultados no permiten diagnosticar si una empresa individual específica obtuvo un retorno de inversión positivo o negativo, ni evaluar la calidad técnica de sus decisiones de implementación. La presencia de costos de ajuste o fricciones organizativas constituye una hipótesis teórica compatible con los datos agregados, no una medición contable directa a nivel firma.
     \item \textbf{Horizonte temporal:} con sólo tres olas comparables (2021, 2023 y 2024), la capacidad para identificar efectos dinámicos rezagados es limitada. Si los retornos productivos de la IA maduran con rezagos de varios años, el diseño actual podría estar capturando una etapa inicial compatible con costos de transición, pero no permite identificar empíricamente la trayectoria dinámica postulada por la curva J.
-    \item \textbf{Precios relativos y shocks sectoriales específicos:} la productividad laboral se calculó en miles de euros corrientes por persona ocupada. Si bien los efectos fijos país--año neutralizan la inflación agregada y los shocks macroeconómicos a escala nacional, no eliminan posibles variaciones en los precios relativos entre sectores dentro de un mismo país durante un período atravesado por la crisis energética y perturbaciones de costos de insumos industriales.
+    \item \textbf{Precios relativos y shocks sectoriales específicos:} la productividad laboral principal se calculó en miles de euros corrientes por persona ocupada. Si bien los efectos fijos país--año neutralizan la inflación agregada y los shocks macroeconómicos a escala nacional, no eliminan posibles variaciones en los precios relativos entre sectores dentro de un mismo país durante un período atravesado por la crisis energética y perturbaciones de costos de insumos industriales. Por ese motivo se incorporó una robustez con productividad real aproximada mediante deflactores país--sector--año de cuentas nacionales; aun así, esa corrección debe interpretarse como aproximada porque los deflactores sectoriales provienen de cuentas nacionales y se aplican sobre valor agregado SBS.
     \item \textbf{Inferencia estadística con panel corto ($T=3$):} al disponer de sólo tres períodos temporales, la variación intra-unidad proviene de fluctuaciones en el corto plazo. Por ello, las estimaciones sectoriales desagregadas deben concebirse como patrones exploratorios de heterogeneidad y no como parámetros estructurales definitivos de la función de producción de cada rama económica.
 \end{enumerate}
 
@@ -580,14 +602,14 @@ Este Trabajo Final de Grado se propuso analizar cómo varían la adopción y los
 
 Los resultados alcanzados permiten extraer tres conclusiones principales:
 \begin{enumerate}
-    \item \textbf{Divergencia entre corte transversal y dinámica temporal (hallazgo empírico central):} este resultado muestra que la asociación positiva observada en niveles está fuertemente condicionada por diferencias estructurales persistentes entre las unidades país--sector y que, con la variación temporal disponible, no se identifica una asociación contemporánea positiva robusta entre aumentos de adopción y productividad laboral aparente en el conjunto de la UE-27 ($r = 0,564$ en niveles frente a $\beta = -0,0011$ en el modelo con efectos fijos).
+    \item \textbf{Divergencia entre corte transversal y dinámica temporal (hallazgo empírico central):} este resultado muestra que la asociación positiva observada en niveles está fuertemente condicionada por diferencias estructurales persistentes entre las unidades país--sector y que, con la productividad nominal, no se identifica una asociación contemporánea positiva robusta entre aumentos de adopción y productividad laboral aparente en el conjunto de la UE-27 ($r = 0,564$ en niveles frente a $\beta = -0,0011$ en el modelo con efectos fijos). Sin embargo, la robustez con productividad real sectorial aproximada arroja una asociación positiva para la adopción general ($\beta = 0,0019$, $p=0,036$), lo que indica que los precios relativos sectoriales inciden en la lectura de los resultados.
     \item \textbf{Heterogeneidad estructural sectorial (evidencia exploratoria):} las estimaciones exploratorias muestran heterogeneidad sectorial en las asociaciones temporales observadas. Las actividades con alta complejidad física y de coordinación (manufactura y comercio) exhiben pendientes temporales negativas compatibles con costos de ajuste iniciales u otros shocks sectoriales concurrentes, mientras que en los servicios informáticos se observa una asociación contemporánea cercana a cero.
-    \item \textbf{La necesidad de activos complementarios:} la adopción declarada de IA no es condición suficiente para elevar la productividad agregada en el corto plazo. La materialización de mejoras en valor agregado exige tiempo de maduración, capacitación de personal y reorganización profunda de tareas.
+    \item \textbf{La necesidad de activos complementarios:} la adopción declarada de IA no es condición suficiente para elevar automáticamente la productividad agregada en el corto plazo. La materialización de mejoras en valor agregado exige tiempo de maduración, capacitación de personal y reorganización profunda de tareas; además, su medición empírica puede depender del tratamiento de precios relativos sectoriales.
 \end{enumerate}
 
 En términos de implicancias de política económica y empresarial, estos hallazgos sugieren que las estrategias de digitalización no deben concentrarse exclusivamente en incentivar la adopción nominal o la adquisición acelerada de licencias de software, sino en fortalecer los activos complementarios: programas de formación continua en habilidades analíticas, apoyo a la reingeniería de procesos internos y modernización de la gobernanza de datos.
 
-Como agenda futura, una vez que Eurostat consolide nuevas olas comparables de SBS y de la encuesta de TIC empresarial, resultará fundamental extender el horizonte temporal del panel para estimar estructuras de rezagos distribuidos que permitan verificar empíricamente en qué momento se produce el punto de inflexión ascendente de la curva J de productividad en el tejido productivo europeo.
+Como agenda futura, una vez que Eurostat consolide nuevas olas comparables de SBS y de la encuesta de TIC empresarial, resultará fundamental extender el horizonte temporal del panel para estimar estructuras de rezagos distribuidos que permitan verificar empíricamente en qué momento se produce el punto de inflexión ascendente de la curva J de productividad en el tejido productivo europeo. Una extensión especialmente relevante para el contexto nacional consistiría en adaptar este enfoque al caso argentino, combinando información sectorial o empresarial sobre adopción digital e inteligencia artificial con indicadores de valor agregado, empleo y productividad. Este tipo de ejercicio permitiría evaluar si las restricciones de capacidades complementarias, escala, financiamiento, infraestructura digital y volatilidad macroeconómica modifican la relación entre adopción tecnológica y productividad en economías emergentes como la Argentina.
 
 \clearpage
 \section{Bibliografía}
@@ -736,7 +758,7 @@ Con el propósito de asegurar la plena transparencia científica y reproducibili
 \url{https://github.com/Facundo-Diaz-Larrarte/TFG_Facundo_Diaz_Larrarte}
 \end{center}
 
-El entorno analítico se ejecuta bajo Python 3.12 utilizando las bibliotecas científicas estándar \texttt{pandas} (v2.3), \texttt{numpy} (v2.5), \texttt{scipy} (v1.18), \texttt{statsmodels} (v0.15) y \texttt{linearmodels} (v7.0).
+El entorno analítico se ejecuta bajo Python 3.12 o superior utilizando las bibliotecas científicas estándar \texttt{pandas} (v2.3), \texttt{numpy} (v2.5), \texttt{scipy} (v1.18), \texttt{statsmodels} (v0.15) y \texttt{linearmodels} (v7.0).
 
 El pipeline completo de reproducción se ejecuta desde la raíz del proyecto mediante el comando maestro:
 \begin{verbatim}
@@ -749,6 +771,7 @@ Este script ejecuta de manera secuencial:
     \item \texttt{02\_modelos\_panel.py}: realiza las estimaciones de panel por mínimos cuadrados agrupados con errores robustos.
     \item \texttt{03\_validacion\_linearmodels.py}: replica y valida el modelo preferido M3 utilizando el algoritmo \texttt{AbsorbingLS}, verificando la coincidencia de los coeficientes a nivel de precisión de máquina.
     \item \texttt{04\_robustez\_panel.py}: estima los cuatro escenarios de sensibilidad de muestra, ponderaciones por empleo y filtros de valores extremos.
+    \item \texttt{05\_productividad\_real\_sectorial.py}: descarga deflactores país--sector--año de Eurostat (\texttt{nama\_10\_a64}), construye la productividad real aproximada y reestima el modelo M3 como robustez adicional.
 \end{enumerate}
 
 \end{document}
