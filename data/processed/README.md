@@ -6,6 +6,12 @@ El archivo reproducible principal del repositorio es:
 data/processed/panel_analitico.csv
 ```
 
+La robustez con productividad real sectorial aproximada genera además:
+
+```text
+data/processed/panel_analitico_productividad_real.csv
+```
+
 Contiene la grilla completa de 729 observaciones país–sector–año y las variables `core_complete` y `balanced_entity`, que permiten reconstruir la muestra central completa y la muestra balanceada de 627 filas.
 
 ## Relación con los Excel
@@ -23,6 +29,7 @@ conservan una versión cómoda para inspección, auditoría y uso académico. Si
 - Eurostat, `isoc_eb_ai`: adopción y uso empresarial de inteligencia artificial.
 - Eurostat, `isoc_eb_ain2`: indicadores complementarios sobre usos de inteligencia artificial.
 - Eurostat, Structural Business Statistics (SBS): valor agregado y personas ocupadas.
+- Eurostat, `nama_10_a64`: valor agregado bruto por industria a precios corrientes y en volúmenes encadenados, utilizado para construir deflactores país–sector–año aproximados.
 
 ## Cobertura
 
@@ -33,7 +40,7 @@ conservan una versión cómoda para inspección, auditoría y uso académico. Si
 
 ## Productividad laboral aparente
 
-La productividad laboral aparente se calcula como:
+La productividad laboral aparente nominal se calcula como:
 
 ```text
 valor agregado / personas ocupadas
@@ -44,6 +51,16 @@ En la base, el valor agregado está expresado en millones de euros y se conviert
 ```text
 labour_productivity_keur = value_added_meur_ge10 * 1000 / persons_employed_ge10
 ```
+
+La productividad real aproximada se calcula en `analysis/05_productividad_real_sectorial.py` como:
+
+```text
+deflactor = GVA corriente / GVA volumen encadenado 2020
+deflactor normalizado = deflactor / deflactor país-sector en 2021
+labour_productivity_real_2021_keur = labour_productivity_keur / deflactor normalizado
+```
+
+Esta corrección es una robustez: aplica deflactores de cuentas nacionales por industria al valor agregado SBS de empresas con 10 o más personas ocupadas.
 
 ## Variables de control de muestra
 
