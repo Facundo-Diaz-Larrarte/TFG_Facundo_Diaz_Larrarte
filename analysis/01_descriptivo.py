@@ -188,19 +188,24 @@ def main() -> None:
     fig.savefig(figures_dir / "adopcion_ia_por_sector.png", dpi=220, bbox_inches="tight")
     plt.close(fig)
 
-    plot_2024 = balanced[balanced["year"] == 2024]
+    plot_2024 = balanced[balanced["year"] == 2024].copy()
+    plot_2024["log_productivity"] = np.log(plot_2024["labour_productivity_keur"])
     fig, ax = plt.subplots(figsize=(9, 6))
     sns.scatterplot(
         data=plot_2024,
         x="ai_any_pct",
-        y="labour_productivity_keur",
+        y="log_productivity",
         hue="sector_code",
         size="persons_employed_ge10",
         sizes=(20, 240),
         alpha=0.72,
         ax=ax,
     )
-    ax.set(title="IA y productividad laboral aparente, 2024", xlabel="Empresas que utilizan IA (%)", ylabel="Miles de euros por persona empleada")
+    ax.set(
+        title="IA y log-productividad laboral aparente, 2024",
+        xlabel="Empresas que utilizan IA (%)",
+        ylabel="Log de productividad laboral aparente",
+    )
     ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1), frameon=False, title="Sector / empleo")
     fig.tight_layout()
     fig.savefig(figures_dir / "ia_productividad_2024.png", dpi=220, bbox_inches="tight")

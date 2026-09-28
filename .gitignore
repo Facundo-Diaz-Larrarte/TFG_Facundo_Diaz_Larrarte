@@ -20,8 +20,10 @@ __pycache__/
 *.toc
 *.lof
 *.lot
+*.nav
+*.snm
 *.synctex.gz
 *.pdf
 !Facundo_Diaz_Larrarte_TFG/plan_trabajo.pdf
 !Facundo_Diaz_Larrarte_TFG/trabajo_final.pdf
-!Facundo_Diaz_Larrarte_TFG/trabajo_final_actualizado.pdf
+!Facundo_Diaz_Larrarte_TFG/seminario_presentacion_metodologia.pdf

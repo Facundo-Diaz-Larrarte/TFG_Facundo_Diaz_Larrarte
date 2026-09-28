@@ -199,22 +199,22 @@ A nivel agregado y sectorial, los estudios empíricos para la Unión Europea son
 
 La coexistencia de resultados positivos en estudios microeconómicos y resultados moderados o nulos en agregaciones sectoriales obedece a un fenómeno clásico de selección y agregación: las encuestas microeconómicas capturan el desempeño de firmas pioneras o más productivas en la frontera (\textit{frontier firms}), mientras que los datos sectoriales consolidan el desempeño conjunto de líderes y rezagadas, amortiguando cualquier impacto agregado si la tecnología aún no alcanza una difusión profunda en la mediana de las unidades productivas.
 
-\subsection{De la adopción extensiva a la integración agéntica: evidencia de frontera (2024--2026)}
+\subsection{Margen extensivo frente a intensidad de uso: limitaciones de medición y evidencia complementaria}
 
-Una limitación estructural de las encuestas estadísticas oficiales, como las operaciones sobre uso de TIC de Eurostat, radica en que capturan fundamentalmente el \textbf{margen extensivo} de la adopción tecnológica: una variable binaria que indica si la empresa declara utilizar al menos una tecnología de IA en sus actividades. Sin embargo, los relevamientos empíricos corporativos más recientes de la frontera tecnológica (2024--2026) evidencian que el acceso formal a herramientas algorítmicas no es un predictor suficiente de transformación económica ni de ganancias de productividad. La literatura industrial emergente demuestra que la materialización del valor agregado depende críticamente de la profundidad de integración y de la transición desde modelos consultivos hacia arquitecturas de ejecución agéntica.
+Una limitación metodológica de las encuestas estadísticas oficiales, como los módulos sobre uso de TIC de Eurostat, radica en que capturan de forma predominante el \textbf{margen extensivo} de la adopción tecnológica: una variable binaria que indica si una firma declara emplear al menos una tecnología de IA. No obstante, la literatura sobre adopción de tecnologías de información \citep{bresnahan2002information} y el marco de tareas de \citet{acemoglu2018race} indican que el mero acceso formal a una herramienta no garantiza ganancias de productividad. El impacto económico depende de la profundidad del \textbf{margen intensivo}, es decir, del grado de integración en las rutinas operativas, el volumen efectivo de tareas automatizadas y las complementariedades organizacionales.
 
-En su informe corporativo de telemetría empresarial, \citet{openai2026enterprise} documentan una marcada divergencia entre empresas que adoptan IA de forma periférica y aquellas que profundizan su integración en procesos operativos (\textit{frontier firms}, definidas como el decil superior de intensidad de uso). Para mediados de 2026, las firmas de frontera generaban $8,3$ veces más tokens de salida por usuario activo que las firmas promedio (frente a una brecha de $2,6$ veces a comienzos de año), polarización que se explica por la integración de los modelos con herramientas corporativas, datos contextuales propios y flujos de trabajo repetibles. Asimismo, el uso agéntico y de ejecución autónoma de tareas complejas ---medido a través de sistemas como Codex--- alcanzó a representar el $64\%$ de los tokens de salida empresariales combinados, evidenciando un desplazamiento desde la interacción conversacional básica hacia la delegación y ejecución automatizada de tareas.
+Aunque con muestras seleccionadas y sin la representatividad probabilística de los institutos oficiales de estadística, diversos reportes técnicos y de telemetría de proveedores tecnológicos aportan evidencia descriptiva sobre esta disparidad. Por ejemplo, los relevamientos de \citet{openai2026enterprise} ilustran una marcada polarización entre empresas con uso periférico o esporádico y firmas con adopción intensiva, donde el uso se acopla a bases de datos corporativas y flujos de trabajo estructurados. En estos contextos de mayor madurez, el patrón de utilización tiende a desplazarse desde la consulta puntual hacia la automatización y delegación de tareas computacionales complejas.
 
-En una dirección convergente, el \textit{Economic Index} de \citet{anthropic2026economic} detecta una mutación metodológica en los patrones de uso empresarial: las interacciones tradicionales de diálogo usuario--asistente han comenzado a ceder terreno frente a flujos de trabajo agénticos prolongados y autónomos (tales como Claude Code o herramientas colaborativas de desarrollo), lo que obligó a reconstruir los índices económicos para capturar la cadencia de tareas computacionales complejas y no meras consultas textuales aisladas. Complementariamente, \citet{openai2026taskcrossing} estudian la recomposición laboral microeconómica denominada cruce de tareas (\textit{task crossing}), documentando cómo los trabajadores emplean herramientas de IA para asumir responsabilidades y funciones operativas que históricamente correspondían a ocupaciones especializadas distintas, alterando la asignación del tiempo de trabajo y la estructura de tareas postulada en el marco teórico de \citet{acemoglu2018race}.
+En un sentido afín, los reportes de \citet{anthropic2026economic} y \citet{openai2026taskcrossing} documentan que el impacto operativo se asocia con procesos de reconfiguración del trabajo y reasignación de funciones entre ocupaciones (\textit{task crossing}), más que con el simple despliegue de herramientas genéricas. Cuando los trabajadores utilizan estas tecnologías para asumir tareas complementarias fuera de su especialización estricta, la estructura de costos y la asignación del tiempo laboral se modifican, lo que requiere períodos prolongados de ajuste interno antes de reflejarse en las estadísticas de valor agregado.
 
-Esta evidencia reciente aporta una clarificación conceptual decisiva para interpretar los resultados de este trabajo, estableciendo una cadena de transmisión que delimita el alcance de las métricas disponibles:
+Esta distinción delimita el alcance analítico de las métricas disponibles en este trabajo y permite formalizar una cadena de transmisión:
 \begin{equation*}
 \begin{aligned}
-\text{Adopción nominal (Eurostat)} &\longrightarrow \text{Intensidad y contexto} \longrightarrow \text{Integración en procesos} \\
-&\longrightarrow \text{Ejecución agéntica} \longrightarrow \text{Realización productiva}.
+\text{Adopción nominal (Eurostat)} &\longrightarrow \text{Intensidad de uso} \longrightarrow \text{Integración en procesos} \\
+&\longrightarrow \text{Reorganización de tareas} \longrightarrow \text{Realización productiva}.
 \end{aligned}
 \end{equation*}
-Mientras que las estadísticas de Eurostat analizadas en este panel capturan prioritariamente el primer eslabón (la adopción declarada o nominal durante el trienio 2021--2024), la realización efectiva de productividad demanda el tránsito por los eslabones intermedios de integración y reingeniería organizacional. Esta divergencia conceptual ofrece un sustento adicional para comprender por qué un indicador agregado como \texttt{ai\_any\_pct} no exhibe una correlación contemporánea inmediata con el valor agregado por trabajador en una ventana de observación corta.
+Las estadísticas sectoriales de Eurostat capturan prioritariamente el primer eslabón del esquema (adopción declarada durante el trienio 2021--2024). En contraste, la realización efectiva de mejoras en productividad exige transitar los eslabones intermedios de intensidad, integración operativa y reingeniería organizacional. Esta brecha conceptual ayuda a comprender por qué un indicador agregado como \texttt{ai\_any\_pct} no necesariamente exhibe una correlación contemporánea positiva con el valor agregado por persona ocupada en el corto plazo.
 
 \subsection{Desafíos econométricos e interpretación en datos de panel}
 
@@ -380,12 +380,12 @@ I & Alojamiento y servicios de comida & 4,7 & 28,4 \\
     \label{fig:adopcion-sector}
 \end{figure}
 
-La heterogeneidad en niveles también se hace visible al examinar la dispersión entre adopción y productividad para cada país y sector en el corte transversal de 2024 (Figura~\ref{fig:ia-productividad-2024}). En este gráfico se aprecia con nitidez la fuerte correlación positiva transversal: las unidades país--sector con mayor productividad laboral aparente (ubicadas en el sector de Información y Comunicación o en países de mayores ingresos) tienden a situarse sistemáticamente hacia la derecha en tasas de adopción, mientras que sectores tradicionales o de servicios personales se concentran en el cuadrante inferior izquierdo.
+La heterogeneidad en niveles también se hace visible al examinar la dispersión entre adopción y log-productividad para cada país y sector en el corte transversal de 2024 (Figura~\ref{fig:ia-productividad-2024}). El uso de log-productividad reduce la influencia visual de valores extremos y mantiene consistencia con las correlaciones y modelos econométricos reportados. En este gráfico se aprecia con nitidez la fuerte correlación positiva transversal: las unidades país--sector con mayor productividad laboral aparente (ubicadas en el sector de Información y Comunicación o en países de mayores ingresos) tienden a situarse sistemáticamente hacia la derecha en tasas de adopción, mientras que sectores tradicionales o de servicios personales se concentran en el cuadrante inferior izquierdo.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.88\linewidth]{../outputs/descriptivo_v0_1/figures/ia_productividad_2024.png}
-    \caption{Relación transversal entre adopción de IA y productividad laboral por país y sector (2024)}
+    \caption{Relación transversal entre adopción de IA y log-productividad laboral por país y sector (2024)}
     \label{fig:ia-productividad-2024}
 \end{figure}
 
@@ -544,7 +544,7 @@ Productividad real aproximada, precios sectoriales 2021 & 0,0019 & 0,0009 & 0,03
 \end{flushleft}
 \end{table}
 
-La comparación muestra que el tratamiento de precios relativos sectoriales es relevante para la interpretación. Mientras que la productividad nominal no exhibe una asociación temporal positiva estadísticamente significativa, la productividad real aproximada presenta una asociación positiva y significativa al 5\% para la adopción general. Este resultado no modifica el carácter asociativo del diseño ni resuelve la endogeneidad, pero sugiere que las variaciones de precios sectoriales dentro de cada país--año pueden ocultar parte de la relación entre adopción de IA y productividad en volumen.
+La comparación muestra que el tratamiento de precios relativos sectoriales es relevante para la interpretación. Mientras que la productividad nominal no exhibe una asociación temporal positiva estadísticamente significativa, la productividad real aproximada presenta una asociación positiva y significativa al 5\% para la adopción general. Este resultado no modifica el carácter asociativo del diseño ni resuelve la endogeneidad, pero sugiere que las variaciones de precios sectoriales dentro de cada país--año pueden ocultar parte de la relación entre adopción de IA y productividad en volumen. En términos económicos, la productividad nominal puede capturar simultáneamente cambios en eficiencia real y variaciones de precios sectoriales; por ello, la productividad real aproximada ofrece una lectura más cercana a cambios en volumen por trabajador, aunque depende de deflactores sectoriales agregados y debe interpretarse como una prueba de sensibilidad. La comparación completa para todos los indicadores de IA se reporta en el Anexo~\ref{anexo:robustez-real}.
 
 \section{Discusión}
 
@@ -773,5 +773,36 @@ Este script ejecuta de manera secuencial:
     \item \texttt{04\_robustez\_panel.py}: estima los cuatro escenarios de sensibilidad de muestra, ponderaciones por empleo y filtros de valores extremos.
     \item \texttt{05\_productividad\_real\_sectorial.py}: descarga deflactores país--sector--año de Eurostat (\texttt{nama\_10\_a64}), construye la productividad real aproximada y reestima el modelo M3 como robustez adicional.
 \end{enumerate}
+
+\subsection*{Anexo E: Robustez con productividad real por indicador de IA}
+\label{anexo:robustez-real}
+
+La Tabla~\ref{tab:anexo-robustez-real} presenta la comparación completa entre la especificación M3 con productividad nominal y con productividad real sectorial aproximada para todos los indicadores de IA. Esta tabla complementa la robustez principal reportada en el cuerpo del trabajo para la adopción general. Su objetivo es mostrar que el cambio de medición de productividad no afecta de manera homogénea a todos los usos de IA: procesos y producción pasan a exhibir asociaciones positivas y estadísticamente significativas, mientras que logística, marketing y seguridad informática permanecen sin significatividad estadística en la especificación real aproximada.
+
+\begin{table}[H]
+\centering
+\caption{Modelo M3 con productividad nominal y real aproximada, por indicador de IA}
+\label{tab:anexo-robustez-real}
+\scriptsize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrrrrrrr}
+\toprule
+\textbf{Indicador} & \textbf{$\beta$ nom.} & \textbf{$p$ nom.} & \textbf{10 pp nom.} & \textbf{$\beta$ real} & \textbf{$p$ real} & \textbf{10 pp real} & \textbf{Obs.} \\
+\midrule
+Adopción general & -0,0011 & 0,250 & -1,1\% & 0,0019 & 0,036 & +1,9\% & 627 \\
+Dos o más tecnologías & -0,0015 & 0,120 & -1,5\% & 0,0017 & 0,080 & +1,7\% & 625 \\
+Tres o más tecnologías & -0,0019 & 0,172 & -1,9\% & 0,0021 & 0,119 & +2,2\% & 615 \\
+Procesos y decisiones & -0,0003 & 0,860 & -0,3\% & 0,0038 & 0,029 & +3,8\% & 624 \\
+Producción & -0,0011 & 0,529 & -1,1\% & 0,0040 & 0,036 & +4,0\% & 597 \\
+Logística & 0,0010 & 0,901 & +1,0\% & -0,0052 & 0,501 & -5,0\% & 590 \\
+Marketing y ventas & -0,0038 & 0,078 & -3,7\% & -0,0008 & 0,704 & -0,8\% & 603 \\
+Seguridad informática & -0,0012 & 0,610 & -1,2\% & 0,0018 & 0,494 & +1,8\% & 592 \\
+\bottomrule
+\end{tabular}%
+}
+\begin{flushleft}
+\tiny Nota: variable dependiente nominal: logaritmo de productividad laboral aparente en miles de euros corrientes por persona ocupada. Variable dependiente real: logaritmo de productividad laboral real aproximada con deflactores país--sector--año de cuentas nacionales normalizados a 2021. Todos los modelos incluyen efectos fijos país--sector y país--año, con errores estándar agrupados por entidad país--sector. Efectos 10 pp calculados como $100\times(\exp(10\beta)-1)$. Fuente: elaboración propia sobre Eurostat SBS, TIC empresarial y \texttt{nama\_10\_a64}.
+\end{flushleft}
+\end{table}
 
 \end{document}

@@ -1,0 +1,198 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[authoryear]{natbib}
+
+\geometry{margin=2.3cm}
+\onehalfspacing
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+}
+
+\begin{document}
+
+% ==== Encabezado Institucional ====
+\begin{minipage}{0.45\textwidth}
+  \raggedright
+  \includegraphics[width=0.7\textwidth]{Imagenes/fce_logo.png}
+\end{minipage}%
+\begin{minipage}{0.45\textwidth}
+  \raggedleft
+  \includegraphics[width=0.35\textwidth]{Imagenes/unrc_logo.png}
+\end{minipage}
+
+\vspace{0.8cm}
+
+\begin{center}
+  {\Large \textbf{Universidad Nacional de Río Cuarto}}\\[2pt]
+  {\large \textbf{Facultad de Ciencias Económicas -- Licenciatura en Economía}}\\[6pt]
+  {\large \textbf{Seminario Taller de Trabajo Final de Grado II}}\\[12pt]
+  \hrule height 1pt
+  \vspace{0.3cm}
+  {\Large \textbf{Documento de Exposición Metodológica:}}\\[4pt]
+  {\Large \textit{Marco Teórico, Datos y Metodología}}\\[6pt]
+  {\large \textbf{Tema:} Usos empresariales de inteligencia artificial y productividad laboral: evidencia país--sector para la Unión Europea}
+  \vspace{0.3cm}
+  \hrule height 1pt
+\end{center}
+
+\vspace{0.4cm}
+
+\begin{tabular}{@{}ll}
+  \textbf{Estudiante:} & Facundo Díaz Larrarte (DNI 43.475.555) \\
+  \textbf{Directores:} & Miguel Bosch / Ana Vianco \\
+  \textbf{Instancia:} & Presentación de avance metodológico en Seminario Taller TGF II \\
+  \textbf{Repositorio de código:} & \url{https://github.com/Facundo-Diaz-Larrarte/TFG_Facundo_Diaz_Larrarte} \\
+\end{tabular}
+
+\vspace{0.5cm}
+
+\section{Introducción y Planteo del Problema}
+
+\textbf{El problema económico:} La difusión de la Inteligencia Artificial (IA) en las empresas generó altas expectativas sobre su impacto en la productividad agregada. Sin embargo, históricamente las tecnologías disruptivas enfrentan una paradoja temporal: la incorporación formal de herramientas no se traduce de manera inmediata en incrementos medibles de valor agregado.
+
+\textbf{Pregunta de investigación central:}
+\begin{quote}
+\textit{¿Cómo varían la adopción y los usos empresariales de inteligencia artificial entre los sectores económicos de la Unión Europea, y en qué medida esas diferencias se asocian con distintos niveles y variaciones de productividad laboral aparente?}
+\end{quote}
+
+\textbf{Objetivo general del trabajo:} Evaluar empíricamente la relación entre adopción de IA y productividad laboral a nivel país--sector en la UE-27 (2021--2024), distinguiendo conceptual y econométricamente entre la correlación estática de niveles (corte transversal) y la asociación dinámica temporal dentro de cada unidad productiva.
+
+\section{Marco Teórico y Conceptual}
+
+El trabajo se apoya en tres pilares de la economía del cambio tecnológico y la microeconomía aplicada:
+
+\subsection{1. Tecnologías de Propósito General (GPT) y la Curva J de Productividad}
+* \textbf{Referencia clave:} \citet{brynjolfsson2021productivity}.
+* \textbf{Concepto central:} La IA comparte los rasgos de una Tecnología de Propósito General: penetración multisectorial, dinamismo innovador y necesidad de inversiones complementarias.
+* \textbf{Mecanismo de la Curva J:} En las etapas iniciales de adopción, las empresas incurren en costos de reorganización, capacitación de personal, adquisición de infraestructura digital y acumulación de activos intangibles no medidos por la contabilidad tradicional. En consecuencia, la productividad medida puede estancarse o incluso caer inicialmente (valle de la J) antes de experimentar incrementos sostenidos en el mediano o largo plazo.
+
+\subsection{2. Reorganización del Trabajo y Enfoque de Tareas}
+* \textbf{Referencias claves:} \citet{bresnahan2002information}, \citet{acemoglu2018race}.
+* \textbf{Mecanismo microeconómico:} La tecnología no reemplaza ocupaciones completas de manera binaria, sino que afecta tareas específicas (rutinarias, analíticas o de coordinación). La efectividad de la IA depende de la capacidad de la firma para rediseñar puestos de trabajo, descentralizar decisiones y reasignar horas laborales a tareas de mayor valor.
+
+\subsection{3. Del Margen Extensivo al Margen Intensivo}
+* \textbf{El desafío de medición:} Las estadísticas oficiales capturan prioritariamente el \textbf{margen extensivo} (adopción nominal: una variable binaria sobre si la empresa declara utilizar al menos una tecnología de IA).
+* \textbf{Cadena de transmisión económica:}
+\begin{equation*}
+\begin{aligned}
+\text{Adopción nominal (Eurostat)} &\longrightarrow \text{Intensidad} \longrightarrow \text{Integración en procesos} \\
+&\longrightarrow \text{Reorganización de tareas} \longrightarrow \text{Realización productiva}
+\end{aligned}
+\end{equation*}
+El acceso a la herramienta es sólo el primer paso; si no se profundiza el margen intensivo (integración operativa profunda y reingeniería organizacional), el impacto agregado en el corto plazo resulta moderado o imperceptible.
+
+\subsection{4. Antecedentes Empíricos: Microdatos frente a Agregación Sectorial}
+* \textbf{Nivel de empresa (\textit{firm-level}):} Estudios como \citet{czarnitzki2023firm} para Alemania o \citet{aldasoro2026adoption} para el BIS hallan que las firmas pioneras (\textit{frontier firms}) con alta dotación de capital humano y gobernanza madura exhiben primas positivas de productividad.
+* \textbf{Nivel sectorial/macro:} Estudios agregados para Europa \citep{yilmaz2026dataset} encuentran la denominada \textit{brecha de atribución de IA}: las tasas de adopción crecen con rapidez, pero la productividad agregada no reacciona al mismo ritmo, diluida por la heterogeneidad entre firmas líderes y rezagadas.
+
+\section{Estructura de Datos y Construcción del Panel}
+
+\subsection{Unidad de Análisis y Cobertura}
+* \textbf{Unidad de observación:} Combinación \textbf{país--sector--año} ($c, s, t$).
+* \textbf{Ámbito geográfico:} Los 27 Estados miembros de la Unión Europea.
+* \textbf{Sectores analizados:} 9 ramas de actividad económica según la clasificación oficial NACE Rev. 2 (C: Manufactura, F: Construcción, G: Comercio, H: Transporte, I: Alojamiento y comida, J: Información y comunicación, L: Inmobiliarias, M: Profesionales y científicas, N: Administrativas).
+* \textbf{Ventana temporal:} Olas armonizadas de Eurostat correspondientes a los años \textbf{2021, 2023 y 2024}.
+* \textbf{Estructura muestral:} De 729 celdas teóricas posibles, 667 poseen datos completos, y se conforma una \textbf{muestra balanceada de 209 unidades país--sector} con seguimiento ininterrumpido en los tres períodos (627 observaciones).
+
+\subsection{Fuentes Oficiales de Eurostat}
+Para construir la base analítica se integraron dos relevamientos estadísticos independientes y armonizados:
+\begin{enumerate}[label=\alph*)]
+  \item \textbf{Encuesta sobre uso de TIC y comercio electrónico en empresas} (\texttt{isoc\_eb\_ai} e \texttt{isoc\_eb\_ain2}): Provee los porcentajes de empresas de 10 o más ocupados que adoptan tecnologías de IA.
+  \item \textbf{Estadísticas Estructurales de Empresas} (SBS -- \texttt{sbs\_sc\_ovw}): Provee las variables económicas de Valor Agregado a costo de factores (en millones de euros corrientes) y el número total de personas ocupadas.
+  \item \textbf{Cuentas Nacionales Sectoriales} (\texttt{nama\_10\_a64}): Provee los deflactores de valor agregado país--sector--año utilizados en la evaluación de robustez con precios reales.
+\end{enumerate}
+
+\subsection{Definición Operativa de Variables}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Variable dependiente (Productividad Laboral Aparente):}
+  \begin{equation}
+    \ln(Productividad_{cst}) = \ln\left( \frac{\text{Valor Agregado}_{cst} \times 1000}{\text{Personas Ocupadas}_{cst}} \right)
+  \end{equation}
+  \textit{Justificación metodológica del logaritmo:} Reduce la asimetría de la distribución del valor agregado, amortigua la influencia de sectores hiperproductivos atípicos y permite interpretar los coeficientes econométricos como semi-elasticidades porcentuales.
+  \item \textbf{Variable explicativa principal:} Tasa de adopción general (\texttt{ai\_any\_pct}), medida como porcentaje de firmas (0 a 100).
+  \item \textbf{Variables explicativas complementarias (analizadas en modelos separados):}
+    \begin{itemize}
+      \item \textit{Intensidad:} Empresas con 2+ y 3+ tecnologías de IA.
+      \item \textit{Usos funcionales:} IA aplicada a (1) organización de procesos y toma de decisiones, (2) procesos productivos, (3) logística y suministros, (4) marketing y ventas, y (5) seguridad informática.
+    \end{itemize}
+\end{itemize}
+
+\section{Estrategia Metodológica y Econométrica}
+
+La metodología sigue un diseño cuantitativo, longitudinal, observacional y no experimental articulado en dos etapas:
+
+\subsection{Etapa 1: Análisis Descriptivo y Contraste de Correlaciones}
+Antes de estimar modelos complejos, se evalúa el comportamiento empírico básico:
+* \textbf{Correlación en niveles (corte transversal):} $r = 0,564$. Existe una clara asociación positiva entre sectores con alta penetración de IA y altos niveles de productividad.
+* \textbf{Correlación de cambios temporales ($\Delta$ 2021--2024):} $r = 0,076$ (no significativa). Los sectores que más aceleraron su adopción en el trienio no fueron necesariamente los que más crecieron en productividad laboral aparente nominal.
+
+\subsection{Etapa 2: Modelo Econométrico de Panel con Efectos Fijos Bidireccionales (M3)}
+Para controlar por factores no observables y aislar la variación temporal, la especificación preferida es:
+\begin{equation}
+  \ln(Productividad_{cst}) = \beta \, IA_{cst} + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}
+\end{equation}
+
+\textbf{Desglose de los componentes del modelo:}
+\begin{enumerate}[label=\textbf{\arabic*.}]
+  \item \textbf{$\beta$ (Parámetro de interés):} Cuantifica la semi-elasticidad contemporánea dentro de cada sector. Un aumento de 10 puntos porcentuales en adopción se asocia con un cambio aproximado de $10\beta \times 100\%$ en la productividad.
+  \item \textbf{$\alpha_{cs}$ (Efectos fijos país--sector):} Absorbe toda la heterogeneidad no observable invariable en el tiempo. Controla por diferencias institucionales, dotaciones históricas de capital físico e intangibles, geografía, y la brecha estructural permanente entre sectores (e.g., software en Alemania vs. gastronomía en Grecia).
+  \item \textbf{$\gamma_{ct}$ (Efectos fijos país--año):} Absorbe todos los shocks macroeconómicos y variaciones de nivel de precios anuales comunes a todos los sectores de un determinado país (e.g., inflación nacional, crisis energética europea 2022--2023, fluctuaciones del ciclo económico).
+  \item \textbf{Errores estándar agrupados (\textit{Cluster-Robust SE}):} Los errores estándar se agrupan a nivel de la entidad país--sector ($cs$), corrigiendo por autocorrelación serial y heterocedasticidad dentro de cada unidad a lo largo del tiempo.
+\end{enumerate}
+
+\textbf{Mecanismo de Identificación (Teorema de Frisch--Waugh--Lovell):}
+Gracias a esta doble malla de efectos fijos, el estimador no confunde diferencias de nivel entre países ricos y pobres ni shocks macroeconómicos nacionales. La estimación proviene exclusivamente de la \textbf{variación dentro} (\textit{within}): evalúa si un sector que adoptó IA a mayor ritmo que el promedio de su propio país experimentó ganancias de productividad respecto a su propia trayectoria histórica media.
+
+\subsection{Extensiones y Batería de Robustez}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Heterogeneidad sectorial:} Estimación con interacciones ($IA_{cst} \times Sector_s$) para comprobar si ramas como manufactura, comercio o servicios informáticos exhiben respuestas disímiles.
+  \item \textbf{Sensibilidad muestral:} Reestimación en muestra no balanceada (667 obs.) y con ponderación por personal ocupado.
+  \item \textbf{Control de valores extremos:} Exclusión de economías distorsionadas por regímenes multinacionales (e.g., Irlanda y Luxemburgo).
+  \item \textbf{Robustez crucial (Precios relativos):} Comparación entre productividad nominal y \textbf{productividad real sectorial aproximada} deflactada por ramas NACE a precios de 2021. Al controlar por precios sectoriales, la asociación pasa de levemente negativa y no significativa en nominal ($\beta = -0,0011$, $p=0,250$) a positiva y significativa en real ($\beta = 0,0019$, $p=0,036$), demostrando la alta sensibilidad del indicador al ciclo inflacionario reciente.
+\end{itemize}
+
+\section{Guía Rápida para la Exposición en el Seminario}
+
+\subsection{Hoja de Ruta para tu Presentación (5 a 7 minutos)}
+\begin{enumerate}
+  \item \textbf{El Gancho (30 seg):} "Todos asumimos que más IA equivale a más productividad. El objetivo de mi tesina es testear si esa intuición se sostiene empíricamente en la Unión Europea o si estamos ante una nueva versión de la paradoja de Solow."
+  \item \textbf{El Marco Teórico (1.5 min):} Explicar que la IA es una GPT que demanda maduración (Curva J) y reorganización de tareas internas (margen intensivo vs. margen extensivo).
+  \item \textbf{Los Datos (1.5 min):} Mostrar el panel país--sector--año de Eurostat (SBS + TIC, 209 unidades balanceadas en 2021, 2023 y 2024). Destacar que se analiza la productividad laboral aparente en logaritmos.
+  \item \textbf{La Metodología (2 min):} Explicar el modelo M3 con efectos fijos país--sector y país--año. Enfatizar qué absorbe cada efecto fijo y por qué elimina la endogeneidad por factores fijos no observados y shocks macro.
+  \item \textbf{Cierre Metodológico (30 seg):} Subrayar la honestidad intelectual del diseño: es un estudio observacional y asociativo que documenta una \textit{brecha de realización productiva} en el corto plazo.
+\end{enumerate}
+
+\subsection{Preguntas Típicas del Tribunal del Seminario y Respuestas}
+\begin{itemize}[leftmargin=*]
+  \item \textbf{Pregunta: "¿Por qué no usaste datos a nivel de firma individual?"} \\
+  \textit{Respuesta:} "Eurostat protege los microdatos de empresas por secreto estadístico. Para estudiar los 27 países de la UE de manera armonizada y abierta, el nivel país--sector es el límite de desagregación pública disponible."
+  \item \textbf{Pregunta: "¿Por qué agregaste efectos país--año en lugar de efectos año simples?"} \\
+  \textit{Respuesta:} "Porque entre 2021 y 2024 Europa vivió shocks muy asimétricos entre países (la crisis del gas ruso impactó más en Alemania o Europa del Este que en la península ibérica, y las tasas de inflación divergieron fuertemente). El efecto país--año neutraliza toda esa distorsión macroeconómica nacional."
+  \item \textbf{Pregunta: "¿Tu estimación demuestra causalidad?"} \\
+  \textit{Respuesta:} "No, y el trabajo lo explicita de entrada. Es una estimación de datos de panel dentro de entidad con controles de heterogeneidad. No contamos con un instrumento cuasi-experimental exógeno y el trienio 2021--2024 captura solo el impacto contemporáneo de corto plazo."
+\end{itemize}
+
+\vspace{0.5cm}
+\small
+\bibliographystyle{apalike}
+\bibliography{referencias}
+
+\end{document}
