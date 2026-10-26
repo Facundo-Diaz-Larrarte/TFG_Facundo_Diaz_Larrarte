@@ -237,7 +237,7 @@ Durante las fases iniciales de difusión, una proporción sustantiva del tiempo 
 
 \subsection{Fundamentos teóricos y medición econométrica de la productividad: el marco de Berndt y Eurostat}
 
-La delimitación conceptual de la variable dependiente reviste una importancia metodológica capital en este trabajo. Como advierte \citet{berndt1991practice} en su obra canónica sobre econometría aplicada, la medición de la productividad exige distinguir con rigor entre medidas de productividad multifactorial o total de los factores (PTF) y medidas de \textbf{productividad parcial de factores} (\textit{partial factor productivity}).
+La delimitación conceptual de la variable dependiente reviste una importancia metodológica capital en este trabajo. Como advierte \citet[Caps.~2 y 9]{berndt1991practice} en su obra canónica sobre econometría aplicada (\textit{The Practice of Econometrics: Classic and Contemporary}), la medición de la productividad exige distinguir con rigor entre medidas de productividad multifactorial o total de los factores (PTF) y medidas de \textbf{productividad parcial de factores} (\textit{partial factor productivity}).
 
 En la teoría de la producción, una función de producción sectorial relaciona el producto con los factores primarios e intermedios: $Y = F(K, L, M, A)$, donde $K$ representa el capital, $L$ el trabajo, $M$ los insumos intermedios y $A$ el estado de la tecnología. La productividad laboral se define como una medida parcial que relaciona el producto con el insumo de trabajo:
 
@@ -247,7 +247,7 @@ En la teoría de la producción, una función de producción sectorial relaciona
 
 donde $VAB$ es el Valor Agregado Bruto y $L$ el personal ocupado.
 
-Siguiendo a \citet{berndt1991practice}, la elección del Valor Agregado en lugar de la Producción Bruta total ($Y$) es obligada en el análisis sectorial: el producto bruto comete el error de la doble contabilización al incorporar insumos intermedios adquiridos a otros sectores. El Valor Agregado ($VAB = Y - M$), en cambio, aísla la riqueza neta generada en el interior de las empresas del sector mediante la combinación de sus factores propios.
+Siguiendo a \citet[Cap.~2]{berndt1991practice}, la elección del Valor Agregado en lugar de la Producción Bruta total ($Y$) es obligada en el análisis sectorial: el producto bruto comete el error de la doble contabilización al incorporar insumos intermedios adquiridos a otros sectores. El Valor Agregado ($VAB = Y - M$), en cambio, aísla la riqueza neta generada en el interior de las empresas del sector mediante la combinación de sus factores propios.
 
 Asimismo, \citet{berndt1991practice} enfatiza que la productividad laboral es una medida ``aparente''. Al relacionar todo el valor generado con el insumo de trabajo, el cociente $VAB/L$ no mide exclusivamente la destreza o eficiencia intrínseca de los trabajadores, sino que absorbe de manera preponderante la \textbf{intensidad de capital} (\textit{capital deepening}, $K/L$) y las complementariedades tecnológicas organizacionales. Un sector intensivo en capital o infraestructura digital exhibirá niveles sistemáticamente más elevados de $VAB/L$ con independencia de la productividad marginal pura del trabajo.
 
@@ -259,7 +259,7 @@ En estricta consonancia con estos fundamentos, la oficina estadística de la Uni
 
 expresada en miles de euros corrientes por persona ocupada.
 
-Un punto metodológico crucial discutido extensamente por \citet{berndt1991practice} refiere al tratamiento de los precios. El autor advierte sobre los severos sesgos y errores de medición (\textit{measurement errors}) que se inducen al intentar deflactar variables empresariales utilizando índices de precios agregados inadecuados o construidos bajo universos metodológicos divergentes. En particular, la aplicación de deflactores macroeconómicos de Cuentas Nacionales (que cubren toda la economía, incluidas administraciones públicas y microempresas) sobre datos SBS de empresas de 10 o más ocupados generaría un descalce muestral e introduciría perturbaciones espurias.
+Un punto metodológico crucial discutido extensamente por \citet[Caps.~2 y 9]{berndt1991practice} refiere al tratamiento de los precios. El autor advierte sobre los severos sesgos y errores de medición (\textit{measurement errors}) que se inducen al intentar deflactar variables empresariales utilizando índices de precios agregados inadecuados o construidos bajo universos metodológicos divergentes. En particular, la aplicación de deflactores macroeconómicos de Cuentas Nacionales (que cubren toda la economía, incluidas administraciones públicas y microempresas) sobre datos SBS de empresas de 10 o más ocupados generaría un descalce muestral e introduciría perturbaciones espurias.
 
 Por este motivo, este trabajo adopta la variable oficial de Eurostat en términos nominales y resuelve el control de precios en el plano de la \textbf{estrategia econométrica}: en virtud del teorema de Frisch--Waugh--Lovell \citep{wooldridge2010econometric}, la inclusión de efectos fijos país--año ($\gamma_{ct}$) en los modelos de panel absorbe la inflación agregada y los shocks macroeconómicos anuales comunes a todos los sectores de cada país, aislando la variación sectorial relativa dentro de cada economía nacional.
 
