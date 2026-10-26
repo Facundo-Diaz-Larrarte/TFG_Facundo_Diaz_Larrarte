@@ -40,15 +40,11 @@ EXPECTED_FILES = [
     MODELS_OUTPUT / "modelo_preferido.csv",
     MODELS_OUTPUT / "modelo_preferido_linearmodels.csv",
     MODELS_OUTPUT / "comparacion_modelo_preferido_linearmodels.csv",
+    MODELS_OUTPUT / "modelos_re_hausman.csv",
     ROBUSTNESS_OUTPUT / "robustez_m3.csv",
     ROBUSTNESS_OUTPUT / "robustez_adopcion_general.csv",
-    ROBUSTNESS_OUTPUT / "comparacion_especificaciones_balanceada.csv",
+    ROBUSTNESS_OUTPUT / "comparacion_especificaciones_principal.csv",
     ROBUSTNESS_OUTPUT / "resumen_robustez_m3.csv",
-    REAL_PRODUCTIVITY_OUTPUT / "deflactores_pais_sector_anio.csv",
-    REAL_PRODUCTIVITY_OUTPUT / "cobertura_deflactores.csv",
-    REAL_PRODUCTIVITY_OUTPUT / "robustez_productividad_real_sectorial.csv",
-    REAL_PRODUCTIVITY_OUTPUT / "robustez_productividad_real_adopcion_general.csv",
-    REAL_PRODUCTIVITY_PANEL,
 ]
 
 
@@ -69,7 +65,7 @@ def verify_outputs() -> None:
         failed = comparison.loc[~comparison["same_beta_1e_10"], ["ai_variable", "beta_abs_diff"]]
         raise SystemExit(f"Manual and linearmodels coefficients differ:\n{failed.to_string(index=False)}")
 
-    print("Reproducibility check OK: expected outputs exist, M3 coefficients match linearmodels, and sectoral real-productivity robustness is available.")
+    print("Reproducibility check OK: expected outputs exist, M3 coefficients match linearmodels, and RE/Hausman specifications are generated.")
 
 
 def main() -> None:
@@ -103,15 +99,6 @@ def main() -> None:
         str(INPUT.relative_to(ROOT)),
         "--output-dir",
         str(ROBUSTNESS_OUTPUT.relative_to(ROOT)),
-    )
-    run(
-        "05_productividad_real_sectorial.py",
-        "--input",
-        str(INPUT.relative_to(ROOT)),
-        "--output-dir",
-        str(REAL_PRODUCTIVITY_OUTPUT.relative_to(ROOT)),
-        "--processed-output",
-        str(REAL_PRODUCTIVITY_PANEL.relative_to(ROOT)),
     )
     verify_outputs()
 

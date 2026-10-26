@@ -18,6 +18,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from linearmodels.iv import AbsorbingLS
+from linearmodels.panel import RandomEffects
 
 
 AI_LABELS = {
@@ -41,9 +42,10 @@ SPECS = {
 def load_panel(input_path: Path) -> pd.DataFrame:
     if input_path.suffix.lower() == ".csv":
         panel = pd.read_csv(input_path)
-        data = panel[(panel["core_complete"] == "Yes") & (panel["balanced_entity"] == "Yes")].copy()
+        data = panel[panel["core_complete"] == "Yes"].copy()
     else:
-        data = pd.read_excel(input_path, sheet_name="Muestra_balanceada")
+        panel = pd.read_excel(input_path, sheet_name="Panel")
+        data = panel[panel["core_complete"] == "Yes"].copy()
 
     data = data[data["labour_productivity_keur"] > 0].copy()
     data["log_productivity"] = np.log(data["labour_productivity_keur"])
@@ -82,6 +84,36 @@ def estimate_absorbing_ls(data: pd.DataFrame, ai_variable: str, fixed_effects: l
     }
 
 
+def estimate_re_and_hausman(data: pd.DataFrame, ai_variable: str) -> dict[str, float | int]:
+    sample = data[["log_productivity", ai_variable, "entity", "year"]].dropna().copy()
+    sample["const"] = 1.0
+    sample["ai_mean"] = sample.groupby("entity")[ai_variable].transform("mean")
+    p_sample = sample.set_index(["entity", "year"])
+
+    # Estimador de Efectos Aleatorios
+    re_mod = RandomEffects(p_sample["log_productivity"], p_sample[["const", ai_variable]]).fit(
+        cov_type="clustered", cluster_entity=True
+    )
+    # Contraste robusto de Hausman vía regresión auxiliar de Mundlak (1978) / Wooldridge (2010)
+    mundlak_mod = RandomEffects(p_sample["log_productivity"], p_sample[["const", ai_variable, "ai_mean"]]).fit(
+        cov_type="clustered", cluster_entity=True
+    )
+    wald = mundlak_mod.wald_test(formula="ai_mean = 0")
+
+    return {
+        "re_beta": float(re_mod.params[ai_variable]),
+        "re_se": float(re_mod.std_errors[ai_variable]),
+        "re_t_stat": float(re_mod.tstats[ai_variable]),
+        "re_p_value": float(re_mod.pvalues[ai_variable]),
+        "fe_within_beta": float(mundlak_mod.params[ai_variable]),
+        "mundlak_hausman_stat": float(wald.stat),
+        "mundlak_hausman_p": float(wald.pval),
+        "reject_re_at_5pct": bool(wald.pval < 0.05),
+        "n": int(re_mod.nobs),
+        "entities": int(sample["entity"].nunique()),
+    }
+
+
 def build_comparison(output_dir: Path, validated: pd.DataFrame) -> None:
     preliminary_path = output_dir / "modelo_preferido.csv"
     if not preliminary_path.exists():
@@ -109,6 +141,7 @@ def main() -> None:
 
     data = load_panel(args.input)
 
+    # 1. AbsorbingLS para especificaciones de efectos fijos M1, M2 y M3
     rows = []
     for spec_name, fixed_effects in SPECS.items():
         for ai_variable, label in AI_LABELS.items():
@@ -129,6 +162,20 @@ def main() -> None:
         args.output_dir / "modelo_preferido_linearmodels.csv", index=False
     )
     build_comparison(args.output_dir, results)
+
+    # 2. Estimación de Efectos Aleatorios (RE) y Test de Hausman
+    re_rows = []
+    for ai_variable, label in AI_LABELS.items():
+        re_est = estimate_re_and_hausman(data, ai_variable)
+        re_rows.append(
+            {
+                "ai_variable": ai_variable,
+                "indicator": label,
+                **re_est,
+            }
+        )
+    re_df = pd.DataFrame(re_rows)
+    re_df.to_csv(args.output_dir / "modelos_re_hausman.csv", index=False)
 
 
 if __name__ == "__main__":

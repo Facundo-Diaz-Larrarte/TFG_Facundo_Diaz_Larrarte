@@ -70,22 +70,23 @@ def main() -> None:
 
     if args.input.suffix.lower() == ".csv":
         panel = pd.read_csv(args.input)
-        balanced = panel[(panel["core_complete"] == "Yes") & (panel["balanced_entity"] == "Yes")].copy()
+        analysis_sample = panel[panel["core_complete"] == "Yes"].copy()
     else:
         panel = pd.read_excel(args.input, sheet_name="Panel")
-        balanced = pd.read_excel(args.input, sheet_name="Muestra_balanceada")
-    balanced["log_productivity"] = np.log(balanced["labour_productivity_keur"])
+        analysis_sample = panel[panel["core_complete"] == "Yes"].copy()
+    analysis_sample = analysis_sample[analysis_sample["labour_productivity_keur"] > 0].copy()
+    analysis_sample["log_productivity"] = np.log(analysis_sample["labour_productivity_keur"])
 
     analysis_vars = ["labour_productivity_keur", "log_productivity", *AI_LABELS.keys()]
     descriptive = (
-        balanced[analysis_vars]
+        analysis_sample[analysis_vars]
         .describe(percentiles=[0.25, 0.5, 0.75])
         .T.reset_index(names="variable")
         .rename(columns={"25%": "p25", "50%": "median", "75%": "p75"})
     )
 
     year_rows = []
-    for year, group in balanced.groupby("year", sort=True):
+    for year, group in analysis_sample.groupby("year", sort=True):
         row = {
             "year": int(year),
             "n": len(group),
@@ -102,7 +103,7 @@ def main() -> None:
     by_year = pd.DataFrame(year_rows)
 
     by_sector = (
-        balanced.groupby(["sector_code", "sector_name"], as_index=False)
+        analysis_sample.groupby(["sector_code", "sector_name"], as_index=False)
         .agg(
             n=("year", "size"),
             countries=("country_code", "nunique"),
@@ -118,10 +119,10 @@ def main() -> None:
         .sort_values("ai_any_mean_pct", ascending=False)
     )
 
-    corr = correlation_table(balanced)
-    corr_matrix = balanced[["log_productivity", *AI_LABELS.keys()]].corr(method="pearson")
+    corr = correlation_table(analysis_sample)
+    corr_matrix = analysis_sample[["log_productivity", *AI_LABELS.keys()]].corr(method="pearson")
     corr_by_year_rows = []
-    for year, group in balanced.groupby("year", sort=True):
+    for year, group in analysis_sample.groupby("year", sort=True):
         for variable, label in AI_LABELS.items():
             sample = group[[variable, "log_productivity"]].dropna()
             r, p = pearsonr(sample[variable], sample["log_productivity"])
@@ -130,7 +131,7 @@ def main() -> None:
             )
     corr_by_year = pd.DataFrame(corr_by_year_rows)
 
-    wide = balanced.pivot(index=["country_code", "sector_code"], columns="year")
+    wide = analysis_sample.pivot(index=["country_code", "sector_code"], columns="year")
     changes = pd.DataFrame(index=wide.index).reset_index()
     for variable in ["labour_productivity_keur", *AI_LABELS.keys()]:
         changes[f"delta_{variable}_2021_2024"] = wide[(variable, 2024)].values - wide[(variable, 2021)].values
@@ -151,11 +152,11 @@ def main() -> None:
         {
             "variable": ["labour_productivity_keur", *AI_LABELS.keys()],
             "missing_panel": [panel[v].isna().sum() for v in ["labour_productivity_keur", *AI_LABELS.keys()]],
-            "missing_balanced": [balanced[v].isna().sum() for v in ["labour_productivity_keur", *AI_LABELS.keys()]],
+            "missing_analysis": [analysis_sample[v].isna().sum() for v in ["labour_productivity_keur", *AI_LABELS.keys()]],
         }
     )
     missing["coverage_panel_pct"] = 100 * (len(panel) - missing["missing_panel"]) / len(panel)
-    missing["coverage_balanced_pct"] = 100 * (len(balanced) - missing["missing_balanced"]) / len(balanced)
+    missing["coverage_analysis_pct"] = 100 * (len(analysis_sample) - missing["missing_analysis"]) / len(analysis_sample)
 
     descriptive.to_csv(tables_dir / "estadisticas_descriptivas.csv", index=False)
     by_year.to_csv(tables_dir / "promedios_por_anio.csv", index=False)
@@ -173,7 +174,7 @@ def main() -> None:
     fig, ax = plt.subplots(figsize=(10, 6))
     for color, (variable, label) in zip(palette, AI_LABELS.items()):
         ax.plot(by_year["year"], by_year[f"{variable}_mean"], marker="o", label=label, color=color)
-    ax.set(title="Adopción y usos de IA en la muestra balanceada", xlabel="Año", ylabel="Empresas (%)")
+    ax.set(title="Adopción y usos de IA en la muestra de análisis (panel no balanceado)", xlabel="Año", ylabel="Empresas (%)")
     ax.set_xticks(by_year["year"])
     ax.legend(loc="upper left", bbox_to_anchor=(1.02, 1), frameon=False)
     fig.tight_layout()
@@ -188,7 +189,7 @@ def main() -> None:
     fig.savefig(figures_dir / "adopcion_ia_por_sector.png", dpi=220, bbox_inches="tight")
     plt.close(fig)
 
-    plot_2024 = balanced[balanced["year"] == 2024].copy()
+    plot_2024 = analysis_sample[analysis_sample["year"] == 2024].copy()
     plot_2024["log_productivity"] = np.log(plot_2024["labour_productivity_keur"])
     fig, ax = plt.subplots(figsize=(9, 6))
     sns.scatterplot(
@@ -222,11 +223,11 @@ def main() -> None:
 
     summary = {
         "panel_rows": int(len(panel)),
-        "balanced_rows": int(len(balanced)),
-        "balanced_entities": int(balanced[["country_code", "sector_code"]].drop_duplicates().shape[0]),
-        "years": sorted(int(x) for x in balanced["year"].unique()),
-        "countries": int(balanced["country_code"].nunique()),
-        "sectors": int(balanced["sector_code"].nunique()),
+        "analysis_sample_rows": int(len(analysis_sample)),
+        "analysis_entities": int(analysis_sample[["country_code", "sector_code"]].drop_duplicates().shape[0]),
+        "years": sorted(int(x) for x in analysis_sample["year"].unique()),
+        "countries": int(analysis_sample["country_code"].nunique()),
+        "sectors": int(analysis_sample["sector_code"].nunique()),
         "strongest_level_correlation": corr.loc[corr["pearson_r"].abs().idxmax()].to_dict(),
         "strongest_change_correlation": change_corr.loc[change_corr["pearson_r"].abs().idxmax()].to_dict(),
     }
