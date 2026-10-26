@@ -29,6 +29,7 @@ AI_LABELS = {
 }
 
 SPECS = {
+    "M0_pooled_OLS": [],
     "M1_pooled_FE": ["country_code", "sector_code", "year"],
     "M2_entity_year_FE": ["entity", "year"],
     "M3_entity_countryyear_FE": ["entity", "country_year"],
@@ -84,9 +85,10 @@ def main() -> None:
 
     if args.input.suffix.lower() == ".csv":
         panel = pd.read_csv(args.input)
-        data = panel[(panel["core_complete"] == "Yes") & (panel["balanced_entity"] == "Yes")].copy()
+        data = panel[panel["core_complete"] == "Yes"].copy()
     else:
-        data = pd.read_excel(args.input, sheet_name="Muestra_balanceada")
+        panel = pd.read_excel(args.input, sheet_name="Panel")
+        data = panel[panel["core_complete"] == "Yes"].copy()
     data = data[data["labour_productivity_keur"] > 0].copy()
     data["log_productivity"] = np.log(data["labour_productivity_keur"])
     data["entity"] = data["country_code"].astype(str) + "_" + data["sector_code"].astype(str)
@@ -131,6 +133,7 @@ def main() -> None:
 
     specification = pd.DataFrame(
         [
+            ["M0_pooled_OLS", "Sin efectos fijos", "Regresión agrupada (Pooled OLS) que captura la asociación en niveles entre corte transversal."],
             ["M1_pooled_FE", "País + sector + año", "Compara niveles controlando diferencias aditivas observables por efectos fijos."],
             ["M2_entity_year_FE", "País-sector + año", "Usa variación temporal dentro de cada entidad y shocks comunes de año."],
             ["M3_entity_countryyear_FE", "País-sector + país-año", "Absorbe heterogeneidad permanente y shocks macro/nominales específicos de cada país-año."],

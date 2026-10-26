@@ -44,29 +44,29 @@ SPECS = {
 }
 
 SCENARIOS = {
-    "balanced_unweighted": {
-        "label": "Muestra balanceada, sin ponderar",
-        "sample": "balanced",
-        "weights": None,
-        "trim": None,
-    },
-    "core_unbalanced_unweighted": {
-        "label": "Muestra central completa, sin ponderar",
+    "core_unweighted": {
+        "label": "Muestra completa no balanceada (principal), sin ponderar",
         "sample": "core",
         "weights": None,
         "trim": None,
     },
-    "balanced_employment_weighted": {
-        "label": "Muestra balanceada, ponderada por empleo",
-        "sample": "balanced",
+    "core_employment_weighted": {
+        "label": "Muestra no balanceada, ponderada por empleo",
+        "sample": "core",
         "weights": "persons_employed_ge10",
         "trim": None,
     },
-    "balanced_trim_p01_p99": {
-        "label": "Muestra balanceada, sin extremos p1-p99 de productividad",
-        "sample": "balanced",
+    "core_trim_p01_p99": {
+        "label": "Muestra no balanceada, sin extremos p1-p99 de productividad",
+        "sample": "core",
         "weights": None,
         "trim": (0.01, 0.99),
+    },
+    "balanced_unweighted": {
+        "label": "Sensibilidad a balanceo: muestra balanceada",
+        "sample": "balanced",
+        "weights": None,
+        "trim": None,
     },
 }
 
@@ -186,8 +186,8 @@ def main() -> None:
                 }
             )
 
-            # Specification comparison only for the unweighted balanced base scenario.
-            if scenario_name == "balanced_unweighted":
+            # Comparación de especificaciones sobre la muestra principal no balanceada.
+            if scenario_name == "core_unweighted":
                 for spec_name, fixed_effects in SPECS.items():
                     spec_estimates = estimate(sample, ai_variable, fixed_effects, weight_col=None)
                     spec_rows.append(
@@ -207,6 +207,8 @@ def main() -> None:
 
     scenarios.to_csv(args.output_dir / "escenarios_robustez.csv", index=False)
     robustness.to_csv(args.output_dir / "robustez_m3.csv", index=False)
+    specs.to_csv(args.output_dir / "comparacion_especificaciones_principal.csv", index=False)
+    # También conservamos el nombre previo para compatibilidad
     specs.to_csv(args.output_dir / "comparacion_especificaciones_balanceada.csv", index=False)
 
     adoption = robustness[robustness["ai_variable"] == "ai_any_pct"].copy()

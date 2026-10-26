@@ -1,0 +1,515 @@
+%==============================================================================
+%  Presentación de seminario
+%  "El efecto de la forma de la parcela sobre el precio del suelo urbano"
+%  Glumac, Herrera-Gómez, Licheron & Francke
+%  Beamer — compilar en Overleaf con pdfLaTeX (o XeLaTeX)
+%==============================================================================
+\documentclass[11pt,aspectratio=169]{beamer}
+
+%------------------------------ Tema y colores --------------------------------
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\definecolor{azulprincipal}{RGB}{29,53,87}
+\definecolor{azulsecundario}{RGB}{69,123,157}
+\definecolor{verdecompacto}{RGB}{43,124,68}
+\definecolor{naranjaextruido}{RGB}{200,80,40}
+
+\setbeamercolor{structure}{fg=azulprincipal}
+\setbeamercolor{frametitle}{bg=azulprincipal,fg=white}
+\setbeamercolor{title}{fg=azulprincipal}
+\setbeamercolor{block title}{bg=azulsecundario,fg=white}
+\setbeamercolor{block body}{bg=azulsecundario!10}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+
+%------------------------------ Idioma y fuentes ------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+% Evita que babel-spanish redefina caracteres activos que rompen tablas/URLs
+\spanishdecimal{,}
+\usepackage{lmodern}
+
+%------------------------------ Paquetes útiles -------------------------------
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usetikzlibrary{shapes.geometric,positioning}
+
+%------------------------------ Comandos auxiliares ---------------------------
+\newcommand{\Gindex}{\textit{G-index}\xspace}
+\usepackage{xspace}
+
+% Pie de página compacto
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.40\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.45\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+    \usebeamerfont{date in head/foot}\insertframenumber{}/\inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+}
+
+%==============================================================================
+%  Datos del título
+%==============================================================================
+\title[Forma de la parcela y precio del suelo]{\color{white}{El efecto de la forma de la parcela\\sobre el precio del suelo urbano}}
+\subtitle{\color{white}{Primera evidencia empírica del \Gindex}}
+\author[Glumac, Herrera-Gómez, Licheron \& Francke]{Brano Glumac \and Marcos Herrera-Gómez \and \\ Julien Licheron \and Marc Francke}
+\institute[]{\small Henley Business School \, $\cdot$ \, CONICET--CIANECO, UNRC \\ LISER \, $\cdot$ \, University of Amsterdam}
+\date{Seminario de investigación \\ \today}
+
+%==============================================================================
+\begin{document}
+
+%------------------------------ Portada ---------------------------------------
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+%------------------------------ Agenda ----------------------------------------
+\begin{frame}{Agenda}
+  \tableofcontents
+\end{frame}
+
+%==============================================================================
+\section{Motivación}
+%==============================================================================
+\begin{frame}{Motivación: ¿la forma de la parcela tiene precio?}
+  \begin{itemize}
+    \item El precio del suelo urbano depende de un \alert{conjunto de atributos}: tiempo, regulación, localización y características físicas.
+    \item El \textbf{tamaño} de la parcela es un determinante muy estudiado del valor del suelo (Colwell \& Munneke, 1997).
+    \item La \textbf{geometría}, en cambio, afecta \emph{cómo} puede usarse el suelo, no solo \emph{cuánto} suelo hay.
+    \item Pese a su relevancia intuitiva, su efecto marginal sobre el precio \alert{nunca había sido cuantificado directamente}.
+  \end{itemize}
+  \vspace{0.4em}
+  \begin{block}{Pregunta central}
+    ¿En qué medida la forma de una parcela individual se capitaliza en su precio de transacción?
+  \end{block}
+\end{frame}
+
+\begin{frame}{La forma importa en distintas escalas espaciales}
+  \begin{columns}[T]
+    \begin{column}{0.55\textwidth}
+      \begin{itemize}
+        \item \textbf{Escala edificio} (Lindenthal, 2020): la forma y la fachada influyen en costos y valor.
+        \item \textbf{Escala ciudad} (Harari, 2020): la geometría urbana afecta productividad, transporte y energía.
+        \item \textbf{Escala intermedia} $\rightarrow$ la \alert{parcela individual}, unidad operativa de las decisiones de desarrollo.
+      \end{itemize}
+      \vspace{0.6em}
+      Si la geometría restringe lo que se puede construir, el mercado debería \alert{ponerle precio} a esa restricción.
+    \end{column}
+    \begin{column}{0.45\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=0.9]
+        % Edificio
+        \node at (0,2.4) {\footnotesize Edificio};
+        \draw[fill=azulsecundario!30] (-0.4,1.4) rectangle (0.4,2.1);
+        % Ciudad
+        \node at (0,1.0) {\footnotesize Ciudad};
+        \draw[fill=azulsecundario!30] (-0.9,-0.1) -- (0.9,0.2) -- (0.6,0.7) -- (-0.7,0.6) -- cycle;
+        % Parcela
+        \node at (0,-0.7) {\footnotesize \textbf{Parcela}};
+        \draw[fill=naranjaextruido!30,thick] (-0.8,-1.6) rectangle (0.8,-1.1);
+        \node[align=center] at (0,-2.1) {\scriptsize unidad de\\[-2pt]\scriptsize desarrollo};
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{¿Por qué la forma importa económicamente?}
+  Las parcelas \alert{extruidas} (irregulares o alargadas) son más difíciles de usar, subdividir o ensamblar. Canales de impacto:
+  \vspace{0.5em}
+  \begin{itemize}
+    \item \textbf{Envolvente edificable}: los retiros obligatorios desperdician más perímetro $\Rightarrow$ menor superficie útil.
+    \item \textbf{Flexibilidad arquitectónica}: las formas raras exigen diseños a medida y comprometen la densidad.
+    \item \textbf{Infraestructura y acceso}: calles, accesos y servicios son más costosos en lotes irregulares.
+    \item \textbf{Subdivisión y zonificación}: pueden violar requisitos de frente o fondo mínimos.
+    \item \textbf{Riesgo y reventa}: menos comparables $\Rightarrow$ los tasadores aplican descuentos.
+  \end{itemize}
+  \vspace{0.4em}
+  \begin{center}
+    \itshape Hipótesis: a igualdad de condiciones, las parcelas más extruidas se transan con descuento.
+  \end{center}
+\end{frame}
+
+%==============================================================================
+\section{Medición de la forma: el \texorpdfstring{\Gindex}{G-index}}
+%==============================================================================
+\begin{frame}{Del índice de Gravelius al \Gindex}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Índice de Gravelius (1914)}
+      \[ G_n=\frac{P_n}{2\sqrt{\pi A_n}}=0.28\,\frac{P_n}{\sqrt{A_n}} \]
+      \begin{itemize}\footnotesize
+        \item $=1$ para un círculo (máxima compacidad).
+        \item Adimensional e invariante a escala.
+        \item Referencia poco realista para el suelo urbano.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{\Gindex (propuesto)}
+      \[ \text{\Gindex}_n=\frac{P_n}{4\sqrt{A_n}} \]
+      \begin{itemize}\footnotesize
+        \item $=1$ para un \alert{cuadrado} (referencia de desarrollo eficiente).
+        \item $>1$ $\Rightarrow$ mayor extrudidad.
+        \item Transformación lineal: $\text{\Gindex}_n=\tfrac{\sqrt\pi}{2}G_n\approx 0.886\,G_n$.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.6em}
+  \begin{block}{Idea clave}
+    Misma información geométrica, \alert{mejor interpretación económica}: anclar la compacidad a un cuadrado se alinea con la planificación urbana ortogonal.
+  \end{block}
+\end{frame}
+
+\begin{frame}{El \Gindex en cuatro formas de igual área (100 u.)}
+  \centering
+  \begin{tikzpicture}[scale=1.0]
+    % Círculo
+    \draw[fill=verdecompacto!25,thick] (0,0) circle (0.8);
+    \node at (0,-1.4) {\scriptsize Círculo};
+    \node at (0,-1.8) {\scriptsize $G=0.886$};
+    % Cuadrado
+    \draw[fill=verdecompacto!40,thick] (2.6,-0.75) rectangle (4.1,0.75);
+    \node at (3.35,-1.4) {\scriptsize Cuadrado};
+    \node at (3.35,-1.8) {\scriptsize $G=1.000$};
+    % Rectángulo moderado
+    \draw[fill=naranjaextruido!25,thick] (5.4,-0.35) rectangle (8.0,0.35);
+    \node at (6.7,-1.4) {\scriptsize Rect. moderado};
+    \node at (6.7,-1.8) {\scriptsize $G=1.342$};
+    % Rectángulo elongado
+    \draw[fill=naranjaextruido!45,thick] (9.0,-0.18) rectangle (11.9,0.18);
+    \node at (10.45,-1.4) {\scriptsize Rect. elongado};
+    \node at (10.45,-1.8) {\scriptsize $G=1.775$};
+  \end{tikzpicture}
+  \vspace{0.8em}
+  \begin{itemize}\footnotesize
+    \item Valores apenas $>1.00$: desviaciones modestas de la forma eficiente.
+    \item Valores $>1.342$: configuraciones claramente extruidas que restringen el desarrollo.
+    \item En las regresiones se usa $\ln(\text{\Gindex})$ y se interpreta por \alert{cambios relativos / percentiles}, no por cambios unitarios.
+  \end{itemize}
+\end{frame}
+
+%==============================================================================
+\section{Datos}
+%==============================================================================
+\begin{frame}{Datos: el laboratorio luxemburgués}
+  \begin{columns}[T]
+    \begin{column}{0.58\textwidth}
+      \begin{itemize}
+        \item \textbf{4.297} transacciones de suelo urbano (arm's-length), \alert{2010--2014}.
+        \item Cobertura nacional, mercado \alert{monocéntrico} (Luxemburgo-Ville concentra $>$50\% del empleo).
+        \item $>$20 variables enriquecidas con SIG: físicas, locacionales, de vecindario y temporales.
+        \item Polígonos catastrales (\textit{Plan Cadastral Numérisé}) $\rightarrow$ área $A_n$ y perímetro $P_n$.
+        \item Variable dependiente: $\ln(\text{precio por área})$, en €/are (100 m\textsuperscript{2}).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.42\textwidth}
+      \centering
+      \textbf{Tratamiento de outliers}
+      \vspace{0.3em}
+      \begin{table}\scriptsize
+      \begin{tabular}{lrr}
+        \toprule
+        Año & Inicial & Limpio \\
+        \midrule
+        2010 & 949 & 820 \\
+        2011 & 870 & 732 \\
+        2012 & 859 & 769 \\
+        2013 & 748 & 666 \\
+        2014 & 871 & 759 \\
+        \midrule
+        \textbf{Total} & \textbf{4.297} & \textbf{3.746} \\
+        \bottomrule
+      \end{tabular}
+      \end{table}
+      \scriptsize 551 outliers removidos en 3 criterios (incl.\ outliers espaciales).
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Estadísticas descriptivas (N = 3.746)}
+  \centering
+  \begin{table}\small
+  \begin{tabular}{lrrrr}
+    \toprule
+    Variable & Media & D.E. & Mín & Máx \\
+    \midrule
+    \multicolumn{5}{l}{\itshape Dependiente}\\
+    Precio por are (€) & 66.451 & 56.513 & 5.025 & 485.000 \\
+    Precio por are (ln) & 10,835 & 0,745 & 8,52 & 13,09 \\
+    \midrule
+    \multicolumn{5}{l}{\itshape Características físicas}\\
+    \Gindex (forma) & 1,30 & 0,32 & 1,08 & 9,63 \\
+    Ln \Gindex & 0,25 & 0,16 & 0,07 & 2,27 \\
+    Tamaño (are) & 6,48 & 9,78 & 0,01 & 269,23 \\
+    \midrule
+    \multicolumn{5}{l}{\itshape Selección de controles}\\
+    Tiempo en auto al CBD (min) & 24,97 & 14,42 & 2,07 & 73,10 \\
+    Zona altamente edificable & 0,89 & 0,31 & 0 & 1 \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{0.4em}
+  \footnotesize El \Gindex medio es \alert{1,30} con amplio rango (1,08 a 9,63): variabilidad útil para identificar el efecto forma.
+\end{frame}
+
+%==============================================================================
+\section{Metodología}
+%==============================================================================
+\begin{frame}{Estrategia empírica: modelo hedónico}
+  Partimos del equilibrio de precios hedónicos de Rosen (1974):
+  \[ p_{n,t}=f(C_{n,t};\,L_{n,t};\,V_{n,t};\,t) \]
+  \footnotesize ($C$: físicas, $L$: locacionales, $V$: vecindario, $t$: tiempo)
+  \vspace{0.5em}
+  \normalsize
+  \textbf{Modelo base log-lineal (OLS):}
+  \[ \ln p_{n,t}=\alpha_0+\sum_{k=1}^{K}\beta_k^{\,t}\,x_{nk}^{t}+\delta_0^{\,t}+\varepsilon_n^{t} \]
+  \begin{itemize}\small
+    \item Forma entra como $\ln(\text{\Gindex})$ + términos no lineales e interacciones con el tamaño.
+    \item Efectos fijos por \alert{municipio} (106 comunas) y por \alert{año}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dependencia espacial}
+  \begin{itemize}
+    \item Los precios del suelo son \alert{inherentemente espaciales}: ignorar la dependencia sesga e ineficiencia las estimaciones OLS.
+    \item Diagnóstico: \textbf{Moran's I = 0,213} ($p=0.0000$) $\Rightarrow$ autocorrelación espacial positiva.
+  \end{itemize}
+  \vspace{0.3em}
+  \textbf{Modelo de rezago espacial (SLM)}, estimado por GMM con corrección heterocedástica:
+  \[ \ln p_{n,t}=\alpha_0+\lambda\!\!\sum_{j\neq n}\!w_{n,j}^{t}\ln p_{j,t}+\sum_{k}\beta_k^{t}x_{nk}^{t}+\delta_0^{t}+\varepsilon_n^{t} \]
+  \begin{block}{Selección de modelo (estrategia GETS)}
+    \footnotesize Desde el SARAR general $\rightarrow$ el coeficiente $\hat\rho$ resulta no significativo $\Rightarrow$ el modelo preferido se reduce al \alert{SLM}. Pesos espaciales: \textbf{$k$ vecinos más cercanos} ($k=10$).
+  \end{block}
+\end{frame}
+
+\begin{frame}{Endogeneidad: ¿es la forma exógena?}
+  Tres argumentos respaldan tratar la forma como \alert{predeterminada}:
+  \vspace{0.4em}
+  \begin{enumerate}
+    \item \textbf{Predeterminación}: los límites catastrales son registros administrativos rígidos; reparcelar es costoso y raro ante una transacción puntual.
+    \item \textbf{Ausencia de causalidad inversa}: la variación de forma proviene de subdivisiones históricas y restricciones topográficas, no de precios esperados.
+    \item \textbf{Variables omitidas correlacionadas}: se controlan con (i) distancias continuas, (ii) características de vecindario, (iii) EF municipales y (iv) el rezago espacial del SLM.
+  \end{enumerate}
+  \vspace{0.4em}
+  \footnotesize Un enfoque IV exigiría instrumentos difíciles de validar (fecha de formación catastral, régimen de planificación) $\rightarrow$ probablemente introduciría más sesgo del que corrige.
+\end{frame}
+
+%==============================================================================
+\section{Resultados}
+%==============================================================================
+\begin{frame}{Resultado principal}
+  \begin{block}{Hallazgo titular}
+    \centering
+    \large Una parcela con \Gindex $=1{,}342$ (moderadamente elongada) se transa con un \\[0.3em]
+    \alert{\Huge $-11{,}3\%$} \\[0.3em]
+    \large de descuento frente a la parcela de forma media (\Gindex $=1{,}3$), \\ manteniendo todo lo demás constante.
+  \end{block}
+  \vspace{0.4em}
+  \begin{itemize}\small
+    \item Las parcelas más extruidas se transan a precios significativamente menores que las compactas de igual tamaño y localización.
+    \item El \Gindex se capitaliza \alert{sistemáticamente} en el valor del suelo.
+    \item La forma es un atributo \alert{secundario pero económicamente relevante} (los derechos de desarrollo / zonificación siguen siendo de primer orden).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados de estimación}
+  \centering
+  \begin{table}\scriptsize
+  \begin{tabular}{lccc}
+    \toprule
+    Var.\ dep.: ln precio por are & (1) OLS & (2) OLS int. & (3) SLM-GMM \\
+    \midrule
+    ln \Gindex & $-0{,}260^{***}$ & $0{,}141$ & $0{,}068$ \\
+    ln \Gindex$^2$ & $0{,}437^{***}$ & $-0{,}771^{***}$ & $-0{,}712^{***}$ \\
+    ln tamaño (are) & $-0{,}163^{***}$ & $0{,}075^{*}$ & $0{,}074^{*}$ \\
+    ln tamaño$^2$ & $-0{,}036^{***}$ & $-0{,}066^{***}$ & $-0{,}064^{***}$ \\
+    ln \Gindex $\times$ ln tamaño & & $-0{,}431^{***}$ & $-0{,}391^{***}$ \\
+    ln \Gindex$^2 \times$ ln tamaño$^2$ & & $0{,}041^{*}$ & $0{,}043^{***}$ \\
+    \midrule
+    Tiempo al CBD (min) & $-0{,}020^{***}$ & $-0{,}020^{***}$ & $-0{,}014^{***}$ \\
+    Zona altamente edificable & $1{,}503^{***}$ & $0{,}893^{***}$ & $0{,}801^{***}$ \\
+    Baulücke & $-0{,}056^{**}$ & $-0{,}071^{***}$ & $-0{,}073^{***}$ \\
+    \midrule
+    $\hat\lambda$ (rezago espacial) & & & $0{,}294^{***}$ \\
+    EF municipio / año & Sí & Sí & Sí \\
+    Pseudo-$R^2$ & 0,4149 & 0,4304 & 0,4210 \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{0.2em}
+  \scriptsize N = 3.746. $^{*}p<0{,}1$; $^{**}p<0{,}05$; $^{***}p<0{,}01$. $\hat\lambda$ positivo y significativo: el entorno encarece la parcela.
+\end{frame}
+
+\begin{frame}{Lectura distribucional del efecto}
+  \footnotesize El cambio unitario en el \Gindex es irrealista (de media a extremo). Comparamos cuatro parcelas de referencia (resto de variables en su media):
+  \vspace{0.4em}
+  \centering
+  \begin{table}\small
+  \begin{tabular}{lccr}
+    \toprule
+    Forma & \Gindex & Precio estimado & vs.\ media \\
+    \midrule
+    Cuadrado & 1,000 & € 319.104 & $+10{,}2\%$ \\
+    \rowcolor{azulsecundario!15} Media muestral & 1,300 & € 289.617 & --- \\
+    Moderadamente elongada & 1,342 & € 256.864 & \alert{$-11{,}3\%$} \\
+    Altamente elongada (1:10) & 1,775 & € 186.323 & $-35{,}5\%$ \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{0.6em}
+  \begin{itemize}\footnotesize
+    \item El descuento del 11,3\% corresponde a un movimiento del \alert{rango intercuartílico} del \Gindex.
+    \item El efecto es \alert{no lineal}: se acelera con mayor irregularidad.
+    \item La interacción \Gindex$\times$tamaño es negativa: el castigo es \alert{mayor en parcelas grandes/valiosas}.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Heterogeneidad por tamaño de parcela}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \centering
+      \begin{tikzpicture}[scale=0.85]
+        \draw[->] (0,0) -- (4,0) node[right]{\scriptsize ln \Gindex};
+        \draw[->] (0,0) -- (0,3) node[above]{\scriptsize precio};
+        % parcela pequeña: pendiente plana
+        \draw[verdecompacto,very thick] (0.3,2.4) -- (3.6,2.0);
+        \node[verdecompacto] at (2,2.6) {\scriptsize parcela pequeña};
+        % parcela grande: pendiente pronunciada
+        \draw[naranjaextruido,very thick] (0.3,2.4) -- (3.6,0.4);
+        \node[naranjaextruido] at (2.4,0.9) {\scriptsize parcela grande};
+      \end{tikzpicture}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}\small
+        \item \textbf{Parcelas pequeñas}: la irregularidad apenas reduce el valor (pendiente plana) — ya están geométricamente limitadas.
+        \item \textbf{Parcelas grandes / valiosas}: la regularidad pesa mucho más (pendiente negativa pronunciada).
+        \item Confirma el mecanismo: mayores costos / menor utilidad al desarrollar lotes irregulares cuando hay más valor en juego.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+%==============================================================================
+\section{Robustez}
+%==============================================================================
+\begin{frame}{Verificaciones de robustez}
+  El hallazgo del 11,3\% sobrevive a una batería de pruebas:
+  \vspace{0.4em}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}\small
+        \item \textbf{Medidas de forma alternativas}: Gravelius y Morton dan resultados cualitativamente idénticos.
+        \item \textbf{Outliers}: el \Gindex sigue significativo con la muestra completa (cae el ajuste: pseudo-$R^2$ 0,42 $\to$ 0,37).
+        \item \textbf{Controles socio-demográficos}: tenencia, \% extranjeros, ingresos — sin cambios materiales.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}\small
+        \item \textbf{Submercados}: 5 regiones (cantones) — sin diferencias significativas.
+        \item \textbf{Modelos espaciales}: OLS, SLM, SEM, SARAR — signos y significancia consistentes.
+        \item \textbf{Estabilidad anual}: coeficientes consistentes año por año.
+        \item \textbf{Diagnóstico visual}: el \Gindex no se concentra en zonas de bajo precio $\Rightarrow$ no es proxy de localización.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Robustez: medidas de forma alternativas (SLM-GMM)}
+  \centering
+  \begin{table}\small
+  \begin{tabular}{lccc}
+    \toprule
+    Var.\ dep.: ln precio por are & Gravelius & Morton & \Gindex \\
+    \midrule
+    ln forma & $0{,}068$ & $-0{,}029$ & $0{,}051$ \\
+    ln forma$^2$ & $-0{,}712^{***}$ & $0{,}622^{***}$ & $-0{,}615^{**}$ \\
+    ln tamaño (are) & $0{,}074^{*}$ & $0{,}074^{*}$ & $0{,}069^{*}$ \\
+    ln forma $\times$ ln tamaño & $-0{,}391^{***}$ & $-0{,}276^{***}$ & $-0{,}381^{**}$ \\
+    \midrule
+    $\hat\lambda$ (rezago espacial) & $0{,}294^{***}$ & $0{,}291^{***}$ & $0{,}199^{***}$ \\
+    N & 3.746 & 3.746 & 4.297 \\
+    Pseudo-$R^2$ & 0,4210 & 0,4042 & 0,3716 \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{0.4em}
+  \footnotesize Gravelius $\approx$ \Gindex (transformación lineal). Morton es empíricamente menos convincente. La última columna incluye outliers (N = 4.297) y muestra menor ajuste.
+\end{frame}
+
+%==============================================================================
+\section{Conclusiones}
+%==============================================================================
+\begin{frame}{Contribuciones}
+  \begin{block}{1. Contribución empírica (principal)}
+    Primera cuantificación rigurosa del \alert{descuento por forma} en un mercado de suelo urbano. La parcela individual —unidad operativa del desarrollo— no había recibido atención empírica directa.
+  \end{block}
+  \begin{block}{2. Contribución metodológica (secundaria)}
+    Introducción y validación del \alert{\Gindex}: normaliza la compacidad respecto a un \textbf{cuadrado} (forma eficiente), más interpretable para desarrolladores, tasadores y planificadores que la referencia circular.
+  \end{block}
+\end{frame}
+
+\begin{frame}{Implicancias para la práctica}
+  \begin{itemize}
+    \item \textbf{Desarrolladores}: el descuento por forma es un factor de riesgo cuantificable en la adquisición, y una fuente de valor vía racionalización y ensamble de lotes.
+    \item \textbf{Tasadores}: respaldo empírico para incluir un \alert{factor de ajuste por forma} en la valuación residual del suelo.
+    \item \textbf{Planificadores y gobiernos locales}: las decisiones de subdivisión tienen consecuencias medibles sobre el mercado. Configuraciones compactas y ortogonales pueden generar mayor captura de valor.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Limitaciones y agenda futura}
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Limitaciones}
+      \begin{itemize}\small
+        \item Luxemburgo: país pequeño, de altos ingresos y catastro rígido $\Rightarrow$ generalizar con cautela.
+        \item Período 2010--2014: una fase específica del ciclo del mercado.
+        \item Solo suelo urbano (se excluye agrícola/rural).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Investigación futura}
+      \begin{itemize}\small
+        \item Otros contextos urbanos (grilla americana vs.\ trazado europeo orgánico).
+        \item Datos catastrales con variación temporal: ¿se intensifica el efecto con escasez de suelo?
+        \item Combinar el \Gindex con datos 3D de forma edilicia: optimización conjunta parcela--edificio.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Mensajes para llevar}
+  \begin{enumerate}
+    \item La \alert{forma de la parcela se capitaliza sistemáticamente} en el precio del suelo urbano.
+    \item Pasar de una forma media a una moderadamente elongada implica un \alert{descuento de $\sim$11,3\%}.
+    \item El efecto es \alert{no lineal} y \alert{más fuerte en parcelas grandes}.
+    \item El \Gindex aporta una métrica \alert{validada e interpretable} para la economía urbana.
+    \item Resultados \alert{robustos} a medidas alternativas, outliers, submercados y especificaciones espaciales.
+  \end{enumerate}
+\end{frame}
+
+%------------------------------ Cierre ----------------------------------------
+\begin{frame}[plain]
+  \centering
+  \vspace{1.5cm}
+  {\Huge \textcolor{azulprincipal}{¡Gracias!}}\\[1cm]
+  {\large \textbf{El efecto de la forma de la parcela sobre el precio del suelo urbano}}\\[0.5cm]
+  {\normalsize Glumac \quad $\cdot$ \quad Herrera-Gómez \quad $\cdot$ \quad Licheron \quad $\cdot$ \quad Francke}\\[1cm]
+  {\small Comentarios y preguntas bienvenidos}\\[0.3em]
+  {\footnotesize \texttt{mherreragomez@conicet.gov.ar}}
+\end{frame}
+
+\end{document}
