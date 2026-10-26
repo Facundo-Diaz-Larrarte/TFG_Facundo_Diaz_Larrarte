@@ -1,0 +1,732 @@
+% Presentación del Trabajo Final de Grado — compilar con pdfLaTeX
+\documentclass[10pt,aspectratio=169]{beamer}
+
+% --- Idioma y tipografía -----------------------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc,arrows.meta,shapes.geometric}
+
+% --- Identidad visual: verde bosque, oro cálido y carbón -------------------
+\definecolor{Forest}{HTML}{1F5A45}
+\definecolor{ForestDark}{HTML}{163D30}
+\definecolor{Gold}{HTML}{C7952E}
+\definecolor{Charcoal}{HTML}{27302B}
+\definecolor{Mist}{HTML}{EEF2EE}
+\definecolor{Sand}{HTML}{F8F3E8}
+\definecolor{Muted}{HTML}{66736C}
+\definecolor{SoftGreen}{HTML}{DCE9E1}
+\definecolor{SoftGold}{HTML}{F4E5BE}
+\definecolor{SoftCharcoal}{HTML}{E8EBE9}
+
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\setbeamercolor{normal text}{fg=Charcoal,bg=white}
+\setbeamercolor{structure}{fg=Forest}
+\setbeamercolor{alerted text}{fg=ForestDark}
+\setbeamercolor{frametitle}{fg=ForestDark,bg=white}
+\setbeamerfont{frametitle}{series=\bfseries,size=\Large}
+\setbeamercolor{title}{fg=ForestDark}
+\setbeamerfont{title}{series=\bfseries,size=\LARGE}
+\setbeamercolor{subtitle}{fg=Muted}
+\setbeamercolor{block title}{fg=white,bg=Forest}
+\setbeamercolor{block body}{fg=Charcoal,bg=SoftGreen}
+\setbeamercolor{block title alerted}{fg=Charcoal,bg=Gold}
+\setbeamercolor{block body alerted}{fg=Charcoal,bg=SoftGold}
+\setbeamercolor{itemize item}{fg=Gold}
+\setbeamercolor{itemize subitem}{fg=Forest}
+\setbeamerfont{footnote}{size=\tiny}
+\setlength{\parskip}{0.22em}
+\setbeamertemplate{frametitle}[default]
+\setbeamertemplate{footline}{}
+
+\newcommand{\source}[1]{%
+  \vfill\nointerlineskip
+  \makebox[\linewidth][r]{\tiny\color{Muted}\textit{Fuente: #1}}%
+}
+\newcommand{\pill}[2]{\tikz[baseline=(n.base)]\node[rounded corners=2pt,fill=#1,text=Charcoal,inner xsep=5pt,inner ysep=2.5pt,font=\scriptsize] (n) {\bfseries #2};}
+\newcommand{\stat}[2]{\begin{minipage}{0.29\textwidth}\centering{\color{ForestDark}\fontsize{25}{28}\selectfont\bfseries #1}\\[-1pt]{\scriptsize\color{Muted}#2}\end{minipage}}
+\newcommand{\directors}{Director: Miguel Bosch}
+
+% Portada conservada: identidad Forest/Gold y composición de la versión previa.
+\setbeamertemplate{title page}{%
+  \vbox{}
+  \vfill
+  \begin{beamercolorbox}[wd=\paperwidth,center,sep=0pt]{title page header}
+    {\color{Gold}\small\textbf{Trabajo Final de Grado}\par}
+    \vspace{0.28cm}
+    {\color{Gold}\rule{0.72\paperwidth}{1.1pt}\par}
+    \vspace{0.42cm}
+    {\usebeamerfont{title}\color{ForestDark}\inserttitle\par}
+    \vspace{0.25cm}
+    {\usebeamerfont{subtitle}\color{Muted}\insertsubtitle\par}
+  \end{beamercolorbox}
+  \vspace{0.85cm}
+  \begin{beamercolorbox}[wd=\paperwidth,center,sep=0pt]{author}
+    {\large\color{ForestDark}\insertauthor\par}
+    \vspace{0.14cm}
+    {\normalsize\color{Muted}\directors\par}
+    \vspace{0.48cm}
+    {\small\color{Forest}\insertinstitute\par}
+  \end{beamercolorbox}
+  \vfill
+  \vfill
+}
+
+\title{Usos empresariales de inteligencia artificial y productividad laboral}
+\subtitle{Evidencia país--sector para la Unión Europea}
+\author{Facundo Díaz Larrarte}
+\institute{Universidad Nacional de Río Cuarto --- Facultad de Ciencias Económicas}
+\date{}
+
+\begin{document}
+
+% 1 --------------------------------------------------------------------------
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+% 2 (Índice de la presentación) ----------------------------------------------
+\begin{frame}{Estructura de la presentación}
+  \vspace{0.15cm}
+  \begin{enumerate}\setlength\itemsep{0.65em}
+    \item \textbf{Introducción: motivación, alcance e hipótesis}\par
+          \vspace{0.04cm}
+          {\small\color{Muted}Pregunta de investigación, delimitación empírica e hipótesis asociativa.}
+
+    \item \textbf{Marco teórico y conceptual}\par
+          \vspace{0.04cm}
+          {\small\color{Muted}Fundamentos de productividad (Berndt, 1991), GPT y Curva J (Brynjolfsson, 2021).}
+
+    \item \textbf{Datos y metodología}\par
+          \vspace{0.04cm}
+          {\small\color{Muted}Panel UE-27 ($n=667$), variables de Eurostat, control de escala y estrategia M1 $\rightarrow$ M3.}
+
+    \item \textbf{Resultados empíricos y validación}\par
+          \vspace{0.04cm}
+          {\small\color{Muted}Niveles vs. cambios, modelos de panel, test de Hausman y heterogeneidad sectorial.}
+
+    \item \textbf{Discusión económica y conclusiones}\par
+          \vspace{0.04cm}
+          {\small\color{Muted}Brecha de realización, límites de inferencia metodológica y balance final.}
+  \end{enumerate}
+  \source{Hoja de ruta del Trabajo Final de Grado (fiel al índice del manuscrito).}
+\end{frame}
+
+% 3 (Cap. 1: Introducción) ---------------------------------------------------
+\begin{frame}{Pregunta, objetivo e hipótesis}
+  \begin{block}{Pregunta de investigación}
+    \small ¿Cómo varían la adopción y los usos empresariales de IA entre sectores económicos de la Unión Europea, y en qué medida esas diferencias se asocian con distintos niveles y variaciones de productividad laboral?
+  \end{block}
+  \begin{block}{Objetivo general}
+    \small Analizar esa variación sectorial y estimar su asociación con la productividad laboral aparente, usando la adopción general como referencia y considerando la heterogeneidad productiva sectorial.
+  \end{block}
+  \begin{alertblock}{Hipótesis central}
+    \small Una mayor adopción empresarial de IA se asocia con una mayor productividad laboral aparente; la asociación puede diferir según usos y sectores.
+  \end{alertblock}
+  \centering\pill{SoftGold}{EVIDENCIA ASOCIATIVA, NO CAUSAL}\par
+  \vspace{0.18cm}
+  \scriptsize No se afirma que la IA cause productividad ni que los resultados sean automáticos.
+  \source{Trabajo Final de Grado, planteo del problema, objetivo e hipótesis.}
+\end{frame}
+
+% 4 (Cap. 2: Marco Teórico) --------------------------------------------------
+\begin{frame}{Marco conceptual: Teoría de la productividad (Berndt, 1991)}
+  \vspace{-0.10cm}
+  \begin{block}{Definición analítica: productividad media parcial del trabajo}
+    \centering\normalsize
+    $Productividad_{cst} = \dfrac{Valor\ Agregado\ Bruto_{cst}}{Personas\ Ocupadas_{cst}}$ \quad \footnotesize (\textit{miles de EUR corrientes por ocupado})
+  \end{block}
+  \vspace{0.12cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Fundamento teórico (Berndt, 1991)}
+        \small\begin{itemize}\setlength\itemsep{0.24em}
+          \item \textbf{Ratio intensivo ($PMe_L$):} imputa el producto al trabajo; no aísla capital físico ni PTF.
+          \item \textbf{VAB vs. Producción Bruta ($Y$):} deduce consumos intermedios ($Y - M$), aislando la riqueza neta y evitando doble contabilización.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Tratamiento nominal y precios}
+        \small\begin{itemize}\setlength\itemsep{0.24em}
+          \item Métrica oficial homogénea en la UE (código SBS \texttt{V91110}).
+          \item Previene sesgos de medición de deflactores macro híbridos (Berndt, 1991).
+          \item Efectos país--año ($\gamma_{ct}$) absorben inflación macro (Frisch--Waugh--Lovell).
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \source{Eurostat Structural Business Statistics (SBS); Berndt (1991), \textit{The Practice of Econometrics}.}
+\end{frame}
+
+% 5 (Cap. 2: Marco Teórico) --------------------------------------------------
+\begin{frame}{Marco conceptual: Adopción de IA y Curva J}
+  \centering
+  \begin{tikzpicture}[node distance=4.5mm, every node/.style={align=center}]
+    \node[draw=Forest,fill=SoftGreen,rounded corners,minimum width=3.5cm,minimum height=.78cm] (a) {\textbf{Adopción declarada}};
+    \node[draw=Gold,fill=SoftGold,rounded corners,minimum width=3.5cm,minimum height=.78cm,right=of a] (b) {\textbf{Complementos}\\datos y capital humano};
+    \node[draw=ForestDark,fill=SoftCharcoal,rounded corners,minimum width=3.5cm,minimum height=.78cm,right=of b] (c) {\textbf{Reorganización}\\de procesos};
+    \node[draw=Forest,fill=Mist,rounded corners,minimum width=3.5cm,minimum height=.78cm,below=of b] (d) {\textbf{Productividad observada}};
+    \draw[-{Stealth[length=2mm]},Forest,thick] (a)--(b);
+    \draw[-{Stealth[length=2mm]},Forest,thick] (b)--(c);
+    \draw[-{Stealth[length=2mm]},Forest,thick] (c.south) |- (d.east);
+  \end{tikzpicture}
+  \vspace{0.35cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Tecnologías de Propósito General (GPT)}
+        \small\begin{itemize}\setlength\itemsep{0.20em}
+          \item Exigen acumular \textbf{activos complementarios}: datos, infraestructura y capacitación.
+          \item \textbf{Enfoque de tareas:} la IA afecta tareas puntuales, no a la firma en bloque.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Curva J de productividad}
+        \small\begin{itemize}\setlength\itemsep{0.20em}
+          \item Costos de ajuste iniciales registrados como gasto corriente deprimen la productividad medida.
+          \item Rezago temporal: los retornos de eficiencia maduran tras la reorganización interna.
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \source{Brynjolfsson, Rock y Syverson (2021); Bresnahan, Brynjolfsson y Hitt (2002); Acemoglu y Restrepo (2018).}
+\end{frame}
+
+% 6 (Cap. 3: Datos y Metodología) --------------------------------------------
+\begin{frame}{Datos y alcance: Panel UE-27 ($n=667$)}
+  \centering
+  \stat{UE-27}{27 países}\hfill
+  \stat{9}{sectores NACE Rev. 2}\hfill
+  \begin{minipage}{0.28\textwidth}\centering{\color{ForestDark}\fontsize{25}{28}\selectfont\bfseries 3}\\[-1pt]{\scriptsize\color{Muted}olas: 2021 · 2023 · 2024}\end{minipage}\par
+  \vspace{0.36cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Muestra principal no balanceada}
+        \small\begin{itemize}\setlength\itemsep{0.28em}
+          \item \textbf{233 entidades país--sector}, total \textbf{667 observaciones}.
+          \item 2021: 220 obs · 2023: 224 obs · 2024: 223 obs.
+          \item De 729 celdas teóricas ($27 \times 9 \times 3$), 62 no publicadas por secreto estadístico en origen.
+          \item Retener el panel no balanceado previene el sesgo de atrición y maximiza la potencia.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Heterogeneidad y representatividad}
+        \small\begin{itemize}\setlength\itemsep{0.28em}
+          \item Todas las celdas superan los 1.000 ocupados (mediana sectorial $>140.000$ ocupados).
+          \item Cobertura de economías avanzadas y del Este en 9 ramas no financieras.
+          \item Sensibilidad a balanceo evaluada sobre las 209 entidades continuas ($n=627$).
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \source{Eurostat SBS y encuestas de TIC; Trabajo Final de Grado.}
+\end{frame}
+
+% 7 (Cap. 3: Datos y Metodología) --------------------------------------------
+\begin{frame}{Variables operativas y control de escala}
+  \vspace{-0.10cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Variables oficiales (Eurostat SBS y TIC)}
+        \scriptsize\begin{itemize}\setlength\itemsep{0.20em}
+          \item \textbf{Productividad ($VAB/L$):} código SBS \texttt{V91110}, miles de EUR corrientes por ocupado.
+          \item \textbf{Encuesta TIC (\texttt{isoc\_eb\_ai}):} empresas $\ge 10$ ocupados; informante directivo/TIC; tasa \texttt{PC\_ENT} con ponderación poblacional oficial.
+          \item \textbf{Indicadores:} Adopción general (\texttt{ai\_any}), intensidad ($\ge 2, \ge 3$) y 5 usos funcionales (procesos, producción, logística, ventas, seguridad).
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Control de escala (Alemania vs. Malta)}
+        \scriptsize\begin{itemize}\setlength\itemsep{0.20em}
+          \item \textbf{Normalización matemática:} la productividad es un ratio intensivo ($VAB/L$) y la IA es una tasa (\%) sobre empresas; la escala física queda neutralizada.
+          \item \textbf{Heterocedasticidad por tamaño:} errores estándar agrupados por entidad (\textit{cluster-robust}) y estimaciones ponderadas por empleo (WLS).
+        \end{itemize}
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \vspace{0.20cm}
+  \centering\pill{SoftGreen}{ESCALA NEUTRALIZADA POR RATIOS Y TRATADA ECONOMÉTRICAMENTE}\par
+  \source{Eurostat: Encuestas de TIC (\texttt{isoc\_eb\_ai}) y SBS (\texttt{sbs\_sc\_ovw}); Trabajo Final de Grado.}
+\end{frame}
+
+% 6 --------------------------------------------------------------------------
+\begin{frame}{Estrategia empírica: Between versus Within}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \colorbox{SoftGreen}{\parbox[c][1.12cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\Large\bfseries BETWEEN\\[-2pt]\small Diferencias entre unidades}}
+      \vspace{0.22cm}
+      \begin{block}{Pregunta}
+        \small ¿Las unidades con más adopción suelen tener mayor productividad?
+      \end{block}
+      \small Incluye diferencias estructurales persistentes entre países y sectores (nivel medio histórico).
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \colorbox{SoftGold}{\parbox[c][1.12cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\Large\bfseries WITHIN\\[-2pt]\small Cambios dentro de país--sector}}
+      \vspace{0.22cm}
+      \begin{alertblock}{Pregunta}
+        \small ¿Los cambios de adopción coinciden con cambios de productividad en la misma unidad?
+      \end{alertblock}
+      \small Aísla variaciones temporales absorbiendo factores fijos mediante efectos fijos.
+    \end{column}
+  \end{columns}
+  \vspace{0.32cm}
+  \begin{block}{Objetivo econométrico}
+    \centering\small Neutralizar la variación \textit{between} para evaluar si los aumentos en adopción de IA se traducen en ganancias temporales de productividad dentro de cada unidad.
+  \end{block}
+  \source{Wooldridge (2010); enfoque metodológico del Trabajo Final de Grado.}
+\end{frame}
+
+% 7 --------------------------------------------------------------------------
+\begin{frame}{Estrategia econométrica: progresión M1 $\rightarrow$ M2 $\rightarrow$ M3}
+  \small Se estiman tres especificaciones de complejidad creciente para aislar el parámetro $\beta$:\par
+  \vspace{0.20cm}
+  \begin{block}{Modelo M1 | Efectos fijos aditivos separados}
+    \centering\small
+    $\ln(Productividad_{cst}) = \beta IA_{cst} + \mu_c + \eta_s + \lambda_t + \varepsilon_{cst}$\\[1pt]
+    \scriptsize Controla por país ($\mu_c$), sector ($\eta_s$) y año ($\lambda_t$) de forma independiente. Arrastra variación \textit{between}.
+  \end{block}
+  \vspace{0.14cm}
+  \begin{block}{Modelo M2 | Estimador within de entidad}
+    \centering\small
+    $\ln(Productividad_{cst}) = \beta IA_{cst} + \alpha_{cs} + \lambda_t + \varepsilon_{cst}$\\[1pt]
+    \scriptsize Efectos fijos país--sector ($\alpha_{cs}$); absorbe diferencias estructurales fijas. Shock anual común a la UE ($\lambda_t$).
+  \end{block}
+  \vspace{0.14cm}
+  \begin{alertblock}{Modelo M3 | Doble efecto fijo (Especificación preferida)}
+    \centering\small
+    $\ln(Productividad_{cst}) = \beta IA_{cst} + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}$\\[1pt]
+    \scriptsize Efectos fijos país--sector ($\alpha_{cs}$) y país--año ($\gamma_{ct}$). Absorbe shocks macro y precios por país--año.
+  \end{alertblock}
+  \source{Wooldridge (2010); especificaciones econométricas del Trabajo Final de Grado.}
+\end{frame}
+
+% 6 --------------------------------------------------------------------------
+\begin{frame}{Descriptivo: la adopción se acelera}
+  \begin{block}{Adopción general de IA (\% de empresas)}
+    \centering\fontsize{27}{31}\selectfont\color{ForestDark}\bfseries
+    9,2 \quad \textcolor{Gold}{$\longrightarrow$} \quad 9,9 \quad \textcolor{Gold}{$\longrightarrow$} \quad 17,0\\[-2pt]
+    \scriptsize\color{Muted}2021 \hspace{2.2cm} 2023 \hspace{2.2cm} 2024
+  \end{block}
+  \vspace{0.20cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Contexto nominal}
+        \centering\small Productividad media: \textbf{62,0} $\rightarrow$ \textbf{67,3} $\rightarrow$ \textbf{72,1}\\
+        \scriptsize miles de euros corrientes por ocupado (mediana: 44,2 $\rightarrow$ 54,3)
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{alertblock}{Lectura prudente}
+        \small Ambos promedios aumentan; la descripción agregada no separa eficiencia, precios relativos ni cambios dentro de cada entidad.
+      \end{alertblock}
+    \end{column}
+  \end{columns}
+  \source{Muestra principal no balanceada ($n=667$); Eurostat y elaboración propia.}
+\end{frame}
+
+% 7 --------------------------------------------------------------------------
+\begin{frame}{El contraste central: niveles versus cambios}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{block}{Niveles: relación transversal}
+        \centering{\fontsize{34}{38}\selectfont\color{ForestDark}\bfseries $r=+0{,}558$}\\[2pt]
+        \small Adopción general y log-productividad\\
+        \scriptsize 667 observaciones · $p<0{,}001$
+      \end{block}
+      \small Unidades más productivas suelen exhibir mayor adopción promedio.
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{alertblock}{Cambios 2021--2024}
+        \centering{\fontsize{34}{38}\selectfont\color{Gold}\bfseries $r=-0{,}229$}\\[2pt]
+        \small Cambios en adopción y log-productividad\\
+        \scriptsize 213 entidades · $p<0{,}001$
+      \end{alertblock}
+      \small La dinámica de corto plazo no reproduce la correlación transversal positiva.
+    \end{column}
+  \end{columns}
+  \vspace{0.30cm}
+  \begin{alertblock}{Inferencia correcta}
+    \centering\small La asociación positiva \textbf{entre} unidades no permite afirmar que elevar la adopción \textbf{dentro} de una unidad aumente su productividad.
+  \end{alertblock}
+  \source{Eurostat; correlaciones propias con log-productividad ($n=667$ en niveles, $n=213$ en cambios).}
+\end{frame}
+
+% 10 -------------------------------------------------------------------------
+\begin{frame}{Resultados de panel: de M1 a M3 nominal}
+  \centering\small Estimaciones para adopción general en muestra principal no balanceada ($n=667$, 233 entidades)\par
+  \vspace{0.18cm}
+  \renewcommand{\arraystretch}{1.22}
+  \begin{tabular}{llrrr}
+    \toprule
+    \textbf{Modelo} & \textbf{Efectos fijos incluidos} & \textbf{$\beta$ (1 pp)} & \textbf{$p$-valor} & \textbf{Efecto 10 pp} \\
+    \midrule
+    \textbf{M1} & País + Sector + Año & $+0{,}0032$ & 0,091 & $+3{,}2\%$ \\
+    \textbf{M2} & País--Sector + Año & $-0{,}0020$ & 0,050 & $-1{,}9\%$ \\
+    \rowcolor{SoftGreen}
+    \textbf{M3 (preferido)} & País--Sector + País--Año & $\mathbf{-0{,}0013}$ & \textbf{0,154} & $\mathbf{-1{,}3\%}$ \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.25cm}
+  \begin{alertblock}{El hallazgo metodológico central}
+    \small En M1, la correlación entre unidades hace parecer que la IA aumenta la productividad ($+3{,}2\%$). Sin embargo, al controlar por la heterogeneidad fija de cada entidad en M2 y M3, \textbf{la asociación se disipa por completo} y deja de ser estadísticamente significativa.
+  \end{alertblock}
+  \vspace{0.15cm}
+  \centering\pill{SoftGold}{NO CAUSAL}\quad\pill{SoftGold}{NO ``IA REDUCE PRODUCTIVIDAD''}\par
+  \vspace{0.08cm}
+  \scriptsize Errores estándar agrupados por entidad. El coeficiente de M3 no es estadísticamente distinguible de cero.
+  \source{Modelos M1, M2 y M3, Trabajo Final de Grado (Anexo B).}
+\end{frame}
+
+% 9 --------------------------------------------------------------------------
+\begin{frame}{Validación econométrica: Efectos Aleatorios y Test de Hausman}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.47\textwidth}
+      \begin{block}{Efectos Aleatorios (RE)}
+        \centering{\fontsize{26}{30}\selectfont\color{ForestDark}\bfseries $\beta_{RE}=+0{,}0111$}\\[2pt]
+        \large $EE=0{,}0009$ · $p<0{,}001$\\[0.10cm]
+        \scriptsize Mínimos cuadrados generalizados (GLS)
+      \end{block}
+      \small Capta la asociación transversal en niveles: unidades con mayor adopción media son más productivas.
+    \end{column}
+    \begin{column}{0.47\textwidth}
+      \begin{alertblock}{Test de Hausman (Mundlak)}
+        \centering{\fontsize{26}{30}\selectfont\color{Gold}\bfseries $\chi^2(1)=69{,}10$}\\[2pt]
+        \large $p=1{,}1\times 10^{-16}$ ($p<0{,}001$)\\[0.10cm]
+        \scriptsize Contraste robusto de Wald
+      \end{alertblock}
+      \small Rechazo contundente de la hipótesis nula de exogeneidad de los efectos individuales ($\text{Cov}(\alpha_i, IA_{it}) = 0$).
+    \end{column}
+  \end{columns}
+  \vspace{0.30cm}
+  \begin{alertblock}{Fundamento metodológico del estimador de Efectos Fijos (M3)}
+    \centering\small La heterogeneidad no observada de cada sector está correlacionada con la propensión a adoptar IA. El estimador RE es inconsistente y el estimador \textit{within} (M3) resulta metodológicamente mandatorio.
+  \end{alertblock}
+  \source{Modelos RE y regresión auxiliar de Mundlak (1978) / Wooldridge (2010), Trabajo Final de Grado (Anexo E).}
+\end{frame}
+
+% 10 -------------------------------------------------------------------------
+\begin{frame}{Heterogeneidad sectorial \pill{SoftGold}{EXPLORATORIA}}
+  \centering\scriptsize Pendientes M3 por sector ($n=667$, 233 entidades): tres olas; patrones asociativos exploratorios.\par
+  \vspace{0.18cm}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}
+      \colorbox{SoftGold}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{Negativas}\\[0.10cm]
+      Manufactura: $\beta=-0{,}0098$ ($p<0{,}001$)\\[0.06cm]
+      Comercio: $\beta=-0{,}0136$ ($p<0{,}001$)\\[0.06cm]
+      Serv. prof.: $\beta=-0{,}0029$ ($p=0{,}007$)}}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \colorbox{SoftCharcoal}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{Cerca de cero}\\[0.10cm]
+      Información y com.:\\$\beta=-0{,}0011$ ($p=0{,}237$)\\[0.08cm]
+      Construcción, transporte, inmuebles, adm.: no signif.}}
+    \end{column}
+    \begin{column}{0.31\textwidth}
+      \colorbox{SoftGreen}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{Positiva}\\[0.10cm]
+      Alojamiento y comida:\\$\beta=+0{,}0110$ ($p=0{,}013$)\\[0.08cm]
+      Baja penetración basal y reapertura post-pandemia}}
+    \end{column}
+  \end{columns}
+  \vspace{0.30cm}
+  \begin{alertblock}{Lectura económica}
+    \centering\small Compatibles con costos de ajuste (curva J), selección sectorial o shocks concurrentes. No establecen causalidad.
+  \end{alertblock}
+  \source{Interacciones sectoriales del modelo M3 validado con \texttt{linearmodels}; $n=667$, 233 entidades.}
+\end{frame}
+
+% 11 -------------------------------------------------------------------------
+\begin{frame}{Interpretación económica: explicaciones compatibles}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.31\textwidth}\centering
+      \colorbox{SoftGreen}{\parbox[c][1.55cm][c]{0.93\linewidth}{\centering\small\textbf{Diferencias previas}\\capital humano, infraestructura y capacidad financiera}}
+    \end{column}
+    \begin{column}{0.31\textwidth}\centering
+      \colorbox{SoftGold}{\parbox[c][1.55cm][c]{0.93\linewidth}{\centering\small\textbf{Ajuste y maduración}\\capacitación, datos y reorganización}}
+    \end{column}
+    \begin{column}{0.31\textwidth}\centering
+      \colorbox{SoftCharcoal}{\parbox[c][1.55cm][c]{0.93\linewidth}{\centering\small\textbf{Medición y contexto}\\precios relativos y shocks sectoriales}}
+    \end{column}
+  \end{columns}
+  \vspace{0.42cm}
+  \begin{block}{Lectura conjunta}
+    \small La adopción declarada puede no capturar intensidad ni calidad de implementación. Los resultados son compatibles con una brecha entre adopción y realización productiva, pero no demuestran sus mecanismos.
+  \end{block}
+  \begin{alertblock}{Implicancia}
+    \small La IA debe considerarse junto con activos complementarios; su adopción no equivale a la realización automática de ganancias de productividad.
+  \end{alertblock}
+  \source{Brynjolfsson, Rock y Syverson (2021); Bresnahan, Brynjolfsson y Hitt (2002); elaboración propia.}
+\end{frame}
+
+% 12 -------------------------------------------------------------------------
+\begin{frame}{Límites de la inferencia}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Diseño y datos}
+        \small\begin{itemize}\setlength\itemsep{0.34em}
+          \item Panel corto: tres olas comparables ($T=3$).
+          \item Unidad agregada país--sector, no empresa.
+          \item Posible causalidad inversa y capacidades omitidas.
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Medición}
+        \small\begin{itemize}\setlength\itemsep{0.34em}
+          \item Adopción declarada (\%), no profundidad de uso.
+          \item Productividad laboral aparente nominal estandarizada.
+          \item Shocks macro absorbidos por $\gamma_{ct}$; precios sectoriales micro no separables.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.38cm}
+  \begin{alertblock}{Alcance}
+    \centering\small El estudio estima asociaciones; no permite atribuir a la IA una suba o una caída de productividad, ni evaluar el retorno de una empresa individual.
+  \end{alertblock}
+  \source{Trabajo Final de Grado, limitaciones metodológicas.}
+\end{frame}
+
+% 13 -------------------------------------------------------------------------
+\begin{frame}{Conclusiones}
+  \begin{enumerate}\setlength\itemsep{0.48em}
+    \item \textbf{Pregunta y objetivo.} En la UE-27, adopción y productividad se asocian positivamente \textit{entre} unidades ($r=+0{,}558$), pero la relación se disipa en variaciones temporales \textit{dentro} de país--sector ($r=-0{,}229$).
+    \item \textbf{Hipótesis central.} El modelo preferido M3 nominal no muestra una asociación temporal contemporánea significativa ($\beta=-0{,}0013$; $p=0{,}154$, $n=667$). El contraste de Hausman ($\chi^2=69{,}10$, $p<0{,}001$) demuestra que el estimador within de efectos fijos es mandatorio.
+    \item \textbf{Heterogeneidad.} Patrones exploratorios muestran pendientes negativas en manufactura y comercio (compatibles con costos de reorganización) y neutras en información y comunicación.
+    \item \textbf{Implicancia.} La adopción no garantiza realización productiva automática: los activos complementarios, la capacitación y el rediseño de procesos son determinantes.
+  \end{enumerate}
+  \vspace{0.12cm}
+  \centering\pill{SoftGold}{ASOCIACIONES, NO EFECTOS CAUSALES}\par
+  \source{Elaboración propia sobre los resultados del Trabajo Final de Grado.}
+\end{frame}
+
+% 15 (Cierre) ----------------------------------------------------------------
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[ForestDark] (current page.south west) rectangle (current page.north east);
+    \fill[Gold] (current page.south west) rectangle ([xshift=.20\paperwidth]current page.south west);
+    \fill[Forest] ([xshift=.20\paperwidth]current page.south west) rectangle ([xshift=.215\paperwidth]current page.north east);
+  \end{tikzpicture}
+  \vspace{1.3cm}\hspace{2.7cm}
+  \begin{minipage}{0.68\textwidth}
+    {\color{Gold}\fontsize{32}{38}\selectfont\bfseries ¡Muchas gracias!}\\[0.30cm]
+    {\color{white}\large Espacio para preguntas, comentarios y discusión}\\[0.45cm]
+    {\color{Gold}\rule{0.85\linewidth}{1.2pt}}\\[0.55cm]
+    {\color{white}\fontsize{16}{20}\selectfont\bfseries Facundo Díaz Larrarte}\\[0.18cm]
+    {\color{SoftGold}\small Trabajo Final de Grado $\cdot$ Licenciatura en Economía}\\[0.14cm]
+    {\color{Mist}\footnotesize Director: Miguel Bosch}\\[0.14cm]
+    {\color{SoftGreen}\footnotesize Universidad Nacional de Río Cuarto $\cdot$ Facultad de Ciencias Económicas}\\[0.38cm]
+    {\color{SoftGold}\scriptsize Contacto: \texttt{fdiazlarrarte@gmail.com}}
+  \end{minipage}
+\end{frame}
+
+% --- Apéndice: material para preguntas --------------------------------------
+\appendix
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[ForestDark] (current page.south west) rectangle (current page.north east);
+    \fill[Gold] (current page.south west) rectangle ([xshift=.16\paperwidth]current page.south west);
+  \end{tikzpicture}
+  \vspace{2.05cm}\hspace{2.55cm}
+  {\color{Gold}\fontsize{28}{34}\selectfont\bfseries APÉNDICE}\\[0.32cm]
+  \hspace{2.55cm}{\color{white}\large Fuentes, método y resultados secundarios}
+\end{frame}
+
+\begin{frame}{Apéndice | Cobertura y fuentes}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Cobertura analítica}
+        \small\begin{itemize}\setlength\itemsep{0.32em}
+          \item 27 países de la Unión Europea.
+          \item 9 sectores y 3 olas: 2021, 2023 y 2024.
+          \item 729 celdas teóricas; 667 con información completa.
+          \item Muestra principal no balanceada: 233 entidades ($n=667$).
+          \item Sensibilidad balanceada: 209 entidades ($n=627$).
+        \end{itemize}
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Fuentes Eurostat}
+        \small\begin{itemize}\setlength\itemsep{0.32em}
+          \item Encuestas TIC (\texttt{isoc\_eb\_ai}, \texttt{isoc\_eb\_ain2}): adopción, intensidad y 5 usos funcionales.
+          \item Estadísticas estructurales (\texttt{sbs\_sc\_ovw}): valor agregado y personas ocupadas ($\ge 10$ ocupados).
+          \item Productividad nominal: miles de EUR corrientes por ocupado.
+        \end{itemize}
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.30cm}
+  \begin{alertblock}{Variables centrales}
+    \small IA: porcentaje de empresas que declara utilizar tecnologías de IA (\texttt{PC\_ENT}). Productividad laboral aparente: valor agregado por persona ocupada (definición oficial Eurostat SBS); la especificación principal usa su logaritmo.
+  \end{alertblock}
+  \source{Eurostat; Trabajo Final de Grado, datos y metodología.}
+\end{frame}
+
+\begin{frame}{Apéndice | Sectores incluidos}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \scriptsize\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.78\linewidth}@{}}
+        C & Industria manufacturera \\
+        F & Construcción \\
+        G & Comercio mayorista y minorista \\
+        H & Transporte y almacenamiento \\
+        I & Alojamiento y servicios de comida \\
+      \end{tabular}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \scriptsize\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.78\linewidth}@{}}
+        J & Información y comunicación \\
+        L & Actividades inmobiliarias \\
+        M & Actividades profesionales, científicas y técnicas \\
+        N & Actividades administrativas y servicios auxiliares \\
+      \end{tabular}
+    \end{column}
+  \end{columns}
+  \vspace{0.55cm}
+  \begin{block}{Unidad de observación}
+    \centering\small Cada registro combina país, sector y año. Los resultados agregados no describen el desempeño de empresas individuales.
+  \end{block}
+  \source{Trabajo Final de Grado, sectores considerados.}
+\end{frame}
+
+\begin{frame}{Apéndice | Especificaciones y ecuaciones}
+  \small
+  \begin{block}{Productividad laboral aparente}
+    \centering $Productividad_{cst}=\dfrac{Valor\ agregado_{cst}}{Personas\ ocupadas_{cst}}$
+  \end{block}
+  \begin{block}{Modelo principal M3}
+    \centering $\ln(Productividad_{cst})=\beta IA_{cst}+\alpha_{cs}+\gamma_{ct}+\varepsilon_{cst}$
+  \end{block}
+  \begin{columns}[T,onlytextwidth]
+    \begin{column}{0.48\textwidth}
+      \begin{block}{M1 y M2}
+        \scriptsize M1: efectos fijos de país, sector y año.\\
+        M2: efectos fijos país--sector y año.
+      \end{block}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \begin{block}{Heterogeneidad}
+        \scriptsize $\beta_s=\beta+\delta_s$ mediante interacciones IA $\times$ sector; análisis exploratorio.
+      \end{block}
+    \end{column}
+  \end{columns}
+  \vspace{0.20cm}
+  \scriptsize $\alpha_{cs}$ absorbe diferencias permanentes país--sector; $\gamma_{ct}$, shocks comunes por país--año. Errores estándar agrupados por entidad país--sector.
+  \source{Wooldridge (2010); Berndt (1991); Trabajo Final de Grado, estrategia econométrica.}
+\end{frame}
+
+\begin{frame}{Apéndice | Resultados secundarios M3 nominal}
+  \centering\scriptsize Estimaciones M3 sobre muestra principal no balanceada ($n=667$, 233 entidades); errores robustos clustered.\par
+  \vspace{0.15cm}
+  \renewcommand{\arraystretch}{1.13}
+  \begin{tabular}{lrrr}
+    \toprule
+    \textbf{Indicador de IA} & \textbf{$\beta$ (1 pp)} & \textbf{$p$} & \textbf{Obs.} \\
+    \midrule
+    Adopción general & $-0{,}0013$ & 0,154 & 667 \\
+    Dos o más tecnologías & $-0{,}0017$ & 0,083 & 662 \\
+    Tres o más tecnologías & $-0{,}0020$ & 0,120 & 653 \\
+    Procesos y decisiones & $-0{,}0007$ & 0,660 & 662 \\
+    Producción & $-0{,}0014$ & 0,385 & 631 \\
+    Logística & $-0{,}0011$ & 0,888 & 627 \\
+    Marketing y ventas & $-0{,}0038$ & 0,054 & 640 \\
+    Seguridad informática & $-0{,}0019$ & 0,412 & 626 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.24cm}
+  \begin{alertblock}{Interpretación}
+    \centering\small Ningún coeficiente funcional es positivo y significativo en la especificación nominal M3.
+  \end{alertblock}
+  \source{Modelo M3 validado con \texttt{linearmodels.iv.AbsorbingLS}, Trabajo Final de Grado.}
+\end{frame}
+
+\begin{frame}{Apéndice | Robustez de la adopción general}
+  \centering\small Modelo M3 para adopción general de IA bajo especificaciones alternativas.\par
+  \vspace{0.18cm}
+  \renewcommand{\arraystretch}{1.22}
+  \begin{tabular}{lrrrr}
+    \toprule
+    \textbf{Escenario} & \textbf{$\beta$} & \textbf{$p$} & \textbf{Efecto 10 pp} & \textbf{Obs.} \\
+    \midrule
+    Muestra principal no balanceada, sin ponderar & $-0{,}0013$ & 0,154 & $-1{,}3\%$ & 667 \\
+    Muestra principal, ponderada por empleo (WLS) & $-0{,}0016$ & 0,032 & $-1{,}6\%$ & 667 \\
+    Muestra principal, sin extremos p1--p99 & $-0{,}0010$ & 0,250 & $-1{,}0\%$ & 653 \\
+    Sensibilidad a balanceo: muestra balanceada & $-0{,}0011$ & 0,250 & $-1{,}1\%$ & 627 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.35cm}
+  \begin{alertblock}{Estabilidad del hallazgo}
+    \centering\small El signo negativo se mantiene en todos los escenarios; la ausencia de efecto positivo temporal no depende del balanceo ni de valores atípicos.
+  \end{alertblock}
+  \source{Trabajo Final de Grado, pruebas de robustez.}
+\end{frame}
+
+\begin{frame}{Apéndice | Efectos Aleatorios y Test de Hausman por indicador}
+  \centering\scriptsize Estimaciones RE (GLS) y contraste de Hausman (Mundlak Wald $\chi^2$) en la muestra principal ($n=667$)\par
+  \vspace{0.15cm}
+  \renewcommand{\arraystretch}{1.12}
+  \begin{tabular}{lrrrrr}
+    \toprule
+    \textbf{Indicador de IA} & \textbf{$\beta_{RE}$} & \textbf{$p_{RE}$} & \textbf{Hausman $\chi^2$} & \textbf{$p$-valor} & \textbf{Obs.} \\
+    \midrule
+    Adopción general & $+0{,}0111$ & <0,001 & 69,10 & <0,001 & 667 \\
+    Dos o más tecnologías & $+0{,}0121$ & <0,001 & 56,86 & <0,001 & 662 \\
+    Tres o más tecnologías & $+0{,}0152$ & <0,001 & 48,97 & <0,001 & 653 \\
+    Procesos y decisiones & $+0{,}0194$ & <0,001 & 44,31 & <0,001 & 662 \\
+    Producción & $+0{,}0190$ & <0,001 & 76,28 & <0,001 & 631 \\
+    Logística & $+0{,}0375$ & <0,001 & 35,92 & <0,001 & 627 \\
+    Marketing y ventas & $+0{,}0153$ & <0,001 & 43,73 & <0,001 & 640 \\
+    Seguridad informática & $+0{,}0237$ & <0,001 & 20,44 & <0,001 & 626 \\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.22cm}
+  \begin{alertblock}{Conclusión metodológica unánime}
+    \centering\small En todos los indicadores se rechaza contundentemente RE ($p < 0{,}001$), demostrando que la correlación entre adopción y $\alpha_i$ exige estimadores de efectos fijos.
+  \end{alertblock}
+  \source{Modelos RE y contraste de Mundlak (1978) / Wooldridge (2010), Trabajo Final de Grado (Anexo E).}
+\end{frame}
+
+\begin{frame}{Apéndice | Bibliografía (1/3)}
+  \scriptsize
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item \textbf{Acemoglu, D. y Restrepo, P.} (2018). The race between man and machine: Implications of technology for growth, factor shares, and employment. \textit{American Economic Review}, \textit{108}(6), 1488--1542.
+    \item \textbf{Aldasoro, I., Gambacorta, L., Pal, R., Revoltella, D., Weiss, C. y Wolski, M.} (2026). \textit{AI adoption, productivity and employment: Evidence from European firms} (BIS Working Papers N.º 1325). Bank for International Settlements.
+    \item \textbf{Berndt, E. R.} (1991). \textit{The practice of econometrics: Classic and contemporary}. Addison-Wesley.
+    \item \textbf{Bresnahan, T. F., Brynjolfsson, E. y Hitt, L. M.} (2002). Information technology, workplace organization, and the demand for skilled labor: Firm-level evidence. \textit{The Quarterly Journal of Economics}, \textit{117}(1), 339--376.
+    \item \textbf{Brynjolfsson, E., Rock, D. y Syverson, C.} (2021). The productivity J-curve: How intangibles complement general purpose technologies. \textit{American Economic Journal: Macroeconomics}, \textit{13}(1), 333--372.
+  \end{itemize}
+  \source{Referencias del Trabajo Final de Grado (Normas APA 7.ª ed.).}
+\end{frame}
+
+\begin{frame}{Apéndice | Bibliografía (2/3)}
+  \scriptsize
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item \textbf{Czarnitzki, D., Fernández, G. P. y Rammer, C.} (2023). Artificial intelligence and firm-level productivity. \textit{Journal of Economic Behavior \& Organization}, \textit{211}, 188--205.
+    \item \textbf{Eurostat.} (2026a). \textit{Artificial intelligence: Additional enterprise indicators} [Conjunto de datos isoc\_eb\_ain2]. Comisión Europea.
+    \item \textbf{Eurostat.} (2026b). \textit{Structural business statistics} [Conjunto de datos sbs\_sc\_ovw]. Comisión Europea.
+    \item \textbf{Eurostat.} (2026c). \textit{Use of artificial intelligence in enterprises} [Conjunto de datos isoc\_eb\_ai]. Comisión Europea.
+    \item \textbf{Kádárová, J., Fiľo, M., Sukopová, D. y Dúlová, M.} (2026). Artificial intelligence adoption and labour productivity in Slovakia and the EU27. \textit{Sustainability}, \textit{18}(4), 2135.
+  \end{itemize}
+  \source{Referencias del Trabajo Final de Grado (Normas APA 7.ª ed.).}
+\end{frame}
+
+\begin{frame}{Apéndice | Bibliografía (3/3)}
+  \scriptsize
+  \begin{itemize}\setlength\itemsep{0.28em}
+    \item \textbf{Mundlak, Y.} (1978). On the pooling of time series and cross section data. \textit{Econometrica}, \textit{46}(1), 69--85.
+    \item \textbf{OpenAI.} (2026). \textit{Enterprise signals: How frontier firms put AI to work}. OpenAI.
+    \item \textbf{Wooldridge, J. M.} (2010). \textit{Econometric analysis of cross section and panel data} (2.ª ed.). MIT Press.
+    \item \textbf{Yilmaz, E.} (2026). \textit{AI adoption velocity, productivity and labour outcomes in Europe: A country-sector dataset with the AI attribution wedge, 2021--2025} (v. 1) [Conjunto de datos]. Mendeley Data.
+  \end{itemize}
+  \source{Referencias del Trabajo Final de Grado (Normas APA 7.ª ed.).}
+\end{frame}
+
+\end{document}

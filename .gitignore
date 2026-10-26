@@ -27,3 +27,9 @@ __pycache__/
 !Facundo_Diaz_Larrarte_TFG/plan_trabajo.pdf
 !Facundo_Diaz_Larrarte_TFG/trabajo_final.pdf
 !Facundo_Diaz_Larrarte_TFG/seminario_presentacion_metodologia.pdf
+!Facundo_Diaz_Larrarte_TFG/presentacion_tfg.pdf
+!Facundo_Diaz_Larrarte_TFG/guion_defensa_tfg.pdf
+!Facundo_Diaz_Larrarte_TFG/matriz_bibliografia_marco_teorico.pdf
+
+# CodeGraph local index
+.codegraph/

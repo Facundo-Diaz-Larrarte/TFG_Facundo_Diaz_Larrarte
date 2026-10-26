@@ -1,0 +1,538 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=2.5cm,bottom=2.5cm,left=2.3cm,right=2.3cm}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{hyperref}
+
+% Paleta de colores consistente con la presentación Beamer
+\definecolor{Forest}{HTML}{1F5A45}
+\definecolor{ForestDark}{HTML}{163D30}
+\definecolor{Gold}{HTML}{C7952E}
+\definecolor{Charcoal}{HTML}{27302B}
+\definecolor{Mist}{HTML}{F4F7F5}
+\definecolor{SoftGreen}{HTML}{E8F2EC}
+\definecolor{SoftGold}{HTML}{FCF8ED}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=Forest,
+  urlcolor=Forest,
+  citecolor=Forest
+}
+
+% Encabezados y pies de página
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ForestDark}\textbf{Guion de Defensa Oral | TFG Licenciatura en Economía}}
+\fancyhead[R]{\small\color{Gold}Facundo Díaz Larrarte}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.6pt}
+
+% Cajas de diálogo y notas
+\newtcolorbox{speechbox}[1]{
+  colback=white,
+  colframe=Forest,
+  fonttitle=\bfseries\color{white},
+  colbacktitle=Forest,
+  title={#1},
+  arc=3mm,
+  boxrule=0.8pt,
+  left=4mm,right=4mm,top=3mm,bottom=3mm,
+  breakable
+}
+
+\newtcolorbox{tipbox}{
+  colback=SoftGold,
+  colframe=Gold,
+  fonttitle=\bfseries\color{Charcoal},
+  colbacktitle=SoftGold,
+  title={\small\textbf{Clave para la exposición oral y énfasis visual}},
+  arc=2mm,
+  boxrule=0.6pt,
+  left=3mm,right=3mm,top=2mm,bottom=2mm,
+  breakable
+}
+
+\newtcolorbox{qbox}[1]{
+  colback=SoftGreen,
+  colframe=ForestDark,
+  fonttitle=\bfseries\color{white},
+  colbacktitle=ForestDark,
+  title={#1},
+  arc=2mm,
+  boxrule=0.7pt,
+  left=3mm,right=3mm,top=2mm,bottom=2mm,
+  breakable
+}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries\color{ForestDark} GUION Y PAUTAS DE DEFENSA ORAL}\\[0.2cm]
+  {\large\bfseries\color{Gold} Trabajo Final de Grado --- Licenciatura en Economía (FCE--UNRC)}\\[0.3cm]
+  \textbf{Tema:} Usos empresariales de inteligencia artificial y productividad laboral: evidencia país--sector para la Unión Europea\\[0.1cm]
+  \textbf{Tesista:} Facundo Díaz Larrarte \quad$\cdot$\quad \textbf{Directores:} Miguel Bosch y Ana Vianco\\[0.15cm]
+  \textit{Tiempo total sugerido de exposición: 16 a 18 minutos (sincronizado con las 18 diapositivas de la presentación)}
+\end{center}
+
+\vspace{0.4cm}
+\hrule height 1pt
+\vspace{0.6cm}
+
+\section*{Criterios generales para la exposición frente al tribunal y el auditorio}
+
+\begin{itemize}[leftmargin=1.5em,itemsep=0.3em]
+  \item \textbf{El tono adecuado:} Riguroso a nivel de tesina de grado, pero didáctico y contundente. Frente a los profesores y compañeros, los conceptos econométricos se explican con intuición económica (el qué y el porqué); frente al tribunal, se demuestran los controles metodológicos, la consistencia de las variables y la prudencia en la inferencia.
+  \item \textbf{El ritmo:} No leas las diapositivas. Las diapositivas son anclas visuales (títulos, ecuaciones, gráficos y tablas sintetizadas); tu voz debe guiar el hilo argumental y conectar la teoría con la econometría.
+  \item \textbf{La respuesta a la objeción del tribunal:} En esta versión, las variables dependiente e independiente se definen y fundamentan teóricamente \textbf{inmediatamente después de la hipótesis} (Diapositivas 4 y 5), conectando con Berndt (1991), los criterios de relevamiento de Eurostat y neutralizando el problema de escala antes de entrar a la econometría.
+  \item \textbf{La idea fuerza central:} \textit{En niveles observamos una correlación transversal positiva engañosa entre IA y productividad; pero cuando aplicamos datos de panel y controlamos por heterogeneidad no observada (Within), esa relación se desvanece por completo en el corto plazo ($\beta_{M3} = -0{,}0013$, $p=0{,}154$). El test de Hausman confirma que los efectos fijos son mandatorios.}
+\end{itemize}
+
+\vspace{0.4cm}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 1: Portada (Tiempo sugerido: 40 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Buenos días a los miembros del tribunal, profesores y compañeros. Mi nombre es Facundo Díaz Larrarte y hoy voy a presentar mi Trabajo Final de Grado para optar por el título de Licenciado en Economía, titulado: \textbf{\textit{`Usos empresariales de inteligencia artificial y productividad laboral: evidencia país--sector para la Unión Europea'}}, desarrollado bajo la dirección del Mgter. Miguel Bosch y la codirección de la Mgter. Ana Vianco.
+
+El propósito central de esta investigación es aportar evidencia empírica rigurosa y transparente a un debate crucial en la economía aplicada contemporánea: la rápida difusión de la inteligencia artificial en el tejido empresarial europeo y su verdadera correlación con la productividad del trabajo.''
+\end{speechbox}
+
+\begin{tipbox}
+Mirá al tribunal al agradecerles y luego abrí la mirada al auditorio. Hacé una pausa breve de dos segundos antes de pasar a la hoja de ruta.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 2: Estructura de la presentación (Tiempo sugerido: 30 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``La exposición sigue estrictamente la misma estructura lógica y el índice de mi Trabajo Final de Grado:
+\begin{enumerate}[itemsep=0.1em]
+  \item \textbf{Introducción:} delimitación del problema, objetivos e hipótesis asociativa.
+  \item \textbf{Marco teórico y conceptual:} fundamentos de productividad (Berndt, 1991), GPT y Curva J (Brynjolfsson, 2021).
+  \item \textbf{Datos y metodología:} panel UE-27 ($n=667$), variables de Eurostat, control de escala y progresión M1 $\rightarrow$ M3.
+  \item \textbf{Resultados empíricos y validación:} análisis descriptivo, modelos de panel, test de Hausman y heterogeneidad sectorial.
+  \item \textbf{Discusión económica y conclusiones:} brecha de realización, límites metodológicos y balance final.
+\end{enumerate}''
+\end{speechbox}
+
+\begin{tipbox}
+No leas cada punto con lentitud. Destacá que la presentación refleja de punta a punta la estructura formal del manuscrito que el tribunal tiene en la mesa.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 3: Pregunta, objetivo e hipótesis (Cap. 1: Introducción) (Tiempo sugerido: 1 minuto)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``El punto de partida de la investigación es una pregunta concreta: \textit{¿cómo varían la adopción y los usos empresariales de IA entre sectores de la Unión Europea, y en qué medida esas diferencias se asocian con distintos niveles y variaciones de productividad laboral?}
+
+El objetivo general es analizar dicha heterogeneidad sectorial y estimar econométricamente su asociación con la productividad laboral aparente, utilizando la adopción general como referencia comparativa.
+
+Nuestra hipótesis central postula que una mayor adopción empresarial de IA se asocia con mayor productividad laboral aparente, aunque esa relación puede diferir sustancialmente según el tipo de uso y el sector productivo considerado.
+
+Deseo explicitar desde este punto inicial un principio metodológico que rige toda la tesis: \textbf{nuestra evidencia es estrictamente asociativa, no causal}. No afirmamos que la adopción de IA cause automáticamente ganancias de productividad.''
+\end{speechbox}
+
+\begin{tipbox}
+Enfatizá con seguridad la frase \textbf{``evidencia asociativa, no causal''}. El tribunal valora de entrada la prudencia científica en el tratamiento de datos observacionales.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 4: Marco conceptual: Teoría de la productividad (Berndt, 1991) (Cap. 2: Marco Teórico) (Tiempo sugerido: 1 minuto y 20 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``En el segundo capítulo del trabajo abordamos los fundamentos teóricos de nuestras variables. Comenzamos con la variable dependiente: la \textbf{Productividad Laboral Aparente}, analizada desde el marco de Ernst Berndt en \textit{The Practice of Econometrics} (1991):
+
+\begin{itemize}[itemsep=0.15em]
+  \item Se define como un \textbf{ratio intensivo de productividad media parcial del trabajo} ($PMe_L$): $Productividad = \frac{VAB}{L}$. Al ser una medida parcial, contablemente imputa el producto al insumo trabajo sin aislar el aporte del capital físico ni la eficiencia multifactorial (PTF).
+  \item Fundamentamos el uso del \textbf{Valor Agregado Bruto} en lugar de la Producción Bruta o facturación: el VAB deduce las compras intermedias ($Y - M$), aislando la riqueza neta creada y evitando el grave problema de doble contabilización a lo largo de las cadenas de valor.
+\end{itemize}
+
+Asimismo, justificamos teóricamente el trabajo con la serie nominal estandarizada de Eurostat SBS: Berndt advierte que deflactar datos sectoriales con índices macroeconómicos híbridos introduce sesgos por error de medición. Econométricamente, cualquier efecto de inflación macroeconómica nacional es absorbido de forma limpia por los efectos fijos país--año ($\gamma_{ct}$) de nuestro modelo principal mediante el teorema de Frisch--Waugh--Lovell.''
+\end{speechbox}
+
+\begin{tipbox}
+Esta diapositiva responde directamente al reclamo del jurado: definís la variable dependiente desde la teoría económica, citás a Berndt (1991) y justificás el VAB y el tratamiento nominal antes de ver los datos.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 5: Marco conceptual: Adopción de IA y Curva J (Cap. 2: Marco Teórico) (Tiempo sugerido: 1 minuto y 15 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Completando el marco teórico, ¿qué nos dice la economía sobre el impacto de la tecnología? ¿Por qué no deberíamos esperar que adoptar IA eleve automáticamente la productividad?
+
+Nos apoyamos en la literatura de Tecnologías de Propósito General (GPT) liderada por Brynjolfsson, Rock y Syverson (2021) y en el enfoque de tareas de Acemoglu y Restrepo (2018):
+\begin{itemize}[itemsep=0.15em]
+  \item La adopción tecnológica exige acumular cuantiosos \textbf{activos complementarios intangibles}: saneamiento y gobernanza de datos, reentrenamiento laboral y reorganización de procesos de trabajo.
+  \item La contabilidad empresarial y nacional registra estos esfuerzos iniciales como costos operativos corrientes y no como inversión de capital, lo que genera el fenómeno de la \textbf{Curva J de productividad}: en el corto plazo, la productividad aparente puede estancarse o caer transitoriamente. Solo cuando los intangibles maduran, los beneficios productivos se hacen observables.
+  \item Asimismo, la IA penetra a nivel de tareas específicas (gestión, logística, producción), por lo que sus efectos son inherentemente heterogéneos según la función y el sector.
+\end{itemize}''
+\end{speechbox}
+
+\begin{tipbox}
+Apoyate en el diagrama de flujo de la diapositiva: Adopción declarada $\rightarrow$ Complementos $\rightarrow$ Reorganización $\rightarrow$ Productividad observada. Demuestra solidez conceptual previa a la econometría.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 6: Datos y alcance: Panel UE-27 ($n=667$) (Cap. 3: Datos y Metodología) (Tiempo sugerido: 1 minuto)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Entrando en el tercer capítulo del trabajo, traducimos estos conceptos al plano empírico construyendo un panel original que cubre los \textbf{27 países de la UE}, en \textbf{9 sectores de actividad NACE Rev. 2}, a lo largo de las \textbf{3 olas comparables} disponibles de Eurostat: 2021, 2023 y 2024.
+
+Nuestra muestra analítica principal es un \textbf{panel no balanceado de 233 entidades país--sector y 667 observaciones}:
+\begin{itemize}[itemsep=0.15em]
+  \item De las 729 celdas teóricas posibles ($27 \times 9 \times 3$), 62 no fueron publicadas en origen por secreto estadístico.
+  \item Conservar el panel no balanceado completo es la mejor práctica econométrica, ya que maximiza la potencia y evita inducir sesgo de selección o atrición artificial al descartar unidades válidas.
+  \item Todas las celdas observadas superan holgadamente las 1.000 personas ocupadas, con una mediana sectorial superior a 140.000 trabajadores.
+\end{itemize}
+
+Como prueba de sensibilidad muestral, también estimamos todos los modelos sobre el subconjunto balanceado de 209 entidades continuas ($n=627$), verificando la total consistencia de los resultados.''
+\end{speechbox}
+
+\begin{tipbox}
+Destacá los tres números gigantes: 27 países, 9 sectores, 3 olas. Enfatizá que usar $n=667$ previene sesgos de atrición y que el balanceo estricto a $n=627$ fue evaluado como robustez.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 7: Variables operativas y control de escala (Cap. 3: Datos y Metodología) (Tiempo sugerido: 1 minuto y 20 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``En esta diapositiva sintetizamos la ficha operativa de las variables y resolvemos un problema metodológico medular:
+
+Por un lado, la \textbf{productividad} proviene de Eurostat SBS (código \texttt{V91110}, miles de euros corrientes por ocupado). Y la \textbf{adopción de IA} proviene de la encuesta oficial TIC (\texttt{isoc\_eb\_ai}), relevada a nivel de empresa con 10 o más ocupados, respondida por directivos o responsables TIC, y proyectada con ponderadores poblacionales (\texttt{PC\_ENT}) en tres dimensiones: adopción general (\texttt{ai\_any}), intensidad tecnológica (2+ y 3+ tecnologías) y 5 usos funcionales de negocio (procesos, producción, logística, ventas y seguridad).
+
+Por otro lado, ¿qué ocurre con el \textbf{control de escala entre economías}? ¿Distorsiona comparar a Alemania con Malta, o un sector con diez mil firmas frente a uno con pocas?
+\begin{enumerate}[itemsep=0.15em]
+  \item \textbf{Normalización matemática por ratios y tasas:} La productividad es un ratio intensivo ($VAB/L$) y la adopción es una tasa porcentual (\% de firmas). Matemáticamente, un ratio elimina la dimensión física de escala del país o sector.
+  \item \textbf{Tratamiento econométrico de heterocedasticidad:} En las estimaciones incorporamos errores estándar agrupados por entidad (\textit{cluster-robust}) y evaluamos regresiones ponderadas por empleo (WLS) para controlar cualquier disparidad de varianza residual por tamaño.
+\end{enumerate}''
+\end{speechbox}
+
+\begin{tipbox}
+Señalá la pastilla verde inferior: ``Escala neutralizada por ratios y tratada econométricamente''. Desactiva de antemano cualquier objeción del tribunal sobre la comparabilidad entre países grandes y pequeños.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 8: Estrategia empírica: Between versus Within (Tiempo sugerido: 1 minuto y 15 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``En econometría de datos de panel, es imperativo distinguir con absoluta claridad dos fuentes de variación que responden a preguntas teóricas completamente distintas:
+\begin{itemize}[itemsep=0.2em]
+  \item La variación \textbf{BETWEEN (entre unidades)}: responde a la pregunta de si los países y sectores que en promedio usan más IA presentan mayor productividad. Como veremos, aquí la correlación es fuertemente positiva. Sin embargo, este contraste arrastra diferencias estructurales preexistentes: el sector de información o Alemania ya contaban con mayor capital humano e infraestructura antes de la IA.
+  \item La variación \textbf{WITHIN (dentro de cada unidad)}: responde a la verdadera pregunta de interés: cuando un país--sector específico incrementa su adopción de IA a lo largo del tiempo, ¿aumenta su propia productividad laboral?
+\end{itemize}
+
+El objetivo central de nuestra estrategia econométrica consiste en neutralizar la variación Between para evaluar si los aumentos en adopción generan mejoras de productividad dentro de cada unidad productiva.''
+\end{speechbox}
+
+\begin{tipbox}
+Hacé hincapié en el contraste visual verde (Between) y dorado (Within). Es la clave conceptual que prepara al jurado para entender por qué M1 engaña y M3 es el modelo correcto.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 9: Estrategia econométrica: progresión M1 $\rightarrow$ M2 $\rightarrow$ M3 (Tiempo sugerido: 1 minuto y 20 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Para materializar esta estrategia, estimamos una progresión formal de tres modelos econométricos:
+\begin{itemize}[itemsep=0.2em]
+  \item \textbf{Modelo M1 (Efectos aditivos separados):} incluye dummies independientes de país ($\mu_c$), sector ($\eta_s$) y año ($\lambda_t$). Aunque controla por niveles medios, continúa arrastrando variación Between entre combinaciones país--sector.
+  \item \textbf{Modelo M2 (Estimador within de entidad):} introduce efectos fijos por unidad país--sector ($\alpha_{cs}$), absorbiendo de forma exacta cualquier factor estructural no observable e invariable en el tiempo.
+  \item \textbf{Modelo M3 (Doble efecto fijo --- Especificación preferida):} incorpora simultáneamente efectos fijos país--sector ($\alpha_{cs}$) y país--año ($\gamma_{ct}$). Estos últimos absorben la totalidad de los shocks macroeconómicos anuales a nivel nacional (inflación general, crisis energética, política económica).
+\end{itemize}
+En todas las especificaciones, los errores estándar se estiman agrupados por entidad país--sector (\textit{cluster-robust}) para corregir por autocorrelación y heterocedasticidad residual.''
+\end{speechbox}
+
+\begin{tipbox}
+Explicá con calma la progresión. Remarcá que M3 es la especificación estándar respaldada por Wooldridge (2010) para paneles con shocks temporales heterogéneos a nivel de país.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 10: Descriptivo: la adopción se acelera (Tiempo sugerido: 50 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Pasando a la evidencia empírica, los datos descriptivos confirman una aceleración evidente en la difusión de la IA en Europa: la adopción media pasó del 9,2\% en 2021 al 9,9\% en 2023, y saltó al \textbf{17,0\% en 2024}, reflejando la irrupción masiva de la inteligencia artificial generativa.
+
+En simultáneo, la productividad laboral nominal aparente creció de 62,0 a 72,1 miles de euros corrientes por ocupado.
+
+Sin embargo, desde la estadística aplicada debemos mantener una interpretación cautelosa: el hecho de que ambos promedios agregados aumenten en el trienio no prueba ninguna relación causal ni técnica; las series macro agregadas mezclan mejoras productivas con presiones inflacionarias y cambios en precios relativos.''
+\end{speechbox}
+
+\begin{tipbox}
+Señalá la flecha 9,2\% $\rightarrow$ 9,9\% $\rightarrow$ 17,0\%. Es el ancla descriptiva que muestra la velocidad del fenómeno analizado.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 11: El contraste central: niveles versus cambios (Tiempo sugerido: 1 minuto y 30 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Esta diapositiva expone el hallazgo descriptivo central del trabajo:
+\begin{itemize}[itemsep=0.2em]
+  \item A la izquierda, la relación en \textbf{niveles}: la correlación transversal entre adopción general y logaritmo de productividad es fuertemente positiva ($r = +0{,}558$, $p < 0{,}001$, sobre las 667 observaciones). Las unidades más avanzadas usan sistemáticamente más IA.
+  \item Pero a la derecha observamos los \textbf{cambios temporales 2021--2024}: cuando calculamos la variación en adopción frente a la variación en productividad dentro de cada entidad, la correlación cambia de signo y pasa a ser negativa ($r = -0{,}229$, $p < 0{,}001$, sobre las 213 entidades con datos en ambos extremos).
+\end{itemize}
+
+La inferencia metodológica es categórica: \textbf{la asociación positiva observada entre unidades no permite afirmar que incrementar la adopción dentro de una unidad incremente su productividad en el corto plazo}. Esto demuestra la necesidad imperiosa de estimar modelos de panel con efectos fijos.''
+\end{speechbox}
+
+\begin{tipbox}
+Este es uno de los momentos más fuertes de la presentación. Destacá el contraste: $+0{,}558$ en niveles frente a $-0{,}229$ en cambios.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 12: Resultados de panel: de M1 a M3 nominal (Tiempo sugerido: 1 minuto y 30 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``En esta tabla contrastamos los resultados de las tres especificaciones econométricas para la adopción general en la muestra principal ($n=667$):
+\begin{itemize}[itemsep=0.15em]
+  \item En el **Modelo M1**, sin efectos fijos de entidad, el coeficiente es positivo y marginalmente significativo ($\beta = +0{,}0032$, $p = 0{,}091$), lo que sugeriría un aparente incremento del 3,2\% en productividad ante una suba de 10 puntos en adopción.
+  \item Sin embargo, al incorporar los efectos fijos país--sector en **M2** y añadir los efectos país--año en **M3**, el coeficiente cae a $\mathbf{\beta = -0{,}0013}$ con un $p$-valor de $\mathbf{0{,}154}$.
+\end{itemize}
+
+El hallazgo econométrico es contundente: **en el modelo preferido M3, la asociación contemporánea es estadísticamente indistinguible de cero**. La correlación positiva de M1 era espuria, explicada por factores estructurales fijos de nivel. No existe evidencia de que un aumento en adopción genere aumentos inmediatos de productividad.''
+\end{speechbox}
+
+\begin{tipbox}
+Guiá la mirada hacia la fila resaltada en verde de M3. Señalá con claridad que el coeficiente no es estadísticamente significativo. Si te consultan por los 5 usos funcionales, recordá que en M3 nominal todos resultaron no significativos (están en el Apéndice).
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 13: Validación econométrica: Efectos Aleatorios y Test de Hausman (Tiempo sugerido: 1 minuto y 30 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Frente a este resultado, el tribunal podría preguntarse con toda legitimidad: ¿por qué no utilizar un estimador de Efectos Aleatorios (RE), que suele tener mayor eficiencia estadística?
+
+Sometimos esta hipótesis a contrastación formal:
+\begin{itemize}[itemsep=0.15em]
+  \item El modelo de **Efectos Aleatorios (GLS)** arroja un coeficiente positivo y altamente significativo: $\beta_{RE} = +0{,}0111$ ($EE = 0{,}0009$, $p < 0{,}001$). Al apoyarse parcialmente en la variación Between, el estimador RE reproduce la correlación de niveles.
+  \item No obstante, implementamos el **Test de especificación de Hausman** mediante la regresión auxiliar de Mundlak (1978) con contrastes robustos de Wald. El resultado arroja un estadístico de $\mathbf{\chi^2(1) = 69{,}10}$, con un $p$-valor de $\mathbf{1{,}1 \times 10^{-16}}$ ($p < 0{,}001$).
+\end{itemize}
+
+Este rechazo categórico de la hipótesis nula demuestra que los efectos individuales no observables ($\alpha_{cs}$) están fuertemente correlacionados con la adopción de IA. Por ende, **el estimador de Efectos Aleatorios es inconsistente y sesgado, y el estimador Within de Efectos Fijos (M3) resulta metodológicamente mandatorio**.''
+\end{speechbox}
+
+\begin{tipbox}
+Esta diapositiva es tu escudo econométrico definitivo. Explicá con total soltura que el $\beta_{RE}$ positivo está viciado de sesgo por variables omitidas fijas, y que el test de Hausman ($\chi^2 = 69{,}10$) prueba matemáticamente la necesidad de usar Efectos Fijos.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 14: Heterogeneidad sectorial (Tiempo sugerido: 1 minuto y 15 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Como análisis exploratorio, evaluamos si la relación difiere entre ramas de actividad estimando interacciones sectoriales bajo el modelo M3:
+\begin{itemize}[itemsep=0.15em]
+  \item En sectores transables con alta inercia operativa como **Manufactura** ($\beta = -0{,}0098$, $p < 0{,}001$) y **Comercio** ($\beta = -0{,}0136$, $p < 0{,}001$), las pendientes contemporáneas son negativas y significativas.
+  \item En **Información y Comunicación**, sector pionero en digitalización, la pendiente es estadísticamente nula ($\beta = -0{,}0011$, $p = 0{,}237$), al igual que en Construcción y Transporte.
+  \item En **Alojamiento y Servicios de comida** observamos una pendiente positiva ($\beta = +0{,}0110$, $p = 0{,}013$), coincidente con un sector de muy baja penetración inicial de IA y un fuerte rebote de actividad post-pandemia.
+\end{itemize}
+
+Aclaramos con prudencia que no se trata de parámetros causales de producción, sino de patrones asociativos exploratorios compatibles con costos de ajuste y curvas J dispares entre sectores.''
+\end{speechbox}
+
+\begin{tipbox}
+Recalcá la etiqueta \textbf{EXPLORATORIA}. No digas que la IA destruye valor en manufactura; decí que refleja costos de reorganización y reestructuración de tareas en sectores complejos.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 15: Interpretación económica: explicaciones compatibles (Tiempo sugerido: 1 minuto y 15 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``A partir de estos hallazgos, articulamos la discusión teórica en torno a la **brecha de realización productiva**: la desconexión observada entre la rapidez con la que las empresas declaran incorporar herramientas de IA y el ritmo en que se materializan ganancias medibles en valor agregado.
+
+Esta brecha es enteramente compatible con tres explicaciones económicas:
+\begin{enumerate}[itemsep=0.15em]
+  \item **Heterogeneidad estructural previa:** las firmas con mayor capital humano y solvencia adoptan más, explicando la correlación transversal en niveles.
+  \item **Costos de ajuste y maduración de intangibles:** en el corto plazo se desvían horas de trabajo hacia capacitación y rediseño de procesos sin retorno contable inmediato (curva J).
+  \item **Disparidad entre margen extensivo e intensivo:** declarar que se usa IA no equivale a haberla integrado a escala profunda en los cuellos de botella del negocio.
+\end{enumerate}''
+\end{speechbox}
+
+\begin{tipbox}
+Conectá esta interpretación con el marco de Brynjolfsson de la Diapositiva 7. Demuestra total coherencia entre la teoría planteada al inicio y los resultados obtenidos.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 16: Límites de la inferencia (Tiempo sugerido: 1 minuto)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``En honor a la transparencia científica, explicitamos los límites metodológicos de la investigación:
+\begin{itemize}[itemsep=0.15em]
+  \item Disponemos de un panel temporal corto de tres olas comparables (2021, 2023 y 2024).
+  \item La unidad de análisis es agregada a escala país--sector; por lo tanto, no evaluamos el retorno de la inversión de empresas individuales.
+  \item La encuesta mide adopción declarada binaria (margen extensivo), pero no captura horas de cómputo, inversión monetaria ni profundidad de integración.
+  \item Shocks macroeconómicos nacionales están controlados por $\gamma_{ct}$, pero no pueden aislarse deflactores de precios relativos intra-sectoriales a escala micro.
+\end{itemize}
+Los resultados representan una caracterización empírica rigurosa de hechos estilizados y asociaciones condicionales, no parámetros causales.''
+\end{speechbox}
+
+\begin{tipbox}
+Esta diapositiva te protege de cualquier objeción del jurado: al exponer tus propios límites metodológicos antes de que te los pregunten, demostrás madurez académica.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 17: Conclusiones (Tiempo sugerido: 1 minuto y 15 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Para cerrar, sintetizamos las cuatro conclusiones principales del trabajo:
+\begin{enumerate}[itemsep=0.2em]
+  \item \textbf{Pregunta y objetivo:} en la Unión Europea, adopción y productividad se correlacionan fuertemente en niveles entre unidades ($r = +0{,}558$), pero la relación se disipa en variaciones temporales dentro de cada país--sector ($r = -0{,}229$).
+  \item \textbf{Hipótesis central:} el modelo preferido M3 nominal confirma la ausencia de una asociación contemporánea significativa ($\beta = -0{,}0013$, $p = 0{,}154$, $n=667$). El test de Hausman ($\chi^2 = 69{,}10$) confirma que el estimador Within de efectos fijos es mandatorio.
+  \item \textbf{Heterogeneidad:} las pendientes sectoriales exploratorias son consistentes con costos de ajuste y curvas J en manufactura y comercio, y neutras en servicios digitales.
+  \item \textbf{Implicancia económica medular:} la adopción formal de IA no garantiza mejoras automáticas de productividad; los activos complementarios, la capacitación laboral y el rediseño organizacional son indispensables para materializar sus beneficios.''
+\end{enumerate}''
+\end{speechbox}
+
+\begin{tipbox}
+Leé las conclusiones con voz firme, clara y pausada. Sintetizás con solvencia el aporte concreto de tu tesis.
+\end{tipbox}
+
+% ----------------------------------------------------------------------------
+\subsection*{Diapositiva 18: Cierre y agradecimiento (Tiempo sugerido: 20 segundos)}
+
+\begin{speechbox}{Qué decir frente al auditorio}
+``Muchas gracias por su atención. Quedo a entera disposición del honorable tribunal y de los presentes para responder preguntas, comentarios o profundizar en cualquiera de las especificaciones metodológicas del trabajo.''
+\end{speechbox}
+
+\begin{tipbox}
+Respirá hondo, sonreí y esperá con tranquilidad el inicio de la ronda de preguntas. Tenés el dominio completo del trabajo.
+\end{tipbox}
+
+\vspace{0.6cm}
+\hrule height 1pt
+\vspace{0.6cm}
+
+% ----------------------------------------------------------------------------
+\section*{Banco de Respuestas Rápidas para Preguntas del Tribunal}
+
+\begin{qbox}{1. ¿Por qué el tribunal no vio la definición de las variables al principio en versiones anteriores y cómo se resuelve?}
+\textbf{Respuesta sugerida:}  
+``En versiones preliminares, la definición formal de las variables se presentaba más adelante, en la sección metodológica y el apéndice. Atendiendo a la observación del tribunal, en esta presentación las variables se introducen y fundamentan teóricamente de inmediato tras la hipótesis (Diapositivas 4 y 5): definimos la Productividad Laboral Aparente ($VAB/L$, código SBS \texttt{V91110}) con base en Berndt (1991), y la Adopción de IA a través de las encuestas oficiales TIC de Eurostat (\texttt{isoc\_eb\_ai}), explicando quién responde y cómo los ratios normalizan el tamaño de los países.''
+\end{qbox}
+
+\vspace{0.2cm}
+
+\begin{qbox}{2. ¿Por qué utilizó Valor Agregado Bruto ($VAB$) y no Ventas o Facturación directa?}
+\textbf{Respuesta sugerida:}  
+``Siguiendo a Ernst Berndt (1991) en \textit{The Practice of Econometrics}, la facturación bruta ($Y$) arrastra un grave problema de doble contabilización a lo largo de las etapas productivas y distorsiona la comparación entre sectores (por ejemplo, el comercio factura grandes volúmenes con escaso margen, mientras que la industria transforma insumos). El Valor Agregado Bruto deduce las compras intermedias ($Y - M$), aislando la riqueza neta efectivamente creada por el sector, siendo además el concepto homogéneo y consistente con las Cuentas Nacionales y el PBI.''
+\end{qbox}
+
+\vspace{0.2cm}
+
+\begin{qbox}{3. ¿Por qué se denomina Productividad Laboral ``Aparente''?}
+\textbf{Respuesta sugerida:}  
+``Se denomina aparente porque contablemente se atribuye la totalidad del valor agregado generado al insumo trabajo (las personas ocupadas), constituyendo una medida de productividad media parcial ($PMe_L$). Esta medida no aísla la contribución del capital físico, los activos intangibles ni la productividad total de los factores (PTF). Si un sector invierte masivamente en capital tecnológico, el ratio $VAB/L$ puede aumentar sin que los trabajadores sean intrínsecamente más hábiles o productivos.''
+\end{qbox}
+
+\vspace{0.2cm}
+
+\begin{qbox}{4. ¿No se distorsionan los resultados al comparar países grandes como Alemania con chicos como Malta, o sectores con muchas firmas frente a pocas?}
+\textbf{Respuesta sugerida:}  
+``No, por dos razones metodológicas fundamentales:
+\begin{enumerate}[itemsep=0.1em]
+  \item \textbf{Normalización de escala por ratios intensivos:} La variable dependiente no es el VAB total sino el VAB por persona ocupada (ratio intensivo). Del mismo modo, la variable de IA no es el número absoluto de empresas sino el porcentaje de firmas adoptantes (\texttt{PC\_ENT}). Matemáticamente, un ratio elimina la dimensión de escala física del país o sector.
+  \item \textbf{Controles econométricos de heterocedasticidad:} En las regresiones utilizamos errores estándar agrupados por entidad (\textit{cluster-robust}) para absorber heterocedasticidad por tamaño de celda, y realizamos pruebas de robustez mediante Mínimos Cuadrados Ponderados (WLS) utilizando el empleo sectorial como factor de ponderación, verificando que los resultados no están distorsionados por economías pequeñas.''
+\end{enumerate}''
+\end{qbox}
+
+\vspace{0.2cm}
+
+\begin{qbox}{5. ¿Por qué utiliza el panel no balanceado de $n=667$ observaciones en lugar de exigir un panel balanceado?}
+\textbf{Respuesta sugerida:}  
+``El espacio teórico completo es de 729 celdas ($27 \times 9 \times 3$). Las 62 observaciones faltantes en Eurostat no se deben a que las firmas hayan quebrado o cerrado, sino a umbrales de secreto estadístico en países pequeños en determinadas olas. Exigir un panel estrictamente balanceado obliga a descartar 40 observaciones válidas de entidades que sí tenían datos en dos de los tres años, reduciendo la muestra a 627 observaciones e introduciendo un potencial sesgo de atrición o selección muestral. En econometría moderna (Wooldridge, 2010), el panel no balanceado es el estimador preferido porque maximiza la potencia y evita distorsiones de selección. Como mostramos en la tabla de robustez, al estimar sobre el panel balanceado ($n=627$) el coeficiente resulta idénticamente neutro ($\beta = -0{,}0011$, $p = 0{,}250$), confirmando la total estabilidad de las conclusiones.''
+\end{qbox}
+
+\vspace{0.2cm}
+
+\begin{qbox}{6. ¿Por qué el modelo preferido M3 utiliza productividad nominal y no deflactores reales de precios?}
+\textbf{Respuesta sugerida:}  
+``Siguiendo a Berndt (1991), cuando no se dispone de índices de precios al productor específicos a nivel microempresarial, intentar deflactar series sectoriales con índices macroeconómicos agregados o de cuentas nacionales introduce un serio sesgo por error de medición en la variable dependiente. La productividad nominal de Eurostat SBS (\texttt{V91110}) es la métrica oficial homogénea. Econométricamente, en el modelo M3 la inclusión de efectos fijos país--año ($\gamma_{ct}$) absorbe de manera exacta, por el teorema de Frisch--Waugh--Lovell, la totalidad de los componentes de inflación macroeconómica nacional del trienio, garantizando una estimación limpia de sesgos por deflación artificial.''
+\end{qbox}
+
+\vspace{0.2cm}
+
+\begin{qbox}{7. ¿Por qué el Test de Hausman da un rechazo tan rotundo ($\chi^2 = 69{,}10$, $p < 0{,}001$)?}
+\textbf{Respuesta sugerida:}  
+``Porque el estimador de Efectos Aleatorios (RE) se fundamenta en el supuesto crítico de que los efectos individuales no observados de cada entidad están incorrelacionados con la variable explicativa: $\text{Cov}(\alpha_i, IA_{it}) = 0$. Mediante la regresión auxiliar de Mundlak (1978), contrastamos si el promedio histórico de adopción de cada sector explica sistemáticamente la productividad. El test de Wald arroja $\chi^2(1) = 69{,}10$ ($p = 1{,}1 \times 10^{-16}$). Esto demuestra que las entidades con mayor productividad estructural adoptan sistemáticamente más IA, violando el supuesto de ortogonalidad. Por lo tanto, el estimador RE arrastra un sesgo masivo por variables omitidas de nivel ($\beta_{RE} = +0{,}0111$), y el estimador Within de Efectos Fijos (M3) es el único consistente.''
+\end{qbox}
+
+\vspace{0.2cm}
+
+\begin{qbox}{8. ¿Cómo estimó la heterogeneidad sectorial y de dónde surgen las pendientes de cada sector?}
+\textbf{Respuesta sugerida:}  
+``Para no fragmentar la muestra ni perder grados de libertad con un panel corto ($T=3$), estimamos una única regresión con términos de interacción bajo la especificación preferida M3:
+$$\ln(\text{Productividad}_{cst}) = \beta IA_{cst} + \sum_{s \neq C} \delta_s (IA_{cst} \times \text{Sector}_s) + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}$$
+Tomamos a la Industria Manufacturera ($C$) como categoría base de referencia ($\beta = -0{,}0098$, $p < 0{,}001$). Para cada uno de los ocho sectores restantes, el modelo estima el parámetro diferencial $\delta_s$. La pendiente total de cada actividad surge de la combinación lineal $\beta_s = \beta + \delta_s$ (por ejemplo, en Comercio da $-0{,}0136$, en Servicios profesionales $-0{,}0029$, en Información y Comunicación $-0{,}0011$, y en Alojamiento $+0{,}0110$). Los errores estándar y niveles de significancia se estimaron mediante el método delta con matriz de varianzas y covarianzas agrupada por entidad.''
+\end{qbox}
+
+\vspace{0.6cm}
+\hrule height 1pt
+\vspace{0.6cm}
+
+% ----------------------------------------------------------------------------
+\section*{Guía de Bibliografía para la Defensa: Autores y Función en el TFG}
+
+\begin{itemize}[leftmargin=1.3em,itemsep=0.4em]
+  \item \textbf{Berndt, E. R. (1991) — \textit{The Practice of Econometrics: Classic and Contemporary} (Addison-Wesley):}  
+  \textbf{Función en el TFG (Diapositiva 4):} Sustento teórico de la variable dependiente. Fundamenta el uso del Valor Agregado Bruto ($Y-M$) para evitar doble contabilización, define la productividad media parcial del trabajo y previene contra los errores de medición derivados de aplicar deflactores macroeconómicos arbitrarios.
+
+  \item \textbf{Brynjolfsson, E., Rock, D. y Syverson, C. (2021) — \textit{The Productivity J-Curve} (AEJ: Macroeconomics):}  
+  \textbf{Función en el TFG (Diapositivas 7 y 15):} Marco conceptual interpretativo central. Explica que las tecnologías de propósito general requieren acumular activos intangibles complementarios que la contabilidad registra como costos corrientes, deprimiendo la productividad a corto plazo (curva J).
+
+  \item \textbf{Bresnahan, T. F., Brynjolfsson, E. y Hitt, L. M. (2002) — \textit{Information Technology, Workplace Organization...} (QJE):}  
+  \textbf{Función en el TFG (Diapositiva 7):} Complementariedades organizacionales. Justifica por qué el simple acceso formal a software no eleva la productividad sin cambios en capital humano y procesos.
+
+  \item \textbf{Acemoglu, D. y Restrepo, P. (2018) — \textit{The Race between Man and Machine...} (AER):}  
+  \textbf{Función en el TFG:} Enfoque de tareas (\textit{task-based framework}). Fundamenta la necesidad de evaluar los 5 usos funcionales de negocio (la IA penetra a nivel de tareas específicas y no en la empresa como un todo homogéneo).
+
+  \item \textbf{Wooldridge, J. M. (2010) — \textit{Econometric Analysis of Cross Section and Panel Data} (MIT Press):}  
+  \textbf{Función en el TFG (Diapositivas 8, 9 y 13):} Fundamento econométrico de panel. Justifica el estimador Within con efectos país--sector ($\alpha_{cs}$), efectos país--año ($\gamma_{ct}$), errores agrupados por entidad y la contrastación de Mundlak-Hausman.
+
+  \item \textbf{Mundlak, Y. (1978) — \textit{On the Pooling of Time Series and Cross Section Data} (Econometrica):}  
+  \textbf{Función en el TFG (Diapositiva 13):} Base del contraste de especificación de Hausman robusto ante heterocedasticidad. Demuestra que $\beta_{RE}$ arrastra sesgo por correlación con las medias individuales.
+
+  \item \textbf{Eurostat (2026a, b, c):}  
+  \textbf{Función en el TFG (Diapositivas 4, 5 y 6):} Fuentes oficiales primarias (\texttt{sbs\_sc\_ovw} para valor agregado y empleo; \texttt{isoc\_eb\_ai} e \texttt{isoc\_eb\_ain2} para adopción, intensidad y usos de IA).
+\end{itemize}
+
+\vspace{0.6cm}
+\hrule height 1pt
+\vspace{0.6cm}
+
+% ----------------------------------------------------------------------------
+\section*{Anexo Metodológico: Flujo Técnico Reproducible en Python}
+
+Este resumen condensa el flujo computacional ejecutado en \path{analysis/00_reproducir_todo.py}:
+\begin{enumerate}[leftmargin=1.5em,itemsep=0.2em]
+  \item \textbf{Construcción del panel (\texttt{panel\_analitico.csv}):} Integración de las bases armonizadas de Eurostat. Muestra analítica principal no balanceada: 233 entidades país--sector y 667 observaciones (2021: 220, 2023: 224, 2024: 223). Submuestra balanceada: 209 entidades seguidas en los tres años ($n=627$).
+  \item \textbf{Descriptivo (\texttt{01\_descriptivo.py}):} La adopción media de IA subió de 9,2\% a 9,9\% y 17,0\%. En niveles, correlación $r = +0{,}558$ ($p < 0{,}001$); en variaciones temporales Within (2021--2024), correlación $r = -0{,}229$ ($p < 0{,}001$).
+  \item \textbf{Modelos de panel (\texttt{02\_modelos\_panel.py}):}
+  \begin{itemize}[itemsep=0.1em]
+    \item M1: $\beta = +0{,}0032$ ($p = 0{,}091$, marginalmente positivo).
+    \item M2: $\beta = -0{,}0020$ ($p = 0{,}050$, no significativo al 1\%).
+    \item M3: $\beta = -0{,}0013$ ($p = 0{,}154$, estadísticamente neutro).
+  \end{itemize}
+  \item \textbf{Validación con \texttt{linearmodels} (\texttt{03\_validacion\_linearmodels.py}):} Replicación exacta del estimador M3 con \texttt{AbsorbingLS} y estimación de los 8 indicadores de IA y las pendientes sectoriales por el método delta.
+  \item \textbf{Efectos Aleatorios y Hausman (\texttt{04\_robustez\_panel.py}):} Estimación RE con GLS ($\beta_{RE} = +0{,}0111$, $p < 0{,}001$). Regresión auxiliar de Mundlak arrojando $\chi^2(1) = 69{,}10$ ($p = 1{,}1 \times 10^{-16} < 0{,}001$). Rechazo unánime de RE a favor de M3.
+  \item \textbf{Robustez de escala y balanceo:} Estimación M3 ponderada por empleo (WLS: $\beta = -0{,}0016$, $p = 0{,}032$), sin valores atípicos p1--p99 ($\beta = -0{,}0010$, $p = 0{,}250$) y sobre panel balanceado ($\beta = -0{,}0011$, $p = 0{,}250$).
+\end{enumerate}
+
+\vspace{0.3cm}
+
+\begin{speechbox}{El resumen de 60 segundos si el tribunal pide sintetizar el pipeline}
+``Integramos microdatos agregados oficiales de Eurostat: encuestas TIC para los indicadores de adopción e intensidad y SBS para valor agregado y empleo, cubriendo la UE-27 en 9 sectores y 3 olas (2021, 2023 y 2024). Retuvimos el panel no balanceado completo de 233 entidades y 667 observaciones para evitar sesgos de atrición. Definimos la variable dependiente como el logaritmo de la productividad aparente (VAB por ocupado), fundamentada en Berndt (1991). Tras constatar en la etapa descriptiva que la correlación positiva en niveles ($r=+0{,}558$) se invertía en cambios temporales ($r=-0{,}229$), estimamos una progresión formal de modelos en Python validada con \texttt{linearmodels}. En el modelo preferido M3 con doble efecto fijo (país--sector y país--año), la asociación resultó estadísticamente nula ($\beta=-0{,}0013$, $p=0{,}154$), y el test de Hausman ($\chi^2=69{,}10$) demostró que los efectos fijos son mandatorios frente a Efectos Aleatorios.''
+\end{speechbox}
+
+\end{document}

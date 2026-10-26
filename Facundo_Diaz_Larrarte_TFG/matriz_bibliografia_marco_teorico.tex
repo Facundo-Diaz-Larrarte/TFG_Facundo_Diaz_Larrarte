@@ -1,0 +1,304 @@
+\documentclass[10pt,a4paper,landscape]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{geometry}
+\geometry{top=1.6cm,bottom=1.8cm,left=1.8cm,right=1.8cm}
+\usepackage{setspace}
+\setstretch{1.10}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{xltabular}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{hyperref}
+
+% Paleta de colores institucional del TFG
+\definecolor{Forest}{HTML}{1F5A45}
+\definecolor{ForestDark}{HTML}{163D30}
+\definecolor{Gold}{HTML}{C7952E}
+\definecolor{Charcoal}{HTML}{27302B}
+\definecolor{Mist}{HTML}{F4F7F5}
+\definecolor{SoftGreen}{HTML}{E8F2EC}
+\definecolor{SoftGold}{HTML}{FCF8ED}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=Forest,
+  urlcolor=Forest,
+  citecolor=Forest
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{ForestDark}\textbf{Dossier Bibliográfico Integral (17/17 Fuentes) | Matriz Conceptual para la Defensa del TFG}}
+\fancyhead[R]{\small\color{Gold}\textbf{Facundo Díaz Larrarte} \quad$\cdot$\quad FCE--UNRC}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.7pt}
+
+% Tipos de columnas xltabular
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+
+% Cajas de diálogo para preguntas
+\newtcolorbox{qspeechbox}[2]{
+  colback=white,
+  colframe=Forest,
+  fonttitle=\bfseries\color{white},
+  colbacktitle=Forest,
+  title={#1},
+  arc=2.5mm,
+  boxrule=0.8pt,
+  left=3.5mm,right=3.5mm,top=2.5mm,bottom=2.5mm,
+  breakable,
+  after upper={\vspace{0.15cm}\tcbline\textbf{\color{ForestDark}Argumento verbal sugerido ante el jurado:}\\[0.1cm]#2}
+}
+
+\begin{document}
+
+\begin{center}
+  {\Large\bfseries\color{ForestDark} DOSSIER DE DEFENSA BIBLIOGRÁFICA INTEGRAL}\\[0.12cm]
+  {\large\bfseries\color{Gold} Matriz Exhaustiva de las 17 Fuentes Registradas en la Bibliografía del TFG}\\[0.18cm]
+  \textbf{Tema:} Usos empresariales de inteligencia artificial y productividad laboral: evidencia país--sector para la Unión Europea\\[0.06cm]
+  \textbf{Tesista:} Facundo Díaz Larrarte \quad$\cdot$\quad \textbf{Directores:} Miguel Bosch y Ana Vianco \quad$\cdot$\quad \textbf{Licenciatura en Economía (FCE--UNRC)}
+\end{center}
+
+\vspace{0.15cm}
+\hrule height 1pt
+\vspace{0.35cm}
+
+\section*{1. Matriz Analítica Exhaustiva de las 17 Fuentes de la Bibliografía}
+
+\renewcommand{\arraystretch}{1.20}
+\small
+\begin{xltabular}{\textwidth}{@{} L{4.5cm} L{3.3cm} Y Y Y @{}}
+  \toprule
+  \rowcolor{ForestDark}
+  \color{white}\textbf{Autor(es), Año y Referencia} & 
+  \color{white}\textbf{Eje Temático} & 
+  \color{white}\textbf{Objeto / Datos / Cobertura} & 
+  \color{white}\textbf{Aporte Conceptual / Hallazgo Central} & 
+  \color{white}\textbf{Función Defensiva en el TFG} \\
+  \midrule
+  \endfirsthead
+
+  \toprule
+  \rowcolor{ForestDark}
+  \color{white}\textbf{Autor(es), Año y Referencia} & 
+  \color{white}\textbf{Eje Temático} & 
+  \color{white}\textbf{Objeto / Datos / Cobertura} & 
+  \color{white}\textbf{Aporte Conceptual / Hallazgo Central} & 
+  \color{white}\textbf{Función Defensiva en el TFG} \\
+  \midrule
+  \endhead
+
+  \bottomrule
+  \endfoot
+
+  \textbf{Acemoglu, Daron y Restrepo, Pascual} (2018)\par
+  \textit{American Economic Review}, 108(6), 1488--1542.\par
+  [\texttt{acemoglu2018race}] &
+  \textbf{Teoría de Automatización y Trabajo} &
+  Modelo formal de equilibrio general sobre automatización y empleo por tareas. &
+  \textbf{Enfoque de tareas (*task-based framework*):} Coexisten el \textbf{efecto desplazamiento} (capital sustituye trabajo) y el \textbf{efecto restablecimiento} (creación de nuevas tareas complejas intensivas en trabajo). &
+  \textbf{Fundamenta los 5 Usos Funcionales:}\par
+  Justifica examinar procesos, producción, logística, ventas y seguridad de forma separada: la IA penetra por tareas puntuales y no en la firma como bloque homogéneo. \\
+  \rowcolor{Mist}
+  \textbf{Aldasoro, I., Gambacorta, L., Pal, R., Revoltella, D., Weiss, C. y Wolski, M.} (2026)\par
+  \textit{BIS Working Papers N.º 1325}.\par
+  [\texttt{aldasoro2026adoption}] &
+  \textbf{Evidencia Microeconómica UE} &
+  Encuesta de inversión del Banco Europeo de Inversiones (EIBIS), representativa de firmas de la UE. &
+  Heterogeneidad en la UE: las ganancias de productividad se concentran solo en firmas con alta gobernanza digital y capacitación interna; en adopción pasiva el efecto es nulo. &
+  \textbf{Respaldo Institucional Contemporáneo:}\par
+  Aporta evidencia del BIS y BEI para el mismo bloque y época, confirmando que la tecnología no rinde sin capacidades de gestión complementarias (brecha de realización). \\
+
+  \textbf{Anthropic} (2026)\par
+  \textit{Anthropic Economic Index: Cadences and the Shift Toward Agentic Tasks}.\par
+  [\texttt{anthropic2026economic}] &
+  \textbf{Margen Intensivo y Telemetría} &
+  Telemetría de interacción con modelos de lenguaje y APIs en empresas internacionales. &
+  Transición operativa desde el uso conversacional aislado hacia la delegación de tareas autónomas complejas (*agentic tasks* y secuencias operativas multi-etapa). &
+  \textbf{Límite Metodológico de Eurostat:}\par
+  Demuestra que la verdadera productividad exige intensidad y autonomía procedimental; la encuesta de Eurostat mide margen extensivo (acceso binario Sí/No). \\
+  \rowcolor{Mist}
+  \textbf{Berndt, Ernst R.} (1991)\par
+  \textit{The Practice of Econometrics: Classic and Contemporary}.\par
+  Addison-Wesley (Caps. 2 y 9).\par
+  [\texttt{berndt1991practice}] &
+  \textbf{Teoría y Medición de Productividad} &
+  Tratado canónico sobre medición de funciones de producción, insumos y productividad. &
+  1. Productividad aparente como \textbf{producto medio parcial} ($PMe_L$).\par
+  2. Uso de \textbf{Valor Agregado Bruto} ($Y - M$) para aislar riqueza neta y evitar doble contabilización.\par
+  3. Previene sesgo por error de medición de deflactores macro híbridos. &
+  \textbf{Blindaje Teórico de la Variable Dependiente:}\par
+  Justifica el uso de $VAB/L$ frente a facturación y el trabajo con series nominales SBS, dejando que los efectos país--año ($\gamma_{ct}$) absorban la inflación macro vía Frisch--Waugh--Lovell. \\
+
+  \textbf{Bresnahan, Timothy F., Brynjolfsson, Erik y Hitt, Lorin M.} (2002)\par
+  \textit{Quarterly Journal of Economics}, 117(1), 339--376.\par
+  [\texttt{bresnahan2002information}] &
+  \textbf{Complementariedades Organizacionales} &
+  Datos microempresariales de más de 300 grandes firmas estadounidenses. &
+  \textbf{Complementariedades organizacionales:} Las TIC por sí solas no rinden. Exigen un clúster: descentralización, autonomía de equipos y mano de obra calificada. &
+  \textbf{Sustento de la Brecha de Realización:}\par
+  Sustenta el esquema de transmisión: \textit{Adopción $\rightarrow$ Complementos $\rightarrow$ Reorganización $\rightarrow$ Productividad}. Comprar licencias sin rediseño no genera valor agregado. \\
+  \rowcolor{Mist}
+  \textbf{Brynjolfsson, Erik, Rock, Daniel y Syverson, Chad} (2021)\par
+  \textit{AEJ: Macroeconomics}, 13(1), 333--372.\par
+  [\texttt{brynjolfsson2021productivity}] &
+  \textbf{Teoría de GPT y Curva J} &
+  Modelo macroeconómico sobre asimilación de Tecnologías de Propósito General. &
+  \textbf{Curva J de productividad:} La adopción exige acumular activos intangibles complementarios registrados como gasto corriente, deprimiendo la productividad a corto plazo. &
+  \textbf{Marco Interpretativo Central:}\par
+  Explica por qué un $\beta_{M3}$ neutro contemporáneo (2021--2024) y pendientes negativas en manufactura y comercio reflejan costos de ajuste e intangibles, no fracaso de la IA. \\
+
+  \textbf{Czarnitzki, Dirk, Fernández, Gastón P. y Rammer, Christian} (2023)\par
+  \textit{JEBO}, 211, 188--205.\par
+  [\texttt{czarnitzki2023firm}] &
+  \textbf{Evidencia Microeconómica en Alemania} &
+  Encuesta de innovación del ZEW para empresas alemanas. &
+  Prima positiva de productividad a nivel micro ($+4\%$ a $+8\%$), pero estrictamente condicionada a infraestructura digital previa y personal técnico calificado. &
+  \textbf{Contraste Micro vs. Agregado:}\par
+  Explica por qué a nivel de firma hay prima positiva (empresas líderes de frontera), mientras que a escala sectorial el promedio con firmas rezagadas diluye el efecto contemporáneo. \\
+  \rowcolor{Mist}
+  \textbf{Eurostat} (2026a)\par
+  Base de datos \texttt{isoc\_eb\_ai}.\par
+  [\texttt{eurostat\_ai}] &
+  \textbf{Fuente Primaria de Datos} &
+  Encuesta comunitaria sobre uso de TIC e inteligencia artificial en empresas de la UE. &
+  Tasa de \textbf{adopción general de IA} (\% de empresas con $\ge 10$ ocupados que utilizan al menos una tecnología de IA, código \texttt{E\_AI\_TANY}), proyectada con ponderadores (\texttt{PC\_ENT}). &
+  \textbf{Variable Explicativa Principal:}\par
+  Es la fuente empírica primaria para el indicador de adopción general (\texttt{ai\_any}) en las 667 observaciones analizadas para 2021, 2023 y 2024. \\
+
+  \textbf{Eurostat} (2026b)\par
+  Base de datos \texttt{isoc\_eb\_ain2}.\par
+  [\texttt{eurostat\_ain2}] &
+  \textbf{Fuente Primaria de Datos} &
+  Encuesta de TIC con indicadores complementarios de IA por función y tecnología. &
+  Métricas de \textbf{intensidad} (2+ y 3+ tecnologías) y \textbf{5 usos funcionales}: procesos/decisiones, producción, logística, marketing/ventas y seguridad informática. &
+  \textbf{Desagregación Funcional de la IA:}\par
+  Permite contrastar la primera hipótesis central: comprobar si los usos en el núcleo productivo (procesos o producción) exhiben asociaciones distintas a la adopción general. \\
+  \rowcolor{Mist}
+  \textbf{Eurostat} (2026c)\par
+  Base de datos \texttt{sbs\_sc\_ovw} / \texttt{sbs\_na\_sca\_r2}.\par
+  [\texttt{eurostat\_sbs}] &
+  \textbf{Fuente Primaria de Datos} &
+  Estadísticas Estructurales de Empresas (SBS) armonizadas para los 27 países de la UE. &
+  Series oficiales de \textbf{Valor Agregado Bruto} a costo de factores y \textbf{Personas Ocupadas} para empresas de $\ge 10$ ocupados; indicador oficial de productividad \texttt{V91110}. &
+  \textbf{Construcción de la Variable Dependiente:}\par
+  Provee los insumos contables oficiales con los que se computa la Productividad Laboral Aparente ($VAB/L$, en miles de EUR corrientes por persona ocupada). \\
+
+  \textbf{Eurostat} (2026d)\par
+  Base de datos \texttt{nama\_10\_a64}.\par
+  [\texttt{eurostat\_nama}] &
+  \textbf{Fuente de Datos Sectoriales} &
+  Cuentas Nacionales Sectoriales de la UE (desglose a 64 ramas A*64). &
+  Series de valor agregado corriente y volúmenes encadenados para la economía total; deflactores implícitos de precios por país--sector--año. &
+  \textbf{Antecedente de Análisis de Precios:}\par
+  Documenta la fuente de cuentas nacionales que se evaluó para análisis de deflación y fundamenta por qué se descartó a favor del tratamiento nominal SBS con efectos fijos país--año. \\
+  \rowcolor{Mist}
+  \textbf{Kádárová, J., Fiľo, M., Sukopová, D. y Dúlová, M.} (2026)\par
+  \textit{Sustainability}, 18(4), 2135.\par
+  [\texttt{kadarova2026slovakia}] &
+  \textbf{Evidencia Agregada UE-27} &
+  Comparación descriptiva de adopción de IA y productividad entre Eslovaquia y UE-27 (Eurostat). &
+  Asimetrías estructurales de digitalización entre el Este y el núcleo de la UE; correlaciones transversales positivas en niveles entre digitalización y productividad. &
+  \textbf{Punto de Partida del Contraste Between:}\par
+  Ilustra la relación transversal en niveles (\textit{Between}). Tu TFG demuestra que esa correlación positiva desaparece al pasar al análisis temporal \textit{Within}. \\
+
+  \textbf{Mundlak, Yair} (1978)\par
+  \textit{Econometrica}, 46(1), 69--85.\par
+  [\texttt{mundlak1978pooling}] &
+  \textbf{Metodología Econométrica} &
+  Contraste formal de especificación entre Efectos Fijos y Efectos Aleatorios. &
+  Regresión de Mundlak: modela la correlación entre $\alpha_i$ y los regresores mediante las medias temporales ($\bar{X}_i$), permitiendo un test de Hausman robusto ante heterocedasticidad. &
+  \textbf{Demolición de Efectos Aleatorios:}\par
+  Fundamenta el test de Hausman robusto ($\chi^2 = 69{,}10, p < 0{,}001$). Demuestra que $\beta_{RE} = +0{,}0111$ está sesgado por variables omitidas de nivel, validando que FE es mandatorio. \\
+  \rowcolor{Mist}
+  \textbf{OpenAI} (2026a)\par
+  \textit{Enterprise Signals: How Frontier Firms Put AI to Work}.\par
+  [\texttt{openai2026enterprise}] &
+  \textbf{Margen Intensivo y Telemetría} &
+  Casos de implementación y telemetría de sistemas en empresas líderes a nivel mundial. &
+  La adopción superficial no altera la productividad; el impacto surge cuando la IA se integra en cuellos de botella operativos centrales y sistemas empresariales transaccionales. &
+  \textbf{Brecha de Realización y Margen Intensivo:}\par
+  Explica por qué declarar que una empresa adoptó IA en la encuesta de Eurostat no se traduce mecánicamente en aumentos contemporáneos de productividad laboral. \\
+
+  \textbf{OpenAI} (2026b)\par
+  \textit{Unlocking New Ways of Working: Task Crossing and the Recomposition of Enterprise Labor}.\par
+  [\texttt{openai2026taskcrossing}] &
+  \textbf{Margen Intensivo y Tareas} &
+  Estudio técnico sobre recomposición laboral y transferencia de tareas entre categorías ocupacionales. &
+  \textbf{Recomposición de tareas (\textit{task crossing}):} La IA permite que trabajadores asuman tareas fuera de su dominio tradicional, exigiendo reorganización profunda de roles y curvas de aprendizaje. &
+  \textbf{Justificación de Costos de Reorganización:}\par
+  Fundamenta los costos de ajuste a corto plazo: la reasignación de tareas insume tiempo y genera fricciones internas temporales antes de estabilizar ganancias de valor agregado. \\
+  \rowcolor{Mist}
+  \textbf{Wooldridge, Jeffrey M.} (2010)\par
+  \textit{Econometric Analysis of Cross Section and Panel Data}.\par
+  MIT Press (2.ª ed.).\par
+  [\texttt{wooldridge2010econometric}] &
+  \textbf{Metodología Econométrica} &
+  Tratado estándar internacional sobre econometría de datos de panel. &
+  1. Estimador \textit{Within} erradica sesgo por factores fijos inobservables ($\alpha_{cs}$).\par
+  2. Efectos país--año absorben shocks macro agregados por Frisch--Waugh--Lovell.\par
+  3. Inferencia robusta agrupada (\textit{cluster-robust}). &
+  \textbf{Pilar Econométrico de Panel:}\par
+  Respalda toda la progresión M1 $\rightarrow$ M2 $\rightarrow$ M3, la retención del panel no balanceado ($n=667$) para evitar atrición y la estimación de errores cluster por entidad. \\
+
+  \textbf{Yilmaz, Ekrem} (2026)\par
+  \textit{Mendeley Data}, v. 1, doi: 10.17632/gznvk45cfk.1.\par
+  [\texttt{yilmaz2026dataset}] &
+  \textbf{Evidencia País--Sector en Europa} &
+  Dataset de velocidad de adopción de IA y productividad en Europa a escala país--sector (2021--2025). &
+  Formaliza la \textbf{brecha de atribución de la IA (\textit{AI attribution wedge})}: la rápida aceleración en adopción no se acompaña de una aceleración en productividad sectorial. &
+  \textbf{Antecedente Directo y Salto Metodológico:}\par
+  Yilmaz documenta la brecha descriptivamente a nivel de velocidades. Tu tesis somete el fenómeno a un modelo formal de panel (M3) con controles macro, Hausman y desgloses de usos. \\
+
+\end{xltabular}
+
+\newpage
+
+\section*{2. Guía Rápida para el Tesista: Respuestas Verbales ante el Tribunal}
+
+\begin{qspeechbox}{Pregunta 1 del Tribunal: ¿Por qué utilizó Valor Agregado Bruto (VAB) y no facturación o ventas para la productividad?}
+  ``Siguiendo a \textbf{Ernst Berndt (1991)} en \textit{The Practice of Econometrics}, la productividad laboral aparente se define formalmente como una productividad media parcial del insumo trabajo ($PMe_L$). Se adopta el Valor Agregado Bruto ($VAB$) en lugar de la Producción Bruta o facturación ($Y$) porque el VAB deduce los insumos intermedios adquiridos a otros sectores ($Y - M$). Esto aísla la verdadera riqueza neta creada por la unidad productiva y evita el grave problema de doble contabilización a lo largo de las cadenas de valor, siendo además el estándar oficial de Eurostat SBS compatible con Cuentas Nacionales y el PBI.''
+\end{qspeechbox}
+
+\vspace{0.25cm}
+
+\begin{qspeechbox}{Pregunta 2 del Tribunal: ¿Por qué no deflactó la productividad con índices de precios para trabajar en términos reales?}
+  ``Por dos motivos teóricos y metodológicos fundamentales: Primero, como advierte \textbf{Berndt (1991)}, cuando no se cuenta con deflactores de precios al productor construidos sobre los mismos microdatos de empresa, aplicar deflactores macroeconómicos híbridos agregados sobre series sectoriales introduce un serio sesgo por error de medición en la variable dependiente. Segundo, siguiendo a \textbf{Wooldridge (2010)}, en nuestra especificación preferida M3 la incorporación de efectos fijos país--año ($\gamma_{ct}$) absorbe de forma exacta, en virtud del teorema de Frisch--Waugh--Lovell, la totalidad de los componentes de inflación macroeconómica nacional del trienio.''
+\end{qspeechbox}
+
+\vspace{0.25cm}
+
+\begin{qspeechbox}{Pregunta 3 del Tribunal: ¿Por qué en el modelo principal M3 el coeficiente da cero si la IA es una revolución tecnológica?}
+  ``Nos apoyamos en la teoría de la Curva J de productividad de \textbf{Brynjolfsson, Rock y Syverson (2021)} y en las complementariedades organizacionales de \textbf{Bresnahan, Brynjolfsson y Hitt (2002)}. Las tecnologías de propósito general (GPT) exigen acumular cuantiosos activos complementarios intangibles: saneamiento de datos, reentrenamiento de personal y rediseño de procesos. Dado que la contabilidad nacional registra estos costos como gastos operativos corrientes y no como inversión de capital, la productividad aparente medida se deprime transitoriamente durante la fase inicial de adopción. Un coeficiente neutro a corto plazo (2021--2024) refleja los costos de ajuste propios de la innovación y no la ineficacia de la herramienta.''
+\end{qspeechbox}
+
+\vspace{0.25cm}
+
+\begin{qspeechbox}{Pregunta 4 del Tribunal: ¿Por qué descartó Efectos Aleatorios (RE) si en ese modelo la adopción da positiva y altamente significativa?}
+  ``Porque el estimador de Efectos Aleatorios asume ortogonalidad entre los factores individuales no observados y los regresores ($\text{Cov}(\alpha_i, IA_{it}) = 0$). Evaluamos esta hipótesis mediante el Test de Hausman utilizando la formulación de regresión auxiliar de \textbf{Mundlak (1978)} y \textbf{Wooldridge (2010)} con contrastes robustos de Wald. El resultado arrojó un estadístico de $\chi^2(1) = 69{,}10$ con $p < 0{,}001$, rechazando categóricamente la hipótesis nula. Esto prueba que los sectores estructuralmente más productivos adoptan sistemáticamente más IA; por ende, el $\beta_{RE} = +0{,}0111$ está viciado de sesgo por variables omitidas de nivel, y el estimador Within de Efectos Fijos (M3) resulta metodológicamente mandatorio.''
+\end{qspeechbox}
+
+\vspace{0.25cm}
+
+\begin{qspeechbox}{Pregunta 5 del Tribunal: ¿No se distorsionan los resultados al mezclar países grandes como Alemania con chicos como Malta?}
+  ``No, por dos razones: Primero, la normalización matemática: la productividad es un ratio intensivo ($VAB/L$) y la adopción es una tasa porcentual (\% de firmas); un ratio elimina por definición la dimensión física de escala del país o sector. Segundo, el tratamiento econométrico: en las regresiones incluimos errores estándar agrupados por entidad (\textit{cluster-robust}) para absorber heterocedasticidad residual, y evaluamos estimaciones ponderadas por empleo (WLS), confirmando que las conclusiones no dependen del tamaño económico relativo.''
+\end{qspeechbox}
+
+\vspace{0.25cm}
+
+\begin{qspeechbox}{Pregunta 6 del Tribunal: ¿Alcanza una encuesta de Eurostat para capturar la profundidad de uso de la IA?}
+  ``Esa es precisamente una limitación metodológica medular que explicitamos en la tesis. Siguiendo los informes técnicos recientes de \textbf{OpenAI (2026a, b)} y \textbf{Anthropic (2026)}, la productividad depende del margen intensivo (la profundidad de integración en cuellos de botella y flujos de trabajo autónomos). Las encuestas oficiales de Eurostat capturan el margen extensivo (adopción binaria declarada). Por ello, como fundamentamos teóricamente con \textbf{Acemoglu y Restrepo (2018)}, declarar que se contrató IA no equivale a haber transformado la función de producción.''
+\end{qspeechbox}
+
+\end{document}
