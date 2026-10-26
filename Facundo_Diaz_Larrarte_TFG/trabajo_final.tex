@@ -58,20 +58,13 @@
 
   \centering
 
-  \begin{minipage}{0.45\textwidth}
-
+    \begin{minipage}[c]{0.48\textwidth}
     \raggedright
-
-    \includegraphics[width=0.8\textwidth]{Imagenes/fce_logo.png}
-
-  \end{minipage}%
-
-  \begin{minipage}{0.45\textwidth}
-
+    \includegraphics[height=2.2cm,keepaspectratio]{Imagenes/unrc_logo.png}
+  \end{minipage}\hfill
+  \begin{minipage}[c]{0.48\textwidth}
     \raggedleft
-
-    \includegraphics[width=0.4\textwidth]{Imagenes/unrc_logo.png}
-
+    \includegraphics[height=2.0cm,keepaspectratio]{Imagenes/fce_logo.png}
   \end{minipage}
 
   \vspace{1.5cm}
@@ -161,8 +154,7 @@ La unidad de observación es la combinación país--sector--año. La adopción d
 La productividad laboral aparente se calcula como el cociente entre valor agregado y personas ocupadas:
 
 \begin{equation}
-  Productividad_{cst} =
-  \frac{Valor\ agregado_{cst}}{Personas\ ocupadas_{cst}},
+  \text{Productividad}_{cst} = \frac{\text{Valor agregado}_{cst}}{\text{Personas ocupadas}_{cst}},
 \end{equation}
 
 donde $c$ identifica al país, $s$ al sector y $t$ al año. Este indicador no mide productividad total de los factores ni permite aislar por sí solo la contribución causal de la IA.
@@ -254,7 +246,7 @@ Asimismo, \citet{berndt1991practice} enfatiza que la productividad laboral es un
 En estricta consonancia con estos fundamentos, la oficina estadística de la Unión Europea (Eurostat) establece el estándar de \textbf{Productividad Laboral Aparente} (\textit{Apparent Labour Productivity}, en las Estadísticas Estructurales Empresariales (\textit{Structural Business Statistics}, SBS; código oficial \texttt{V91110}) \citep{eurostat_sbs}, bajo el Reglamento UE 2019/2152. Eurostat la calcula formalmente como:
 
 \begin{equation}
-  Productividad_{cst} = \frac{Valor\ Agregado\ a\ costo\ de\ factores_{cst}}{Personas\ ocupadas_{cst}},
+  \text{Productividad}_{cst} = \frac{\text{Valor Agregado a costo de factores}_{cst}}{\text{Personas ocupadas}_{cst}},
 \end{equation}
 
 expresada en miles de euros corrientes por persona ocupada.
@@ -276,7 +268,7 @@ Las encuestas estadísticas oficiales capturan predominantemente el \textbf{marg
 Esta distinción delimita el alcance de las métricas disponibles y permite formalizar una cadena de transmisión conceptual:
 
 \begin{equation*}
-  \text{Adopción nominal (Eurostat)} \longrightarrow \text{Intensidad de uso} \longrightarrow \text{Integración en procesos} \longrightarrow \text{Realización productiva}.
+  \resizebox{0.95\textwidth}{!}{$\text{Adopción nominal (Eurostat)} \longrightarrow \text{Intensidad de uso} \longrightarrow \text{Integración en procesos} \longrightarrow \text{Realización productiva}$}
 \end{equation*}
 
 Las estadísticas de Eurostat capturan el primer eslabón del esquema. La realización efectiva de ganancias de productividad requiere transitar los eslabones intermedios de intensidad y reingeniería organizacional, lo que explica por qué la adopción general no exhibe necesariamente una correlación contemporánea positiva con el valor agregado por trabajador en el corto plazo.
@@ -321,9 +313,9 @@ El trabajo utiliza datos secundarios oficiales de la oficina estadística de la 
 
 La grilla teórica de cobertura comprende 27 países de la UE, nueve sectores NACE Rev. 2 y tres olas temporales (2021, 2023 y 2024), totalizando $27 \times 9 \times 3 = 729$ combinaciones país--sector--año. En los registros oficiales de Eurostat, 62 celdas presentan datos faltantes en origen debido al secreto estadístico o a la no disponibilidad del relevamiento en determinados Estados miembros (53 observaciones sin datos de SBS y 15 sin datos de encuesta TIC, con 6 omisiones simultáneas). 
 
-Por lo tanto, la **muestra analítica central de este trabajo corresponde a la totalidad de las observaciones reales disponibles ($n=667$), estructuradas como un panel no balanceado de 233 unidades país--sector**. Forzar un balanceo artificial de la muestra exigiría descartar 40 observaciones plenamente válidas sólo para retener entidades observadas en las tres olas temporales del panel ($n=627$), lo que reduciría la potencia estadística e induciría un riesgo innecesario de sesgo de atrición. Los estimadores modernos de datos de panel operan de forma nativa sobre paneles desbalanceados, utilizándose la muestra balanceada exclusivamente como control de sensibilidad.
+Por lo tanto, la \textbf{muestra analítica central de este trabajo corresponde a la totalidad de las observaciones reales disponibles ($n=667$), estructuradas como un panel no balanceado de 233 unidades país--sector}. Forzar un balanceo artificial de la muestra exigiría descartar 40 observaciones plenamente válidas sólo para retener entidades observadas en las tres olas temporales del panel ($n=627$), lo que reduciría la potencia estadística e induciría un riesgo innecesario de sesgo de atrición. Los estimadores modernos de datos de panel operan de forma nativa sobre paneles desbalanceados, utilizándose la muestra balanceada exclusivamente como control de sensibilidad.
 
-\subsection{Ficha metodológica de la encuesta y representatividad muestral}
+\subsection{Ficha metodológica de la encuesta y representatividad de la muestra}
 
 Para comprender la naturaleza de las variables explicativas es fundamental precisar el diseño metodológico de la encuesta europea de uso de TIC en empresas (\textit{Community survey on ICT usage and e-commerce in enterprises}):
 
@@ -393,19 +385,19 @@ La estrategia econométrica se articula en una secuencia metodológica progresiv
     \item \textbf{MCO Agrupado (\textit{Pooled OLS}):} estima la asociación en niveles como punto de referencia transversal:
 
     \begin{equation}
-      \ln(Productividad_{cst}) = \beta_0 + \beta_1 IA_{cst} + \varepsilon_{cst}.
+      \ln(\text{Productividad}_{cst}) = \beta_0 + \beta_1 \text{IA}_{cst} + \varepsilon_{cst}.
     \end{equation}
 
-    \item \textbf{Efectos Aleatorios (\textit{Random Effects} - RE):} asume que la heterogeneidad no observada de cada unidad país--sector ($\alpha_{cs}$) es ortogonal a los regresores ($\text{Cov}(\alpha_{cs}, IA_{cst}) = 0$). Se estima mediante Mínimos Cuadrados Generalizados (GLS) con errores agrupados por entidad.
+    \item \textbf{Efectos Aleatorios (\textit{Random Effects} - RE):} asume que la heterogeneidad no observada de cada unidad país--sector ($\alpha_{cs}$) es ortogonal a los regresores, cumpliéndose $\text{Cov}(\alpha_{cs}, \text{IA}_{cst}) = 0$. Se estima mediante Mínimos Cuadrados Generalizados (GLS) con errores agrupados por entidad.
 
-    \item \textbf{Contraste de Hausman:} evalúa formalmente la hipótesis de exogeneidad de los efectos individuales mediante la regresión auxiliar de \citet{mundlak1978pooling} y \citet{wooldridge2010econometric}, contrastando si la media temporal de entidad $\bar{IA}_{cs}$ es nula en un modelo RE robusto.
+    \item \textbf{Contraste de Hausman:} evalúa formalmente la hipótesis de exogeneidad de los efectos individuales mediante la regresión auxiliar de \citet{mundlak1978pooling} y \citet{wooldridge2010econometric}, contrastando si la media temporal de entidad $\bar{\text{IA}}_{cs}$ es nula en un modelo RE robusto.
 
     \item \textbf{Modelos de Efectos Fijos (\textit{Fixed Effects}):} ante el rechazo empírico de RE, se estiman tres especificaciones dentro de entidad:
 
-    \begin{align}
-      \text{M1 (País + Sector + Año):} \quad &\ln(Productividad_{cst}) = \beta IA_{cst} + \mu_c + \eta_s + \lambda_t + \varepsilon_{cst}, \\
-      \text{M2 (Entidad + Año):} \quad &\ln(Productividad_{cst}) = \beta IA_{cst} + \alpha_{cs} + \lambda_t + \varepsilon_{cst}, \\
-      \text{M3 (Entidad + País--Año, preferido):} \quad &\ln(Productividad_{cst}) = \beta IA_{cst} + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}.
+        \begin{align}
+      \text{M1 (País + Sector + Año):} \quad &\ln(\text{Productividad}_{cst}) = \beta \text{IA}_{cst} + \mu_c + \eta_s + \lambda_t + \varepsilon_{cst}, \\
+      \text{M2 (Entidad + Año):} \quad &\ln(\text{Productividad}_{cst}) = \beta \text{IA}_{cst} + \alpha_{cs} + \lambda_t + \varepsilon_{cst}, \\
+      \text{M3 (Entidad + País--Año):} \quad &\ln(\text{Productividad}_{cst}) = \beta \text{IA}_{cst} + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}.
     \end{align}
 
 \end{enumerate}
@@ -417,7 +409,7 @@ El modelo M3 constituye la especificación principal preferida. En virtud del te
 La heterogeneidad sectorial se examina descriptivamente y mediante un modelo con interacciones completas sobre la especificación M3:
 
 \begin{equation}
- \ln(Productividad_{cst}) = \beta IA_{cst} + \sum_{s \neq C} \delta_s(IA_{cst}\times Sector_s) + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst},
+ \ln(\text{Productividad}_{cst}) = \beta \text{IA}_{cst} + \sum_{s \neq C} \delta_s(\text{IA}_{cst} \times \text{Sector}_s) + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst},
 \end{equation}
 
 donde la Industria Manufacturera ($C$) actúa como categoría base y la pendiente sectorial específica se obtiene como $\beta + \delta_s$.
@@ -583,7 +575,7 @@ Este resultado no debe interpretarse como evidencia de que la IA reduzca product
 Para evaluar si la relación temporal entre adopción y productividad difiere según la estructura productiva de cada actividad, se estimó la especificación con interacciones sectoriales definida en la metodología, tomando a la Industria Manufacturera ($C$) como sector base de referencia:
 
 \begin{equation}
- \ln(Productividad_{cst}) = \beta IA_{cst} + \sum_{s \neq C} \delta_s(IA_{cst}\times Sector_s) + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}.
+ \ln(\text{Productividad}_{cst}) = \beta \text{IA}_{cst} + \sum_{s \neq C} \delta_s(\text{IA}_{cst} \times \text{Sector}_s) + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}.
 \end{equation}
 
 La pendiente específica de cada sector $s$ se obtiene calculando la combinación lineal $\beta_s = \beta + \delta_s$, cuyos errores estándar se derivan mediante el método delta agrupado por entidad país--sector. La Tabla~\ref{tab:heterogeneidad-sectorial} presenta las estimaciones de las pendientes sectoriales resultantes.
@@ -634,6 +626,9 @@ La estimación con interacciones sugiere heterogeneidad sectorial que quedaba en
 Como prueba de sensibilidad de la especificación principal (M3), se reestimó el modelo para adopción general bajo cuatro criterios metodológicos alternativos: la muestra principal no balanceada sin ponderar ($n=667$), la muestra principal ponderada por personas ocupadas (WLS), la muestra principal excluyendo valores extremos en los percentiles p1--p99 de productividad ($n=653$), y la muestra restringida a entidades balanceadas en los tres períodos ($n=627$). La Tabla~\ref{tab:robustez-adopcion} resume estos resultados.
 
 \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{0.80}
+\setlength{\tabcolsep}{3.5pt}
 \centering
 \caption{Robustez del modelo M3 para adopción general de IA}
 \label{tab:robustez-adopcion}
@@ -770,6 +765,9 @@ Como agenda futura, una vez que Eurostat consolide nuevas olas comparables de SB
 La Tabla~\ref{tab:anexo-diccionario} detalla las variables que componen la base de datos analítica, su definición conceptual, el código oficial de flujo en Eurostat y su rol en la estrategia empírica.
 
 \begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{0.80}
+\setlength{\tabcolsep}{3.5pt}
 \centering
 \caption{Diccionario de variables de la base analítica}
 \label{tab:anexo-diccionario}
