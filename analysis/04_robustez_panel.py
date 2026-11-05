@@ -104,6 +104,49 @@ def scenario_sample(data: pd.DataFrame, scenario: dict[str, object]) -> pd.DataF
     return sample
 
 
+def sbs_flag_sensitivity_samples(data: pd.DataFrame) -> dict[str, pd.DataFrame]:
+    """Construct SBS-flag scenarios while retaining the full core sample as primary."""
+    if "sbs_break" not in data:
+        raise ValueError("SBS flag sensitivity requires an sbs_break column")
+
+    core = data[(data["core_complete"] == "Yes") & (data["labour_productivity_keur"] > 0)].copy()
+    core["sbs_break"] = core["sbs_break"].astype(bool)
+    core["entity"] = core["country_code"].astype(str) + "_" + core["sector_code"].astype(str)
+    core["country_year"] = core["country_code"].astype(str) + "_" + core["year"].astype(str)
+    core["log_productivity"] = np.log(core["labour_productivity_keur"])
+    flagged_entities = set(core.loc[core["sbs_break"], "entity"])
+
+    return {
+        "full_core": core,
+        "drop_flagged_core_rows": core[~core["sbs_break"]].copy(),
+        "drop_entities_with_flagged_core": core[~core["entity"].isin(flagged_entities)].copy(),
+    }
+
+
+def estimate_sbs_flag_sensitivity(data: pd.DataFrame) -> pd.DataFrame:
+    """Estimate canonical M3 for full and SBS-break exclusion sensitivities."""
+    labels = {
+        "full_core": ("Muestra principal completa (retiene flags SBS)", "Sin exclusión por flags SBS"),
+        "drop_flagged_core_rows": ("Sensibilidad: excluye sólo filas core con flag SBS", "Excluye filas core con AV_MEUR o EMP_NR marcado b"),
+        "drop_entities_with_flagged_core": ("Sensibilidad: excluye entidades con algún flag SBS core", "Excluye todas las olas de entidades país-sector afectadas"),
+    }
+    rows = []
+    for scenario, sample in sbs_flag_sensitivity_samples(data).items():
+        estimates = estimate(sample, "ai_any_pct", SPECS["M3_entity_countryyear_FE"])
+        rows.append(
+            {
+                "scenario": scenario,
+                "scenario_label": labels[scenario][0],
+                "exclusion_rule": labels[scenario][1],
+                "specification": "M3_entity_countryyear_FE",
+                "ai_variable": "ai_any_pct",
+                "indicator": AI_LABELS["ai_any_pct"],
+                **estimates,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def estimate(
     data: pd.DataFrame,
     ai_variable: str,

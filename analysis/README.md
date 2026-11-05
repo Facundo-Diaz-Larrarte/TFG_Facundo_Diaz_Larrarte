@@ -104,6 +104,19 @@ El script `analysis/04_robustez_panel.py` genera `outputs/modelos_panel_v0_2/` c
 Estas pruebas evalúan sensibilidad de signo, magnitud y significatividad. No deben usarse para seleccionar la especificación más favorable, sino para documentar la estabilidad de los resultados.
 
 
+## Cobertura y sensibilidad de flags SBS
+
+El siguiente comando lee `Fuente_SBS` del libro versionado, agrega los status `b` por país--sector--año a través de las cuatro clases de tamaño y estima M3 con la misma rutina `AbsorbingLS` de robustez:
+
+```bash
+.venv/Scripts/python.exe analysis/06_auditar_flags_sbs.py \
+  --source-workbook Facundo_Diaz_Larrarte_TFG/Datos/base_analitica_ia_productividad_ue27_v0_1.xlsx \
+  --panel data/processed/panel_analitico.csv \
+  --output-dir outputs/modelos_panel_v0_2
+```
+
+Genera `cobertura_flags_sbs.csv` y `sensibilidad_flags_sbs.csv`. El primero informa la cobertura fuente/panel y el segundo compara M3 completo con dos exclusiones de sensibilidad: filas core marcadas y entidades con alguna fila core marcada. La muestra principal conserva todas las filas core; el script no modifica el panel y rechaza sobrescribir cualquiera de esos dos archivos.
+
 ## Tratamiento de precios y delimitación nominal
 
 Siguiendo a Berndt (1991), la productividad laboral aparente se analiza en términos nominales estandarizados de Eurostat SBS. No se aplican deflactores macroeconómicos agregados de Cuentas Nacionales (`nama_10_a64`) para evitar severos sesgos de error de medición por descalce entre el universo empresarial de SBS (empresas formales de 10 o más ocupados) y el universo macroeconómico global. El control de perturbaciones de precios agregadas se resuelve en el plano econométrico mediante la inclusión de efectos fijos país--año ($\gamma_{ct}$) en el modelo M3 en virtud del teorema de Frisch--Waugh--Lovell.

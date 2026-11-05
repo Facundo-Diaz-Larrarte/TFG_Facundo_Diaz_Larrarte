@@ -1,0 +1,17 @@
+metric,value
+source_unique_key_rows,5635
+raw_break_rows,258
+raw_break_value_added_rows,111
+raw_break_employment_rows,147
+raw_break_years,2021
+source_rows,5635
+panel_rows,729
+core_rows,667
+flagged_panel_rows,38
+flagged_core_rows,35
+flagged_core_both_components,26
+flagged_core_value_added_only,0
+flagged_core_employment_only,9
+flagged_core_raw_break_rows,242
+flagged_core_countries,6
+flagged_core_country_codes,"CZ,FI,FR,NL,PT,RO"

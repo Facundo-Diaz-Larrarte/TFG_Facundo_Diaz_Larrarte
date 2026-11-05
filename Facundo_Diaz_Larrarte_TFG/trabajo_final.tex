@@ -316,6 +316,8 @@ La grilla teórica de cobertura comprende 27 países de la UE, nueve sectores NA
 
 Por lo tanto, la \textbf{muestra analítica central de este trabajo corresponde a la totalidad de las observaciones reales disponibles ($n=667$), estructuradas como un panel no balanceado de 233 unidades país--sector}. Forzar un balanceo artificial de la muestra exigiría descartar 40 observaciones plenamente válidas sólo para retener entidades observadas en las tres olas temporales del panel ($n=627$), lo que reduciría la potencia estadística e induciría un riesgo innecesario de sesgo de atrición. Los estimadores modernos de datos de panel operan de forma nativa sobre paneles desbalanceados, utilizándose la muestra balanceada exclusivamente como control de sensibilidad.
 
+Las marcas de estado de la fuente SBS se preservan como información de calidad y no como un filtro automático. Para \texttt{status=b} (ruptura de serie), se agregan las marcas de \texttt{AV\_MEUR} y \texttt{EMP\_NR} entre las cuatro clases de tamaño hacia la misma observación país--sector--año. El reporte reproducible registra 258 marcas fuente, todas en 2021, y 35 observaciones \textit{core} afectadas en seis países; la muestra principal conserva esas observaciones. Este tratamiento es coherente con la documentación SBS, que identifica cambios de serie desde 2021, y separa la marca de una prueba de error del dato \citep{eurostat_sbs_metadata,eurostat_sbs_variables}.
+
 \subsection{Ficha metodológica de la encuesta y representatividad de la muestra}
 
 Para comprender la naturaleza de las variables explicativas es fundamental precisar el diseño metodológico de la encuesta europea de uso de TIC en empresas (\textit{Community survey on ICT usage and e-commerce in enterprises}):
@@ -420,7 +422,7 @@ donde la Industria Manufacturera ($C$) actúa como categoría base y la pendient
 
 \subsection{Robustez}
 
-Las pruebas de robustez incluyen: (i) contrastar la muestra principal no balanceada ($n=667$) con la muestra balanceada ($n=627$); (ii) ponderar por personas ocupadas (\textit{Weighted Least Squares} - WLS); (iii) excluir valores extremos en los percentiles p1--p99 de productividad; y (iv) validar las estimaciones con algoritmos econométricos estándar (\texttt{linearmodels.iv.AbsorbingLS}).
+Las pruebas de robustez incluyen: (i) contrastar la muestra principal no balanceada ($n=667$) con la muestra balanceada ($n=627$); (ii) ponderar por personas ocupadas (\textit{Weighted Least Squares} - WLS); (iii) excluir valores extremos en los percentiles p1--p99 de productividad; (iv) validar las estimaciones con algoritmos econométricos estándar (\texttt{linearmodels.iv.AbsorbingLS}); y (v) dos sensibilidades a las marcas SBS: excluir sólo las filas \textit{core} marcadas o todas las olas de las entidades afectadas. Estas dos últimas son escenarios de sensibilidad; no redefinen la muestra principal ni convierten una marca de ruptura en un error automático.
 
 \section{Resultados}
 
@@ -652,6 +654,8 @@ Sensibilidad a balanceo: muestra balanceada & -0,0011 & 0,0009 & 0,250 & -1,1\% 
 \end{flushleft}
 \end{table}
 
+Como análisis de sensibilidad complementario de las marcas SBS, la estimación M3 de adopción general conserva las 667 observaciones \textit{core} en la muestra principal ($\beta=-0,001263$, $p=0,154$; 233 entidades). Al excluir sólo las 35 filas \textit{core} marcadas resulta $\beta=-0,001097$ y $p=0,234$ ($n=632$, 232 entidades); al excluir las entidades con alguna fila marcada resulta $\beta=-0,001352$ y $p=0,174$ ($n=565$, 198 entidades). Estas comparaciones describen sensibilidad a la cobertura de rupturas; no identifican un efecto causal ni justifican excluir automáticamente las observaciones marcadas.
+
 El signo del coeficiente de adopción general se mantiene negativo en los cuatro escenarios de robustez. No obstante, se observa un cambio relevante en la inferencia estadística: mientras que en las especificaciones no ponderadas el coeficiente no es estadísticamente significativo a niveles convencionales ($p = 0,154$ en la muestra principal y $p = 0,250$ en la balanceada), bajo la ponderación por personas ocupadas (WLS) el coeficiente resulta estadísticamente significativo al 5\% ($\beta = -0,0016$, $EE = 0,0007$, $p = 0,032$). Este resultado evidencia que, al asignar mayor peso relativo a las ramas que concentran la mayor masa de empleo (donde predominan actividades manufactureras y comerciales tradicionales con elevados costos de reestructuración), la pendiente negativa contemporánea dentro de cada unidad se vuelve más pronunciada. En ningún escenario se detecta una asociación contemporánea positiva.
 
 \subsection{Validación de especificación: Efectos Aleatorios y Contraste de Hausman}
@@ -723,6 +727,8 @@ Es imperativo subrayar los límites del diseño econométrico implementado:
     \item \textbf{Precios relativos y shocks sectoriales específicos:} la productividad laboral se mide en términos nominales estandarizados por Eurostat SBS. Si bien los efectos fijos país--año neutralizan la inflación agregada y las perturbaciones macroeconómicas a escala nacional mediante el teorema de Frisch--Waugh--Lovell, no absorben posibles divergencias en precios relativos entre sectores dentro de un mismo país en un período condicionado por perturbaciones en costos de insumos e hidrocarburos. Como fundamenta \citet{berndt1991practice}, la separación rigurosa de variaciones de precios y cantidades a nivel desagregado requeriría deflactores construidos sobre los mismos microdatos de empresa, una vía que excede el alcance de las series agregadas oficiales disponibles.
 
     \item \textbf{Inferencia estadística con panel corto ($T=3$):} al disponer de sólo tres períodos temporales, la variación intra-unidad proviene de fluctuaciones en el corto plazo. Por ello, las estimaciones sectoriales desagregadas deben concebirse como patrones exploratorios de heterogeneidad y no como parámetros estructurales definitivos de la función de producción de cada rama económica.
+
+    \item \textbf{Rupturas SBS:} las marcas \texttt{b} se concentran en 2021, por lo que el panel no permite contrastar dentro de la muestra el quiebre con la serie anterior. Los efectos fijos país--año absorben componentes comunes a los sectores de un país y año, pero no cambios diferenciales por sector. Las sensibilidades reportadas son informativas, no una prueba de que las observaciones marcadas sean erróneas ni una corrección de comparabilidad.
 
 \end{enumerate}
 
