@@ -26,7 +26,8 @@
 
 \usepackage{background}
 
-\usepackage{tabularx}
+\usepackage{ltablex}
+\keepXColumns
 
 \usepackage{array}
 
@@ -151,13 +152,13 @@ El trabajo se inscribe en la microeconomía aplicada, la economía de la empresa
 
 La unidad de observación es la combinación país--sector--año. La adopción de IA se mide mediante el porcentaje de empresas de diez o más personas ocupadas que declara utilizar al menos una tecnología de IA. Además, se consideran indicadores de intensidad y usos funcionales, tales como IA en organización de procesos o toma de decisiones, producción, logística, marketing y ventas, y seguridad informática.
 
-La productividad laboral aparente se calcula como el cociente entre valor agregado y personas ocupadas:
+La productividad laboral aparente nominal se construye como el cociente entre valor agregado y personas ocupadas:
 
 \begin{equation}
-  \text{Productividad}_{cst} = \frac{\text{Valor agregado}_{cst}}{\text{Personas ocupadas}_{cst}},
+  \text{Productividad}_{cst} = \frac{\texttt{AV\_MEUR}_{cst}\times 1000}{\texttt{EMP\_NR}_{cst}},
 \end{equation}
 
-donde $c$ identifica al país, $s$ al sector y $t$ al año. Este indicador no mide productividad total de los factores ni permite aislar por sí solo la contribución causal de la IA.
+donde $c$ identifica al país, $s$ al sector y $t$ al año. El resultado se expresa en miles de euros corrientes por persona ocupada. Este indicador construido no mide productividad total de los factores ni permite aislar por sí solo la contribución causal de la IA.
 
 \subsection{Objetivo general}
 
@@ -243,17 +244,17 @@ Siguiendo a \citet[Cap.~2]{berndt1991practice}, la elección del Valor Agregado 
 
 Asimismo, \citet{berndt1991practice} enfatiza que la productividad laboral es una medida ``aparente''. Al relacionar todo el valor generado con el insumo de trabajo, el cociente $VAB/L$ no mide exclusivamente la destreza o eficiencia intrínseca de los trabajadores, sino que absorbe de manera preponderante la \textbf{intensidad de capital} (\textit{capital deepening}, $K/L$) y las complementariedades tecnológicas organizacionales. Un sector intensivo en capital o infraestructura digital exhibirá niveles sistemáticamente más elevados de $VAB/L$ con independencia de la productividad marginal pura del trabajo.
 
-En estricta consonancia con estos fundamentos, la oficina estadística de la Unión Europea (Eurostat) establece el estándar de \textbf{Productividad Laboral Aparente} (\textit{Apparent Labour Productivity}, en las Estadísticas Estructurales Empresariales (\textit{Structural Business Statistics}, SBS; código oficial \texttt{V91110}) \citep{eurostat_sbs}, bajo el Reglamento UE 2019/2152. Eurostat la calcula formalmente como:
+Para las olas de este estudio (2021, 2023 y 2024), la tabla SBS \texttt{sbs\_sc\_ovw} proporciona \texttt{AV\_MEUR} (valor agregado, millones de euros) y \texttt{EMP\_NR} (personas ocupadas) \citep{eurostat_sbs,eurostat_sbs_variables}. Desde 2021, \texttt{AV\_MEUR} mide valor agregado nominal a precios básicos; esta definición marca una ruptura frente a la serie SBS previa a 2021, a costo de factores \citep{eurostat_sbs_metadata,eurostat_ict_sector_metadata}. En consecuencia, el resultado utilizado en este trabajo es una construcción propia:
 
 \begin{equation}
-  \text{Productividad}_{cst} = \frac{\text{Valor Agregado a costo de factores}_{cst}}{\text{Personas ocupadas}_{cst}},
+  \text{Productividad}_{cst} = \frac{\texttt{AV\_MEUR}_{cst}\times 1000}{\texttt{EMP\_NR}_{cst}},
 \end{equation}
 
-expresada en miles de euros corrientes por persona ocupada.
+expresada en miles de euros corrientes por persona ocupada. No se importa como un indicador derivado oficial: \texttt{V91110} corresponde a tablas SBS históricas, entre ellas \texttt{sbs\_na\_1a\_se\_r2} para 2005--2020, y no al código de los componentes 2021+ empleados aquí \citep{eurostat_sbs_historical}.
 
 Un punto metodológico crucial discutido extensamente por \citet[Caps.~2 y 9]{berndt1991practice} refiere al tratamiento de los precios. El autor advierte sobre los severos sesgos y errores de medición (\textit{measurement errors}) que se inducen al intentar deflactar variables empresariales utilizando índices de precios agregados inadecuados o construidos bajo universos metodológicos divergentes. En particular, la aplicación de deflactores macroeconómicos de Cuentas Nacionales (que cubren toda la economía, incluidas administraciones públicas y microempresas) sobre datos SBS de empresas de 10 o más ocupados generaría un descalce muestral e introduciría perturbaciones espurias.
 
-Por este motivo, este trabajo adopta la variable oficial de Eurostat en términos nominales y resuelve el control de precios en el plano de la \textbf{estrategia econométrica}: en virtud del teorema de Frisch--Waugh--Lovell \citep{wooldridge2010econometric}, la inclusión de efectos fijos país--año ($\gamma_{ct}$) en los modelos de panel absorbe la inflación agregada y los shocks macroeconómicos anuales comunes a todos los sectores de cada país, aislando la variación sectorial relativa dentro de cada economía nacional.
+Por este motivo, este trabajo construye una medida nominal a partir de componentes oficiales de Eurostat SBS y resuelve el control de precios en el plano de la \textbf{estrategia econométrica}: en virtud del teorema de Frisch--Waugh--Lovell \citep{wooldridge2010econometric}, la inclusión de efectos fijos país--año ($\gamma_{ct}$) en los modelos de panel absorbe la inflación agregada y los shocks macroeconómicos anuales comunes a todos los sectores de cada país, aislando la variación sectorial relativa dentro de cada economía nacional.
 
 \subsection{Evidencia empírica sobre IA y productividad en Europa}
 
@@ -309,7 +310,7 @@ La discusión se estructura alrededor de la \textbf{brecha de realización produ
 
 \subsection{Fuentes de información y muestra analítica}
 
-El trabajo utiliza datos secundarios oficiales de la oficina estadística de la Unión Europea (Eurostat). Las fuentes principales son la base \texttt{isoc\_eb\_ai}, referida a la adopción empresarial de inteligencia artificial \citep{eurostat_ai}; la base \texttt{isoc\_eb\_ain2}, con indicadores complementarios de usos específicos de IA \citep{eurostat_ain2}; y las Estadísticas Estructurales Empresariales (\textit{Structural Business Statistics} - SBS), utilizadas para obtener valor agregado y personas ocupadas \citep{eurostat_sbs}.
+El trabajo utiliza datos secundarios oficiales de la oficina estadística de la Unión Europea (Eurostat). Las fuentes principales son la base \texttt{isoc\_eb\_ai}, referida a la adopción empresarial de inteligencia artificial \citep{eurostat_ai}; la base \texttt{isoc\_eb\_ain2}, con indicadores complementarios de usos específicos de IA \citep{eurostat_ain2}; y la tabla de Estadísticas Estructurales Empresariales (\textit{Structural Business Statistics} - SBS) \texttt{sbs\_sc\_ovw}, de la que se obtienen \texttt{AV\_MEUR} y \texttt{EMP\_NR} \citep{eurostat_sbs}.
 
 La grilla teórica de cobertura comprende 27 países de la UE, nueve sectores NACE Rev. 2 y tres olas temporales (2021, 2023 y 2024), totalizando $27 \times 9 \times 3 = 729$ combinaciones país--sector--año. En los registros oficiales de Eurostat, 62 celdas presentan datos faltantes en origen debido al secreto estadístico o a la no disponibilidad del relevamiento en determinados Estados miembros (53 observaciones sin datos de SBS y 15 sin datos de encuesta TIC, con 6 omisiones simultáneas). 
 
@@ -371,7 +372,7 @@ N & Actividades administrativas y servicios auxiliares \\
 
 \subsection{Variables}
 
-La variable dependiente es el logaritmo natural de la productividad laboral aparente nominal, expresada en miles de euros corrientes por persona ocupada ($\ln(VAB/L)$). La transformación logarítmica estabiliza la varianza, mitiga la influencia de valores atípicos y permite interpretar los coeficientes aproximadamente como semi-elasticidades porcentuales.
+La variable dependiente es el logaritmo natural de la productividad laboral aparente nominal construida como $\ln(\texttt{AV\_MEUR}\times1000/\texttt{EMP\_NR})$, expresada en miles de euros corrientes por persona ocupada. La transformación logarítmica estabiliza la varianza, mitiga la influencia de valores atípicos y permite interpretar los coeficientes aproximadamente como semi-elasticidades porcentuales.
 
 Las variables explicativas de IA se expresan como porcentaje de empresas adoptantes. La adopción general se mide con \texttt{ai\_any\_pct}. Como indicadores complementarios se consideran la intensidad tecnológica (adopción de dos o más y tres o más herramientas) y los usos funcionales en procesos y decisiones, producción, logística, marketing y ventas, y seguridad informática. Cada variable se evalúa en modelos separados para evitar multicolinealidad.
 
@@ -767,18 +768,20 @@ Como agenda futura, una vez que Eurostat consolide nuevas olas comparables de SB
 
 La Tabla~\ref{tab:anexo-diccionario} detalla las variables que componen la base de datos analítica, su definición conceptual, el código oficial de flujo en Eurostat y su rol en la estrategia empírica.
 
-\begin{table}[H]
-\centering
+\begingroup
 \renewcommand{\arraystretch}{0.80}
 \setlength{\tabcolsep}{3.5pt}
-\centering
-\caption{Diccionario de variables de la base analítica}
-\label{tab:anexo-diccionario}
 \scriptsize
 \begin{tabularx}{\textwidth}{lXllX}
+\caption{Diccionario de variables de la base analítica}\label{tab:anexo-diccionario} \\
 \toprule
 \textbf{Variable} & \textbf{Definición} & \textbf{Tipo / Unidad} & \textbf{Fuente Eurostat} & \textbf{Nota metodológica} \\
 \midrule
+\endfirsthead
+\toprule
+\textbf{Variable} & \textbf{Definición} & \textbf{Tipo / Unidad} & \textbf{Fuente Eurostat} & \textbf{Nota metodológica} \\
+\midrule
+\endhead
 \texttt{country\_code} & Código geográfico oficial & Texto & Eurostat & 27 Estados miembros de la UE (Grecia utiliza \texttt{EL}). \\
 \texttt{sector\_code} & Sección de actividad NACE Rev. 2 & Texto & Eurostat & 9 sectores seleccionados: C, F, G, H, I, J, L, M y N. \\
 \texttt{year} & Año de referencia & Entero & Eurostat & Olas comparables del panel: 2021, 2023 y 2024. \\
@@ -790,17 +793,17 @@ La Tabla~\ref{tab:anexo-diccionario} detalla las variables que componen la base 
 \texttt{ai\_logistics\_pct} & IA aplicada a logística y suministros & \% de empresas & \texttt{isoc\_eb\_ain2}: \texttt{E\_AI\_PLOG} & Uso funcional en transporte interno y cadena de valor. \\
 \texttt{ai\_marketing\_pct} & IA aplicada a marketing y ventas & \% de empresas & \texttt{isoc\_eb\_ain2}: \texttt{E\_AI\_PMS} & Uso comercial y perfilado de clientes. \\
 \texttt{ai\_security\_pct} & IA aplicada a seguridad de TIC & \% de empresas & \texttt{isoc\_eb\_ain2}: \texttt{E\_AI\_PITS} & Uso de soporte preventivo en ciberseguridad. \\
-\texttt{value\_added\_meur\_ge10} & Valor agregado a costo de factores & Millones de EUR & SBS: \texttt{sbs\_sc\_ovw} (\texttt{AV\_MEUR}) & Agregado para empresas de 10 o más personas ocupadas. \\
+\texttt{value\_added\_meur\_ge10} & Valor agregado a precios básicos & Millones de EUR corrientes & SBS: \texttt{sbs\_sc\_ovw} (\texttt{AV\_MEUR}) & SBS 2021+; empresas con $\geq 10$. \\
 \texttt{persons\_employed\_ge10} & Personas ocupadas totales & Personas & SBS: \texttt{sbs\_sc\_ovw} (\texttt{EMP\_NR}) & Agregado para empresas de 10 o más personas ocupadas. \\
-\texttt{labour\_productivity\_keur} & Productividad laboral aparente & Miles EUR / pers. & Construcción propia & (Valor agregado $\times$ 1000) / Personas ocupadas. \\
+\texttt{labour\_productivity\_keur} & Productividad laboral aparente nominal & Miles EUR corrientes / pers. & Construcción propia & Cálculo propio: \texttt{AV\_MEUR} $\times$ 1000 / \texttt{EMP\_NR}. \\
 \texttt{core\_complete} & Completitud de variables centrales & Indicador binario & Filtro analítico & Exige información conjunta de IA general y productividad. \\
 \texttt{balanced\_entity} & Entidad balanceada en los 3 años & Indicador binario & Filtro analítico & 209 entidades observadas en las tres olas temporales del panel (2021, 2023 y 2024). \\
 \bottomrule
 \end{tabularx}
+\endgroup
 \begin{flushleft}
 \tiny Fuente: elaboración propia sobre la base de metadatos de Eurostat (\texttt{isoc\_eb\_ai}, \texttt{isoc\_eb\_ain2} y \texttt{sbs\_sc\_ovw}).
 \end{flushleft}
-\end{table}
 
 \subsection*{Anexo B: Comparación completa de especificaciones econométricas (M1, M2 y M3)}
 

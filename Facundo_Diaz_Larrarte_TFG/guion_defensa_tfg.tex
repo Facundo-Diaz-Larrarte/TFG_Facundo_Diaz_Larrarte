@@ -213,7 +213,7 @@ Destacá los tres números gigantes: 27 países, 9 sectores, 3 olas. Enfatizá q
 \begin{speechbox}{Qué decir frente al auditorio}
 ``En esta diapositiva sintetizamos la ficha operativa de las variables y resolvemos un problema metodológico medular:
 
-Por un lado, la \textbf{productividad} proviene de Eurostat SBS (código \texttt{V91110}, miles de euros corrientes por ocupado). Y la \textbf{adopción de IA} proviene de la encuesta oficial TIC (\texttt{isoc\_eb\_ai}), relevada a nivel de empresa con 10 o más ocupados, respondida por directivos o responsables TIC, y proyectada con ponderadores poblacionales (\texttt{PC\_ENT}) en tres dimensiones: adopción general (\texttt{ai\_any}), intensidad tecnológica (2+ y 3+ tecnologías) y 5 usos funcionales de negocio (procesos, producción, logística, ventas y seguridad).
+Por un lado, la \textbf{productividad} se construye con Eurostat SBS como \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR} (miles de euros corrientes por ocupado); \texttt{AV\_MEUR} es valor agregado a precios básicos. Y la \textbf{adopción de IA} proviene de la encuesta oficial TIC (\texttt{isoc\_eb\_ai}), relevada a nivel de empresa con 10 o más ocupados, respondida por directivos o responsables TIC, y proyectada con ponderadores poblacionales (\texttt{PC\_ENT}) en tres dimensiones: adopción general (\texttt{ai\_any}), intensidad tecnológica (2+ y 3+ tecnologías) y 5 usos funcionales de negocio (procesos, producción, logística, ventas y seguridad).
 
 Por otro lado, ¿qué ocurre con el \textbf{control de escala entre economías}? ¿Distorsiona comparar a Alemania con Malta, o un sector con diez mil firmas frente a uno con pocas?
 \begin{enumerate}[itemsep=0.15em]
@@ -419,7 +419,7 @@ Respirá hondo, sonreí y esperá con tranquilidad el inicio de la ronda de preg
 
 \begin{qbox}{1. ¿Por qué el tribunal no vio la definición de las variables al principio en versiones anteriores y cómo se resuelve?}
 \textbf{Respuesta sugerida:}  
-``En versiones preliminares, la definición formal de las variables se presentaba más adelante, en la sección metodológica y el apéndice. Atendiendo a la observación del tribunal, en esta presentación las variables se introducen y fundamentan teóricamente de inmediato tras la hipótesis (Diapositivas 4 y 5): definimos la Productividad Laboral Aparente ($VAB/L$, código SBS \texttt{V91110}) con base en Berndt (1991), y la Adopción de IA a través de las encuestas oficiales TIC de Eurostat (\texttt{isoc\_eb\_ai}), explicando quién responde y cómo los ratios normalizan el tamaño de los países.''
+``En versiones preliminares, la definición formal de las variables se presentaba más adelante, en la sección metodológica y el apéndice. Atendiendo a la observación del tribunal, en esta presentación las variables se introducen y fundamentan teóricamente de inmediato tras la hipótesis (Diapositivas 4 y 5): definimos la Productividad Laboral Aparente como el cálculo propio \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR} con base en Berndt (1991), y la Adopción de IA a través de las encuestas oficiales TIC de Eurostat (\texttt{isoc\_eb\_ai}), explicando quién responde y cómo los ratios normalizan el tamaño de los países.''
 \end{qbox}
 
 \vspace{0.2cm}
@@ -458,7 +458,7 @@ Respirá hondo, sonreí y esperá con tranquilidad el inicio de la ronda de preg
 
 \begin{qbox}{6. ¿Por qué el modelo preferido M3 utiliza productividad nominal y no deflactores reales de precios?}
 \textbf{Respuesta sugerida:}  
-``Siguiendo a Berndt (1991), cuando no se dispone de índices de precios al productor específicos a nivel microempresarial, intentar deflactar series sectoriales con índices macroeconómicos agregados o de cuentas nacionales introduce un serio sesgo por error de medición en la variable dependiente. La productividad nominal de Eurostat SBS (\texttt{V91110}) es la métrica oficial homogénea. Econométricamente, en el modelo M3 la inclusión de efectos fijos país--año ($\gamma_{ct}$) absorbe de manera exacta, por el teorema de Frisch--Waugh--Lovell, la totalidad de los componentes de inflación macroeconómica nacional del trienio, garantizando una estimación limpia de sesgos por deflación artificial.''
+``Siguiendo a Berndt (1991), cuando no se dispone de índices de precios al productor específicos a nivel microempresarial, intentar deflactar series sectoriales con índices macroeconómicos agregados o de cuentas nacionales introduce un serio sesgo por error de medición en la variable dependiente. La productividad nominal se construye con los componentes SBS \texttt{AV\_MEUR} y \texttt{EMP\_NR}; no se utiliza \texttt{V91110}. Econométricamente, en el modelo M3 la inclusión de efectos fijos país--año ($\gamma_{ct}$) absorbe de manera exacta, por el teorema de Frisch--Waugh--Lovell, la totalidad de los componentes de inflación macroeconómica nacional del trienio, garantizando una estimación limpia de sesgos por deflación artificial.''
 \end{qbox}
 
 \vspace{0.2cm}
@@ -504,7 +504,7 @@ Tomamos a la Industria Manufacturera ($C$) como categoría base de referencia ($
   \textbf{Función en el TFG (Diapositiva 13):} Base del contraste de especificación de Hausman robusto ante heterocedasticidad. Demuestra que $\beta_{RE}$ arrastra sesgo por correlación con las medias individuales.
 
   \item \textbf{Eurostat (2026a, b, c):}  
-  \textbf{Función en el TFG (Diapositivas 4, 5 y 6):} Fuentes oficiales primarias (\texttt{sbs\_sc\_ovw} para valor agregado y empleo; \texttt{isoc\_eb\_ai} e \texttt{isoc\_eb\_ain2} para adopción, intensidad y usos de IA).
+  \textbf{Función en el TFG (Diapositivas 4, 5 y 6):} Fuentes oficiales primarias (\texttt{sbs\_sc\_ovw}: \texttt{AV\_MEUR}, valor agregado a precios básicos, y \texttt{EMP\_NR}; \texttt{isoc\_eb\_ai} e \texttt{isoc\_eb\_ain2} para adopción, intensidad y usos de IA).
 \end{itemize}
 
 \vspace{0.6cm}
@@ -532,7 +532,7 @@ Este resumen condensa el flujo computacional ejecutado en \path{analysis/00_repr
 \vspace{0.3cm}
 
 \begin{speechbox}{El resumen de 60 segundos si el tribunal pide sintetizar el pipeline}
-``Integramos microdatos agregados oficiales de Eurostat: encuestas TIC para los indicadores de adopción e intensidad y SBS para valor agregado y empleo, cubriendo la UE-27 en 9 sectores y 3 olas (2021, 2023 y 2024). Retuvimos el panel no balanceado completo de 233 entidades y 667 observaciones para evitar sesgos de atrición. Definimos la variable dependiente como el logaritmo de la productividad aparente (VAB por ocupado), fundamentada en Berndt (1991). Tras constatar en la etapa descriptiva que la correlación positiva en niveles ($r=+0{,}558$) se invertía en cambios temporales ($r=-0{,}229$), estimamos una progresión formal de modelos en Python validada con \texttt{linearmodels}. En el modelo preferido M3 con doble efecto fijo (país--sector y país--año), la asociación resultó estadísticamente nula ($\beta=-0{,}0013$, $p=0{,}154$), y el test de Hausman ($\chi^2=69{,}10$) demostró que los efectos fijos son mandatorios frente a Efectos Aleatorios.''
+``Integramos microdatos agregados oficiales de Eurostat: encuestas TIC para los indicadores de adopción e intensidad y SBS para valor agregado y empleo, cubriendo la UE-27 en 9 sectores y 3 olas (2021, 2023 y 2024). Retuvimos el panel no balanceado completo de 233 entidades y 667 observaciones para evitar sesgos de atrición. Definimos la variable dependiente como el logaritmo de la productividad aparente nominal construida como \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR}, fundamentada en Berndt (1991). Tras constatar en la etapa descriptiva que la correlación positiva en niveles ($r=+0{,}558$) se invertía en cambios temporales ($r=-0{,}229$), estimamos una progresión formal de modelos en Python validada con \texttt{linearmodels}. En el modelo preferido M3 con doble efecto fijo (país--sector y país--año), la asociación resultó estadísticamente nula ($\beta=-0{,}0013$, $p=0{,}154$), y el test de Hausman ($\chi^2=69{,}10$) demostró que los efectos fijos son mandatorios frente a Efectos Aleatorios.''
 \end{speechbox}
 
 \end{document}

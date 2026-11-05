@@ -142,7 +142,7 @@
   \vspace{-0.10cm}
   \begin{block}{Definición analítica: productividad media parcial del trabajo}
     \centering\normalsize
-    $Productividad_{cst} = \dfrac{Valor\ Agregado\ Bruto_{cst}}{Personas\ Ocupadas_{cst}}$ \quad \footnotesize (\textit{miles de EUR corrientes por ocupado})
+    $Productividad_{cst} = \dfrac{\texttt{AV\_MEUR}_{cst}\times1000}{\texttt{EMP\_NR}_{cst}}$ \quad \footnotesize (cálculo propio; miles de EUR corrientes por ocupado)
   \end{block}
   \vspace{0.12cm}
   \begin{columns}[T,onlytextwidth]
@@ -157,14 +157,14 @@
     \begin{column}{0.48\textwidth}
       \begin{alertblock}{Tratamiento nominal y precios}
         \small\begin{itemize}\setlength\itemsep{0.24em}
-          \item Métrica oficial homogénea en la UE (código SBS \texttt{V91110}).
+          \item Cálculo propio con \texttt{AV\_MEUR} (valor agregado a precios básicos) y \texttt{EMP\_NR}.
           \item Previene sesgos de medición de deflactores macro híbridos (Berndt, 1991).
           \item Efectos país--año ($\gamma_{ct}$) absorben inflación macro (Frisch--Waugh--Lovell).
         \end{itemize}
       \end{alertblock}
     \end{column}
   \end{columns}
-  \source{Eurostat Structural Business Statistics (SBS); Berndt (1991), \textit{The Practice of Econometrics}.}
+  \source{Eurostat SBS \texttt{sbs\_sc\_ovw}, correspondencia de variables desde 2021 y metadatos; Berndt (1991).}
 \end{frame}
 
 % 5 (Cap. 2: Marco Teórico) --------------------------------------------------
@@ -239,7 +239,7 @@
     \begin{column}{0.48\textwidth}
       \begin{block}{Variables oficiales (Eurostat SBS y TIC)}
         \scriptsize\begin{itemize}\setlength\itemsep{0.20em}
-          \item \textbf{Productividad ($VAB/L$):} código SBS \texttt{V91110}, miles de EUR corrientes por ocupado.
+          \item \textbf{Productividad:} cálculo propio \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR}, miles de EUR corrientes por ocupado.
           \item \textbf{Encuesta TIC (\texttt{isoc\_eb\_ai}):} empresas $\ge 10$ ocupados; informante directivo/TIC; tasa \texttt{PC\_ENT} con ponderación poblacional oficial.
           \item \textbf{Indicadores:} Adopción general (\texttt{ai\_any}), intensidad ($\ge 2, \ge 3$) y 5 usos funcionales (procesos, producción, logística, ventas, seguridad).
         \end{itemize}
@@ -557,15 +557,15 @@
       \begin{block}{Fuentes Eurostat}
         \small\begin{itemize}\setlength\itemsep{0.32em}
           \item Encuestas TIC (\texttt{isoc\_eb\_ai}, \texttt{isoc\_eb\_ain2}): adopción, intensidad y 5 usos funcionales.
-          \item Estadísticas estructurales (\texttt{sbs\_sc\_ovw}): valor agregado y personas ocupadas ($\ge 10$ ocupados).
-          \item Productividad nominal: miles de EUR corrientes por ocupado.
+          \item Estadísticas estructurales (\texttt{sbs\_sc\_ovw}): \texttt{AV\_MEUR} (valor agregado a precios básicos) y \texttt{EMP\_NR} ($\ge 10$ ocupados).
+          \item Productividad nominal propia: \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR}, miles de EUR corrientes por ocupado.
         \end{itemize}
       \end{block}
     \end{column}
   \end{columns}
   \vspace{0.30cm}
   \begin{alertblock}{Variables centrales}
-    \small IA: porcentaje de empresas que declara utilizar tecnologías de IA (\texttt{PC\_ENT}). Productividad laboral aparente: valor agregado por persona ocupada (definición oficial Eurostat SBS); la especificación principal usa su logaritmo.
+    \small IA: porcentaje de empresas que declara utilizar tecnologías de IA (\texttt{PC\_ENT}). Productividad laboral aparente nominal: cálculo propio de \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR}; la especificación principal usa su logaritmo.
   \end{alertblock}
   \source{Eurostat; Trabajo Final de Grado, datos y metodología.}
 \end{frame}
@@ -600,7 +600,7 @@
 \begin{frame}{Apéndice | Especificaciones y ecuaciones}
   \small
   \begin{block}{Productividad laboral aparente}
-    \centering $Productividad_{cst}=\dfrac{Valor\ agregado_{cst}}{Personas\ ocupadas_{cst}}$
+    \centering $Productividad_{cst}=\dfrac{\texttt{AV\_MEUR}_{cst}\times1000}{\texttt{EMP\_NR}_{cst}}$ \; (cálculo propio)
   \end{block}
   \begin{block}{Modelo principal M3}
     \centering $\ln(Productividad_{cst})=\beta IA_{cst}+\alpha_{cs}+\gamma_{ct}+\varepsilon_{cst}$

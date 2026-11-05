@@ -116,7 +116,7 @@ El acceso a la herramienta es sólo el primer paso; si no se profundiza el marge
 Para construir la base analítica se integraron dos relevamientos estadísticos independientes y armonizados:
 \begin{enumerate}[label=\alph*)]
   \item \textbf{Encuesta sobre uso de TIC y comercio electrónico en empresas} (\texttt{isoc\_eb\_ai} e \texttt{isoc\_eb\_ain2}): Provee los porcentajes de empresas de 10 o más ocupados que adoptan tecnologías de IA.
-  \item \textbf{Estadísticas Estructurales de Empresas} (SBS -- \texttt{sbs\_sc\_ovw}): Provee las variables económicas de Valor Agregado a costo de factores (en millones de euros corrientes) y el número total de personas ocupadas.
+  \item \textbf{Estadísticas Estructurales de Empresas} (SBS -- \texttt{sbs\_sc\_ovw}): Provee \texttt{AV\_MEUR}, valor agregado a precios básicos en millones de euros corrientes, y \texttt{EMP\_NR}, personas ocupadas.
   \item \textbf{Cuentas Nacionales Sectoriales} (\texttt{nama\_10\_a64}): Provee los deflactores de valor agregado país--sector--año utilizados en la evaluación de robustez con precios reales.
 \end{enumerate}
 
@@ -124,8 +124,9 @@ Para construir la base analítica se integraron dos relevamientos estadísticos 
 \begin{itemize}[leftmargin=*]
   \item \textbf{Variable dependiente (Productividad Laboral Aparente):}
   \begin{equation}
-    \ln(Productividad_{cst}) = \ln\left( \frac{\text{Valor Agregado}_{cst} \times 1000}{\text{Personas Ocupadas}_{cst}} \right)
+    \ln(Productividad_{cst}) = \ln\left( \frac{\texttt{AV\_MEUR}_{cst} \times 1000}{\texttt{EMP\_NR}_{cst}} \right)
   \end{equation}
+  Es una construcción propia, expresada en miles de euros corrientes por persona ocupada; no es el indicador histórico \texttt{V91110}.
   \textit{Justificación metodológica del logaritmo:} Reduce la asimetría de la distribución del valor agregado, amortigua la influencia de sectores hiperproductivos atípicos y permite interpretar los coeficientes econométricos como semi-elasticidades porcentuales.
   \item \textbf{Variable explicativa principal:} Tasa de adopción general (\texttt{ai\_any\_pct}), medida como porcentaje de firmas (0 a 100).
   \item \textbf{Variables explicativas complementarias (analizadas en modelos separados):}
