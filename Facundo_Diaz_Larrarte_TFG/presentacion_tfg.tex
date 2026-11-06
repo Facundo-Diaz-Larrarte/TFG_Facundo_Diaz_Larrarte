@@ -111,7 +111,7 @@
 
     \item \textbf{Resultados empíricos y validación}\par
           \vspace{0.04cm}
-          {\small\color{Muted}Niveles vs. cambios, modelos de panel, test de Hausman y heterogeneidad sectorial.}
+          {\small\color{Muted}Niveles vs. cambios, modelos de panel, contraste Wald Mundlak/CRE y heterogeneidad sectorial.}
 
     \item \textbf{Discusión económica y conclusiones}\par
           \vspace{0.04cm}
@@ -142,7 +142,7 @@
   \vspace{-0.10cm}
   \begin{block}{Definición analítica: productividad media parcial del trabajo}
     \centering\normalsize
-    $Productividad_{cst} = \dfrac{Valor\ Agregado\ Bruto_{cst}}{Personas\ Ocupadas_{cst}}$ \quad \footnotesize (\textit{miles de EUR corrientes por ocupado})
+    $Productividad_{cst} = \dfrac{\texttt{AV\_MEUR}_{cst}\times1000}{\texttt{EMP\_NR}_{cst}}$ \quad \footnotesize (cálculo propio; miles de EUR corrientes por ocupado)
   \end{block}
   \vspace{0.12cm}
   \begin{columns}[T,onlytextwidth]
@@ -157,14 +157,14 @@
     \begin{column}{0.48\textwidth}
       \begin{alertblock}{Tratamiento nominal y precios}
         \small\begin{itemize}\setlength\itemsep{0.24em}
-          \item Métrica oficial homogénea en la UE (código SBS \texttt{V91110}).
+          \item Cálculo propio con \texttt{AV\_MEUR} (valor agregado a precios básicos) y \texttt{EMP\_NR}.
           \item Previene sesgos de medición de deflactores macro híbridos (Berndt, 1991).
-          \item Efectos país--año ($\gamma_{ct}$) absorben inflación macro (Frisch--Waugh--Lovell).
+          \item Efectos país--año ($\gamma_{ct}$) retiran componentes comunes de inflación macro; no precios relativos ni shocks sectoriales.
         \end{itemize}
       \end{alertblock}
     \end{column}
   \end{columns}
-  \source{Eurostat Structural Business Statistics (SBS); Berndt (1991), \textit{The Practice of Econometrics}.}
+  \source{Eurostat SBS \texttt{sbs\_sc\_ovw}, correspondencia de variables desde 2021 y metadatos; Berndt (1991).}
 \end{frame}
 
 % 5 (Cap. 2: Marco Teórico) --------------------------------------------------
@@ -212,10 +212,10 @@
     \begin{column}{0.48\textwidth}
       \begin{block}{Muestra principal no balanceada}
         \small\begin{itemize}\setlength\itemsep{0.28em}
-          \item \textbf{233 entidades país--sector}, total \textbf{667 observaciones}.
+          \item \textbf{233 entidades país--sector}, total \textbf{667 observaciones \textit{core}}: productividad nominal y adopción general.
           \item 2021: 220 obs · 2023: 224 obs · 2024: 223 obs.
-          \item De 729 celdas teóricas ($27 \times 9 \times 3$), 62 no publicadas por secreto estadístico en origen.
-          \item Retener el panel no balanceado previene el sesgo de atrición y maximiza la potencia.
+          \item De 729 celdas teóricas ($27 \times 9 \times 3$), 62 sin valores observables; las fuentes reportan estados de secreto estadístico o no disponibilidad.
+          \item Los indicadores secundarios usan casos completos por indicador ($n=626\text{--}662$), no los 667 en todos los casos.
         \end{itemize}
       \end{block}
     \end{column}
@@ -224,7 +224,7 @@
         \small\begin{itemize}\setlength\itemsep{0.28em}
           \item Todas las celdas superan los 1.000 ocupados (mediana sectorial $>140.000$ ocupados).
           \item Cobertura de economías avanzadas y del Este en 9 ramas no financieras.
-          \item Sensibilidad a balanceo evaluada sobre las 209 entidades continuas ($n=627$).
+          \item Sensibilidad balanceada: 209 entidades \textit{core} ($n=627$); secundarios: $n=590\text{--}625$ según indicador.
         \end{itemize}
       \end{alertblock}
     \end{column}
@@ -239,9 +239,9 @@
     \begin{column}{0.48\textwidth}
       \begin{block}{Variables oficiales (Eurostat SBS y TIC)}
         \scriptsize\begin{itemize}\setlength\itemsep{0.20em}
-          \item \textbf{Productividad ($VAB/L$):} código SBS \texttt{V91110}, miles de EUR corrientes por ocupado.
+          \item \textbf{Productividad:} cálculo propio \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR}, miles de EUR corrientes por ocupado.
           \item \textbf{Encuesta TIC (\texttt{isoc\_eb\_ai}):} empresas $\ge 10$ ocupados; informante directivo/TIC; tasa \texttt{PC\_ENT} con ponderación poblacional oficial.
-          \item \textbf{Indicadores:} Adopción general (\texttt{ai\_any}), intensidad ($\ge 2, \ge 3$) y 5 usos funcionales (procesos, producción, logística, ventas, seguridad).
+          \item \textbf{Indicadores:} Adopción general (\texttt{ai\_any}), intensidad ($\ge 2, \ge 3$) y 5 usos funcionales. Los secundarios se estiman por casos completos de cada indicador.
         \end{itemize}
       \end{block}
     \end{column}
@@ -249,7 +249,7 @@
       \begin{alertblock}{Control de escala (Alemania vs. Malta)}
         \scriptsize\begin{itemize}\setlength\itemsep{0.20em}
           \item \textbf{Normalización matemática:} la productividad es un ratio intensivo ($VAB/L$) y la IA es una tasa (\%) sobre empresas; la escala física queda neutralizada.
-          \item \textbf{Heterocedasticidad por tamaño:} errores estándar agrupados por entidad (\textit{cluster-robust}) y estimaciones ponderadas por empleo (WLS).
+          \item \textbf{Inferencia agrupada:} errores estándar basales por entidad y sensibilidad WLS; la agrupación permite dependencia residual intraentidad bajo aproximación asintótica.
         \end{itemize}
       \end{alertblock}
     \end{column}
@@ -276,7 +276,7 @@
       \begin{alertblock}{Pregunta}
         \small ¿Los cambios de adopción coinciden con cambios de productividad en la misma unidad?
       \end{alertblock}
-      \small Aísla variaciones temporales absorbiendo factores fijos mediante efectos fijos.
+      \small Usa variación temporal tras controlar efectos fijos de unidad.
     \end{column}
   \end{columns}
   \vspace{0.32cm}
@@ -299,13 +299,13 @@
   \begin{block}{Modelo M2 | Estimador within de entidad}
     \centering\small
     $\ln(Productividad_{cst}) = \beta IA_{cst} + \alpha_{cs} + \lambda_t + \varepsilon_{cst}$\\[1pt]
-    \scriptsize Efectos fijos país--sector ($\alpha_{cs}$); absorbe diferencias estructurales fijas. Shock anual común a la UE ($\lambda_t$).
+    \scriptsize Efectos país--sector ($\alpha_{cs}$): retiran efectos de unidad invariantes. Shock anual común a la UE ($\lambda_t$).
   \end{block}
   \vspace{0.14cm}
   \begin{alertblock}{Modelo M3 | Doble efecto fijo (Especificación preferida)}
     \centering\small
     $\ln(Productividad_{cst}) = \beta IA_{cst} + \alpha_{cs} + \gamma_{ct} + \varepsilon_{cst}$\\[1pt]
-    \scriptsize Efectos fijos país--sector ($\alpha_{cs}$) y país--año ($\gamma_{ct}$). Absorbe shocks macro y precios por país--año.
+    \scriptsize Efectos país--sector ($\alpha_{cs}$) y país--año ($\gamma_{ct}$): retiran efectos invariantes y componentes comunes; no precios relativos ni shocks sectoriales.
   \end{alertblock}
   \source{Wooldridge (2010); especificaciones econométricas del Trabajo Final de Grado.}
 \end{frame}
@@ -373,22 +373,22 @@
     \textbf{M1} & País + Sector + Año & $+0{,}0032$ & 0,091 & $+3{,}2\%$ \\
     \textbf{M2} & País--Sector + Año & $-0{,}0020$ & 0,050 & $-1{,}9\%$ \\
     \rowcolor{SoftGreen}
-    \textbf{M3 (preferido)} & País--Sector + País--Año & $\mathbf{-0{,}0013}$ & \textbf{0,154} & $\mathbf{-1{,}3\%}$ \\
+    \textbf{M3 (preferido)} & País--Sector + País--Año & $\mathbf{-0{,}0013}$ & \textbf{0,282} & $\mathbf{-1{,}3\%}$ \\
     \bottomrule
   \end{tabular}
   \vspace{0.25cm}
   \begin{alertblock}{El hallazgo metodológico central}
-    \small En M1, la correlación entre unidades hace parecer que la IA aumenta la productividad ($+3{,}2\%$). Sin embargo, al controlar por la heterogeneidad fija de cada entidad en M2 y M3, \textbf{la asociación se disipa por completo} y deja de ser estadísticamente significativa.
+    \small En M3, el coeficiente de adopción general es $-0{,}001263116$ y \textbf{no es estadísticamente significativo} ($p=0{,}282043$; $n=667$, $G=233$). El IC95\% $[-0{,}00357116;\ 0{,}00104493]$ incluye asociaciones negativas y positivas.
   \end{alertblock}
   \vspace{0.15cm}
   \centering\pill{SoftGold}{NO CAUSAL}\quad\pill{SoftGold}{NO ``IA REDUCE PRODUCTIVIDAD''}\par
   \vspace{0.08cm}
-  \scriptsize Errores estándar agrupados por entidad. El coeficiente de M3 no es estadísticamente distinguible de cero.
-  \source{Modelos M1, M2 y M3, Trabajo Final de Grado (Anexo B).}
+  \scriptsize Inferencia canónica T60: CR1 de rango efectivo ($\operatorname{rank}(X)=288$), $EE=0{,}001171453$ y referencia $t_{232}$. Sensibilidad \texttt{AbsorbingLS} separada: su convención de covarianza da $EE=0{,}000884369$ (una vía) y $0{,}000939258$ (dos vías); no es un aumento directo respecto del EE canónico.
+  \source{Modelos M1, M2 y M3; inferencia T60 y sensibilidad de covarianza, Trabajo Final de Grado.}
 \end{frame}
 
 % 9 --------------------------------------------------------------------------
-\begin{frame}{Validación econométrica: Efectos Aleatorios y Test de Hausman}
+\begin{frame}{Validación econométrica: RE y restricción Mundlak/CRE}
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.47\textwidth}
       \begin{block}{Efectos Aleatorios (RE)}
@@ -399,19 +399,20 @@
       \small Capta la asociación transversal en niveles: unidades con mayor adopción media son más productivas.
     \end{column}
     \begin{column}{0.47\textwidth}
-      \begin{alertblock}{Test de Hausman (Mundlak)}
+      \begin{alertblock}{Wald Mundlak/CRE (sin controles temporales)}
         \centering{\fontsize{26}{30}\selectfont\color{Gold}\bfseries $\chi^2(1)=69{,}10$}\\[2pt]
         \large $p=1{,}1\times 10^{-16}$ ($p<0{,}001$)\\[0.10cm]
-        \scriptsize Contraste robusto de Wald
+        \scriptsize $H_0:\ \texttt{ai\_mean}=0$
       \end{alertblock}
-      \small Rechazo contundente de la hipótesis nula de exogeneidad de los efectos individuales ($\text{Cov}(\alpha_i, IA_{it}) = 0$).
+      \small El rechazo aporta evidencia contra la restricción de ortogonalidad RE/CRE correspondiente, bajo sus supuestos.
     \end{column}
   \end{columns}
   \vspace{0.30cm}
-  \begin{alertblock}{Fundamento metodológico del estimador de Efectos Fijos (M3)}
-    \centering\small La heterogeneidad no observada de cada sector está correlacionada con la propensión a adoptar IA. El estimador RE es inconsistente y el estimador \textit{within} (M3) resulta metodológicamente mandatorio.
+  \begin{alertblock}{Elección de M3}
+    \centering\small M3 es la especificación asociativa principal: controla efectos de unidad invariantes y componentes país--año comunes, no precios relativos ni shocks sectoriales. Este Wald no prueba causalidad, cuantifica sesgo ni hace a M3 la única opción posible.
   \end{alertblock}
-  \source{Modelos RE y regresión auxiliar de Mundlak (1978) / Wooldridge (2010), Trabajo Final de Grado (Anexo E).}
+  \scriptsize Con dummies globales de año, la misma restricción da $\chi^2(1)=108{,}98$; no hay un Wald CRE reproducible con efectos país--año.\par
+  \source{\texttt{analysis/03\_validacion\_linearmodels.py}; Mundlak (1978) / Wooldridge (2010).}
 \end{frame}
 
 % 10 -------------------------------------------------------------------------
@@ -421,26 +422,26 @@
   \begin{columns}[T,onlytextwidth]
     \begin{column}{0.31\textwidth}
       \colorbox{SoftGold}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{Negativas}\\[0.10cm]
-      Manufactura: $\beta=-0{,}0098$ ($p<0{,}001$)\\[0.06cm]
-      Comercio: $\beta=-0{,}0136$ ($p<0{,}001$)\\[0.06cm]
-      Serv. prof.: $\beta=-0{,}0029$ ($p=0{,}007$)}}
+      C: $\beta=-0{,}0098$ ($p_{Holm}=0{,}00110$)\\[0.06cm]
+      G: $\beta=-0{,}0136$ ($p_{Holm}=0{,}00000000151$)\\[0.06cm]
+      M: $\beta=-0{,}0029$ ($p_{Holm}=0{,}04838$)}}
     \end{column}
     \begin{column}{0.31\textwidth}
-      \colorbox{SoftCharcoal}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{Cerca de cero}\\[0.10cm]
-      Información y com.:\\$\beta=-0{,}0011$ ($p=0{,}237$)\\[0.08cm]
-      Construcción, transporte, inmuebles, adm.: no signif.}}
+      \colorbox{SoftCharcoal}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{No alcanzan 5\% Holm}\\[0.10cm]
+      J: $p_{crudo}=0{,}237313$\\[0.08cm]
+      F, H, L, N: tampoco alcanzan 5\%.}}
     \end{column}
     \begin{column}{0.31\textwidth}
-      \colorbox{SoftGreen}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{Positiva}\\[0.10cm]
-      Alojamiento y comida:\\$\beta=+0{,}0110$ ($p=0{,}013$)\\[0.08cm]
-      Baja penetración basal y reapertura post-pandemia}}
+      \colorbox{SoftGreen}{\parbox[c][2.15cm][c]{\dimexpr\linewidth-2\fboxsep\relax}{\centering\small\textbf{Alojamiento y comida}\\[0.10cm]
+      $\beta=+0{,}0110$; $p_{crudo}=0{,}013261$\\[0.08cm]
+      $p_{Holm}=0{,}07957$: no alcanza 5\%}}
     \end{column}
   \end{columns}
   \vspace{0.30cm}
   \begin{alertblock}{Lectura económica}
-    \centering\small Compatibles con costos de ajuste y reorganización, selección sectorial o shocks concurrentes. No establecen causalidad.
+    \centering\small Una única familia exploratoria de nueve pruebas: C, G y M permanecen $<0{,}05$ tras Holm; I no. No establecen causalidad ni mecanismos.
   \end{alertblock}
-  \source{Interacciones sectoriales del modelo M3 validado con \texttt{linearmodels}; $n=667$, 233 entidades.}
+  \source{Asociaciones exploratorias; $p$ crudos Wald $\chi^2(1)$ y corrección Holm de nueve pruebas; $n=667$, 233 entidades.}
 \end{frame}
 
 % 11 -------------------------------------------------------------------------
@@ -498,10 +499,10 @@
 % 13 -------------------------------------------------------------------------
 \begin{frame}{Conclusiones}
   \begin{enumerate}\setlength\itemsep{0.48em}
-    \item \textbf{Pregunta y objetivo.} En la UE-27, adopción y productividad se asocian positivamente \textit{entre} unidades ($r=+0{,}558$), pero la relación se disipa en variaciones temporales \textit{dentro} de país--sector ($r=-0{,}229$).
-    \item \textbf{Hipótesis central.} El modelo preferido M3 nominal no muestra una asociación temporal contemporánea significativa ($\beta=-0{,}0013$; $p=0{,}154$, $n=667$). El contraste de Hausman ($\chi^2=69{,}10$, $p<0{,}001$) demuestra que el estimador within de efectos fijos es mandatorio.
-    \item \textbf{Heterogeneidad.} Patrones exploratorios muestran pendientes negativas en manufactura y comercio (compatibles con costos de reorganización) y neutras en información y comunicación.
-    \item \textbf{Implicancia.} La adopción no garantiza realización productiva automática: los activos complementarios, la capacitación y el rediseño de procesos son determinantes.
+    \item \textbf{Pregunta y objetivo.} La correlación de cambios 2021--2024 es negativa y significativa ($r=-0{,}229$; $n=213$): es un estimando descriptivo distinto del coeficiente de M3.
+    \item \textbf{Hipótesis central.} En M3, la adopción general no es estadísticamente significativa ($\beta=-0{,}001263116$; $EE=0{,}001171453$; $p=0{,}282043$, $n=667$), bajo CR1 de rango efectivo y $t_{232}$. El Wald Mundlak/CRE sin controles temporales rechaza $H_0:\ \texttt{ai\_mean}=0$ ($\chi^2=69{,}10$, $p<0{,}001$): evidencia contra la restricción RE/CRE correspondiente bajo sus supuestos, no causalidad ni sesgo cuantificado.
+    \item \textbf{Heterogeneidad.} En la familia exploratoria de nueve contrastes, C, G y M permanecen bajo 5\% tras Holm; I no. No identifica mecanismos sectoriales.
+    \item \textbf{Implicancia.} La adopción no garantiza una mejora automática; activos complementarios, capacitación y rediseño son hipótesis explicativas compatibles.
   \end{enumerate}
   \vspace{0.12cm}
   \centering\pill{SoftGold}{ASOCIACIONES, NO EFECTOS CAUSALES}\par
@@ -547,9 +548,9 @@
         \small\begin{itemize}\setlength\itemsep{0.32em}
           \item 27 países de la Unión Europea.
           \item 9 sectores y 3 olas: 2021, 2023 y 2024.
-          \item 729 celdas teóricas; 667 con información completa.
-          \item Muestra principal no balanceada: 233 entidades ($n=667$).
-          \item Sensibilidad balanceada: 209 entidades ($n=627$).
+          \item 729 celdas teóricas; 667 \textit{core} con productividad nominal y adopción general.
+          \item Muestra principal no balanceada: 233 entidades ($n=667$); secundarios: $n=626\text{--}662$ por indicador.
+          \item Sensibilidad balanceada: 209 entidades \textit{core} ($n=627$); secundarios: $n=590\text{--}625$.
         \end{itemize}
       \end{block}
     \end{column}
@@ -557,15 +558,15 @@
       \begin{block}{Fuentes Eurostat}
         \small\begin{itemize}\setlength\itemsep{0.32em}
           \item Encuestas TIC (\texttt{isoc\_eb\_ai}, \texttt{isoc\_eb\_ain2}): adopción, intensidad y 5 usos funcionales.
-          \item Estadísticas estructurales (\texttt{sbs\_sc\_ovw}): valor agregado y personas ocupadas ($\ge 10$ ocupados).
-          \item Productividad nominal: miles de EUR corrientes por ocupado.
+          \item Estadísticas estructurales (\texttt{sbs\_sc\_ovw}): \texttt{AV\_MEUR} (valor agregado a precios básicos) y \texttt{EMP\_NR} ($\ge 10$ ocupados).
+          \item Productividad nominal propia: \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR}, miles de EUR corrientes por ocupado.
         \end{itemize}
       \end{block}
     \end{column}
   \end{columns}
   \vspace{0.30cm}
   \begin{alertblock}{Variables centrales}
-    \small IA: porcentaje de empresas que declara utilizar tecnologías de IA (\texttt{PC\_ENT}). Productividad laboral aparente: valor agregado por persona ocupada (definición oficial Eurostat SBS); la especificación principal usa su logaritmo.
+    \small IA: porcentaje de empresas que declara utilizar tecnologías de IA (\texttt{PC\_ENT}). Productividad laboral aparente nominal: cálculo propio de \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR}; la especificación principal usa su logaritmo.
   \end{alertblock}
   \source{Eurostat; Trabajo Final de Grado, datos y metodología.}
 \end{frame}
@@ -600,7 +601,7 @@
 \begin{frame}{Apéndice | Especificaciones y ecuaciones}
   \small
   \begin{block}{Productividad laboral aparente}
-    \centering $Productividad_{cst}=\dfrac{Valor\ agregado_{cst}}{Personas\ ocupadas_{cst}}$
+    \centering $Productividad_{cst}=\dfrac{\texttt{AV\_MEUR}_{cst}\times1000}{\texttt{EMP\_NR}_{cst}}$ \; (cálculo propio)
   \end{block}
   \begin{block}{Modelo principal M3}
     \centering $\ln(Productividad_{cst})=\beta IA_{cst}+\alpha_{cs}+\gamma_{ct}+\varepsilon_{cst}$
@@ -619,33 +620,33 @@
     \end{column}
   \end{columns}
   \vspace{0.20cm}
-  \scriptsize $\alpha_{cs}$ absorbe diferencias permanentes país--sector; $\gamma_{ct}$, shocks comunes por país--año. Errores estándar agrupados por entidad país--sector.
+  \scriptsize $\alpha_{cs}$ retira efectos de unidad invariantes y $\gamma_{ct}$ componentes comunes por país--año; no precios relativos ni shocks sectoriales. Inferencia basal agrupada por entidad; sensibilidad dos vías entidad+país--año.
   \source{Wooldridge (2010); Berndt (1991); Trabajo Final de Grado, estrategia econométrica.}
 \end{frame}
 
 \begin{frame}{Apéndice | Resultados secundarios M3 nominal}
-  \centering\scriptsize Estimaciones M3 sobre muestra principal no balanceada ($n=667$, 233 entidades); errores robustos clustered.\par
+  \centering\scriptsize Estimaciones M3: adopción general sobre la muestra \textit{core} no balanceada ($n=667$, 233 entidades); secundarios por casos completos ($n=626\text{--}662$); errores robustos clustered.\par
   \vspace{0.15cm}
   \renewcommand{\arraystretch}{1.13}
   \begin{tabular}{lrrr}
     \toprule
     \textbf{Indicador de IA} & \textbf{$\beta$ (1 pp)} & \textbf{$p$} & \textbf{Obs.} \\
     \midrule
-    Adopción general & $-0{,}0013$ & 0,154 & 667 \\
-    Dos o más tecnologías & $-0{,}0017$ & 0,083 & 662 \\
-    Tres o más tecnologías & $-0{,}0020$ & 0,120 & 653 \\
-    Procesos y decisiones & $-0{,}0007$ & 0,660 & 662 \\
-    Producción & $-0{,}0014$ & 0,385 & 631 \\
-    Logística & $-0{,}0011$ & 0,888 & 627 \\
-    Marketing y ventas & $-0{,}0038$ & 0,054 & 640 \\
-    Seguridad informática & $-0{,}0019$ & 0,412 & 626 \\
+    Adopción general & $-0{,}0013$ & 0,282 & 667 \\
+    Dos o más tecnologías & $-0{,}0017$ & 0,192 & 662 \\
+    Tres o más tecnologías & $-0{,}0020$ & 0,244 & 653 \\
+    Procesos y decisiones & $-0{,}0007$ & 0,740 & 662 \\
+    Producción & $-0{,}0014$ & 0,519 & 631 \\
+    Logística & $-0{,}0011$ & 0,917 & 627 \\
+    Marketing y ventas & $-0{,}0038$ & 0,151 & 640 \\
+    Seguridad informática & $-0{,}0019$ & 0,542 & 626 \\
     \bottomrule
   \end{tabular}
   \vspace{0.24cm}
   \begin{alertblock}{Interpretación}
     \centering\small Ningún coeficiente funcional es positivo y significativo en la especificación nominal M3.
   \end{alertblock}
-  \source{Modelo M3 validado con \texttt{linearmodels.iv.AbsorbingLS}, Trabajo Final de Grado.}
+  \source{EE y $p$ canónicos T60; \texttt{linearmodels.iv.AbsorbingLS} valida coeficientes con otra convención de covarianza.}
 \end{frame}
 
 \begin{frame}{Apéndice | Robustez de la adopción general}
@@ -656,7 +657,7 @@
     \toprule
     \textbf{Escenario} & \textbf{$\beta$} & \textbf{$p$} & \textbf{Efecto 10 pp} & \textbf{Obs.} \\
     \midrule
-    Muestra principal no balanceada, sin ponderar & $-0{,}0013$ & 0,154 & $-1{,}3\%$ & 667 \\
+    Muestra principal no balanceada, sin ponderar & $-0{,}0013$ & 0,282 & $-1{,}3\%$ & 667 \\
     Muestra principal, ponderada por empleo (WLS) & $-0{,}0016$ & 0,032 & $-1{,}6\%$ & 667 \\
     Muestra principal, sin extremos p1--p99 & $-0{,}0010$ & 0,250 & $-1{,}0\%$ & 653 \\
     Sensibilidad a balanceo: muestra balanceada & $-0{,}0011$ & 0,250 & $-1{,}1\%$ & 627 \\
@@ -669,13 +670,13 @@
   \source{Trabajo Final de Grado, pruebas de robustez.}
 \end{frame}
 
-\begin{frame}{Apéndice | Efectos Aleatorios y Test de Hausman por indicador}
-  \centering\scriptsize Estimaciones RE (GLS) y contraste de Hausman (Mundlak Wald $\chi^2$) en la muestra principal ($n=667$)\par
+\begin{frame}{Apéndice | RE y restricciones Wald Mundlak/CRE}
+  \centering\scriptsize Estimaciones RE (GLS) y Wald Mundlak/CRE sin controles temporales: adopción general en la muestra \textit{core} ($n=667$) y secundarios en casos completos por indicador ($n=626\text{--}662$).\par
   \vspace{0.15cm}
   \renewcommand{\arraystretch}{1.12}
   \begin{tabular}{lrrrrr}
     \toprule
-    \textbf{Indicador de IA} & \textbf{$\beta_{RE}$} & \textbf{$p_{RE}$} & \textbf{Hausman $\chi^2$} & \textbf{$p$-valor} & \textbf{Obs.} \\
+    \textbf{Indicador de IA} & \textbf{$\beta_{RE}$} & \textbf{$p_{RE}$} & \textbf{Wald CRE $\chi^2$} & \textbf{$p$-valor} & \textbf{Obs.} \\
     \midrule
     Adopción general & $+0{,}0111$ & <0,001 & 69,10 & <0,001 & 667 \\
     Dos o más tecnologías & $+0{,}0121$ & <0,001 & 56,86 & <0,001 & 662 \\
@@ -688,10 +689,10 @@
     \bottomrule
   \end{tabular}
   \vspace{0.22cm}
-  \begin{alertblock}{Conclusión metodológica unánime}
-    \centering\small En todos los indicadores se rechaza contundentemente RE ($p < 0{,}001$), demostrando que la correlación entre adopción y $\alpha_i$ exige estimadores de efectos fijos.
+  \begin{alertblock}{Interpretación}
+    \centering\small Cada estadístico contrasta $H_0:\ \texttt{ai\_mean}=0$ en su RE/CRE sin controles temporales; el rechazo es evidencia contra la restricción de ortogonalidad correspondiente bajo sus supuestos, no una prueba causal ni una selección única de M3.
   \end{alertblock}
-  \source{Modelos RE y contraste de Mundlak (1978) / Wooldridge (2010), Trabajo Final de Grado (Anexo E).}
+  \source{\texttt{analysis/03\_validacion\_linearmodels.py}; Mundlak (1978) / Wooldridge (2010).}
 \end{frame}
 
 \begin{frame}{Apéndice | Bibliografía (1/3)}

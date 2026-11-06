@@ -57,7 +57,7 @@
 
 \begin{tabular}{@{}ll}
   \textbf{Estudiante:} & Facundo Díaz Larrarte (DNI 43.475.555) \\
-  \textbf{Directores:} & Miguel Bosch / Ana Vianco \\
+  \textbf{Director:} & Miguel Bosch \\
   \textbf{Instancia:} & Presentación de avance metodológico en Seminario Taller TGF II \\
   \textbf{Repositorio de código:} & \url{https://github.com/Facundo-Diaz-Larrarte/TFG_Facundo_Diaz_Larrarte} \\
 \end{tabular}
@@ -100,8 +100,8 @@ El trabajo se apoya en tres pilares de la economía del cambio tecnológico y la
 El acceso a la herramienta es sólo el primer paso; si no se profundiza el margen intensivo (integración operativa profunda y reingeniería organizacional), el impacto agregado en el corto plazo resulta moderado o imperceptible.
 
 \subsection{4. Antecedentes Empíricos: Microdatos frente a Agregación Sectorial}
-* \textbf{Nivel de empresa (\textit{firm-level}):} Estudios como \citet{czarnitzki2023firm} para Alemania o \citet{aldasoro2026adoption} para el BIS hallan que las firmas pioneras (\textit{frontier firms}) con alta dotación de capital humano y gobernanza madura exhiben primas positivas de productividad.
-* \textbf{Nivel sectorial/macro:} Estudios agregados para Europa \citep{yilmaz2026dataset} encuentran la denominada \textit{brecha de atribución de IA}: las tasas de adopción crecen con rapidez, pero la productividad agregada no reacciona al mismo ritmo, diluida por la heterogeneidad entre firmas líderes y rezagadas.
+* \textbf{Nivel de empresa (\textit{firm-level}):} \citet{czarnitzki2023firm} documentan para Alemania asociaciones positivas entre el uso o la intensidad de IA y ventas o valor agregado, en especificaciones con controles observados, sin establecer causalidad ni un canal por capital humano; los autores señalan que analizar esos canales requiere datos más detallados sobre la fuerza laboral y el capital humano. Por su parte, \citet{aldasoro2026adoption}, con datos EIBIS--ORBIS (2019--2024), estiman mediante emparejamiento e IV basado en firmas estadounidenses comparables un aumento de aproximadamente 4,1\% en el logaritmo de la facturación por empleado, con valor agregado por empleado como robustez; los autores lo interpretan causalmente bajo sus supuestos de identificación. Las interacciones más fuertes son con inversión en software/datos y capacitación, no con un mecanismo demostrado de gobernanza; no explica causalmente este panel sectorial.
+* \textbf{Nivel sectorial/macro:} El dataset de \citet{yilmaz2026dataset} reúne 733 observaciones país--sector--año de la UE-27, siete sectores y las olas 2021, 2023, 2024 y 2025. Define la \textit{AI Attribution Wedge} como un indicador descriptivo de \textit{screening} que combina adopción, productividad posterior y horas trabajadas; el registro aclara que no es causal. No mide ni demuestra mecanismos de selección o agregación entre firmas líderes y rezagadas, que solo pueden plantearse como hipótesis no medidas.
 
 \section{Estructura de Datos y Construcción del Panel}
 
@@ -110,22 +110,22 @@ El acceso a la herramienta es sólo el primer paso; si no se profundiza el marge
 * \textbf{Ámbito geográfico:} Los 27 Estados miembros de la Unión Europea.
 * \textbf{Sectores analizados:} 9 ramas de actividad económica según la clasificación oficial NACE Rev. 2 (C: Manufactura, F: Construcción, G: Comercio, H: Transporte, I: Alojamiento y comida, J: Información y comunicación, L: Inmobiliarias, M: Profesionales y científicas, N: Administrativas).
 * \textbf{Ventana temporal:} Olas armonizadas de Eurostat correspondientes a los años \textbf{2021, 2023 y 2024}.
-* \textbf{Estructura muestral:} De 729 celdas teóricas posibles, 667 poseen datos completos, y se conforma una \textbf{muestra balanceada de 209 unidades país--sector} con seguimiento ininterrumpido en los tres períodos (627 observaciones).
+* \textbf{Estructura muestral:} De 729 celdas teóricas posibles, la muestra \textit{core} no balanceada reúne 667 observaciones de productividad nominal y adopción general para 233 unidades país--sector. Esas 667 observaciones no son completas en todos los indicadores secundarios: cada uno usa casos completos específicos ($n=626\text{--}662$). El escenario \textit{core} balanceado reúne 209 unidades seguidas en los tres períodos (627 observaciones); los indicadores secundarios balanceados abarcan $n=590\text{--}625$.
 
 \subsection{Fuentes Oficiales de Eurostat}
 Para construir la base analítica se integraron dos relevamientos estadísticos independientes y armonizados:
 \begin{enumerate}[label=\alph*)]
   \item \textbf{Encuesta sobre uso de TIC y comercio electrónico en empresas} (\texttt{isoc\_eb\_ai} e \texttt{isoc\_eb\_ain2}): Provee los porcentajes de empresas de 10 o más ocupados que adoptan tecnologías de IA.
-  \item \textbf{Estadísticas Estructurales de Empresas} (SBS -- \texttt{sbs\_sc\_ovw}): Provee las variables económicas de Valor Agregado a costo de factores (en millones de euros corrientes) y el número total de personas ocupadas.
-  \item \textbf{Cuentas Nacionales Sectoriales} (\texttt{nama\_10\_a64}): Provee los deflactores de valor agregado país--sector--año utilizados en la evaluación de robustez con precios reales.
+  \item \textbf{Estadísticas Estructurales de Empresas} (SBS -- \texttt{sbs\_sc\_ovw}): Provee \texttt{AV\_MEUR}, valor agregado a precios básicos en millones de euros corrientes, y \texttt{EMP\_NR}, personas ocupadas.
 \end{enumerate}
 
 \subsection{Definición Operativa de Variables}
 \begin{itemize}[leftmargin=*]
   \item \textbf{Variable dependiente (Productividad Laboral Aparente):}
   \begin{equation}
-    \ln(Productividad_{cst}) = \ln\left( \frac{\text{Valor Agregado}_{cst} \times 1000}{\text{Personas Ocupadas}_{cst}} \right)
+    \ln(Productividad_{cst}) = \ln\left( \frac{\texttt{AV\_MEUR}_{cst} \times 1000}{\texttt{EMP\_NR}_{cst}} \right)
   \end{equation}
+  Es una construcción propia, expresada en miles de euros corrientes por persona ocupada; no es el indicador histórico \texttt{V91110}.
   \textit{Justificación metodológica del logaritmo:} Reduce la asimetría de la distribución del valor agregado, amortigua la influencia de sectores hiperproductivos atípicos y permite interpretar los coeficientes econométricos como semi-elasticidades porcentuales.
   \item \textbf{Variable explicativa principal:} Tasa de adopción general (\texttt{ai\_any\_pct}), medida como porcentaje de firmas (0 a 100).
   \item \textbf{Variables explicativas complementarias (analizadas en modelos separados):}
@@ -153,20 +153,20 @@ Para controlar por factores no observables y aislar la variación temporal, la e
 \textbf{Desglose de los componentes del modelo:}
 \begin{enumerate}[label=\textbf{\arabic*.}]
   \item \textbf{$\beta$ (Parámetro de interés):} Cuantifica la semi-elasticidad contemporánea dentro de cada sector. Un aumento de 10 puntos porcentuales en adopción se asocia con un cambio aproximado de $10\beta \times 100\%$ en la productividad.
-  \item \textbf{$\alpha_{cs}$ (Efectos fijos país--sector):} Absorbe toda la heterogeneidad no observable invariable en el tiempo. Controla por diferencias institucionales, dotaciones históricas de capital físico e intangibles, geografía, y la brecha estructural permanente entre sectores (e.g., software en Alemania vs. gastronomía en Grecia).
-  \item \textbf{$\gamma_{ct}$ (Efectos fijos país--año):} Absorbe todos los shocks macroeconómicos y variaciones de nivel de precios anuales comunes a todos los sectores de un determinado país (e.g., inflación nacional, crisis energética europea 2022--2023, fluctuaciones del ciclo económico).
-  \item \textbf{Errores estándar agrupados (\textit{Cluster-Robust SE}):} Los errores estándar se agrupan a nivel de la entidad país--sector ($cs$), corrigiendo por autocorrelación serial y heterocedasticidad dentro de cada unidad a lo largo del tiempo.
+  \item \textbf{$\alpha_{cs}$ (Efectos fijos país--sector):} Absorbe heterogeneidad no observable invariable en el tiempo, como diferencias institucionales, dotaciones históricas de capital o geografía.
+  \item \textbf{$\gamma_{ct}$ (Efectos fijos país--año):} Absorbe los componentes macroeconómicos y de nivel de precios anuales comunes a todos los sectores de un país; no identifica precios relativos ni shocks específicos de sector.
+  \item \textbf{Errores estándar agrupados (\textit{Cluster-Robust SE}):} La inferencia canónica T60 agrupa por entidad país--sector y aplica CR1 de rango efectivo $\frac{G}{G-1}\frac{N-1}{N-\operatorname{rank}(X)}$, con referencia $t_{G-1}$. Para adopción general: $n=667$, $G=233$, $\operatorname{rank}(X)=288$, $\beta=-0,001263116$, $EE=0,001171453$, $p=0,282043$ e IC95\% $[-0,00357116;\ 0,00104493]$. La sensibilidad bidimensional de \texttt{AbsorbingLS} usa una convención de covarianza separada; sus EE no son un aumento directo desde el EE canónico.
 \end{enumerate}
 
 \textbf{Mecanismo de Identificación (Teorema de Frisch--Waugh--Lovell):}
-Gracias a esta doble malla de efectos fijos, el estimador no confunde diferencias de nivel entre países ricos y pobres ni shocks macroeconómicos nacionales. La estimación proviene exclusivamente de la \textbf{variación dentro} (\textit{within}): evalúa si un sector que adoptó IA a mayor ritmo que el promedio de su propio país experimentó ganancias de productividad respecto a su propia trayectoria histórica media.
+Gracias a esta doble malla de efectos fijos, el estimador no confunde diferencias de nivel entre países ricos y pobres ni shocks macroeconómicos nacionales. La estimación proviene exclusivamente de la \textbf{variación dentro} (\textit{within}): evalúa si un sector que adoptó IA a mayor ritmo que el promedio de su propio país experimentó ganancias de productividad respecto a su propia trayectoria histórica media. Para cada indicador de IA, M1, M2 y M3 se estiman sobre la misma muestra de casos completos; el tamaño muestral no cambia por la especificación de efectos fijos.
 
 \subsection{Extensiones y Batería de Robustez}
 \begin{itemize}[leftmargin=*]
-  \item \textbf{Heterogeneidad sectorial:} Estimación con interacciones ($IA_{cst} \times Sector_s$) para comprobar si ramas como manufactura, comercio o servicios informáticos exhiben respuestas disímiles.
-  \item \textbf{Sensibilidad muestral:} Reestimación en muestra no balanceada (667 obs.) y con ponderación por personal ocupado.
+  \item \textbf{Heterogeneidad sectorial (extensión exploratoria):} Las nueve interacciones ($IA_{cst} \times Sector_s$) forman una única familia; se informan $p$ crudos y Holm. C ($0,00110$), G ($0,00000000151$) y M ($0,04838$) permanecen bajo 0,05; I pasa de $p$ crudo $0,013261$ a $p_{Holm}=0,07957$. Son asociaciones exploratorias, no mecanismos ni efectos causales.
+  \item \textbf{Sensibilidad muestral:} Para adopción general, reestimación en el \textit{core} no balanceado (667 obs.) y el escenario balanceado (627); los indicadores secundarios usan $n=626\text{--}662$ no balanceadas y $n=590\text{--}625$ balanceadas, según indicador.
   \item \textbf{Control de valores extremos:} Exclusión de economías distorsionadas por regímenes multinacionales (e.g., Irlanda y Luxemburgo).
-  \item \textbf{Robustez crucial (Precios relativos):} Comparación entre productividad nominal y \textbf{productividad real sectorial aproximada} deflactada por ramas NACE a precios de 2021. Al controlar por precios sectoriales, la asociación pasa de levemente negativa y no significativa en nominal ($\beta = -0,0011$, $p=0,250$) a positiva y significativa en real ($\beta = 0,0019$, $p=0,036$), demostrando la alta sensibilidad del indicador al ciclo inflacionario reciente.
+  \item \textbf{Delimitación de precios:} El análisis sustantivo usa productividad laboral aparente nominal de SBS; los efectos país--año sólo absorben componentes comunes a los sectores de cada país--año.
 \end{itemize}
 
 \section{Guía Rápida para la Exposición en el Seminario}
@@ -175,8 +175,8 @@ Gracias a esta doble malla de efectos fijos, el estimador no confunde diferencia
 \begin{enumerate}
   \item \textbf{El Gancho (30 seg):} "Todos asumimos que más IA equivale a más productividad. El objetivo de mi tesina es testear si esa intuición se sostiene empíricamente en la Unión Europea o si estamos ante una nueva versión de la paradoja de Solow."
   \item \textbf{El Marco Teórico (1.5 min):} Explicar que la IA es una GPT que demanda maduración (Curva J) y reorganización de tareas internas (margen intensivo vs. margen extensivo).
-  \item \textbf{Los Datos (1.5 min):} Mostrar el panel país--sector--año de Eurostat (SBS + TIC, 209 unidades balanceadas en 2021, 2023 y 2024). Destacar que se analiza la productividad laboral aparente en logaritmos.
-  \item \textbf{La Metodología (2 min):} Explicar el modelo M3 con efectos fijos país--sector y país--año. Enfatizar qué absorbe cada efecto fijo y por qué elimina la endogeneidad por factores fijos no observados y shocks macro.
+  \item \textbf{Los Datos (1.5 min):} Mostrar el panel país--sector--año de Eurostat (SBS + TIC): muestra \textit{core} no balanceada de 233 entidades y 667 observaciones para productividad nominal y adopción general; 209 entidades balanceadas ($n=627$) sólo como sensibilidad. Aclarar que los indicadores secundarios usan muestras específicas y que la productividad laboral aparente se analiza en logaritmos.
+  \item \textbf{La Metodología (2 min):} Explicar el modelo M3 con efectos fijos país--sector y país--año. Enfatizar qué componentes invariantes o comunes absorbe cada efecto fijo, sin atribuirle eliminación de la endogeneidad.
   \item \textbf{Cierre Metodológico (30 seg):} Subrayar la honestidad intelectual del diseño: es un estudio observacional y asociativo que documenta una \textit{brecha de realización productiva} en el corto plazo.
 \end{enumerate}
 
@@ -185,7 +185,7 @@ Gracias a esta doble malla de efectos fijos, el estimador no confunde diferencia
   \item \textbf{Pregunta: "¿Por qué no usaste datos a nivel de firma individual?"} \\
   \textit{Respuesta:} "Eurostat protege los microdatos de empresas por secreto estadístico. Para estudiar los 27 países de la UE de manera armonizada y abierta, el nivel país--sector es el límite de desagregación pública disponible."
   \item \textbf{Pregunta: "¿Por qué agregaste efectos país--año en lugar de efectos año simples?"} \\
-  \textit{Respuesta:} "Porque entre 2021 y 2024 Europa vivió shocks muy asimétricos entre países (la crisis del gas ruso impactó más en Alemania o Europa del Este que en la península ibérica, y las tasas de inflación divergieron fuertemente). El efecto país--año neutraliza toda esa distorsión macroeconómica nacional."
+  \textit{Respuesta:} "Porque los efectos país--año absorben componentes macroeconómicos comunes a todos los sectores de un país en un año. Esto no separa shocks ni precios relativos específicos de cada sector."
   \item \textbf{Pregunta: "¿Tu estimación demuestra causalidad?"} \\
   \textit{Respuesta:} "No, y el trabajo lo explicita de entrada. Es una estimación de datos de panel dentro de entidad con controles de heterogeneidad. No contamos con un instrumento cuasi-experimental exógeno y el trienio 2021--2024 captura solo el impacto contemporáneo de corto plazo."
 \end{itemize}

@@ -5,6 +5,10 @@ Las estimaciones son asociativas. Los errores estándar se agrupan por entidad
 país-sector. La especificación preferida incorpora efectos fijos país-sector y
 país-año, que absorben heterogeneidad permanente y shocks macroeconómicos
 comunes a los sectores de cada país en cada año.
+
+La inferencia canónica con agrupación unidireccional por entidad usa la
+corrección CR1 ``G/(G-1) * (N-1)/(N-rank(X))`` y distribución ``t_(G-1)``
+para valores p e intervalos de confianza.
 """
 
 from __future__ import annotations
@@ -47,6 +51,29 @@ def design_matrix(df: pd.DataFrame, ai_variable: str, fixed_effects: list[str]) 
     return matrix.to_numpy(dtype=float), names
 
 
+def clustered_inference(beta: float, se: float, clusters: int) -> dict[str, float | int]:
+    """Apply the canonical one-way entity-cluster t inference convention."""
+    inference_df = clusters - 1
+    t_stat = beta / se if se > 0 else np.nan
+    if inference_df <= 0:
+        return {
+            "t_stat": t_stat,
+            "p_value": np.nan,
+            "ci95_low": np.nan,
+            "ci95_high": np.nan,
+            "inference_df": inference_df,
+        }
+
+    ci_critical = student_t.ppf(0.975, df=inference_df)
+    return {
+        "t_stat": t_stat,
+        "p_value": 2 * student_t.sf(abs(t_stat), df=inference_df),
+        "ci95_low": beta - ci_critical * se,
+        "ci95_high": beta + ci_critical * se,
+        "inference_df": inference_df,
+    }
+
+
 def clustered_ols(y: np.ndarray, x: np.ndarray, clusters: np.ndarray) -> dict[str, np.ndarray | float | int]:
     xtx_inv = np.linalg.pinv(x.T @ x)
     beta = xtx_inv @ x.T @ y
@@ -58,8 +85,9 @@ def clustered_ols(y: np.ndarray, x: np.ndarray, clusters: np.ndarray) -> dict[st
         score = x[idx].T @ resid[idx]
         meat += np.outer(score, score)
     n, k = x.shape
+    rank = int(np.linalg.matrix_rank(x))
     g = len(unique_clusters)
-    correction = (g / (g - 1)) * ((n - 1) / (n - k)) if g > 1 and n > k else 1.0
+    correction = (g / (g - 1)) * ((n - 1) / (n - rank)) if g > 1 and n > rank else 1.0
     vcov = correction * xtx_inv @ meat @ xtx_inv
     se = np.sqrt(np.maximum(np.diag(vcov), 0))
     fitted = x @ beta
@@ -72,7 +100,10 @@ def clustered_ols(y: np.ndarray, x: np.ndarray, clusters: np.ndarray) -> dict[st
         "r2": 1 - ssr / tss if tss > 0 else np.nan,
         "n": n,
         "k": k,
+        "rank": rank,
         "clusters": g,
+        "cr1_correction": correction,
+        "inference_df": g - 1,
     }
 
 
@@ -103,10 +134,7 @@ def main() -> None:
             idx = names.index(ai_variable)
             beta = float(result["beta"][idx])
             se = float(result["se"][idx])
-            t_stat = beta / se if se > 0 else np.nan
-            df_clusters = int(result["clusters"]) - 1
-            p_value = 2 * student_t.sf(abs(t_stat), df=df_clusters) if df_clusters > 0 else np.nan
-            ci_critical = student_t.ppf(0.975, df=df_clusters) if df_clusters > 0 else 1.96
+            inference = clustered_inference(beta, se, int(result["clusters"]))
             rows.append(
                 {
                     "specification": spec_name,
@@ -114,13 +142,13 @@ def main() -> None:
                     "indicator": label,
                     "beta_per_1pp": beta,
                     "clustered_se": se,
-                    "t_stat": t_stat,
-                    "p_value": p_value,
-                    "ci95_low": beta - ci_critical * se,
-                    "ci95_high": beta + ci_critical * se,
+                    **inference,
                     "effect_10pp_pct": 100 * (np.exp(10 * beta) - 1),
                     "n": int(result["n"]),
                     "clusters": int(result["clusters"]),
+                    "design_rank": int(result["rank"]),
+                    "cr1_correction": float(result["cr1_correction"]),
+                    "inference_convention": "CR1 G/(G-1)*(N-1)/(N-rank(X)); t_(G-1)",
                     "r2_including_fe": float(result["r2"]),
                 }
             )

@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Robustez con productividad laboral deflactada por precios sectoriales.
+"""ARCHIVADO — NO EJECUTAR NI USAR EN EL TFG ACTIVO.
 
-Descarga de Eurostat ``nama_10_a64`` valor agregado bruto a precios corrientes
-(CP_MEUR) y volúmenes encadenados (CLV20_MEUR) para los países, sectores y años
-presentes en la base analítica. Con esos datos construye un deflactor
-país-sector-año, normalizado a 2021=1 dentro de cada entidad país-sector, y lo
-aplica a la productividad laboral aparente SBS.
+Este fuente preserva, sin borrado, el cálculo histórico de una proxy de
+productividad laboral deflactada. La proxy fue retirada por decisión del autor:
+combina productividad SBS de empresas de 10+ ocupados con deflactores de Cuentas
+Nacionales para el sector agregado, cuyos universos no son compatibles.
 
-La corrección es una aproximación: el numerador de productividad proviene de SBS
-(empresas de 10+ ocupados), mientras que el deflactor proviene de cuentas
-nacionales por industria para el sector agregado completo.
+El punto de entrada rechaza deliberadamente la ejecución antes de descargar,
+crear directorios o sobrescribir artefactos. El código restante se conserva sólo
+para trazabilidad histórica y no constituye una robustez ni una ruta de
+reproducción activa.
 """
 
 from __future__ import annotations
@@ -155,6 +155,11 @@ def estimate_m3(data: pd.DataFrame, dependent: str, ai_variable: str) -> dict[st
 
 
 def main() -> None:
+    raise SystemExit(
+        "ARCHIVADO — analysis/05_productividad_real_sectorial.py fue retirado del TFG activo; "
+        "no se permite ejecutarlo ni regenerar sus salidas históricas."
+    )
+
     parser = argparse.ArgumentParser()
     parser.add_argument("--input", type=Path, default=Path("data/processed/panel_analitico.csv"))
     parser.add_argument("--output-dir", type=Path, default=Path("outputs/modelos_panel_v0_3"))

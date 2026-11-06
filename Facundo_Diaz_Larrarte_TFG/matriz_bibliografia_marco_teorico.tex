@@ -67,7 +67,7 @@
   {\Large\bfseries\color{ForestDark} DOSSIER DE DEFENSA BIBLIOGRÁFICA INTEGRAL}\\[0.12cm]
   {\large\bfseries\color{Gold} Matriz Exhaustiva de las 17 Fuentes Registradas en la Bibliografía del TFG}\\[0.18cm]
   \textbf{Tema:} Usos empresariales de inteligencia artificial y productividad laboral: evidencia país--sector para la Unión Europea\\[0.06cm]
-  \textbf{Tesista:} Facundo Díaz Larrarte \quad$\cdot$\quad \textbf{Directores:} Miguel Bosch y Ana Vianco \quad$\cdot$\quad \textbf{Licenciatura en Economía (FCE--UNRC)}
+  \textbf{Tesista:} Facundo Díaz Larrarte \quad$\cdot$\quad \textbf{Director:} Miguel Bosch \quad$\cdot$\quad \textbf{Licenciatura en Economía (FCE--UNRC)}
 \end{center}
 
 \vspace{0.15cm}
@@ -115,10 +115,10 @@
   \textit{BIS Working Papers N.º 1325}.\par
   [\texttt{aldasoro2026adoption}] &
   \textbf{Evidencia Microeconómica UE} &
-  Encuesta de inversión del Banco Europeo de Inversiones (EIBIS), representativa de firmas de la UE. &
-  Heterogeneidad en la UE: las ganancias de productividad se concentran solo en firmas con alta gobernanza digital y capacitación interna; en adopción pasiva el efecto es nulo. &
-  \textbf{Respaldo Institucional Contemporáneo:}\par
-  Aporta evidencia del BIS y BEI para el mismo bloque y época, confirmando que la tecnología no rinde sin capacidades de gestión complementarias (brecha de realización). \\
+  Datos empresariales EIBIS--ORBIS (2019--2024); productividad: logaritmo de facturación por empleado (valor agregado por empleado, robustez). &
+  Con controles, la estrategia de emparejamiento e IV basada en firmas de EE.UU. estima $0,041$ ($\sim$4,1\%) para facturación por empleado; los autores lo interpretan causalmente bajo sus supuestos. Interacciones más fuertes: software/datos y capacitación; edificios/infraestructura, menor positiva; organización/procesos, no significativa. &
+  \textbf{Referencia Microeconómica:}\par
+  Aporta evidencia empresarial contemporánea, sin probar un mecanismo de gestión ni explicar causalmente este panel sectorial. \\
 
   \textbf{Anthropic} (2026)\par
   \textit{Anthropic Economic Index: Cadences and the Shift Toward Agentic Tasks}.\par
@@ -138,8 +138,8 @@
   1. Productividad aparente como \textbf{producto medio parcial} ($PMe_L$).\par
   2. Uso de \textbf{Valor Agregado Bruto} ($Y - M$) para aislar riqueza neta y evitar doble contabilización.\par
   3. Previene sesgo por error de medición de deflactores macro híbridos. &
-  \textbf{Blindaje Teórico de la Variable Dependiente:}\par
-  Justifica el uso de $VAB/L$ frente a facturación y el trabajo con series nominales SBS, dejando que los efectos país--año ($\gamma_{ct}$) absorban la inflación macro vía Frisch--Waugh--Lovell. \\
+  \textbf{Delimitación de la Variable Dependiente:}\par
+  Justifica el uso de $VAB/L$ frente a facturación y el trabajo con series nominales SBS. Los efectos país--año absorben componentes de inflación macro comunes a los sectores de un país--año, no precios relativos sectoriales. \\
 
   \textbf{Bresnahan, Timothy F., Brynjolfsson, Erik y Hitt, Lorin M.} (2002)\par
   \textit{Quarterly Journal of Economics}, 117(1), 339--376.\par
@@ -157,16 +157,16 @@
   Modelo macroeconómico sobre asimilación de Tecnologías de Propósito General. &
   \textbf{Curva J de productividad:} La adopción exige acumular activos intangibles complementarios registrados como gasto corriente, deprimiendo la productividad a corto plazo. &
   \textbf{Marco Interpretativo Central:}\par
-  Explica por qué un $\beta_{M3}$ neutro contemporáneo (2021--2024) y pendientes negativas en manufactura y comercio reflejan costos de ajuste e intangibles, no fracaso de la IA. \\
+  Un $\beta_{M3}$ neutro contemporáneo (2021--2024) y las pendientes negativas en manufactura y comercio son compatibles con costos de ajuste e intangibles, pero no los establecen: son hipótesis de mecanismos no medidos. \\
 
   \textbf{Czarnitzki, Dirk, Fernández, Gastón P. y Rammer, Christian} (2023)\par
   \textit{JEBO}, 211, 188--205.\par
   [\texttt{czarnitzki2023firm}] &
   \textbf{Evidencia Microeconómica en Alemania} &
   Encuesta de innovación del ZEW para empresas alemanas. &
-  Prima positiva de productividad a nivel micro ($+4\%$ a $+8\%$), pero estrictamente condicionada a infraestructura digital previa y personal técnico calificado. &
+  Asociaciones positivas entre el uso o la intensidad de IA y ventas o valor agregado, en especificaciones de función de producción con controles observados; no establecen un efecto causal. Los autores señalan que analizar los canales vinculados con las calificaciones laborales requiere datos más detallados sobre la fuerza laboral y el capital humano. &
   \textbf{Contraste Micro vs. Agregado:}\par
-  Explica por qué a nivel de firma hay prima positiva (empresas líderes de frontera), mientras que a escala sectorial el promedio con firmas rezagadas diluye el efecto contemporáneo. \\
+  Aporta evidencia de asociaciones positivas a nivel de firma en Alemania, mientras que a escala sectorial el promedio con firmas rezagadas puede diluir el efecto contemporáneo. \\
   \rowcolor{Mist}
   \textbf{Eurostat} (2026a)\par
   Base de datos \texttt{isoc\_eb\_ai}.\par
@@ -191,9 +191,9 @@
   [\texttt{eurostat\_sbs}] &
   \textbf{Fuente Primaria de Datos} &
   Estadísticas Estructurales de Empresas (SBS) armonizadas para los 27 países de la UE. &
-  Series oficiales de \textbf{Valor Agregado Bruto} a costo de factores y \textbf{Personas Ocupadas} para empresas de $\ge 10$ ocupados; indicador oficial de productividad \texttt{V91110}. &
+  Para 2021--2024, \texttt{AV\_MEUR} (valor agregado a precios básicos, millones de EUR) y \texttt{EMP\_NR} (personas ocupadas) para empresas de $\ge 10$ ocupados. &
   \textbf{Construcción de la Variable Dependiente:}\par
-  Provee los insumos contables oficiales con los que se computa la Productividad Laboral Aparente ($VAB/L$, en miles de EUR corrientes por persona ocupada). \\
+  Provee los insumos oficiales para el cálculo propio de productividad laboral aparente nominal: \texttt{AV\_MEUR}$\times$1000/\texttt{EMP\_NR} (miles de EUR corrientes por persona ocupada), no \texttt{V91110}. \\
 
   \textbf{Eurostat} (2026d)\par
   Base de datos \texttt{nama\_10\_a64}.\par
@@ -209,18 +209,18 @@
   [\texttt{kadarova2026slovakia}] &
   \textbf{Evidencia Agregada UE-27} &
   Comparación descriptiva de adopción de IA y productividad entre Eslovaquia y UE-27 (Eurostat). &
-  Asimetrías estructurales de digitalización entre el Este y el núcleo de la UE; correlaciones transversales positivas en niveles entre digitalización y productividad. &
-  \textbf{Punto de Partida del Contraste Between:}\par
-  Ilustra la relación transversal en niveles (\textit{Between}). Tu TFG demuestra que esa correlación positiva desaparece al pasar al análisis temporal \textit{Within}. \\
+  Según el resumen, la adopción de IA en Eslovaquia aumentó, aunque se mantuvo por debajo de la media UE-27; la productividad fue volátil y no se observa una asociación agregada estable ni inmediata. El estudio emplea estadísticos descriptivos, tendencias/correlación y una regresión ilustrativa. &
+  \textbf{Contexto Descriptivo Eslovaquia--UE-27:}\par
+  Aporta un referente descriptivo limitado a Eslovaquia y al agregado UE-27. El contraste \textit{Between}/\textit{Within} es un análisis propio de este TFG, no un resultado demostrado por Kádárová et al. \\
 
   \textbf{Mundlak, Yair} (1978)\par
   \textit{Econometrica}, 46(1), 69--85.\par
   [\texttt{mundlak1978pooling}] &
   \textbf{Metodología Econométrica} &
   Contraste formal de especificación entre Efectos Fijos y Efectos Aleatorios. &
-  Regresión de Mundlak: modela la correlación entre $\alpha_i$ y los regresores mediante las medias temporales ($\bar{X}_i$), permitiendo un test de Hausman robusto ante heterocedasticidad. &
-  \textbf{Demolición de Efectos Aleatorios:}\par
-  Fundamenta el test de Hausman robusto ($\chi^2 = 69{,}10, p < 0{,}001$). Demuestra que $\beta_{RE} = +0{,}0111$ está sesgado por variables omitidas de nivel, validando que FE es mandatorio. \\
+  Regresión de Mundlak: modela la correlación entre $\alpha_i$ y los regresores mediante las medias temporales ($\bar{X}_i$), implementando un contraste Wald tipo Mundlak/CRE robusto ante heterocedasticidad y correlación intra-cluster. &
+  \textbf{Contraste de la restricción RE/CRE:}\par
+  Base del contraste Wald Mundlak/CRE ($\chi^2(1) = 69{,}10, p < 0{,}001$ sin controles temporales; $\chi^2(1) = 108{,}98$ con dummies de año). Rechaza la ortogonalidad en la especificación RE evaluada bajo sus supuestos; no es una prueba de causalidad ni impone M3 de forma única o mandatoria. \\
   \rowcolor{Mist}
   \textbf{OpenAI} (2026a)\par
   \textit{Enterprise Signals: How Frontier Firms Put AI to Work}.\par
@@ -256,10 +256,10 @@
   \textit{Mendeley Data}, v. 1, doi: 10.17632/gznvk45cfk.1.\par
   [\texttt{yilmaz2026dataset}] &
   \textbf{Evidencia País--Sector en Europa} &
-  Dataset de velocidad de adopción de IA y productividad en Europa a escala país--sector (2021--2025). &
-  Formaliza la \textbf{brecha de atribución de la IA (\textit{AI attribution wedge})}: la rápida aceleración en adopción no se acompaña de una aceleración en productividad sectorial. &
-  \textbf{Antecedente Directo y Salto Metodológico:}\par
-  Yilmaz documenta la brecha descriptivamente a nivel de velocidades. Tu tesis somete el fenómeno a un modelo formal de panel (M3) con controles macro, Hausman y desgloses de usos. \\
+  Dataset de 733 observaciones país--sector--año para UE-27, siete sectores y olas 2021, 2023, 2024 y 2025. &
+  Define la \textbf{brecha de atribución de la IA (\textit{AI Attribution Wedge}, AAW)} como un indicador descriptivo de \textit{screening} que combina adopción, productividad posterior y horas trabajadas; el registro declara expresamente que no es causal. &
+  \textbf{Antecedente Descriptivo Delimitado:}\par
+  El dataset no demuestra correlatos contemporáneos ni mecanismos de selección o agregación de firmas de frontera y rezagadas. Sin un estudio acompañante independiente verificable, esos mecanismos se mantienen como hipótesis no medidas y no como resultados de Yilmaz. \\
 
 \end{xltabular}
 
@@ -274,25 +274,25 @@
 \vspace{0.25cm}
 
 \begin{qspeechbox}{Pregunta 2 del Tribunal: ¿Por qué no deflactó la productividad con índices de precios para trabajar en términos reales?}
-  ``Por dos motivos teóricos y metodológicos fundamentales: Primero, como advierte \textbf{Berndt (1991)}, cuando no se cuenta con deflactores de precios al productor construidos sobre los mismos microdatos de empresa, aplicar deflactores macroeconómicos híbridos agregados sobre series sectoriales introduce un serio sesgo por error de medición en la variable dependiente. Segundo, siguiendo a \textbf{Wooldridge (2010)}, en nuestra especificación preferida M3 la incorporación de efectos fijos país--año ($\gamma_{ct}$) absorbe de forma exacta, en virtud del teorema de Frisch--Waugh--Lovell, la totalidad de los componentes de inflación macroeconómica nacional del trienio.''
+  ``Por dos motivos teóricos y metodológicos: primero, como advierte \textbf{Berndt (1991)}, cuando no se cuenta con deflactores de precios al productor construidos sobre los mismos microdatos de empresa, aplicar deflactores macroeconómicos agregados a series sectoriales puede introducir error de medición. Segundo, en M3 los efectos país--año ($\gamma_{ct}$) absorben componentes de inflación macroeconómica comunes a todos los sectores de un país--año; no identifican precios relativos ni shocks sectoriales específicos.''
 \end{qspeechbox}
 
 \vspace{0.25cm}
 
-\begin{qspeechbox}{Pregunta 3 del Tribunal: ¿Por qué en el modelo principal M3 el coeficiente da cero si la IA es una revolución tecnológica?}
-  ``Nos apoyamos en la teoría de la Curva J de productividad de \textbf{Brynjolfsson, Rock y Syverson (2021)} y en las complementariedades organizacionales de \textbf{Bresnahan, Brynjolfsson y Hitt (2002)}. Las tecnologías de propósito general (GPT) exigen acumular cuantiosos activos complementarios intangibles: saneamiento de datos, reentrenamiento de personal y rediseño de procesos. Dado que la contabilidad nacional registra estos costos como gastos operativos corrientes y no como inversión de capital, la productividad aparente medida se deprime transitoriamente durante la fase inicial de adopción. Un coeficiente neutro a corto plazo (2021--2024) refleja los costos de ajuste propios de la innovación y no la ineficacia de la herramienta.''
+\begin{qspeechbox}{Pregunta 3 del Tribunal: ¿Por qué M3 no muestra una asociación estadísticamente significativa?}
+  ``En M3, la adopción general tiene $\beta=-0{,}001263116$, $EE=0{,}001171453$ y $p=0{,}282043$ bajo CR1 de rango efectivo y referencia $t_{232}$; el intervalo 95\% incluye asociaciones negativas y positivas. La Curva J y las complementariedades organizacionales ofrecen hipótesis compatibles --costos de ajuste, datos, capacitación y rediseño--, pero este panel no mide esos mecanismos ni permite atribuirles el resultado. Tampoco demuestra ineficacia de la herramienta.''
 \end{qspeechbox}
 
 \vspace{0.25cm}
 
 \begin{qspeechbox}{Pregunta 4 del Tribunal: ¿Por qué descartó Efectos Aleatorios (RE) si en ese modelo la adopción da positiva y altamente significativa?}
-  ``Porque el estimador de Efectos Aleatorios asume ortogonalidad entre los factores individuales no observados y los regresores ($\text{Cov}(\alpha_i, IA_{it}) = 0$). Evaluamos esta hipótesis mediante el Test de Hausman utilizando la formulación de regresión auxiliar de \textbf{Mundlak (1978)} y \textbf{Wooldridge (2010)} con contrastes robustos de Wald. El resultado arrojó un estadístico de $\chi^2(1) = 69{,}10$ con $p < 0{,}001$, rechazando categóricamente la hipótesis nula. Esto prueba que los sectores estructuralmente más productivos adoptan sistemáticamente más IA; por ende, el $\beta_{RE} = +0{,}0111$ está viciado de sesgo por variables omitidas de nivel, y el estimador Within de Efectos Fijos (M3) resulta metodológicamente mandatorio.''
+  ``Porque el estimador de Efectos Aleatorios asume ortogonalidad entre los factores individuales no observados y los regresores ($\text{Cov}(\alpha_i, IA_{it}) = 0$). Evaluamos esta hipótesis mediante un contraste robusto de Wald sobre la media temporal de adopción ($H_0:\ \bar{IA}_i = 0$), siguiendo la formulación de regresión auxiliar de \textbf{Mundlak (1978)} y \textbf{Wooldridge (2010)}. El resultado arrojó $\chi^2(1) = 69{,}10$ con $p < 0{,}001$, rechazando la hipótesis de ortogonalidad en la especificación RE evaluada. Esto aporta evidencia de que la asociación positiva de RE incorpora heterogeneidad estructural correlacionada con la adopción. No es una prueba clásica de diferencia FE--RE ni prueba de causalidad, pero justifica priorizar M3 como especificación asociativa principal para absorber heterogeneidad no observada país--sector y shocks agregados país--año.''
 \end{qspeechbox}
 
 \vspace{0.25cm}
 
 \begin{qspeechbox}{Pregunta 5 del Tribunal: ¿No se distorsionan los resultados al mezclar países grandes como Alemania con chicos como Malta?}
-  ``No, por dos razones: Primero, la normalización matemática: la productividad es un ratio intensivo ($VAB/L$) y la adopción es una tasa porcentual (\% de firmas); un ratio elimina por definición la dimensión física de escala del país o sector. Segundo, el tratamiento econométrico: en las regresiones incluimos errores estándar agrupados por entidad (\textit{cluster-robust}) para absorber heterocedasticidad residual, y evaluamos estimaciones ponderadas por empleo (WLS), confirmando que las conclusiones no dependen del tamaño económico relativo.''
+  ``La normalización ayuda a la comparabilidad: la productividad es un ratio intensivo ($VAB/L$) y la adopción es una tasa porcentual de firmas, aunque pueden persistir diferencias de composición. En las regresiones, los errores agrupados por entidad permiten dependencia residual intraentidad bajo una aproximación asintótica, y WLS es una sensibilidad por empleo; ninguno garantiza por sí solo eliminar la heterocedasticidad o toda diferencia de escala.''
 \end{qspeechbox}
 
 \vspace{0.25cm}
