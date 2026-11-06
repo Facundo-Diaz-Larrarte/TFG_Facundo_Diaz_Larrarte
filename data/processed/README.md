@@ -6,13 +6,13 @@ El archivo reproducible principal del repositorio es:
 data/processed/panel_analitico.csv
 ```
 
-La robustez con productividad real sectorial aproximada genera además:
+El archivo siguiente se conserva solo como **archivo histórico — NO USAR**:
 
 ```text
 data/processed/panel_analitico_productividad_real.csv
 ```
 
-Contiene la grilla completa de 729 observaciones país–sector–año y las variables `core_complete` y `balanced_entity`, que permiten reconstruir la muestra central completa y la muestra balanceada de 627 filas.
+Fue derivado de una proxy retirada por incompatibilidad entre el universo SBS y los deflactores de Cuentas Nacionales. No integra el TFG activo, sus análisis, robusteces ni las instrucciones de reproducción. Se preserva sin modificación ni eliminación exclusivamente para trazabilidad.
 
 ## Relación con los Excel
 
@@ -22,14 +22,14 @@ Los libros Excel ubicados en:
 Facundo_Diaz_Larrarte_TFG/Datos/
 ```
 
-conservan una versión cómoda para inspección, auditoría y uso académico. Sin embargo, la reproducción del análisis se apoya en `panel_analitico.csv` y en los scripts de `analysis/`, para evitar depender de operaciones manuales sobre Excel.
+conservan una versión cómoda para inspección, auditoría y uso académico. Sin embargo, la reproducción activa se apoya exclusivamente en `panel_analitico.csv` y en los scripts activos documentados en `analysis/README.md`, para evitar depender de operaciones manuales sobre Excel.
 
 ## Fuentes
 
 - Eurostat, `isoc_eb_ai`: adopción y uso empresarial de inteligencia artificial.
 - Eurostat, `isoc_eb_ain2`: indicadores complementarios sobre usos de inteligencia artificial.
 - Eurostat, Structural Business Statistics (SBS): valor agregado y personas ocupadas.
-- Eurostat, `nama_10_a64`: valor agregado bruto por industria a precios corrientes y en volúmenes encadenados, utilizado para construir deflactores país–sector–año aproximados.
+- Archivo histórico — **NO USAR**: Eurostat, `nama_10_a64`, conservado solo como insumo de la proxy retirada; no es una fuente del análisis activo.
 
 ## Cobertura
 
@@ -52,7 +52,7 @@ En la base, el valor agregado está expresado en millones de euros y se conviert
 labour_productivity_keur = value_added_meur_ge10 * 1000 / persons_employed_ge10
 ```
 
-La productividad real aproximada se calcula en `analysis/05_productividad_real_sectorial.py` como:
+La fórmula siguiente documenta un cálculo histórico archivado, no una variable disponible para uso activo:
 
 ```text
 deflactor = GVA corriente / GVA volumen encadenado 2020
@@ -60,7 +60,7 @@ deflactor normalizado = deflactor / deflactor país-sector en 2021
 labour_productivity_real_2021_keur = labour_productivity_keur / deflactor normalizado
 ```
 
-Esta corrección es una robustez: aplica deflactores de cuentas nacionales por industria al valor agregado SBS de empresas con 10 o más personas ocupadas.
+La proxy se retiró por aplicar deflactores de cuentas nacionales por industria al valor agregado SBS de empresas con 10 o más personas ocupadas. `analysis/05_productividad_real_sectorial.py` rechaza su ejecución para prevenir la regeneración accidental.
 
 ## Variables de control de muestra
 
